@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Quanlythuvien.Controllers.Login;
+using Quanlythuvien.Controllers;
 
-namespace Quanlythuvien.Views
+namespace Quanlythuvien.Views.Logins
 {
     public partial class Login : Form
     {
@@ -20,18 +20,12 @@ namespace Quanlythuvien.Views
 
         private void cboanhien_CheckedChanged(object sender, EventArgs e)
         {
-            txtpass.PasswordChar = txtpass.PasswordChar == '*' ? '\0' : '*';
+            new LoginManagement().An_Hien(txtpass);
         }
 
-        private void btnthoat_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        
         private void btndangnhap_Click(object sender, EventArgs e)
         {
-            QuanLyLogin kn = new QuanLyLogin();
-            kn.Login(txtuser,txtpass);
+            new LoginManagement().Login(txtuser, txtpass);
         }
     }
 }

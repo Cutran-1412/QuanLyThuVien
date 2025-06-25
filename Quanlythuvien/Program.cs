@@ -1,4 +1,4 @@
-using Quanlythuvien.Views;
+using Quanlythuvien.Views.Logins;
 namespace Quanlythuvien
 {
     internal static class Program

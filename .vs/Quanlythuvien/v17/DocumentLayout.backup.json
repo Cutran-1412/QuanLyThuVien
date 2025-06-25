@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "D:\\Quanlythuvien\\Quanlythuvien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\models\\login\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\models\\login\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\views\\logins\\adminshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\logins\\adminshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\controllers\\login\\quanlylogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\controllers\\login\\quanlylogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\views\\logins\\adminshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\logins\\adminshow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\views\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\controllers\\loginmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\controllers\\loginmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|D:\\Quanlythuvien\\Quanlythuvien\\quanlythuvien\\views\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\login\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\models\\logins\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\models\\logins\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\models\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\models\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\views\\logins\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\logins\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\models\\logins\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\models\\logins\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\views\\logins\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\logins\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,52 +59,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TaiKhoan.cs",
-              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Login\\TaiKhoan.cs",
-              "RelativeDocumentMoniker": "Quanlythuvien\\Models\\Login\\TaiKhoan.cs",
-              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Login\\TaiKhoan.cs",
-              "RelativeToolTip": "Quanlythuvien\\Models\\Login\\TaiKhoan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Title": "Adminshow.cs",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Adminshow.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Views\\Logins\\Adminshow.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Adminshow.cs*",
+              "RelativeToolTip": "Quanlythuvien\\Views\\Logins\\Adminshow.cs*",
+              "ViewState": "AgIAADsAAAAAAAAAAIA8wEMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T02:20:20.96Z",
+              "WhenOpened": "2025-06-25T09:38:51.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "QuanLyLogin.cs",
-              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Controllers\\Login\\QuanLyLogin.cs",
-              "RelativeDocumentMoniker": "Quanlythuvien\\Controllers\\Login\\QuanLyLogin.cs",
-              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Controllers\\Login\\QuanLyLogin.cs*",
-              "RelativeToolTip": "Quanlythuvien\\Controllers\\Login\\QuanLyLogin.cs*",
-              "ViewState": "AgIAABcAAAAAAAAAAAAvwCQAAAAAAAAAAAAAAA==",
+              "Title": "Adminshow.cs [Design]",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Adminshow.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Views\\Logins\\Adminshow.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Adminshow.cs [Design]*",
+              "RelativeToolTip": "Quanlythuvien\\Views\\Logins\\Adminshow.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T09:38:49.258Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginDAO.cs",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Logins\\LoginDAO.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Models\\Logins\\LoginDAO.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Logins\\LoginDAO.cs",
+              "RelativeToolTip": "Quanlythuvien\\Models\\Logins\\LoginDAO.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAADwvywAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T09:27:01.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Login.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Views\\Logins\\Login.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Login.cs [Design]",
+              "RelativeToolTip": "Quanlythuvien\\Views\\Logins\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T05:56:55.587Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\DataContext.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Models\\DataContext.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\DataContext.cs",
+              "RelativeToolTip": "Quanlythuvien\\Models\\DataContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T02:45:31.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginManagement.cs",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Controllers\\LoginManagement.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Controllers\\LoginManagement.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Controllers\\LoginManagement.cs",
+              "RelativeToolTip": "Quanlythuvien\\Controllers\\LoginManagement.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAYwEsAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T01:51:52.487Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Login\\Login.cs",
-              "RelativeDocumentMoniker": "Quanlythuvien\\Views\\Login\\Login.cs",
-              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Login\\Login.cs [Design]",
-              "RelativeToolTip": "Quanlythuvien\\Views\\Login\\Login.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Logins\\Admin.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Models\\Logins\\Admin.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Logins\\Admin.cs",
+              "RelativeToolTip": "Quanlythuvien\\Models\\Logins\\Admin.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T01:47:53.392Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-25T02:20:20.96Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Login.cs",
-              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Login\\Login.cs",
-              "RelativeDocumentMoniker": "Quanlythuvien\\Views\\Login\\Login.cs",
-              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Login\\Login.cs",
-              "RelativeToolTip": "Quanlythuvien\\Views\\Login\\Login.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwCEAAAAmAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Login.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Views\\Logins\\Login.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\Logins\\Login.cs",
+              "RelativeToolTip": "Quanlythuvien\\Views\\Logins\\Login.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T01:44:22.31Z",
+              "WhenOpened": "2025-06-25T05:57:10.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Program.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Program.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Program.cs",
+              "RelativeToolTip": "Quanlythuvien\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T06:04:22.963Z",
               "EditorCaption": ""
             }
           ]
