@@ -25,8 +25,23 @@ namespace Quanlythuvien.Controllers.Login
             return true;
         }
         public void Login(TextBox txtuser, TextBox txtpass)
-        { 
+        {
+            if (Check_Null(txtuser, txtpass))
+            {
+                if(txtuser.Text == "administrator" && txtpass.Text == "2004")
+                {
 
+                }
+                else if (txtuser.Text == "administrator" && txtpass.Text == "2004")
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu sai !");
+                    txtuser.Focus();
+                }
+            }
         }
     }
 }

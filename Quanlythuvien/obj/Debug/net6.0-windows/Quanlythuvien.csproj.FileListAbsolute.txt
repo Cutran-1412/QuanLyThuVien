@@ -50,3 +50,4 @@ D:\Quanlythuvien\Quanlythuvien\Quanlythuvien\obj\Debug\net6.0-windows\refint\Qua
 D:\Quanlythuvien\Quanlythuvien\Quanlythuvien\obj\Debug\net6.0-windows\Quanlythuvien.pdb
 D:\Quanlythuvien\Quanlythuvien\Quanlythuvien\obj\Debug\net6.0-windows\Quanlythuvien.genruntimeconfig.cache
 D:\Quanlythuvien\Quanlythuvien\Quanlythuvien\obj\Debug\net6.0-windows\ref\Quanlythuvien.dll
+D:\Quanlythuvien\Quanlythuvien\Quanlythuvien\obj\Debug\net6.0-windows\Quanlythuvien.sourcelink.json
