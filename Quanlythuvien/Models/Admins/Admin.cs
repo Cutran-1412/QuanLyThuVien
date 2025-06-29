@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quanlythuvien.Models.Login
+namespace Quanlythuvien.Models.Admins
 {
     internal class Admin
     {
