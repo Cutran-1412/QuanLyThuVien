@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Quanlythuvien\\Quanlythuvien\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\controllers\\docgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\controllers\\docgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\models\\admins\\admindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\models\\admins\\admindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\controllers\\docgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\controllers\\docgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AdminDAO.cs",
+              "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Admins\\AdminDAO.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Models\\Admins\\AdminDAO.cs",
+              "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Models\\Admins\\AdminDAO.cs",
+              "RelativeToolTip": "Quanlythuvien\\Models\\Admins\\AdminDAO.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwCAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T01:21:00.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DocGiaController.cs",
               "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Controllers\\DocGiaController.cs",
               "RelativeDocumentMoniker": "Quanlythuvien\\Controllers\\DocGiaController.cs",
@@ -35,24 +60,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Quanlythuvien\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Quanlythuvien\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAA9wCYAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T01:18:03.375Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         },

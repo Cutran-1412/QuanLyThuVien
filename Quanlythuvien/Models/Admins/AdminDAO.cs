@@ -13,6 +13,10 @@ namespace Quanlythuvien.Models.Admins
         {
             return kn.Admins.ToList();
         }
+        public List<Admin> Search_Admin(Admin admin)
+        {
+            return kn.Admins.Where(s=>s.username == admin.username && s.password == admin.password).Select(s=>s).ToList();
+        }
         public void Insert_Admin(Admin admin)
         {
             kn.Admins!.Add(admin);
