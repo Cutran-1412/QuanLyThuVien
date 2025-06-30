@@ -1,6 +1,6 @@
-﻿namespace Quanlythuvien.Views
+﻿namespace Quanlythuvien
 {
-    partial class Form1
+    partial class MainHub
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.Name = "Form1";
+            this.Text = "RJ CODE - Modern Dashboard";
+            this.ResumeLayout(false);
         }
 
         #endregion

@@ -23,9 +23,9 @@ namespace Quanlythuvien.Models
         {
             base.OnConfiguring(optionsBuilder);
             String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=Quanlythuvien;Integrated Security=True;Trust Server Certificate=True";
-            String sqlCuong = "";
+            String sqlCuong = "Data Source=DESKTOP-M202JIE\\SQLEXPRESS;Initial Catalog=LibMag;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
             String sqlChien = "";
-            optionsBuilder.UseSqlServer(sqlcu);
+            optionsBuilder.UseSqlServer(sqlCuong);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

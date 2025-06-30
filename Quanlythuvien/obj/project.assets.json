@@ -2042,23 +2042,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\quycu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien.csproj",
+      "projectUniqueName": "C:\\Users\\quycu\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Quanlythuvien\\Quanlythuvien.csproj",
       "projectName": "Quanlythuvien",
-      "projectPath": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\obj\\",
+      "projectPath": "C:\\Users\\quycu\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Quanlythuvien\\Quanlythuvien.csproj",
+      "packagesPath": "C:\\Users\\quycu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\quycu\\Desktop\\QuanLyThuVien\\QuanLyThuVien\\Quanlythuvien\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\quycu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2066,7 +2066,8 @@
         "net6.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -2118,12 +2119,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.Net.Sdk.Compilers.Toolset",
-            "version": "[9.0.200, 9.0.200]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -2132,7 +2127,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
