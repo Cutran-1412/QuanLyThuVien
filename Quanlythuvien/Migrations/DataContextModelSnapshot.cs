@@ -284,20 +284,13 @@ namespace Quanlythuvien.Migrations
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuMuons.PhieuMuon", b =>
                 {
-                    b.Property<int>("PhieuMuonId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PhieuMuonId"), 1L, 1);
+                    b.Property<string>("MaPhieuMuon")
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
 
                     b.Property<string>("MaDocGia")
                         .IsRequired()
                         .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("MaPhieuMuon")
-                        .IsRequired()
-                        .HasMaxLength(12)
-                        .HasColumnType("nvarchar(12)");
 
                     b.Property<DateTime>("NgayMuon")
                         .HasColumnType("datetime2");
@@ -313,7 +306,7 @@ namespace Quanlythuvien.Migrations
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.HasKey("PhieuMuonId");
+                    b.HasKey("MaPhieuMuon");
 
                     b.HasIndex("MaDocGia");
 
@@ -324,9 +317,8 @@ namespace Quanlythuvien.Migrations
                     b.HasData(
                         new
                         {
-                            PhieuMuonId = 1,
-                            MaDocGia = "DG001",
                             MaPhieuMuon = "PM001",
+                            MaDocGia = "DG001",
                             NgayMuon = new DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 1,
@@ -334,9 +326,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 2,
-                            MaDocGia = "DG001",
                             MaPhieuMuon = "PM002",
+                            MaDocGia = "DG001",
                             NgayMuon = new DateTime(2025, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 2,
@@ -344,9 +335,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 3,
-                            MaDocGia = "DG001",
                             MaPhieuMuon = "PM003",
+                            MaDocGia = "DG001",
                             NgayMuon = new DateTime(2025, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 3,
@@ -354,9 +344,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 4,
-                            MaDocGia = "DG002",
                             MaPhieuMuon = "PM004",
+                            MaDocGia = "DG002",
                             NgayMuon = new DateTime(2025, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 4,
@@ -364,9 +353,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 5,
-                            MaDocGia = "DG002",
                             MaPhieuMuon = "PM005",
+                            MaDocGia = "DG002",
                             NgayMuon = new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 5,
@@ -374,9 +362,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 6,
-                            MaDocGia = "DG002",
                             MaPhieuMuon = "PM006",
+                            MaDocGia = "DG002",
                             NgayMuon = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 6,
@@ -384,9 +371,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 7,
-                            MaDocGia = "DG002",
                             MaPhieuMuon = "PM007",
+                            MaDocGia = "DG002",
                             NgayMuon = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 7,
@@ -394,9 +380,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 8,
-                            MaDocGia = "DG003",
                             MaPhieuMuon = "PM008",
+                            MaDocGia = "DG003",
                             NgayMuon = new DateTime(2025, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 8,
@@ -404,9 +389,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 9,
-                            MaDocGia = "DG003",
                             MaPhieuMuon = "PM009",
+                            MaDocGia = "DG003",
                             NgayMuon = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 9,
@@ -414,9 +398,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 10,
-                            MaDocGia = "DG004",
                             MaPhieuMuon = "PM010",
+                            MaDocGia = "DG004",
                             NgayMuon = new DateTime(2025, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 10,
@@ -424,9 +407,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 11,
-                            MaDocGia = "DG004",
                             MaPhieuMuon = "PM011",
+                            MaDocGia = "DG004",
                             NgayMuon = new DateTime(2025, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 11,
@@ -434,9 +416,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 12,
-                            MaDocGia = "DG004",
                             MaPhieuMuon = "PM012",
+                            MaDocGia = "DG004",
                             NgayMuon = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 12,
@@ -444,9 +425,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 13,
-                            MaDocGia = "DG004",
                             MaPhieuMuon = "PM013",
+                            MaDocGia = "DG004",
                             NgayMuon = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 13,
@@ -454,9 +434,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 14,
-                            MaDocGia = "DG004",
                             MaPhieuMuon = "PM014",
+                            MaDocGia = "DG004",
                             NgayMuon = new DateTime(2025, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 14,
@@ -464,9 +443,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 15,
-                            MaDocGia = "DG005",
                             MaPhieuMuon = "PM015",
+                            MaDocGia = "DG005",
                             NgayMuon = new DateTime(2025, 6, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 15,
@@ -474,9 +452,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 16,
-                            MaDocGia = "DG005",
                             MaPhieuMuon = "PM016",
+                            MaDocGia = "DG005",
                             NgayMuon = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 16,
@@ -484,9 +461,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 17,
-                            MaDocGia = "DG005",
                             MaPhieuMuon = "PM017",
+                            MaDocGia = "DG005",
                             NgayMuon = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 17,
@@ -494,9 +470,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 18,
-                            MaDocGia = "DG006",
                             MaPhieuMuon = "PM018",
+                            MaDocGia = "DG006",
                             NgayMuon = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 18,
@@ -504,9 +479,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 19,
-                            MaDocGia = "DG006",
                             MaPhieuMuon = "PM019",
+                            MaDocGia = "DG006",
                             NgayMuon = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 19,
@@ -514,9 +488,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 20,
-                            MaDocGia = "DG007",
                             MaPhieuMuon = "PM020",
+                            MaDocGia = "DG007",
                             NgayMuon = new DateTime(2025, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 20,
@@ -524,9 +497,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 21,
-                            MaDocGia = "DG007",
                             MaPhieuMuon = "PM021",
+                            MaDocGia = "DG007",
                             NgayMuon = new DateTime(2025, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 21,
@@ -534,9 +506,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 22,
-                            MaDocGia = "DG007",
                             MaPhieuMuon = "PM022",
+                            MaDocGia = "DG007",
                             NgayMuon = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 22,
@@ -544,9 +515,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 23,
-                            MaDocGia = "DG007",
                             MaPhieuMuon = "PM023",
+                            MaDocGia = "DG007",
                             NgayMuon = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 23,
@@ -554,9 +524,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 24,
-                            MaDocGia = "DG007",
                             MaPhieuMuon = "PM024",
+                            MaDocGia = "DG007",
                             NgayMuon = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 24,
@@ -564,9 +533,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 25,
-                            MaDocGia = "DG008",
                             MaPhieuMuon = "PM025",
+                            MaDocGia = "DG008",
                             NgayMuon = new DateTime(2025, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 25,
@@ -574,9 +542,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 26,
-                            MaDocGia = "DG008",
                             MaPhieuMuon = "PM026",
+                            MaDocGia = "DG008",
                             NgayMuon = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 26,
@@ -584,9 +551,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 27,
-                            MaDocGia = "DG009",
                             MaPhieuMuon = "PM027",
+                            MaDocGia = "DG009",
                             NgayMuon = new DateTime(2025, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 27,
@@ -594,9 +560,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 28,
-                            MaDocGia = "DG009",
                             MaPhieuMuon = "PM028",
+                            MaDocGia = "DG009",
                             NgayMuon = new DateTime(2025, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 28,
@@ -604,9 +569,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 29,
-                            MaDocGia = "DG009",
                             MaPhieuMuon = "PM029",
+                            MaDocGia = "DG009",
                             NgayMuon = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 29,
@@ -614,9 +578,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 30,
-                            MaDocGia = "DG009",
                             MaPhieuMuon = "PM030",
+                            MaDocGia = "DG009",
                             NgayMuon = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 30,
@@ -624,9 +587,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 31,
-                            MaDocGia = "DG010",
                             MaPhieuMuon = "PM031",
+                            MaDocGia = "DG010",
                             NgayMuon = new DateTime(2025, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 31,
@@ -634,9 +596,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 32,
-                            MaDocGia = "DG010",
                             MaPhieuMuon = "PM032",
+                            MaDocGia = "DG010",
                             NgayMuon = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 32,
@@ -644,9 +605,8 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuMuonId = 33,
-                            MaDocGia = "DG010",
                             MaPhieuMuon = "PM033",
+                            MaDocGia = "DG010",
                             NgayMuon = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgayTra = new DateTime(2025, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 33,
@@ -656,8 +616,9 @@ namespace Quanlythuvien.Migrations
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuTras.PhieuTra", b =>
                 {
-                    b.Property<int>("PhieuTraId")
-                        .HasColumnType("int");
+                    b.Property<string>("MaPhieuTra")
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
 
                     b.Property<string>("GhiChu")
                         .IsRequired()
@@ -667,11 +628,6 @@ namespace Quanlythuvien.Migrations
                     b.Property<string>("MaDocGia")
                         .IsRequired()
                         .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("MaPhieuTra")
-                        .IsRequired()
-                        .HasMaxLength(12)
-                        .HasColumnType("nvarchar(12)");
 
                     b.Property<DateTime>("NgayTra")
                         .HasColumnType("datetime2");
@@ -687,7 +643,7 @@ namespace Quanlythuvien.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.HasKey("PhieuTraId");
+                    b.HasKey("MaPhieuTra");
 
                     b.HasIndex("MaDocGia");
 
@@ -698,10 +654,9 @@ namespace Quanlythuvien.Migrations
                     b.HasData(
                         new
                         {
-                            PhieuTraId = 1,
+                            MaPhieuTra = "PT001",
                             GhiChu = "Sách sạch sẽ, không hư hỏng",
                             MaDocGia = "DG001",
-                            MaPhieuTra = "PT001",
                             NgayTra = new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 1,
                             TienPhat = 0m,
@@ -709,10 +664,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 2,
+                            MaPhieuTra = "PT002",
                             GhiChu = "Trang bìa hơi quăn",
                             MaDocGia = "DG001",
-                            MaPhieuTra = "PT002",
                             NgayTra = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 2,
                             TienPhat = 5000m,
@@ -720,10 +674,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 3,
+                            MaPhieuTra = "PT003",
                             GhiChu = "",
                             MaDocGia = "DG001",
-                            MaPhieuTra = "PT003",
                             NgayTra = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 3,
                             TienPhat = 0m,
@@ -731,10 +684,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 4,
+                            MaPhieuTra = "PT004",
                             GhiChu = "Rách nhẹ trang cuối",
                             MaDocGia = "DG002",
-                            MaPhieuTra = "PT004",
                             NgayTra = new DateTime(2025, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 4,
                             TienPhat = 7000m,
@@ -742,10 +694,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 5,
+                            MaPhieuTra = "PT005",
                             GhiChu = "",
                             MaDocGia = "DG002",
-                            MaPhieuTra = "PT005",
                             NgayTra = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 5,
                             TienPhat = 0m,
@@ -753,10 +704,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 6,
+                            MaPhieuTra = "PT006",
                             GhiChu = "",
                             MaDocGia = "DG002",
-                            MaPhieuTra = "PT006",
                             NgayTra = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 6,
                             TienPhat = 0m,
@@ -764,10 +714,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 7,
+                            MaPhieuTra = "PT007",
                             GhiChu = "Sách ố màu nhẹ, xước gáy",
                             MaDocGia = "DG002",
-                            MaPhieuTra = "PT007",
                             NgayTra = new DateTime(2025, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 7,
                             TienPhat = 10000m,
@@ -775,10 +724,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 8,
+                            MaPhieuTra = "PT008",
                             GhiChu = "",
                             MaDocGia = "DG003",
-                            MaPhieuTra = "PT008",
                             NgayTra = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 8,
                             TienPhat = 0m,
@@ -786,10 +734,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 9,
+                            MaPhieuTra = "PT009",
                             GhiChu = "Có vết bẩn ở trang giữa",
                             MaDocGia = "DG003",
-                            MaPhieuTra = "PT009",
                             NgayTra = new DateTime(2025, 6, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 9,
                             TienPhat = 5000m,
@@ -797,10 +744,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 10,
+                            MaPhieuTra = "PT010",
                             GhiChu = "Trang 12 bị gấp góc",
                             MaDocGia = "DG004",
-                            MaPhieuTra = "PT010",
                             NgayTra = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 10,
                             TienPhat = 4000m,
@@ -808,10 +754,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 11,
+                            MaPhieuTra = "PT011",
                             GhiChu = "",
                             MaDocGia = "DG004",
-                            MaPhieuTra = "PT011",
                             NgayTra = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 11,
                             TienPhat = 0m,
@@ -819,10 +764,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 12,
+                            MaPhieuTra = "PT012",
                             GhiChu = "",
                             MaDocGia = "DG004",
-                            MaPhieuTra = "PT012",
                             NgayTra = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 12,
                             TienPhat = 0m,
@@ -830,10 +774,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 13,
+                            MaPhieuTra = "PT013",
                             GhiChu = "Sách cũ nhiều chỗ",
                             MaDocGia = "DG004",
-                            MaPhieuTra = "PT013",
                             NgayTra = new DateTime(2025, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 13,
                             TienPhat = 6000m,
@@ -841,10 +784,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 14,
+                            MaPhieuTra = "PT014",
                             GhiChu = "",
                             MaDocGia = "DG004",
-                            MaPhieuTra = "PT014",
                             NgayTra = new DateTime(2025, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 14,
                             TienPhat = 0m,
@@ -852,10 +794,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 15,
+                            MaPhieuTra = "PT015",
                             GhiChu = "Mực lem nhẹ",
                             MaDocGia = "DG005",
-                            MaPhieuTra = "PT015",
                             NgayTra = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 15,
                             TienPhat = 3000m,
@@ -863,10 +804,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 16,
+                            MaPhieuTra = "PT016",
                             GhiChu = "",
                             MaDocGia = "DG005",
-                            MaPhieuTra = "PT016",
                             NgayTra = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 16,
                             TienPhat = 0m,
@@ -874,10 +814,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 17,
+                            MaPhieuTra = "PT017",
                             GhiChu = "Sách bong gáy",
                             MaDocGia = "DG005",
-                            MaPhieuTra = "PT017",
                             NgayTra = new DateTime(2025, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 17,
                             TienPhat = 8000m,
@@ -885,10 +824,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 18,
+                            MaPhieuTra = "PT018",
                             GhiChu = "",
                             MaDocGia = "DG006",
-                            MaPhieuTra = "PT018",
                             NgayTra = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 18,
                             TienPhat = 0m,
@@ -896,10 +834,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 19,
+                            MaPhieuTra = "PT019",
                             GhiChu = "Trang đầu có vết bút chì",
                             MaDocGia = "DG006",
-                            MaPhieuTra = "PT019",
                             NgayTra = new DateTime(2025, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 19,
                             TienPhat = 3000m,
@@ -907,10 +844,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 20,
+                            MaPhieuTra = "PT020",
                             GhiChu = "",
                             MaDocGia = "DG007",
-                            MaPhieuTra = "PT020",
                             NgayTra = new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 20,
                             TienPhat = 0m,
@@ -918,10 +854,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 21,
+                            MaPhieuTra = "PT021",
                             GhiChu = "Sách xước nhẹ gáy",
                             MaDocGia = "DG007",
-                            MaPhieuTra = "PT021",
                             NgayTra = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 21,
                             TienPhat = 4000m,
@@ -929,10 +864,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 22,
+                            MaPhieuTra = "PT022",
                             GhiChu = "",
                             MaDocGia = "DG007",
-                            MaPhieuTra = "PT022",
                             NgayTra = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 22,
                             TienPhat = 0m,
@@ -940,10 +874,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 23,
+                            MaPhieuTra = "PT023",
                             GhiChu = "Có vết gạch nhỏ ở trang giữa",
                             MaDocGia = "DG007",
-                            MaPhieuTra = "PT023",
                             NgayTra = new DateTime(2025, 6, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 23,
                             TienPhat = 3000m,
@@ -951,10 +884,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 24,
+                            MaPhieuTra = "PT024",
                             GhiChu = "",
                             MaDocGia = "DG007",
-                            MaPhieuTra = "PT024",
                             NgayTra = new DateTime(2025, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 24,
                             TienPhat = 0m,
@@ -962,10 +894,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 25,
+                            MaPhieuTra = "PT025",
                             GhiChu = "Màu trang bị ngả",
                             MaDocGia = "DG008",
-                            MaPhieuTra = "PT025",
                             NgayTra = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 25,
                             TienPhat = 5000m,
@@ -973,10 +904,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 26,
+                            MaPhieuTra = "PT026",
                             GhiChu = "",
                             MaDocGia = "DG008",
-                            MaPhieuTra = "PT026",
                             NgayTra = new DateTime(2025, 6, 27, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 26,
                             TienPhat = 0m,
@@ -984,10 +914,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 27,
+                            MaPhieuTra = "PT027",
                             GhiChu = "",
                             MaDocGia = "DG009",
-                            MaPhieuTra = "PT027",
                             NgayTra = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 27,
                             TienPhat = 0m,
@@ -995,10 +924,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 28,
+                            MaPhieuTra = "PT028",
                             GhiChu = "Góc sách bị gập",
                             MaDocGia = "DG009",
-                            MaPhieuTra = "PT028",
                             NgayTra = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 28,
                             TienPhat = 4000m,
@@ -1006,10 +934,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 29,
+                            MaPhieuTra = "PT029",
                             GhiChu = "",
                             MaDocGia = "DG009",
-                            MaPhieuTra = "PT029",
                             NgayTra = new DateTime(2025, 6, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 29,
                             TienPhat = 0m,
@@ -1017,10 +944,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 30,
+                            MaPhieuTra = "PT030",
                             GhiChu = "Sách bong gáy, rách nhẹ",
                             MaDocGia = "DG009",
-                            MaPhieuTra = "PT030",
                             NgayTra = new DateTime(2025, 6, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 30,
                             TienPhat = 6000m,
@@ -1028,10 +954,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 31,
+                            MaPhieuTra = "PT031",
                             GhiChu = "",
                             MaDocGia = "DG010",
-                            MaPhieuTra = "PT031",
                             NgayTra = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 31,
                             TienPhat = 0m,
@@ -1039,10 +964,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 32,
+                            MaPhieuTra = "PT032",
                             GhiChu = "Sách ngả màu",
                             MaDocGia = "DG010",
-                            MaPhieuTra = "PT032",
                             NgayTra = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 32,
                             TienPhat = 4000m,
@@ -1050,10 +974,9 @@ namespace Quanlythuvien.Migrations
                         },
                         new
                         {
-                            PhieuTraId = 33,
+                            MaPhieuTra = "PT033",
                             GhiChu = "",
                             MaDocGia = "DG010",
-                            MaPhieuTra = "PT033",
                             NgayTra = new DateTime(2025, 6, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             QuyenSachId = 33,
                             TienPhat = 0m,
@@ -1075,9 +998,6 @@ namespace Quanlythuvien.Migrations
                     b.Property<string>("MaSach")
                         .IsRequired()
                         .HasColumnType("nvarchar(10)");
-
-                    b.Property<DateTime>("NgayNhap")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("TinhTrang")
                         .IsRequired()
@@ -1101,7 +1021,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 1,
                             CoSan = true,
                             MaSach = "S001",
-                            NgayNhap = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A1-01"
                         },
@@ -1110,7 +1029,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 2,
                             CoSan = true,
                             MaSach = "S001",
-                            NgayNhap = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A1-02"
                         },
@@ -1119,7 +1037,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 3,
                             CoSan = true,
                             MaSach = "S001",
-                            NgayNhap = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A1-03"
                         },
@@ -1128,7 +1045,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 4,
                             CoSan = true,
                             MaSach = "S001",
-                            NgayNhap = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A1-04"
                         },
@@ -1137,7 +1053,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 5,
                             CoSan = true,
                             MaSach = "S001",
-                            NgayNhap = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A1-05"
                         },
@@ -1146,7 +1061,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 6,
                             CoSan = true,
                             MaSach = "S002",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A2-01"
                         },
@@ -1155,7 +1069,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 7,
                             CoSan = true,
                             MaSach = "S002",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A2-02"
                         },
@@ -1164,7 +1077,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 8,
                             CoSan = true,
                             MaSach = "S002",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A2-03"
                         },
@@ -1173,7 +1085,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 9,
                             CoSan = true,
                             MaSach = "S002",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A2-04"
                         },
@@ -1182,7 +1093,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 10,
                             CoSan = true,
                             MaSach = "S003",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A3-01"
                         },
@@ -1191,7 +1101,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 11,
                             CoSan = true,
                             MaSach = "S003",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A3-02"
                         },
@@ -1200,7 +1109,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 12,
                             CoSan = true,
                             MaSach = "S003",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A3-03"
                         },
@@ -1209,7 +1117,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 13,
                             CoSan = true,
                             MaSach = "S003",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A3-04"
                         },
@@ -1218,7 +1125,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 14,
                             CoSan = true,
                             MaSach = "S003",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A3-05"
                         },
@@ -1227,7 +1133,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 15,
                             CoSan = true,
                             MaSach = "S003",
-                            NgayNhap = new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A3-06"
                         },
@@ -1236,7 +1141,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 16,
                             CoSan = true,
                             MaSach = "S004",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A4-01"
                         },
@@ -1245,7 +1149,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 17,
                             CoSan = true,
                             MaSach = "S004",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A4-02"
                         },
@@ -1254,7 +1157,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 18,
                             CoSan = true,
                             MaSach = "S004",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A4-03"
                         },
@@ -1263,7 +1165,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 19,
                             CoSan = true,
                             MaSach = "S005",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A5-01"
                         },
@@ -1272,7 +1173,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 20,
                             CoSan = true,
                             MaSach = "S005",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A5-02"
                         },
@@ -1281,7 +1181,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 21,
                             CoSan = true,
                             MaSach = "S005",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A5-03"
                         },
@@ -1290,7 +1189,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 22,
                             CoSan = true,
                             MaSach = "S005",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A5-04"
                         },
@@ -1299,7 +1197,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 23,
                             CoSan = true,
                             MaSach = "S005",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A5-05"
                         },
@@ -1308,7 +1205,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 24,
                             CoSan = true,
                             MaSach = "S005",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A5-06"
                         },
@@ -1317,7 +1213,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 25,
                             CoSan = true,
                             MaSach = "S005",
-                            NgayNhap = new DateTime(2025, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "A5-07"
                         },
@@ -1326,7 +1221,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 26,
                             CoSan = true,
                             MaSach = "S006",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B1-01"
                         },
@@ -1335,7 +1229,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 27,
                             CoSan = true,
                             MaSach = "S006",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B1-02"
                         },
@@ -1344,7 +1237,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 28,
                             CoSan = true,
                             MaSach = "S006",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B1-03"
                         },
@@ -1353,7 +1245,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 29,
                             CoSan = true,
                             MaSach = "S006",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B1-04"
                         },
@@ -1362,7 +1253,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 30,
                             CoSan = true,
                             MaSach = "S007",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B2-01"
                         },
@@ -1371,7 +1261,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 31,
                             CoSan = true,
                             MaSach = "S007",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B2-02"
                         },
@@ -1380,7 +1269,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 32,
                             CoSan = true,
                             MaSach = "S007",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B2-03"
                         },
@@ -1389,7 +1277,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 33,
                             CoSan = true,
                             MaSach = "S007",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B2-04"
                         },
@@ -1398,7 +1285,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 34,
                             CoSan = true,
                             MaSach = "S007",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B2-05"
                         },
@@ -1407,7 +1293,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 35,
                             CoSan = true,
                             MaSach = "S007",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B2-06"
                         },
@@ -1416,7 +1301,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 36,
                             CoSan = true,
                             MaSach = "S008",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B3-01"
                         },
@@ -1425,7 +1309,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 37,
                             CoSan = true,
                             MaSach = "S008",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B3-02"
                         },
@@ -1434,7 +1317,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 38,
                             CoSan = true,
                             MaSach = "S008",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B3-03"
                         },
@@ -1443,7 +1325,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 39,
                             CoSan = true,
                             MaSach = "S008",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B3-04"
                         },
@@ -1452,7 +1333,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 40,
                             CoSan = true,
                             MaSach = "S008",
-                            NgayNhap = new DateTime(2025, 6, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B3-05"
                         },
@@ -1461,7 +1341,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 41,
                             CoSan = true,
                             MaSach = "S009",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B4-01"
                         },
@@ -1470,7 +1349,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 42,
                             CoSan = true,
                             MaSach = "S009",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B4-02"
                         },
@@ -1479,7 +1357,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 43,
                             CoSan = true,
                             MaSach = "S009",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B4-03"
                         },
@@ -1488,7 +1365,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 44,
                             CoSan = true,
                             MaSach = "S009",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B4-04"
                         },
@@ -1497,7 +1373,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 45,
                             CoSan = true,
                             MaSach = "S010",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B5-01"
                         },
@@ -1506,7 +1381,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 46,
                             CoSan = true,
                             MaSach = "S010",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B5-02"
                         },
@@ -1515,7 +1389,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 47,
                             CoSan = true,
                             MaSach = "S010",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B5-03"
                         },
@@ -1524,7 +1397,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 48,
                             CoSan = true,
                             MaSach = "S010",
-                            NgayNhap = new DateTime(2025, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "B5-04"
                         },
@@ -1533,7 +1405,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 49,
                             CoSan = true,
                             MaSach = "S011",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C1-01"
                         },
@@ -1542,7 +1413,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 50,
                             CoSan = true,
                             MaSach = "S011",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C1-02"
                         },
@@ -1551,7 +1421,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 51,
                             CoSan = true,
                             MaSach = "S011",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C1-03"
                         },
@@ -1560,7 +1429,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 52,
                             CoSan = true,
                             MaSach = "S011",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C1-04"
                         },
@@ -1569,7 +1437,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 53,
                             CoSan = true,
                             MaSach = "S011",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C1-05"
                         },
@@ -1578,7 +1445,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 54,
                             CoSan = true,
                             MaSach = "S011",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C1-06"
                         },
@@ -1587,7 +1453,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 55,
                             CoSan = true,
                             MaSach = "S012",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C2-01"
                         },
@@ -1596,7 +1461,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 56,
                             CoSan = true,
                             MaSach = "S012",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C2-02"
                         },
@@ -1605,7 +1469,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 57,
                             CoSan = true,
                             MaSach = "S012",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C2-03"
                         },
@@ -1614,7 +1477,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 58,
                             CoSan = true,
                             MaSach = "S012",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C2-04"
                         },
@@ -1623,7 +1485,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 59,
                             CoSan = true,
                             MaSach = "S012",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C2-05"
                         },
@@ -1632,7 +1493,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 60,
                             CoSan = true,
                             MaSach = "S013",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C3-01"
                         },
@@ -1641,7 +1501,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 61,
                             CoSan = true,
                             MaSach = "S013",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C3-02"
                         },
@@ -1650,7 +1509,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 62,
                             CoSan = true,
                             MaSach = "S013",
-                            NgayNhap = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C3-03"
                         },
@@ -1659,7 +1517,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 63,
                             CoSan = true,
                             MaSach = "S014",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C4-01"
                         },
@@ -1668,7 +1525,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 64,
                             CoSan = true,
                             MaSach = "S014",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C4-02"
                         },
@@ -1677,7 +1533,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 65,
                             CoSan = true,
                             MaSach = "S014",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C4-03"
                         },
@@ -1686,7 +1541,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 66,
                             CoSan = true,
                             MaSach = "S014",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C4-04"
                         },
@@ -1695,7 +1549,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 67,
                             CoSan = true,
                             MaSach = "S014",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C4-05"
                         },
@@ -1704,7 +1557,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 68,
                             CoSan = true,
                             MaSach = "S015",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C5-01"
                         },
@@ -1713,7 +1565,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 69,
                             CoSan = true,
                             MaSach = "S015",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C5-02"
                         },
@@ -1722,7 +1573,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 70,
                             CoSan = true,
                             MaSach = "S015",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C5-03"
                         },
@@ -1731,7 +1581,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 71,
                             CoSan = true,
                             MaSach = "S015",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "C5-04"
                         },
@@ -1740,7 +1589,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 72,
                             CoSan = true,
                             MaSach = "S016",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D1-01"
                         },
@@ -1749,7 +1597,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 73,
                             CoSan = true,
                             MaSach = "S016",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D1-02"
                         },
@@ -1758,7 +1605,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 74,
                             CoSan = true,
                             MaSach = "S016",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D1-03"
                         },
@@ -1767,7 +1613,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 75,
                             CoSan = true,
                             MaSach = "S016",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D1-04"
                         },
@@ -1776,7 +1621,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 76,
                             CoSan = true,
                             MaSach = "S016",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D1-05"
                         },
@@ -1785,7 +1629,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 77,
                             CoSan = true,
                             MaSach = "S016",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D1-06"
                         },
@@ -1794,7 +1637,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 78,
                             CoSan = true,
                             MaSach = "S016",
-                            NgayNhap = new DateTime(2025, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D1-07"
                         },
@@ -1803,7 +1645,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 79,
                             CoSan = true,
                             MaSach = "S017",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D2-01"
                         },
@@ -1812,7 +1653,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 80,
                             CoSan = true,
                             MaSach = "S017",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D2-02"
                         },
@@ -1821,7 +1661,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 81,
                             CoSan = true,
                             MaSach = "S017",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D2-03"
                         },
@@ -1830,7 +1669,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 82,
                             CoSan = true,
                             MaSach = "S017",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D2-04"
                         },
@@ -1839,7 +1677,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 83,
                             CoSan = true,
                             MaSach = "S017",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D2-05"
                         },
@@ -1848,7 +1685,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 84,
                             CoSan = true,
                             MaSach = "S017",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D2-06"
                         },
@@ -1857,7 +1693,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 85,
                             CoSan = true,
                             MaSach = "S018",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D3-01"
                         },
@@ -1866,7 +1701,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 86,
                             CoSan = true,
                             MaSach = "S018",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D3-02"
                         },
@@ -1875,7 +1709,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 87,
                             CoSan = true,
                             MaSach = "S018",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D3-03"
                         },
@@ -1884,7 +1717,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 88,
                             CoSan = true,
                             MaSach = "S019",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D4-01"
                         },
@@ -1893,7 +1725,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 89,
                             CoSan = true,
                             MaSach = "S019",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D4-02"
                         },
@@ -1902,7 +1733,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 90,
                             CoSan = true,
                             MaSach = "S019",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D4-03"
                         },
@@ -1911,7 +1741,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 91,
                             CoSan = true,
                             MaSach = "S019",
-                            NgayNhap = new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D4-04"
                         },
@@ -1920,7 +1749,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 92,
                             CoSan = true,
                             MaSach = "S020",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D5-01"
                         },
@@ -1929,7 +1757,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 93,
                             CoSan = true,
                             MaSach = "S020",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D5-02"
                         },
@@ -1938,7 +1765,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 94,
                             CoSan = true,
                             MaSach = "S020",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "D5-03"
                         },
@@ -1947,7 +1773,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 95,
                             CoSan = true,
                             MaSach = "S021",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E1-01"
                         },
@@ -1956,7 +1781,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 96,
                             CoSan = true,
                             MaSach = "S021",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E1-02"
                         },
@@ -1965,7 +1789,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 97,
                             CoSan = true,
                             MaSach = "S021",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E1-03"
                         },
@@ -1974,7 +1797,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 98,
                             CoSan = true,
                             MaSach = "S021",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E1-04"
                         },
@@ -1983,7 +1805,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 99,
                             CoSan = true,
                             MaSach = "S021",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E1-05"
                         },
@@ -1992,7 +1813,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 100,
                             CoSan = true,
                             MaSach = "S022",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E2-01"
                         },
@@ -2001,7 +1821,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 101,
                             CoSan = true,
                             MaSach = "S022",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E2-02"
                         },
@@ -2010,7 +1829,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 102,
                             CoSan = true,
                             MaSach = "S022",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E2-03"
                         },
@@ -2019,7 +1837,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 103,
                             CoSan = true,
                             MaSach = "S022",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E2-04"
                         },
@@ -2028,7 +1845,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 104,
                             CoSan = true,
                             MaSach = "S022",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E2-05"
                         },
@@ -2037,7 +1853,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 105,
                             CoSan = true,
                             MaSach = "S022",
-                            NgayNhap = new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E2-06"
                         },
@@ -2046,7 +1861,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 106,
                             CoSan = true,
                             MaSach = "S023",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E3-01"
                         },
@@ -2055,7 +1869,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 107,
                             CoSan = true,
                             MaSach = "S023",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E3-02"
                         },
@@ -2064,7 +1877,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 108,
                             CoSan = true,
                             MaSach = "S023",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E3-03"
                         },
@@ -2073,7 +1885,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 109,
                             CoSan = true,
                             MaSach = "S023",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E3-04"
                         },
@@ -2082,7 +1893,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 110,
                             CoSan = true,
                             MaSach = "S024",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E4-01"
                         },
@@ -2091,7 +1901,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 111,
                             CoSan = true,
                             MaSach = "S024",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E4-02"
                         },
@@ -2100,7 +1909,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 112,
                             CoSan = true,
                             MaSach = "S024",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E4-03"
                         },
@@ -2109,7 +1917,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 113,
                             CoSan = true,
                             MaSach = "S024",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E4-04"
                         },
@@ -2118,7 +1925,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 114,
                             CoSan = true,
                             MaSach = "S024",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E4-05"
                         },
@@ -2127,7 +1933,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 115,
                             CoSan = true,
                             MaSach = "S024",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E4-06"
                         },
@@ -2136,7 +1941,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 116,
                             CoSan = true,
                             MaSach = "S024",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E4-07"
                         },
@@ -2145,7 +1949,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 117,
                             CoSan = true,
                             MaSach = "S025",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E5-01"
                         },
@@ -2154,7 +1957,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 118,
                             CoSan = true,
                             MaSach = "S025",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E5-02"
                         },
@@ -2163,7 +1965,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 119,
                             CoSan = true,
                             MaSach = "S025",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E5-03"
                         },
@@ -2172,7 +1973,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 120,
                             CoSan = true,
                             MaSach = "S025",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E5-04"
                         },
@@ -2181,7 +1981,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 121,
                             CoSan = true,
                             MaSach = "S025",
-                            NgayNhap = new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "E5-05"
                         },
@@ -2190,7 +1989,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 122,
                             CoSan = true,
                             MaSach = "S026",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F1-01"
                         },
@@ -2199,7 +1997,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 123,
                             CoSan = true,
                             MaSach = "S026",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F1-02"
                         },
@@ -2208,7 +2005,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 124,
                             CoSan = true,
                             MaSach = "S026",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F1-03"
                         },
@@ -2217,7 +2013,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 125,
                             CoSan = true,
                             MaSach = "S027",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F2-01"
                         },
@@ -2226,7 +2021,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 126,
                             CoSan = true,
                             MaSach = "S027",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F2-02"
                         },
@@ -2235,7 +2029,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 127,
                             CoSan = true,
                             MaSach = "S027",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F2-03"
                         },
@@ -2244,7 +2037,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 128,
                             CoSan = true,
                             MaSach = "S027",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F2-04"
                         },
@@ -2253,7 +2045,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 129,
                             CoSan = true,
                             MaSach = "S028",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F3-01"
                         },
@@ -2262,7 +2053,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 130,
                             CoSan = true,
                             MaSach = "S028",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F3-02"
                         },
@@ -2271,7 +2061,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 131,
                             CoSan = true,
                             MaSach = "S028",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F3-03"
                         },
@@ -2280,7 +2069,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 132,
                             CoSan = true,
                             MaSach = "S028",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F3-04"
                         },
@@ -2289,7 +2077,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 133,
                             CoSan = true,
                             MaSach = "S028",
-                            NgayNhap = new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F3-05"
                         },
@@ -2298,7 +2085,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 134,
                             CoSan = true,
                             MaSach = "S029",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F4-01"
                         },
@@ -2307,7 +2093,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 135,
                             CoSan = true,
                             MaSach = "S029",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F4-02"
                         },
@@ -2316,7 +2101,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 136,
                             CoSan = true,
                             MaSach = "S029",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F4-03"
                         },
@@ -2325,7 +2109,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 137,
                             CoSan = true,
                             MaSach = "S029",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F4-04"
                         },
@@ -2334,7 +2117,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 138,
                             CoSan = true,
                             MaSach = "S030",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F5-01"
                         },
@@ -2343,7 +2125,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 139,
                             CoSan = true,
                             MaSach = "S030",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F5-02"
                         },
@@ -2352,7 +2133,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 140,
                             CoSan = true,
                             MaSach = "S030",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F5-03"
                         },
@@ -2361,7 +2141,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 141,
                             CoSan = true,
                             MaSach = "S030",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F5-04"
                         },
@@ -2370,7 +2149,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 142,
                             CoSan = true,
                             MaSach = "S030",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F5-05"
                         },
@@ -2379,7 +2157,6 @@ namespace Quanlythuvien.Migrations
                             QuyenSachId = 143,
                             CoSan = true,
                             MaSach = "S030",
-                            NgayNhap = new DateTime(2025, 6, 21, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TinhTrang = "Mới",
                             ViTriKe = "F5-06"
                         });
@@ -2817,12 +2594,6 @@ namespace Quanlythuvien.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Quanlythuvien.Models.PhieuMuons.PhieuMuon", "PhieuMuon")
-                        .WithOne("PhieuTra")
-                        .HasForeignKey("Quanlythuvien.Models.PhieuTras.PhieuTra", "PhieuTraId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Quanlythuvien.Models.Sachs.QuyenSach", "QuyenSach")
                         .WithMany()
                         .HasForeignKey("QuyenSachId")
@@ -2830,8 +2601,6 @@ namespace Quanlythuvien.Migrations
                         .IsRequired();
 
                     b.Navigation("DocGia");
-
-                    b.Navigation("PhieuMuon");
 
                     b.Navigation("QuyenSach");
                 });
@@ -2851,11 +2620,6 @@ namespace Quanlythuvien.Migrations
                 {
                     b.Navigation("PhieuMuon");
 
-                    b.Navigation("PhieuTra");
-                });
-
-            modelBuilder.Entity("Quanlythuvien.Models.PhieuMuons.PhieuMuon", b =>
-                {
                     b.Navigation("PhieuTra");
                 });
 

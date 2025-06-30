@@ -29,7 +29,6 @@ namespace Quanlythuvien.Models.Sachs
                 qs.MaSach = quyenSach.MaSach;
                 qs.TinhTrang = quyenSach.TinhTrang;
                 qs.ViTriKe = quyenSach.ViTriKe;
-                qs.NgayNhap = quyenSach.NgayNhap;
                 qs.CoSan = quyenSach.CoSan;
                 kn.SaveChanges();
             }

@@ -12,13 +12,10 @@ namespace Quanlythuvien.Models.PhieuTras
 {
     internal class PhieuTra
     {
-        [Key, ForeignKey(nameof(PhieuMuon))]
-        public int PhieuTraId { get; set; }
 
+        [Key]
         [Required, StringLength(12, MinimumLength = 3)]
         public string MaPhieuTra { get; set; }
-
-        public PhieuMuon? PhieuMuon { get; set; }
 
         [Required]
         public string MaDocGia { get; set; }

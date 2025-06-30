@@ -26,9 +26,6 @@ namespace Quanlythuvien.Models.Sachs
         [StringLength(15)]
         public string ViTriKe { get; set; }
 
-        [DataType(DataType.Date)]
-        public DateTime NgayNhap { get; set; }
-
         public bool CoSan { get; set; } = true;
     }
 }

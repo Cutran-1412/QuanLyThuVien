@@ -21,10 +21,9 @@ namespace Quanlythuvien.Models.PhieuMuons
 
         public void Update_PhieuMuon(PhieuMuon pm)
         {
-            var muon = kn.PhieuMuons.Find(pm.PhieuMuonId);
+            var muon = kn.PhieuMuons.Find(pm.MaPhieuMuon);
             if (muon != null)
             {
-                muon.MaPhieuMuon = pm.MaPhieuMuon;
                 muon.MaDocGia = pm.MaDocGia;
                 muon.QuyenSachId = pm.QuyenSachId;
                 muon.NgayMuon = pm.NgayMuon;
@@ -34,9 +33,9 @@ namespace Quanlythuvien.Models.PhieuMuons
             }
         }
 
-        public void Delete_PhieuMuon(int id)
+        public void Delete_PhieuMuon(string maphieumuon)
         {
-            var muon = kn.PhieuMuons.Find(id);
+            var muon = kn.PhieuMuons.Find(maphieumuon);
             if (muon != null)
             {
                 kn.PhieuMuons.Remove(muon);

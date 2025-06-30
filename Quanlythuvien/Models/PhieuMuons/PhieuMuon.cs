@@ -13,8 +13,6 @@ namespace Quanlythuvien.Models.PhieuMuons
     internal class PhieuMuon
     {
         [Key]
-        public int PhieuMuonId { get; set; }
-
         [Required, StringLength(12, MinimumLength = 3)]
         public string MaPhieuMuon { get; set; }
 
@@ -37,7 +35,5 @@ namespace Quanlythuvien.Models.PhieuMuons
 
         [StringLength(40)]
         public string TrangThai { get; set; } = "Đang mượn";
-
-        public PhieuTra? PhieuTra { get; set; }
     }
 }

@@ -23,10 +23,9 @@ namespace Quanlythuvien.Models.PhieuTras
 
         public void Update_PhieuTra(PhieuTra pt)
         {
-            var tra = kn.PhieuTras.Find(pt.PhieuTraId);
+            var tra = kn.PhieuTras.Find(pt.MaPhieuTra);
             if (tra != null)
             {
-                tra.MaPhieuTra = pt.MaPhieuTra;
                 tra.MaDocGia = pt.MaDocGia;
                 tra.QuyenSachId = pt.QuyenSachId;
                 tra.NgayTra = pt.NgayTra;
@@ -37,9 +36,9 @@ namespace Quanlythuvien.Models.PhieuTras
             }
         }
 
-        public void Delete_PhieuTra(int id)
+        public void Delete_PhieuTra(string maphieutra)
         {
-            var tra = kn.PhieuTras.Find(id);
+            var tra = kn.PhieuTras.Find(maphieutra);
             if (tra != null)
             {
                 kn.PhieuTras.Remove(tra);
