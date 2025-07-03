@@ -47,7 +47,7 @@ namespace Quanlythuvien.Views
             }
 
         }
-     
+
 
         private void cboPhieuMuon_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -56,24 +56,24 @@ namespace Quanlythuvien.Views
         }
         private void LoadSach(string maPhieuMuon)
         {
-            using(DataContext context = new DataContext())
+            using (DataContext context = new DataContext())
             {
                 PhieuMuon pm = context.PhieuMuons
                     .Include(ph => ph.ChiTietPhieuMuons)
-                    .ThenInclude(ct =>ct.Sach)
+                    .ThenInclude(ct => ct.Sach)
                     .FirstOrDefault(pm => pm.MaPhieuMuon.Equals(maPhieuMuon));
-                
-                if(pm != null)
+
+                if (pm != null)
                 {
-                    List<Sach> sachs  = new List<Sach>();
-                    foreach(ChiTietPhieuMuon ct  in pm.ChiTietPhieuMuons)
+                    List<Sach> sachs = new List<Sach>();
+                    foreach (ChiTietPhieuMuon ct in pm.ChiTietPhieuMuons)
                     {
                         sachs.Add(ct.Sach);
                     }
-                  
+
                     this.dgvSach.DataSource = sachs;
                 }
-               
+
             }
         }
     }

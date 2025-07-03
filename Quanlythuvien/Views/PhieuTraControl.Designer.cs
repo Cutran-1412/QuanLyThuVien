@@ -45,7 +45,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(333, 32);
+            label1.Location = new Point(336, 11);
             label1.Name = "label1";
             label1.Size = new Size(78, 20);
             label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(180, 89);
+            label2.Location = new Point(183, 54);
             label2.Name = "label2";
             label2.Size = new Size(93, 20);
             label2.TabIndex = 1;
@@ -63,7 +63,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(180, 161);
+            label3.Location = new Point(183, 126);
             label3.Name = "label3";
             label3.Size = new Size(66, 20);
             label3.TabIndex = 3;
@@ -72,7 +72,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(321, 195);
+            label4.Location = new Point(336, 160);
             label4.Name = "label4";
             label4.Size = new Size(174, 20);
             label4.TabIndex = 4;
@@ -81,11 +81,11 @@
             // dgvSach
             // 
             dgvSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSach.Location = new Point(85, 218);
+            dgvSach.Location = new Point(85, 183);
             dgvSach.Name = "dgvSach";
             dgvSach.RowHeadersWidth = 51;
             dgvSach.RowTemplate.Height = 29;
-            dgvSach.Size = new Size(641, 115);
+            dgvSach.Size = new Size(641, 150);
             dgvSach.TabIndex = 5;
             // 
             // button1
@@ -110,7 +110,7 @@
             // cboPhieuMuon
             // 
             cboPhieuMuon.FormattingEnabled = true;
-            cboPhieuMuon.Location = new Point(333, 120);
+            cboPhieuMuon.Location = new Point(336, 85);
             cboPhieuMuon.Name = "cboPhieuMuon";
             cboPhieuMuon.Size = new Size(239, 28);
             cboPhieuMuon.TabIndex = 9;
@@ -119,7 +119,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(180, 123);
+            label5.Location = new Point(183, 88);
             label5.Name = "label5";
             label5.Size = new Size(127, 20);
             label5.TabIndex = 8;
@@ -127,14 +127,14 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(333, 154);
+            dateTimePicker1.Location = new Point(336, 119);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(250, 27);
             dateTimePicker1.TabIndex = 10;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(333, 89);
+            textBox1.Location = new Point(336, 54);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(239, 27);
             textBox1.TabIndex = 11;

@@ -16,11 +16,12 @@ namespace Quanlythuvien.Views
     public partial class PhieuMuonForm : Form
     {
         private PhieuMuon phieuMuon = new PhieuMuon();
-
+        int cnt = 0;
         public PhieuMuonForm()
         {
             InitializeComponent();
             this.SinhMaPhieu();
+            
 
         }
         private void SinhMaPhieu()
@@ -30,6 +31,8 @@ namespace Quanlythuvien.Views
                 int cnt = context.PhieuMuons.Count() + 1;
                 this.phieuMuon.MaPhieuMuon = "PM" + cnt;
                 this.txtMaPhieu.Text = this.phieuMuon.MaPhieuMuon;
+                
+
             }
         }
         private void phieumuon_Load(object sender, EventArgs e)
@@ -41,17 +44,21 @@ namespace Quanlythuvien.Views
             using (DataContext context = new DataContext())
             {
                 this.dgvSach.DataSource = context.Sachs.ToList();
+                cnt = context.ChiTietPhieuMuons.Count();
             }
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
+          
             using (DataContext context = new DataContext())
             {
                 int rowSelected = this.dgvSach.CurrentRow.Index;
                 string maSach = this.dgvSach.Rows[rowSelected].Cells[0].Value.ToString();
-                ChiTietPhieuMuon ct = new ChiTietPhieuMuon { Id = "ct1", MaSach = maSach, PhieuMuonId = this.phieuMuon.MaPhieuMuon, NgayTra = null };
+                ChiTietPhieuMuon ct = new ChiTietPhieuMuon { Id ="CT"+(++cnt), MaSach = maSach, PhieuMuonId = this.phieuMuon.MaPhieuMuon, NgayTra = null };
+                context.ChiTietPhieuMuons.Add(ct);
                 this.phieuMuon.ChiTietPhieuMuons.Add(ct);
+               
             }
 
         }
@@ -62,6 +69,7 @@ namespace Quanlythuvien.Views
             {
                 this.phieuMuon.MaDocGia = this.txtMaDocGia.Text;
                 this.phieuMuon.NgayMuon = this.dtpNgayMuon.Value;
+
                 context.PhieuMuons.Add(this.phieuMuon);
                 context.SaveChanges();
             }
