@@ -9,27 +9,31 @@ namespace Quanlythuvien.Models.Admins
     internal class AdminDAO
     {
         private readonly DataContext kn = new DataContext();
-        public List<Admin> Get_Admin()
+        public List<Admin> Get_All()
         {
             return kn.Admins.ToList();
         }
-        public void Insert_Admin(Admin admin)
+        public Admin Get_Admin(Admin admin)
+        {
+            return kn.Admins.Where(s => s.Username == admin.Username && s.Password == admin.Password).FirstOrDefault();
+        }
+        public void Insert(Admin admin)
         {
             kn.Admins!.Add(admin);
             kn.SaveChanges();
         }
-        public void Update_Admin(Admin adm)
+        public void Update(Admin adm)
         {
 
-            var ad = kn.Admins.Find(adm.id);
+            var ad = kn.Admins.Find(adm.Id);
             if (ad != null)
             {
-                ad.username = adm.username;
-                ad.password = adm.password;
+                ad.Username = adm.Username;
+                ad.Password = adm.Password;
                 kn.SaveChanges();
             }
         }
-        public void Delete_Admin(int ma)
+        public void Delete(int ma)
         {
             var ad = kn.Admins.Find(ma);
             if (ad != null)
@@ -38,9 +42,9 @@ namespace Quanlythuvien.Models.Admins
                 kn.SaveChanges();
             }
         }
-        public List<Admin> Search_User_Admin(string tim)
+        public List<Admin> Search(string tim)
         {
-            List<Admin> ds = kn.Admins.Where(s => s.username == tim).ToList();
+            List<Admin> ds = kn.Admins.Where(s => s.Username == tim).ToList();
             return ds;
         }
     }

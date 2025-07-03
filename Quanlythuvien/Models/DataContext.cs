@@ -32,16 +32,16 @@ namespace Quanlythuvien.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Admin>().HasData(
-                new Admin { id = 1, username = "Admin1", password = "2004"},
-                new Admin { id = 2, username = "Admin2", password = "2004" },
-                new Admin { id = 3, username = "Admin3", password = "2004" },
-                new Admin { id = 4, username = "Admin4", password = "2004" },
-                new Admin { id = 5, username = "Admin5", password = "2004" },
-                new Admin { id = 6, username = "Admin6", password = "2004" },
-                new Admin { id = 7, username = "Admin7", password = "2004" },
-                new Admin { id = 8, username = "Admin8", password = "2004" },
-                new Admin { id = 9, username = "Admin9", password = "2004" },
-                new Admin { id = 10, username = "Admin110", password = "2004" }
+                new Admin { Id = 1, Username = "Admin1", Password = "2004"},
+                new Admin { Id = 2, Username = "Admin2", Password = "2004" },
+                new Admin { Id = 3, Username = "Admin3", Password = "2004" },
+                new Admin { Id = 4, Username = "Admin4", Password = "2004" },
+                new Admin { Id = 5, Username = "Admin5", Password = "2004" },
+                new Admin { Id = 6, Username = "Admin6", Password = "2004" },
+                new Admin { Id = 7, Username = "Admin7", Password = "2004" },
+                new Admin { Id = 8, Username = "Admin8", Password = "2004" },
+                new Admin { Id = 9, Username = "Admin9", Password = "2004" },
+                new Admin { Id = 10, Username = "Admin110", Password = "2004" }
             );
             modelBuilder.Entity<DocGia>().HasData(
                 new DocGia { MaDocGia = "DG001", HoTen = "Nguyễn Văn An", GioiTinh = "Nam", NgaySinh = new DateTime(1995, 3, 15), SoDienThoai = "0912345678", Email = "nguyenvana@example.com", DiaChi = "12 Tràng Tiền, Hà Nội", NgayDangKy = new DateTime(2025, 1, 5), SoSachMuonToiDa = 5, TienDangKy = 50000m },
