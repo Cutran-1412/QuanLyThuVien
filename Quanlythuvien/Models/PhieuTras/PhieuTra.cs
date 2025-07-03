@@ -12,29 +12,18 @@ namespace Quanlythuvien.Models.PhieuTras
 {
     internal class PhieuTra
     {
-
         [Key]
         [Required, StringLength(12, MinimumLength = 3)]
         public string MaPhieuTra { get; set; }
 
-        [Required]
-        public string MaDocGia { get; set; }
-
-        [ForeignKey(nameof(MaDocGia))]
-        public DocGia? DocGia { get; set; }
-
-        [Required] public int QuyenSachId { get; set; }
-        public QuyenSach? QuyenSach { get; set; }
-
+        [ForeignKey(nameof(PhieuMuon))]
+        public string MaPhieuMuon { get; set; }
+        public PhieuMuon PhieuMuon { get; set; }
         [Required, DataType(DataType.Date)]
         public DateTime NgayTra { get; set; }
 
-        [Range(0, 1_000_000)] public decimal TienPhat { get; set; }
-
-        [Required, StringLength(30)]
-        public string TinhTrangSauTra { get; set; }
-
-        [StringLength(200)] public string GhiChu { get; set; }
+        [Range(0, double.MaxValue)] 
+        public decimal TienPhat { get; set; }
 
     }
 }

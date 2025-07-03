@@ -4,5 +4,11 @@
     <Compile Update="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\phieumuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\PhieuTraControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

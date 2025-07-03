@@ -17,11 +17,7 @@ namespace Quanlythuvien.Models.PhieuMuons
         public string MaPhieuMuon { get; set; }
 
         [Required(ErrorMessage = "Phải chọn quyển sách muốn mượn")]
-        public int QuyenSachId { get; set; }
 
-        [ForeignKey(nameof(QuyenSachId))]
-        public QuyenSach? QuyenSach { get; set; }
-        [Required]
         public string MaDocGia { get; set; }
 
         [ForeignKey(nameof(MaDocGia))]
@@ -29,11 +25,7 @@ namespace Quanlythuvien.Models.PhieuMuons
 
         [Required, DataType(DataType.Date)]
         public DateTime NgayMuon { get; set; }
-
-        [Required, DataType(DataType.Date)]
-        public DateTime NgayTra { get; set; }
-
-        [StringLength(40)]
-        public string TrangThai { get; set; } = "Đang mượn";
+        public List<ChiTietPhieuMuon> ChiTietPhieuMuons { get; set; } = new List<ChiTietPhieuMuon>();
+        public List<PhieuTra> PhieuTras { get; set; }
     }
 }

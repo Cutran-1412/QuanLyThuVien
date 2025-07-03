@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Quanlythuvien.Models;
 
@@ -11,9 +12,10 @@ using Quanlythuvien.Models;
 namespace Quanlythuvien.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20250703042013_v0")]
+    partial class v0
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -304,7 +306,7 @@ namespace Quanlythuvien.Migrations
 
                     b.HasIndex("PhieuMuonId");
 
-                    b.ToTable("ChiTietPhieuMuons");
+                    b.ToTable("ChiTietPhieuMuon");
                 });
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuMuons.PhieuMuon", b =>
@@ -347,6 +349,9 @@ namespace Quanlythuvien.Migrations
                         .HasMaxLength(12)
                         .HasColumnType("nvarchar(12)");
 
+                    b.Property<string>("DocGiaMaDocGia")
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<string>("MaPhieuMuon")
                         .IsRequired()
                         .HasColumnType("nvarchar(12)");
@@ -358,6 +363,8 @@ namespace Quanlythuvien.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("MaPhieuTra");
+
+                    b.HasIndex("DocGiaMaDocGia");
 
                     b.HasIndex("MaPhieuMuon");
 
@@ -817,6 +824,10 @@ namespace Quanlythuvien.Migrations
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuTras.PhieuTra", b =>
                 {
+                    b.HasOne("Quanlythuvien.Models.DocGia", null)
+                        .WithMany("PhieuTra")
+                        .HasForeignKey("DocGiaMaDocGia");
+
                     b.HasOne("Quanlythuvien.Models.PhieuMuons.PhieuMuon", "PhieuMuon")
                         .WithMany("PhieuTras")
                         .HasForeignKey("MaPhieuMuon")
@@ -829,6 +840,8 @@ namespace Quanlythuvien.Migrations
             modelBuilder.Entity("Quanlythuvien.Models.DocGia", b =>
                 {
                     b.Navigation("PhieuMuon");
+
+                    b.Navigation("PhieuTra");
                 });
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuMuons.PhieuMuon", b =>
