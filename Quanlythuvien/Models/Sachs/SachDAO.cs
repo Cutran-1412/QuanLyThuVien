@@ -7,42 +7,29 @@ using Quanlythuvien.Models.Admins;
 
 namespace Quanlythuvien.Models.Sachs
 {
-    internal class SachDAO
+    internal class SachDAO : DAO<Sach>
     {
-        private readonly DataContext kn = new DataContext();
-        public List<Sach> Get_Sach()
+        public override bool Delete(string key)
         {
-            return kn.Sachs.ToList();
+            throw new NotImplementedException();
         }
-        public void Insert_Sach(Sach sach)
+
+        public override int GetCount()
         {
-            kn.Sachs!.Add(sach);
-            kn.SaveChanges();
+            throw new NotImplementedException();
         }
-        public void Update_Sach(Sach sach)
+
+        public override List<Sach> GetData()
         {
-            var S = kn.Sachs.Find(sach.MaSach);
-            if (S != null)
+           using(DataContext context = new DataContext())
             {
-                S.TenSach = sach.TenSach;
-                S.TenTacGia = sach.TenTacGia;
-                S.TheLoai = sach.TheLoai;
-                S.DonGia = sach.DonGia;
-                S.NgayNhap = sach.NgayNhap;
-                S.NamPhatHanh = sach.NamPhatHanh;
-                S.NhaXuatBan = sach.NhaXuatBan;
-                S.SoLuong = sach.SoLuong;
-                kn.SaveChanges();
+                return context.Sachs.ToList();
             }
         }
-        public void Delete_Sach(String ma)
+
+        public override bool Insert(Sach model)
         {
-            var sach = kn.Sachs.Find(ma);
-            if (sach != null)
-            {
-                kn.Sachs.Remove(sach);
-                kn.SaveChanges();
-            }
+            throw new NotImplementedException();
         }
     }
 }

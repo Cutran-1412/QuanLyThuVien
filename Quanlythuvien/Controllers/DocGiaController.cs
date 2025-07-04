@@ -8,13 +8,20 @@ using Quanlythuvien.Models.DocGias;
 
 namespace Quanlythuvien.Controllers
 {
-    internal class DocGiaController
+    internal class DocGiaController : Controller<DocGia>
     {
-        private readonly DocGiaDAO dgdao = new DocGiaDAO();
+        public DocGiaController() {
+            this.dao = new DocGiaDAO();
 
-        public List<DocGia> Get_DocGia()
+        }
+        public override int GetCount()
         {
-            return dgdao.Get_All();
+            throw new NotImplementedException();
+        }
+
+        public override List<DocGia> GetData()
+        {
+            return this.dao.GetData();
         }
     }
 }

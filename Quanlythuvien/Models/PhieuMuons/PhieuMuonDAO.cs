@@ -7,27 +7,43 @@ using Quanlythuvien.Models.PhieuTras;
 
 namespace Quanlythuvien.Models.PhieuMuons
 {
-    internal class PhieuMuonDAO
+    internal class PhieuMuonDAO :DAO<PhieuMuon>
     {
-        private readonly DataContext kn = new DataContext();
-
-        public List<PhieuMuon> Get_PhieuMuon() => kn.PhieuMuons.ToList();
-
-        public void Insert_PhieuMuon(PhieuMuon pm)
+        public override bool Delete(string key)
         {
-            kn.PhieuMuons!.Add(pm);
-            kn.SaveChanges();
+            using (DataContext context = new DataContext())
+            {
+                PhieuMuon temp = context.PhieuMuons.Find(key);
+                if (temp == null) return false;
+                context.PhieuMuons.Remove(temp);
+                context.SaveChanges();
+                return true;    
+            }
         }
 
-
-
-        public void Delete_PhieuMuon(string maphieumuon)
+        public override int GetCount()
         {
-            var muon = kn.PhieuMuons.Find(maphieumuon);
-            if (muon != null)
+            using (DataContext context = new DataContext())
             {
-                kn.PhieuMuons.Remove(muon);
-                kn.SaveChanges();
+                return context.PhieuMuons.Count();
+            }
+        }
+
+        public override List<PhieuMuon> GetData()
+        {
+            using(DataContext context = new DataContext())
+            {
+                return context.PhieuMuons.ToList();
+            } 
+        }
+
+        public override bool Insert(PhieuMuon model)
+        {
+            using (DataContext context = new DataContext())
+            {
+                context.PhieuMuons.Add(model);
+                context.SaveChanges();
+                return true;
             }
         }
     }

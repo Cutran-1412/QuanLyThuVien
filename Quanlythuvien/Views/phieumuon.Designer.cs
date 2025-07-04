@@ -32,20 +32,21 @@
             txtMaPhieu = new TextBox();
             btnAdd = new Button();
             label2 = new Label();
-            txtMaDocGia = new TextBox();
             label3 = new Label();
             dtpNgayMuon = new DateTimePicker();
             label4 = new Label();
             dgvSach = new DataGridView();
             button2 = new Button();
             btnSave = new Button();
+            dgvDocGia = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvSach).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDocGia).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(219, 36);
+            label1.Location = new Point(379, 36);
             label1.Name = "label1";
             label1.Size = new Size(114, 20);
             label1.TabIndex = 0;
@@ -54,14 +55,15 @@
             // txtMaPhieu
             // 
             txtMaPhieu.AcceptsReturn = true;
-            txtMaPhieu.Location = new Point(366, 33);
+            txtMaPhieu.Location = new Point(519, 29);
             txtMaPhieu.Name = "txtMaPhieu";
-            txtMaPhieu.Size = new Size(125, 27);
+            txtMaPhieu.ReadOnly = true;
+            txtMaPhieu.Size = new Size(250, 27);
             txtMaPhieu.TabIndex = 1;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(239, 332);
+            btnAdd.Location = new Point(782, 357);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(94, 29);
             btnAdd.TabIndex = 2;
@@ -72,23 +74,16 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(219, 75);
+            label2.Location = new Point(281, 164);
             label2.Name = "label2";
-            label2.Size = new Size(84, 20);
+            label2.Size = new Size(61, 20);
             label2.TabIndex = 3;
-            label2.Text = "Mã độc giả";
-            // 
-            // txtMaDocGia
-            // 
-            txtMaDocGia.Location = new Point(366, 75);
-            txtMaDocGia.Name = "txtMaDocGia";
-            txtMaDocGia.Size = new Size(125, 27);
-            txtMaDocGia.TabIndex = 4;
+            label2.Text = "Độc giả";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(219, 122);
+            label3.Location = new Point(379, 92);
             label3.Name = "label3";
             label3.Size = new Size(87, 20);
             label3.TabIndex = 5;
@@ -96,7 +91,7 @@
             // 
             // dtpNgayMuon
             // 
-            dtpNgayMuon.Location = new Point(366, 117);
+            dtpNgayMuon.Location = new Point(519, 92);
             dtpNgayMuon.Name = "dtpNgayMuon";
             dtpNgayMuon.Size = new Size(250, 27);
             dtpNgayMuon.TabIndex = 6;
@@ -104,7 +99,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(329, 166);
+            label4.Location = new Point(801, 164);
             label4.Name = "label4";
             label4.Size = new Size(119, 20);
             label4.TabIndex = 7;
@@ -113,16 +108,16 @@
             // dgvSach
             // 
             dgvSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSach.Location = new Point(37, 189);
+            dgvSach.Location = new Point(632, 197);
             dgvSach.Name = "dgvSach";
             dgvSach.RowHeadersWidth = 51;
             dgvSach.RowTemplate.Height = 29;
-            dgvSach.Size = new Size(742, 137);
+            dgvSach.Size = new Size(438, 137);
             dgvSach.TabIndex = 8;
             // 
             // button2
             // 
-            button2.Location = new Point(397, 332);
+            button2.Location = new Point(916, 357);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 9;
@@ -131,7 +126,7 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(239, 409);
+            btnSave.Location = new Point(532, 421);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(94, 29);
             btnSave.TabIndex = 10;
@@ -139,18 +134,28 @@
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
+            // dgvDocGia
+            // 
+            dgvDocGia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDocGia.Location = new Point(111, 197);
+            dgvDocGia.Name = "dgvDocGia";
+            dgvDocGia.RowHeadersWidth = 51;
+            dgvDocGia.RowTemplate.Height = 29;
+            dgvDocGia.Size = new Size(438, 137);
+            dgvDocGia.TabIndex = 11;
+            // 
             // PhieuMuonForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1082, 493);
+            Controls.Add(dgvDocGia);
             Controls.Add(btnSave);
             Controls.Add(button2);
             Controls.Add(dgvSach);
             Controls.Add(label4);
             Controls.Add(dtpNgayMuon);
             Controls.Add(label3);
-            Controls.Add(txtMaDocGia);
             Controls.Add(label2);
             Controls.Add(btnAdd);
             Controls.Add(txtMaPhieu);
@@ -159,6 +164,7 @@
             Text = "phieumuon";
             Load += phieumuon_Load;
             ((System.ComponentModel.ISupportInitialize)dgvSach).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDocGia).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,12 +175,12 @@
         private TextBox txtMaPhieu;
         private Button btnAdd;
         private Label label2;
-        private TextBox txtMaDocGia;
         private Label label3;
         private DateTimePicker dtpNgayMuon;
         private Label label4;
         private DataGridView dgvSach;
         private Button button2;
         private Button btnSave;
+        private DataGridView dgvDocGia;
     }
 }

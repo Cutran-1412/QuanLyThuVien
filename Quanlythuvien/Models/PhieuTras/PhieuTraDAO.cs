@@ -7,30 +7,26 @@ using Quanlythuvien.Models.PhieuMuons;
 
 namespace Quanlythuvien.Models.PhieuTras
 {
-    internal class PhieuTraDAO
+    internal class PhieuTraDAO : DAO<PhieuTra>
     {
-        private readonly DataContext kn = new DataContext();
-
-        public List<PhieuTra> Get_PhieuTra()
+        public override bool Delete(string key)
         {
-            return kn.PhieuTras.ToList();
-        }
-        public void Insert_PhieuTra(PhieuTra pt)
-        {
-            kn.PhieuTras!.Add(pt);
-            kn.SaveChanges();
+            throw new NotImplementedException();
         }
 
-   
-
-        public void Delete_PhieuTra(string maphieutra)
+        public override int GetCount()
         {
-            var tra = kn.PhieuTras.Find(maphieutra);
-            if (tra != null)
-            {
-                kn.PhieuTras.Remove(tra);
-                kn.SaveChanges();
-            }
+            throw new NotImplementedException();
+        }
+
+        public override List<PhieuTra> GetData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Insert(PhieuTra model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

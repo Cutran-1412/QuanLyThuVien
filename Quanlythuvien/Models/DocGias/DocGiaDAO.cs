@@ -7,43 +7,30 @@ using System.Threading.Tasks;
 
 namespace Quanlythuvien.Models.DocGias
 {
-    internal class DocGiaDAO
+    internal class DocGiaDAO : DAO<DocGia>
     {
-        private readonly DataContext kn = new DataContext();
-        public List<DocGia> Get_All()
+        public override bool Delete(string key)
         {
-            return kn.DocGias.Select(s=>s).ToList();
+            throw new NotImplementedException();
         }
-        public void Insert_DocGia(DocGia dg)
+
+        public override int GetCount()
         {
-            kn.DocGias!.Add(dg);
-            kn.SaveChanges();
+            throw new NotImplementedException();
         }
-        public void Update_DocGia(DocGia dg)
+
+        public override List<DocGia> GetData()
         {
-            var docgia = kn.DocGias.Find(dg.MaDocGia);
-            if (docgia != null)
-            {   
-                docgia.HoTen = dg.HoTen;
-                docgia.GioiTinh = dg.GioiTinh;
-                docgia.NgaySinh = dg.NgaySinh;
-                docgia.SoDienThoai = dg.SoDienThoai;
-                docgia.Email = dg.Email;
-                docgia.DiaChi = dg.DiaChi;
-                docgia.NgayDangKy = dg.NgayDangKy;
-                docgia.SoSachMuonToiDa = dg.SoSachMuonToiDa;
-                docgia.TienDangKy = dg.TienDangKy;
-                kn.SaveChanges();
-            }
-        }
-        public void Delete_DocGia(String ma)
-        {
-            var dg = kn.DocGias.Find(ma);
-            if (dg != null)
+            using(DataContext context = new DataContext())
             {
-                kn.DocGias.Remove(dg);
-                kn.SaveChanges();
+                return context.DocGias.ToList();
             }
+        }
+
+        public override bool Insert(DocGia model)
+        {
+            throw new NotImplementedException();
         }
     }
+
 }

@@ -1,4 +1,5 @@
-﻿using Quanlythuvien.Models;
+﻿using Quanlythuvien.Controllers;
+using Quanlythuvien.Models;
 using Quanlythuvien.Models.PhieuMuons;
 using System;
 using System.Collections.Generic;
@@ -16,49 +17,45 @@ namespace Quanlythuvien.Views
     public partial class PhieuMuonForm : Form
     {
         private PhieuMuon phieuMuon = new PhieuMuon();
+        private PhieuMuonController phieuMuonctrl = new PhieuMuonController();
+        private SachController sachCtrl = new SachController();
+        private DocGiaController docGiaCtrl = new DocGiaController();
         int cnt = 0;
         public PhieuMuonForm()
         {
             InitializeComponent();
             this.SinhMaPhieu();
-            
-
         }
         private void SinhMaPhieu()
         {
-            using (DataContext context = new DataContext())
-            {
-                int cnt = context.PhieuMuons.Count() + 1;
-                this.phieuMuon.MaPhieuMuon = "PM" + cnt;
-                this.txtMaPhieu.Text = this.phieuMuon.MaPhieuMuon;
-                
-
-            }
+            int cnt = this.phieuMuonctrl.GetCount() + 1;
+            this.phieuMuon.MaPhieuMuon = "PM" + cnt;
+            this.txtMaPhieu.Text = this.phieuMuon.MaPhieuMuon;
         }
         private void phieumuon_Load(object sender, EventArgs e)
         {
             this.LoadSach();
+            this.LoadDocGia();
         }
         private void LoadSach()
         {
-            using (DataContext context = new DataContext())
-            {
-                this.dgvSach.DataSource = context.Sachs.ToList();
-                cnt = context.ChiTietPhieuMuons.Count();
-            }
+            this.dgvSach.DataSource = this.sachCtrl.GetData();
         }
-        
+        private void LoadDocGia()
+        {
+            this.dgvDocGia.DataSource = this.docGiaCtrl.GetData();
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-          
+
             using (DataContext context = new DataContext())
             {
                 int rowSelected = this.dgvSach.CurrentRow.Index;
                 string maSach = this.dgvSach.Rows[rowSelected].Cells[0].Value.ToString();
-                ChiTietPhieuMuon ct = new ChiTietPhieuMuon { Id ="CT"+(++cnt), MaSach = maSach, PhieuMuonId = this.phieuMuon.MaPhieuMuon, NgayTra = null };
+                ChiTietPhieuMuon ct = new ChiTietPhieuMuon { Id = "CT" + (++cnt), MaSach = maSach, PhieuMuonId = this.phieuMuon.MaPhieuMuon, NgayTra = null };
                 context.ChiTietPhieuMuons.Add(ct);
                 this.phieuMuon.ChiTietPhieuMuons.Add(ct);
-               
             }
 
         }
@@ -67,7 +64,6 @@ namespace Quanlythuvien.Views
         {
             using (DataContext context = new DataContext())
             {
-                this.phieuMuon.MaDocGia = this.txtMaDocGia.Text;
                 this.phieuMuon.NgayMuon = this.dtpNgayMuon.Value;
 
                 context.PhieuMuons.Add(this.phieuMuon);

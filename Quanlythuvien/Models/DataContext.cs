@@ -24,8 +24,8 @@ namespace Quanlythuvien.Models
             base.OnConfiguring(optionsBuilder);
             String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=qlthuvien;Integrated Security=True";
             String sqlCuong = "";
-            String sqlChien = "";
-            optionsBuilder.UseSqlServer(sqlcu);
+            String sqlChien = "Data Source=MSI\\SQLSERVER;Initial Catalog=qlthuvien;Integrated Security=True";
+            optionsBuilder.UseSqlServer(sqlChien);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

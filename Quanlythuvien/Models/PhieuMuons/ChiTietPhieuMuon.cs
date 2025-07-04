@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Quanlythuvien.Models.PhieuMuons
 {
-    internal class ChiTietPhieuMuon
+    public class ChiTietPhieuMuon
     {
         public string Id { get; set; }
         public string PhieuMuonId { get; set; }
