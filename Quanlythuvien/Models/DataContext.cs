@@ -22,7 +22,7 @@ namespace Quanlythuvien.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            String sqlcu = "Data Source=MSI\\SQLSERVER;Initial Catalog=qlthuvien;Integrated Security=True";
+            String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=qlthuvien;Integrated Security=True";
             String sqlCuong = "";
             String sqlChien = "";
             optionsBuilder.UseSqlServer(sqlcu);
@@ -31,18 +31,7 @@ namespace Quanlythuvien.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Admin>().HasData(
-                new Admin { id = 1, username = "Admin1", password = "2004" },
-                new Admin { id = 2, username = "Admin2", password = "2004" },
-                new Admin { id = 3, username = "Admin3", password = "2004" },
-                new Admin { id = 4, username = "Admin4", password = "2004" },
-                new Admin { id = 5, username = "Admin5", password = "2004" },
-                new Admin { id = 6, username = "Admin6", password = "2004" },
-                new Admin { id = 7, username = "Admin7", password = "2004" },
-                new Admin { id = 8, username = "Admin8", password = "2004" },
-                new Admin { id = 9, username = "Admin9", password = "2004" },
-                new Admin { id = 10, username = "Admin110", password = "2004" }
-            );
+            
             modelBuilder.Entity<DocGia>().HasData(
                 new DocGia { MaDocGia = "DG001", HoTen = "Nguyễn Văn An", GioiTinh = "Nam", NgaySinh = new DateTime(1995, 3, 15), SoDienThoai = "0912345678", Email = "nguyenvana@example.com", DiaChi = "12 Tràng Tiền, Hà Nội", NgayDangKy = new DateTime(2025, 1, 5), SoSachMuonToiDa = 5, TienDangKy = 50000m },
                 new DocGia { MaDocGia = "DG002", HoTen = "Trần Thị Bình", GioiTinh = "Nữ", NgaySinh = new DateTime(1998, 9, 20), SoDienThoai = "0934567890", Email = "tranthib@example.com", DiaChi = "45 Lê Lợi, TP.HCM", NgayDangKy = new DateTime(2025, 2, 10), SoSachMuonToiDa = 6, TienDangKy = 60000m },

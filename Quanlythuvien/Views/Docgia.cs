@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien.Views
 {
-    public partial class Form1 : Form
+    public partial class Docgia : UserControl
     {
-        public Form1()
+        public Docgia()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.panel1.Controls.Add(new PhieuTraControl());
+
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Quanlythuvien.Models.DocGias
     internal class DocGiaDAO
     {
         private readonly DataContext kn = new DataContext();
-        public List<DocGia> Get_DocGia()
+        public List<DocGia> Get_All()
         {
             return kn.DocGias.Select(s=>s).ToList();
         }
