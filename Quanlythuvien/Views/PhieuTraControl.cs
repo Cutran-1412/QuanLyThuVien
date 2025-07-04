@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Quanlythuvien.Controllers;
 using Quanlythuvien.Models;
 using Quanlythuvien.Models.PhieuMuons;
 using Quanlythuvien.Models.Sachs;
@@ -16,6 +17,8 @@ namespace Quanlythuvien.Views
 {
     public partial class PhieuTraControl : UserControl
     {
+        private PhieuMuonController phieuMuonCtrl = new PhieuMuonController();
+        private PhieuTraController phieuTraCtrl = new PhieuTraController();
         public PhieuTraControl()
         {
             InitializeComponent();
@@ -31,29 +34,6 @@ namespace Quanlythuvien.Views
 
         }
 
-        private void PhieuTraControl_Load(object sender, EventArgs e)
-        {
-            this.LoadPhieuMuon();
-        }
-        private void LoadPhieuMuon()
-        {
-            using (DataContext context = new DataContext())
-            {
-                List<PhieuMuon> pms = context.PhieuMuons.ToList();
-                this.cboPhieuMuon.DataSource = pms;
-                this.cboPhieuMuon.DisplayMember = "MaPhieuMuon";
-                this.cboPhieuMuon.ValueMember = "MaPhieuMuon";
-
-            }
-
-        }
-
-
-        private void cboPhieuMuon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string maPhieuMuon = this.cboPhieuMuon.SelectedValue.ToString();
-            this.LoadSach(maPhieuMuon);
-        }
         private void LoadSach(string maPhieuMuon)
         {
             using (DataContext context = new DataContext())

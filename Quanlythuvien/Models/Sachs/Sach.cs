@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Quanlythuvien.Models.Sachs
 {
-    internal class Sach
+    public class Sach : Model
     {
         [Key]
         [Required(ErrorMessage = "Mã sách không được để trống")]
@@ -47,7 +47,7 @@ namespace Quanlythuvien.Models.Sachs
         public int NamPhatHanh { get; set; }
 
         [StringLength(80)]
-        [DisplayName("Năm xuất bảnsách")]
+        [DisplayName("Năm xuất bản sách")]
         public string NhaXuatBan { get; set; }
         [DisplayName("Số lượng")]
 

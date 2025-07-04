@@ -10,7 +10,7 @@ using Quanlythuvien.Models.PhieuTras;
 
 namespace Quanlythuvien.Models
 {
-    internal class DocGia
+    public class DocGia
     {
         [Key]
         [Required(ErrorMessage = "Mã độc giả không được để trống")]

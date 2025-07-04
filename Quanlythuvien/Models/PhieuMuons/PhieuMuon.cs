@@ -10,7 +10,7 @@ using Quanlythuvien.Models.PhieuTras;
 
 namespace Quanlythuvien.Models.PhieuMuons
 {
-    internal class PhieuMuon
+    public class PhieuMuon : Model    
     {
         [Key]
         [Required, StringLength(12, MinimumLength = 3)]
