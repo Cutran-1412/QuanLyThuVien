@@ -1,0 +1,64 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+
+# Visual Studio Code
+.vscode/
+
+# Windows image cache
+Thumbs.db
+ehthumbs.db
+
+# ASP.NET temp files
+~$
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuget.props
+*.nuget.targets
+
+# Rider IDE
+.idea/
+
+# Visual Studio for Mac
+.vscode/
+.vs/
+
+# Backup & Logs
+*.log
+*.bak
+
+# Publish folder
+publish/
+
+# Auto-generated files
+Generated_Code/
+
+# Local test results
+TestResults/
+
+# Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+# For ClickOnce (if used)
+*.application
+*.manifest
+*.deploy
+
+# Debug files
+*.pdb
+*.mdb
+
+# Crash dumps
+*.dmp
