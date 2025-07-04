@@ -58,6 +58,6 @@ namespace Quanlythuvien.Models
             return tuoi >= 6 && tuoi <= 100;
         }
         public virtual ICollection<PhieuMuon>? PhieuMuon { get; set; }
-        public virtual ICollection<PhieuTra>? PhieuTra { get; set; }
+
     }
 }

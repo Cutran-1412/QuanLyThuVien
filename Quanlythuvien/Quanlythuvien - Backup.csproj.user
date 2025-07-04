@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
@@ -10,6 +11,17 @@
     <Compile Update="Views\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\ucMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Views\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\phieumuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,9 +29,5 @@
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
+>>>>>>> 81b3f7e465375f2cafffd7afdd742813216dd39e
 </Project>

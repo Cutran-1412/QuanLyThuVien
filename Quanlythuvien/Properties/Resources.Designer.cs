@@ -59,15 +59,5 @@ namespace Quanlythuvien.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hinh_nen_chill_78_1024x640 {
-            get {
-                object obj = ResourceManager.GetObject("hinh-nen-chill-78-1024x640", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

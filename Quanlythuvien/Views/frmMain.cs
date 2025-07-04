@@ -22,8 +22,6 @@ namespace Quanlythuvien.Views
         {
             timethoigian.Start();
             timechuyen.Interval = 15;
-            ucMain myPanel = new ucMain();
-            pamain.Controls.Add(myPanel);
         }
 
         private void timethoigian_Tick(object sender, EventArgs e)

@@ -19,19 +19,7 @@ namespace Quanlythuvien.Models.PhieuMuons
             kn.SaveChanges();
         }
 
-        public void Update_PhieuMuon(PhieuMuon pm)
-        {
-            var muon = kn.PhieuMuons.Find(pm.MaPhieuMuon);
-            if (muon != null)
-            {
-                muon.MaDocGia = pm.MaDocGia;
-                muon.QuyenSachId = pm.QuyenSachId;
-                muon.NgayMuon = pm.NgayMuon;
-                muon.NgayTra = pm.NgayTra;
-                muon.TrangThai = pm.TrangThai;
-                kn.SaveChanges();
-            }
-        }
+
 
         public void Delete_PhieuMuon(string maphieumuon)
         {
