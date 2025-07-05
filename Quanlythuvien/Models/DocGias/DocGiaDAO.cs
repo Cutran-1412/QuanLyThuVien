@@ -12,29 +12,31 @@ namespace Quanlythuvien.Models.DocGias
         private readonly DataContext kn = new DataContext();
         public List<DocGia> Get_All()
         {
-            return kn.DocGias.Select(s=>s).ToList();
+            return kn.DocGias.Select(s => s).ToList();
         }
-        public void Insert_DocGia(DocGia dg)
+        public DocGia? Check(string ma)
+        {
+            return kn.DocGias.Find(ma);
+        }
+        public void Insert(DocGia dg)
         {
             kn.DocGias!.Add(dg);
             kn.SaveChanges();
         }
         public void Update_DocGia(DocGia dg)
         {
-            var docgia = kn.DocGias.Find(dg.MaDocGia);
-            if (docgia != null)
-            {   
-                docgia.HoTen = dg.HoTen;
-                docgia.GioiTinh = dg.GioiTinh;
-                docgia.NgaySinh = dg.NgaySinh;
-                docgia.SoDienThoai = dg.SoDienThoai;
-                docgia.Email = dg.Email;
-                docgia.DiaChi = dg.DiaChi;
-                docgia.NgayDangKy = dg.NgayDangKy;
-                docgia.SoSachMuonToiDa = dg.SoSachMuonToiDa;
-                docgia.TienDangKy = dg.TienDangKy;
-                kn.SaveChanges();
-            }
+            //var docgia = kn.DocGias.Find(dg.MaDocGia);
+            //if (docgia != null)
+            //{   
+            //    docgia.HoTen = dg.HoTen;
+            //    docgia.GioiTinh = dg.GioiTinh;
+            //    docgia.NgaySinh = dg.NgaySinh;
+            //    docgia.SoDienThoai = dg.SoDienThoai;
+            //    docgia.Email = dg.Email;
+            //    docgia.DiaChi = dg.DiaChi;
+            //    docgia.NgayDangKy = dg.NgayDangKy;
+            //    kn.SaveChanges();
+            //}
         }
         public void Delete_DocGia(String ma)
         {

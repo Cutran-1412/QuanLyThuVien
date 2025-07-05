@@ -24,84 +24,84 @@ namespace Quanlythuvien.Migrations
 
             modelBuilder.Entity("Quanlythuvien.Models.Admins.Admin", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("password")
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("username")
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Admins");
 
                     b.HasData(
                         new
                         {
-                            id = 1,
-                            password = "2004",
-                            username = "Admin1"
+                            Id = 1,
+                            Password = "2004",
+                            Username = "Admin1"
                         },
                         new
                         {
-                            id = 2,
-                            password = "2004",
-                            username = "Admin2"
+                            Id = 2,
+                            Password = "2004",
+                            Username = "Admin2"
                         },
                         new
                         {
-                            id = 3,
-                            password = "2004",
-                            username = "Admin3"
+                            Id = 3,
+                            Password = "2004",
+                            Username = "Admin3"
                         },
                         new
                         {
-                            id = 4,
-                            password = "2004",
-                            username = "Admin4"
+                            Id = 4,
+                            Password = "2004",
+                            Username = "Admin4"
                         },
                         new
                         {
-                            id = 5,
-                            password = "2004",
-                            username = "Admin5"
+                            Id = 5,
+                            Password = "2004",
+                            Username = "Admin5"
                         },
                         new
                         {
-                            id = 6,
-                            password = "2004",
-                            username = "Admin6"
+                            Id = 6,
+                            Password = "2004",
+                            Username = "Admin6"
                         },
                         new
                         {
-                            id = 7,
-                            password = "2004",
-                            username = "Admin7"
+                            Id = 7,
+                            Password = "2004",
+                            Username = "Admin7"
                         },
                         new
                         {
-                            id = 8,
-                            password = "2004",
-                            username = "Admin8"
+                            Id = 8,
+                            Password = "2004",
+                            Username = "Admin8"
                         },
                         new
                         {
-                            id = 9,
-                            password = "2004",
-                            username = "Admin9"
+                            Id = 9,
+                            Password = "2004",
+                            Username = "Admin9"
                         },
                         new
                         {
-                            id = 10,
-                            password = "2004",
-                            username = "Admin110"
+                            Id = 10,
+                            Password = "2004",
+                            Username = "Admin10"
                         });
                 });
 
@@ -142,7 +142,7 @@ namespace Quanlythuvien.Migrations
                     b.Property<int>("SoSachMuonToiDa")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TienDangKy")
+                    b.Property<decimal>("TienPhat")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("MaDocGia");
@@ -160,8 +160,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1995, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0912345678",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 50000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -173,8 +173,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1998, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0934567890",
-                            SoSachMuonToiDa = 6,
-                            TienDangKy = 60000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -186,8 +186,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(2002, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0971122334",
-                            SoSachMuonToiDa = 4,
-                            TienDangKy = 55000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -199,8 +199,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1988, 12, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0908123456",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 100000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -212,8 +212,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(2000, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0369988776",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 45000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -225,8 +225,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1993, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0924455667",
-                            SoSachMuonToiDa = 7,
-                            TienDangKy = 70000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -238,8 +238,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1979, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0919988775",
-                            SoSachMuonToiDa = 3,
-                            TienDangKy = 120000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -251,8 +251,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(2005, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0988112233",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 40000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -264,8 +264,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1991, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0955667788",
-                            SoSachMuonToiDa = 6,
-                            TienDangKy = 80000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -277,8 +277,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1985, 8, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0965123456",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 65000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         });
                 });
 

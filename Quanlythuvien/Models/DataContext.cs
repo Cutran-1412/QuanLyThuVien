@@ -8,6 +8,8 @@ using Quanlythuvien.Models.Admins;
 using Quanlythuvien.Models.Sachs;
 using Quanlythuvien.Models.PhieuTras;
 using Quanlythuvien.Models.PhieuMuons;
+using Quanlythuvien.Models.DocGias;
+using System.Reflection.Emit;
 
 namespace Quanlythuvien.Models
 {
@@ -22,29 +24,44 @@ namespace Quanlythuvien.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=qlthuvien;Integrated Security=True";
+            String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=Quanlythuvien;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
             String sqlCuong = "";
             String sqlChien = "";
             optionsBuilder.UseSqlServer(sqlcu);
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        private void Seed_Admin(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-            
-            modelBuilder.Entity<DocGia>().HasData(
-                new DocGia { MaDocGia = "DG001", HoTen = "Nguyễn Văn An", GioiTinh = "Nam", NgaySinh = new DateTime(1995, 3, 15), SoDienThoai = "0912345678", Email = "nguyenvana@example.com", DiaChi = "12 Tràng Tiền, Hà Nội", NgayDangKy = new DateTime(2025, 1, 5), SoSachMuonToiDa = 5, TienDangKy = 50000m },
-                new DocGia { MaDocGia = "DG002", HoTen = "Trần Thị Bình", GioiTinh = "Nữ", NgaySinh = new DateTime(1998, 9, 20), SoDienThoai = "0934567890", Email = "tranthib@example.com", DiaChi = "45 Lê Lợi, TP.HCM", NgayDangKy = new DateTime(2025, 2, 10), SoSachMuonToiDa = 6, TienDangKy = 60000m },
-                new DocGia { MaDocGia = "DG003", HoTen = "Lê Hoàng Cường", GioiTinh = "Nam", NgaySinh = new DateTime(2002, 7, 7), SoDienThoai = "0971122334", Email = "lehoangc@example.com", DiaChi = "99 Phạm Văn Đồng, TP.HCM", NgayDangKy = new DateTime(2025, 3, 2), SoSachMuonToiDa = 4, TienDangKy = 55000m },
-                new DocGia { MaDocGia = "DG004", HoTen = "Phạm Minh Duy", GioiTinh = "Nam", NgaySinh = new DateTime(1988, 12, 30), SoDienThoai = "0908123456", Email = "phaminhd@example.com", DiaChi = "18 Điện Biên Phủ, Hà Nội", NgayDangKy = new DateTime(2025, 3, 18), SoSachMuonToiDa = 5, TienDangKy = 100000m },
-                new DocGia { MaDocGia = "DG005", HoTen = "Đặng Thùy Huyền", GioiTinh = "Nữ", NgaySinh = new DateTime(2000, 1, 11), SoDienThoai = "0369988776", Email = "dangthuye@example.com", DiaChi = "6 Nguyễn Trãi, Hà Nội", NgayDangKy = new DateTime(2025, 4, 1), SoSachMuonToiDa = 5, TienDangKy = 45000m },
-                new DocGia { MaDocGia = "DG006", HoTen = "Võ Quốc Toàn", GioiTinh = "Nam", NgaySinh = new DateTime(1993, 4, 4), SoDienThoai = "0924455667", Email = "voquocf@example.com", DiaChi = "150 Hai Bà Trưng, TP.HCM", NgayDangKy = new DateTime(2025, 4, 20), SoSachMuonToiDa = 7, TienDangKy = 70000m },
-                new DocGia { MaDocGia = "DG007", HoTen = "Ngô Đức Duy", GioiTinh = "Nam", NgaySinh = new DateTime(1979, 11, 5), SoDienThoai = "0919988775", Email = "ngoducg@example.com", DiaChi = "210 Nguyễn Huệ, Huế", NgayDangKy = new DateTime(2025, 5, 2), SoSachMuonToiDa = 3, TienDangKy = 120000m },
-                new DocGia { MaDocGia = "DG008", HoTen = "Bùi Thị Hằng", GioiTinh = "Nữ", NgaySinh = new DateTime(2005, 6, 14), SoDienThoai = "0988112233", Email = "buithih@example.com", DiaChi = "34 Trần Hưng Đạo, Nam Định", NgayDangKy = new DateTime(2025, 5, 28), SoSachMuonToiDa = 5, TienDangKy = 40000m },
-                new DocGia { MaDocGia = "DG009", HoTen = "Trịnh Gia Bảo", GioiTinh = "Nam", NgaySinh = new DateTime(1991, 2, 22), SoDienThoai = "0955667788", Email = "trinhgiai@example.com", DiaChi = "8 Lý Thường Kiệt, Đà Nẵng", NgayDangKy = new DateTime(2025, 6, 10), SoSachMuonToiDa = 6, TienDangKy = 80000m },
-                new DocGia { MaDocGia = "DG010", HoTen = "Hoàng Mỹ Khánh", GioiTinh = "Nữ", NgaySinh = new DateTime(1985, 8, 18), SoDienThoai = "0965123456", Email = "hoangmyk@example.com", DiaChi = "35 Nguyễn Văn Cừ, Nha Trang", NgayDangKy = new DateTime(2025, 6, 25), SoSachMuonToiDa = 5, TienDangKy = 65000m }
-            );
+            modelBuilder.Entity<Admin>().HasData(
+                new Admin { Id = 1,Username = "Admin1",Password = "2004"},
+                new Admin { Id = 2, Username = "Admin2", Password = "2004" },
+                new Admin { Id = 3, Username = "Admin3", Password = "2004" },
+                new Admin { Id = 4, Username = "Admin4", Password = "2004" },
+                new Admin { Id = 5, Username = "Admin5", Password = "2004" },
+                new Admin { Id = 6, Username = "Admin6", Password = "2004" },
+                new Admin { Id = 7, Username = "Admin7", Password = "2004" },
+                new Admin { Id = 8, Username = "Admin8", Password = "2004" },
+                new Admin { Id = 9, Username = "Admin9", Password = "2004" },
+                new Admin { Id = 10, Username = "Admin10", Password = "2004" }
 
+            );
+        }
+        private void Seed_DocGia(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<DocGia>().HasData(
+                new DocGia { MaDocGia = "DG001", HoTen = "Nguyễn Văn An", GioiTinh = "Nam", NgaySinh = new DateTime(1995, 3, 15), SoDienThoai = "0912345678", Email = "nguyenvana@example.com", DiaChi = "12 Tràng Tiền, Hà Nội", NgayDangKy = new DateTime(2025, 1, 5) },
+                new DocGia { MaDocGia = "DG002", HoTen = "Trần Thị Bình", GioiTinh = "Nữ", NgaySinh = new DateTime(1998, 9, 20), SoDienThoai = "0934567890", Email = "tranthib@example.com", DiaChi = "45 Lê Lợi, TP.HCM", NgayDangKy = new DateTime(2025, 2, 10)},
+                new DocGia { MaDocGia = "DG003", HoTen = "Lê Hoàng Cường", GioiTinh = "Nam", NgaySinh = new DateTime(2002, 7, 7), SoDienThoai = "0971122334", Email = "lehoangc@example.com", DiaChi = "99 Phạm Văn Đồng, TP.HCM", NgayDangKy = new DateTime(2025, 3, 2)},
+                new DocGia { MaDocGia = "DG004", HoTen = "Phạm Minh Duy", GioiTinh = "Nam", NgaySinh = new DateTime(1988, 12, 30), SoDienThoai = "0908123456", Email = "phaminhd@example.com", DiaChi = "18 Điện Biên Phủ, Hà Nội", NgayDangKy = new DateTime(2025, 3, 18) },
+                new DocGia { MaDocGia = "DG005", HoTen = "Đặng Thùy Huyền", GioiTinh = "Nữ", NgaySinh = new DateTime(2000, 1, 11), SoDienThoai = "0369988776", Email = "dangthuye@example.com", DiaChi = "6 Nguyễn Trãi, Hà Nội", NgayDangKy = new DateTime(2025, 4, 1)},
+                new DocGia { MaDocGia = "DG006", HoTen = "Võ Quốc Toàn", GioiTinh = "Nam", NgaySinh = new DateTime(1993, 4, 4), SoDienThoai = "0924455667", Email = "voquocf@example.com", DiaChi = "150 Hai Bà Trưng, TP.HCM", NgayDangKy = new DateTime(2025, 4, 20) },
+                new DocGia { MaDocGia = "DG007", HoTen = "Ngô Đức Duy", GioiTinh = "Nam", NgaySinh = new DateTime(1979, 11, 5), SoDienThoai = "0919988775", Email = "ngoducg@example.com", DiaChi = "210 Nguyễn Huệ, Huế", NgayDangKy = new DateTime(2025, 5, 2)},
+                new DocGia { MaDocGia = "DG008", HoTen = "Bùi Thị Hằng", GioiTinh = "Nữ", NgaySinh = new DateTime(2005, 6, 14), SoDienThoai = "0988112233", Email = "buithih@example.com", DiaChi = "34 Trần Hưng Đạo, Nam Định", NgayDangKy = new DateTime(2025, 5, 28)},
+                new DocGia { MaDocGia = "DG009", HoTen = "Trịnh Gia Bảo", GioiTinh = "Nam", NgaySinh = new DateTime(1991, 2, 22), SoDienThoai = "0955667788", Email = "trinhgiai@example.com", DiaChi = "8 Lý Thường Kiệt, Đà Nẵng", NgayDangKy = new DateTime(2025, 6, 10) },
+                new DocGia { MaDocGia = "DG010", HoTen = "Hoàng Mỹ Khánh", GioiTinh = "Nữ", NgaySinh = new DateTime(1985, 8, 18), SoDienThoai = "0965123456", Email = "hoangmyk@example.com", DiaChi = "35 Nguyễn Văn Cừ, Nha Trang", NgayDangKy = new DateTime(2025, 6, 25) }
+            );
+        }
+        private void Seed_Sach(ModelBuilder modelBuilder)
+        {
             modelBuilder.Entity<Sach>().HasData(
                 new Sach { MaSach = "S001", TenSach = "Dế Mèn Phiêu Lưu Ký", TenTacGia = "Tô Hoài", TheLoai = "Thiếu nhi", DonGia = 90000m, NgayNhap = new DateTime(2025, 6, 10), NamPhatHanh = 2007, NhaXuatBan = "NXB Kim Đồng", SoLuong = 5 },
                 new Sach { MaSach = "S002", TenSach = "Lão Hạc", TenTacGia = "Nam Cao", TheLoai = "Văn học", DonGia = 75000m, NgayNhap = new DateTime(2025, 6, 11), NamPhatHanh = 1950, NhaXuatBan = "NXB Văn Học", SoLuong = 4 },
@@ -77,7 +94,13 @@ namespace Quanlythuvien.Models
                 new Sach { MaSach = "S029", TenSach = "Thiên Tài Bên Trái...", TenTacGia = "Eric B. T. Lin", TheLoai = "Khoa học", DonGia = 119000m, NgayNhap = new DateTime(2025, 6, 21), NamPhatHanh = 2014, NhaXuatBan = "NXB Lao Động", SoLuong = 4 },
                 new Sach { MaSach = "S030", TenSach = "Nhật Ký Anne Frank", TenTacGia = "Anne Frank", TheLoai = "Tự truyện", DonGia = 103000m, NgayNhap = new DateTime(2025, 6, 21), NamPhatHanh = 1947, NhaXuatBan = "NXB Văn Học", SoLuong = 6 }
             );
-
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            Seed_Admin(modelBuilder);
+            Seed_DocGia(modelBuilder);
+            Seed_Sach(modelBuilder);
             modelBuilder.Entity<PhieuMuon>().HasData(
                 new PhieuMuon { MaPhieuMuon = "PM1", MaDocGia = "DG001", NgayMuon = new DateTime(2025, 6, 1)},
                 new PhieuMuon { MaPhieuMuon = "PM2", MaDocGia = "DG001", NgayMuon = new DateTime(2025, 6, 3)}

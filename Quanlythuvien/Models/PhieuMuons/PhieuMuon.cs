@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Quanlythuvien.Models.Sachs;
+using Quanlythuvien.Models.DocGias;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,7 +11,7 @@ using Quanlythuvien.Models.PhieuTras;
 
 namespace Quanlythuvien.Models.PhieuMuons
 {
-    internal class PhieuMuon
+    public class PhieuMuon
     {
         [Key]
         [Required, StringLength(12, MinimumLength = 3)]

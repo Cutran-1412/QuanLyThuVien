@@ -16,5 +16,13 @@ namespace Quanlythuvien.Controllers
         {
             return dgdao.Get_All();
         }
+        public DocGia? Get_DocGia_Ma(string ma)
+        {
+             return dgdao.Check(ma);
+        }
+        public void Insert_DocGia(DocGia dg)
+        {
+            dgdao.Insert(dg);
+        }
     }
 }

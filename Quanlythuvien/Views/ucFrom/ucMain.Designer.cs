@@ -1,6 +1,6 @@
 ﻿namespace Quanlythuvien.Views
 {
-    partial class Docgia
+    partial class ucMain
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,31 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(388, 89);
-            label1.Name = "label1";
-            label1.Size = new Size(29, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Hihi";
-            // 
-            // Docgia
+            // ucMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
-            Name = "Docgia";
-            Size = new Size(1109, 575);
+            Name = "ucMain";
+            Size = new Size(1105, 530);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
     }
 }

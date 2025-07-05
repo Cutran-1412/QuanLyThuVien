@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Quanlythuvien.Models.Sachs
 {
-    internal class Sach
+    public class Sach
     {
         [Key]
         [Required(ErrorMessage = "Mã sách không được để trống")]
