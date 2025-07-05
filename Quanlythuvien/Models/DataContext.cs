@@ -26,8 +26,8 @@ namespace Quanlythuvien.Models
             base.OnConfiguring(optionsBuilder);
             String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=Quanlythuvien;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
             String sqlCuong = "";
-            String sqlChien = "";
-            optionsBuilder.UseSqlServer(sqlcu);
+            String sqlChien = "Data Source=MSI\\SQLSERVER;Initial Catalog=qlthuvien;Integrated Security=True";
+            optionsBuilder.UseSqlServer(sqlChien);
         }
         private void Seed_Admin(ModelBuilder modelBuilder)
         {

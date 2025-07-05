@@ -10,7 +10,11 @@ using Quanlythuvien.Models.Sachs;
 
 namespace Quanlythuvien.Models.PhieuTras
 {
+<<<<<<< HEAD
     public class PhieuTra
+=======
+    public class PhieuTra :Model
+>>>>>>> d7b609e91d416c009426a33e96e3610c3d612981
     {
         [Key]
         [Required, StringLength(12, MinimumLength = 3)]

@@ -11,7 +11,11 @@ using Quanlythuvien.Models.PhieuTras;
 
 namespace Quanlythuvien.Models.PhieuMuons
 {
+<<<<<<< HEAD
     public class PhieuMuon
+=======
+    public class PhieuMuon : Model    
+>>>>>>> d7b609e91d416c009426a33e96e3610c3d612981
     {
         [Key]
         [Required, StringLength(12, MinimumLength = 3)]

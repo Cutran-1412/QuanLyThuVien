@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Quanlythuvien.Models.DocGias
 {
+<<<<<<< HEAD
     internal class DocGiaDAO
     {
         private readonly DataContext kn = new DataContext();
@@ -48,4 +49,32 @@ namespace Quanlythuvien.Models.DocGias
             }
         }
     }
+=======
+    internal class DocGiaDAO : DAO<DocGia>
+    {
+        public override bool Delete(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override int GetCount()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<DocGia> GetData()
+        {
+            using(DataContext context = new DataContext())
+            {
+                return context.DocGias.ToList();
+            }
+        }
+
+        public override bool Insert(DocGia model)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+>>>>>>> d7b609e91d416c009426a33e96e3610c3d612981
 }

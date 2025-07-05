@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YGtdmH2pow8=",
+  "dgSpecHash": "8s3HqIUUKE8=",
   "success": true,
   "projectFilePath": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\fontawesome\\4.7.0\\fontawesome.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\fontawesome.sharp\\6.6.0\\fontawesome.sharp.6.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
