@@ -87,6 +87,27 @@ namespace Quanlythuvien.Migrations
                             Id = 7,
                             Password = "2004",
                             Username = "Admin7"
+<<<<<<< HEAD
+=======
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Password = "2004",
+                            Username = "Admin8"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Password = "2004",
+                            Username = "Admin9"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Password = "2004",
+                            Username = "Admin10"
+>>>>>>> 1374692c096744187acb23e1f074c3c169300f37
                         });
                 });
 
@@ -127,7 +148,7 @@ namespace Quanlythuvien.Migrations
                     b.Property<int>("SoSachMuonToiDa")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TienDangKy")
+                    b.Property<decimal>("TienPhat")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("MaDocGia");
@@ -145,8 +166,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1995, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0912345678",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 50000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -158,8 +179,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1998, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0934567890",
-                            SoSachMuonToiDa = 6,
-                            TienDangKy = 60000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -171,8 +192,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 3, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(2002, 7, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0971122334",
-                            SoSachMuonToiDa = 4,
-                            TienDangKy = 55000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -184,8 +205,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1988, 12, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0908123456",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 100000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -197,8 +218,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(2000, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0369988776",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 45000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -210,8 +231,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 4, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1993, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0924455667",
-                            SoSachMuonToiDa = 7,
-                            TienDangKy = 70000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -223,8 +244,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1979, 11, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0919988775",
-                            SoSachMuonToiDa = 3,
-                            TienDangKy = 120000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -236,8 +257,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(2005, 6, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0988112233",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 40000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -249,8 +270,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 6, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1991, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0955667788",
-                            SoSachMuonToiDa = 6,
-                            TienDangKy = 80000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         },
                         new
                         {
@@ -262,8 +283,8 @@ namespace Quanlythuvien.Migrations
                             NgayDangKy = new DateTime(2025, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             NgaySinh = new DateTime(1985, 8, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             SoDienThoai = "0965123456",
-                            SoSachMuonToiDa = 5,
-                            TienDangKy = 65000m
+                            SoSachMuonToiDa = 10,
+                            TienPhat = 0m
                         });
                 });
 

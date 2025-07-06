@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Quanlythuvien.Views
 {
-    public partial class Docgia : UserControl
+    public partial class ucMain : UserControl
     {
-        public Docgia()
+        public ucMain()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

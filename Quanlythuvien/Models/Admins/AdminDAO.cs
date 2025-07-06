@@ -42,10 +42,9 @@ namespace Quanlythuvien.Models.Admins
                 kn.SaveChanges();
             }
         }
-        public List<Admin> Search(string tim)
+        public List<Admin> Search(string keyword)
         {
-            List<Admin> ds = kn.Admins.Where(s => s.Username == tim).ToList();
-            return ds;
+            return kn.Admins.Where(a => a.Username.ToLower().Contains(keyword)).ToList();
         }
     }
 }

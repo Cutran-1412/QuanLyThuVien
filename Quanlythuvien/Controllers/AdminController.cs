@@ -27,5 +27,17 @@ namespace Quanlythuvien.Controllers
         {
             addao.Insert(ad);
         }
+        public void Update_Admin(Admin ad)
+        {
+            addao.Update(ad);
+        }
+        public void Delete_Admin(int id)
+        {
+            addao.Delete(id);
+        }
+        public List<Admin> Search_Admin(string keyword)
+        {
+            return addao.Search(keyword);
+        }
     }
 }

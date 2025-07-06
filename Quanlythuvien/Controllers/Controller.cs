@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Quanlythuvien.Models;
 using System;
 using System.Collections.Generic;
@@ -29,3 +30,23 @@ namespace Quanlythuvien.Controllers
         }
     }
 }
+=======
+﻿using Quanlythuvien.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Quanlythuvien.Controllers
+{
+ 
+    public abstract class Controller<T>
+    {
+        protected DAO<T> dao;   
+        public abstract List<T> GetData();
+        public abstract int GetCount();
+        
+    }
+}
+>>>>>>> 1374692c096744187acb23e1f074c3c169300f37

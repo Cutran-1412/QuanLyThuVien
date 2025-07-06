@@ -1,6 +1,4 @@
 # Build results
-bin/
-obj/
 
 # User-specific files
 *.user
@@ -31,7 +29,6 @@ packages/
 
 # Visual Studio for Mac
 .vscode/
-.vs/
 
 # Backup & Logs
 *.log
