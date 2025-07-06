@@ -101,5 +101,10 @@ namespace Quanlythuvien.Views
         {
             ShowControl(new ucDocgia());
         }
+
+        private void pamain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

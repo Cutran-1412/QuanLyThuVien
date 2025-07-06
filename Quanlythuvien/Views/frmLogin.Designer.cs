@@ -52,9 +52,9 @@
             // 
             lbldanghap.AutoSize = true;
             lbldanghap.Font = new Font("Arial", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lbldanghap.Location = new Point(61, 20);
+            lbldanghap.Location = new Point(70, 27);
             lbldanghap.Name = "lbldanghap";
-            lbldanghap.Size = new Size(179, 32);
+            lbldanghap.Size = new Size(225, 39);
             lbldanghap.TabIndex = 1;
             lbldanghap.Text = "ĐĂNG NHẬP";
             // 
@@ -62,27 +62,30 @@
             // 
             txtusername.BackColor = SystemColors.Control;
             txtusername.BorderStyle = BorderStyle.None;
-            txtusername.Location = new Point(37, 21);
+            txtusername.Location = new Point(42, 28);
+            txtusername.Margin = new Padding(3, 4, 3, 4);
             txtusername.Name = "txtusername";
             txtusername.PlaceholderText = "Username";
-            txtusername.Size = new Size(189, 16);
+            txtusername.Size = new Size(216, 20);
             txtusername.TabIndex = 2;
             // 
             // panel1
             // 
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(txtusername);
-            panel1.Location = new Point(24, 152);
+            panel1.Location = new Point(27, 203);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(247, 44);
+            panel1.Size = new Size(282, 59);
             panel1.TabIndex = 4;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaptionText;
-            panel2.Location = new Point(37, 36);
+            panel2.Location = new Point(42, 48);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(189, 1);
+            panel2.Size = new Size(216, 1);
             panel2.TabIndex = 5;
             // 
             // panel3
@@ -91,9 +94,10 @@
             panel3.Controls.Add(ipichien);
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(txtpassword);
-            panel3.Location = new Point(24, 195);
+            panel3.Location = new Point(27, 260);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(247, 49);
+            panel3.Size = new Size(282, 65);
             panel3.TabIndex = 5;
             // 
             // ipican
@@ -103,10 +107,11 @@
             ipican.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             ipican.IconColor = SystemColors.ControlText;
             ipican.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ipican.IconSize = 25;
-            ipican.Location = new Point(201, 9);
+            ipican.IconSize = 29;
+            ipican.Location = new Point(230, 12);
+            ipican.Margin = new Padding(3, 4, 3, 4);
             ipican.Name = "ipican";
-            ipican.Size = new Size(25, 25);
+            ipican.Size = new Size(29, 33);
             ipican.TabIndex = 10;
             ipican.TabStop = false;
             ipican.Click += ipican_Click;
@@ -118,10 +123,11 @@
             ipichien.IconChar = FontAwesome.Sharp.IconChar.Eye;
             ipichien.IconColor = SystemColors.ControlText;
             ipichien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ipichien.IconSize = 25;
-            ipichien.Location = new Point(201, 9);
+            ipichien.IconSize = 29;
+            ipichien.Location = new Point(230, 12);
+            ipichien.Margin = new Padding(3, 4, 3, 4);
             ipichien.Name = "ipichien";
-            ipichien.Size = new Size(25, 25);
+            ipichien.Size = new Size(29, 33);
             ipichien.TabIndex = 9;
             ipichien.TabStop = false;
             ipichien.Click += ipichien_Click;
@@ -129,19 +135,21 @@
             // panel4
             // 
             panel4.BackColor = SystemColors.ActiveCaptionText;
-            panel4.Location = new Point(37, 36);
+            panel4.Location = new Point(42, 48);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(189, 1);
+            panel4.Size = new Size(216, 1);
             panel4.TabIndex = 5;
             // 
             // txtpassword
             // 
             txtpassword.BackColor = SystemColors.Control;
             txtpassword.BorderStyle = BorderStyle.None;
-            txtpassword.Location = new Point(37, 21);
+            txtpassword.Location = new Point(42, 28);
+            txtpassword.Margin = new Padding(3, 4, 3, 4);
             txtpassword.Name = "txtpassword";
             txtpassword.PlaceholderText = "Password";
-            txtpassword.Size = new Size(189, 16);
+            txtpassword.Size = new Size(216, 20);
             txtpassword.TabIndex = 2;
             // 
             // btndangnhap
@@ -153,9 +161,10 @@
             btndangnhap.FlatStyle = FlatStyle.Flat;
             btndangnhap.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btndangnhap.ForeColor = Color.Black;
-            btndangnhap.Location = new Point(61, 290);
+            btndangnhap.Location = new Point(70, 387);
+            btndangnhap.Margin = new Padding(3, 4, 3, 4);
             btndangnhap.Name = "btndangnhap";
-            btndangnhap.Size = new Size(189, 38);
+            btndangnhap.Size = new Size(216, 51);
             btndangnhap.TabIndex = 6;
             btndangnhap.Text = "Đăng nhập";
             btndangnhap.UseVisualStyleBackColor = false;
@@ -167,9 +176,10 @@
             btnthoat.FlatAppearance.MouseOverBackColor = Color.Red;
             btnthoat.FlatStyle = FlatStyle.Flat;
             btnthoat.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnthoat.Location = new Point(61, 334);
+            btnthoat.Location = new Point(70, 445);
+            btnthoat.Margin = new Padding(3, 4, 3, 4);
             btnthoat.Name = "btnthoat";
-            btnthoat.Size = new Size(189, 38);
+            btnthoat.Size = new Size(216, 51);
             btnthoat.TabIndex = 7;
             btnthoat.Text = "Thoát";
             btnthoat.UseVisualStyleBackColor = true;
@@ -179,9 +189,9 @@
             // 
             lbllammoi.AutoSize = true;
             lbllammoi.Font = new Font("Arial", 9F, FontStyle.Underline, GraphicsUnit.Point);
-            lbllammoi.Location = new Point(194, 253);
+            lbllammoi.Location = new Point(222, 337);
             lbllammoi.Name = "lbllammoi";
-            lbllammoi.Size = new Size(57, 15);
+            lbllammoi.Size = new Size(67, 17);
             lbllammoi.TabIndex = 8;
             lbllammoi.Text = "Làm mới";
             lbllammoi.Click += lbllammoi_Click;
@@ -193,18 +203,19 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
             iconPictureBox1.IconColor = SystemColors.ControlText;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 91;
-            iconPictureBox1.Location = new Point(103, 55);
+            iconPictureBox1.IconSize = 105;
+            iconPictureBox1.Location = new Point(118, 73);
+            iconPictureBox1.Margin = new Padding(3, 4, 3, 4);
             iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(92, 91);
+            iconPictureBox1.Size = new Size(105, 121);
             iconPictureBox1.TabIndex = 9;
             iconPictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(292, 403);
+            ClientSize = new Size(334, 537);
             Controls.Add(iconPictureBox1);
             Controls.Add(lbllammoi);
             Controls.Add(btnthoat);
@@ -213,9 +224,11 @@
             Controls.Add(panel1);
             Controls.Add(lbldanghap);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
+            Load += frmLogin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);

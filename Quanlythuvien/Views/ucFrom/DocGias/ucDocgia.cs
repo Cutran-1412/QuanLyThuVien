@@ -23,7 +23,7 @@ namespace Quanlythuvien.Views.ucFrom
 
         private void Load_Data()
         {
-            dtDocgia.DataSource = dg.Get_DocGia();
+            dtDocgia.DataSource = dg.GetData();
             dtDocgia.Columns["SoDienThoai"].Visible = false;
             dtDocgia.Columns["Email"].Visible = false;
             dtDocgia.Columns["SoSachMuonToiDa"].Visible = false;
@@ -39,7 +39,7 @@ namespace Quanlythuvien.Views.ucFrom
         {
             if (dtDocgia.SelectedRows.Count > 0)
             {
-                docgia = dg.Get_DocGia_Ma(dtDocgia.SelectedRows[0].Cells[0].Value.ToString());
+                docgia = dg.FindByKey(dtDocgia.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
 

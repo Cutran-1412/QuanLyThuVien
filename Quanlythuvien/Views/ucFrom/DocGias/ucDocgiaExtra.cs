@@ -63,9 +63,9 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                     NgayDangKy = datengaydangki.Value,
                     TienPhat = decimal.Parse(gtxttienphat.Text)
                 };
-                if(dgctr.Get_DocGia_Ma(dg.MaDocGia) != null) 
+                if(dgctr.FindByKey(dg.MaDocGia) != null) 
                 {
-                    dgctr.Insert_DocGia(dg);
+                    dgctr.Insert(dg);
                     string text = "Đã thêm thành công độc giả có mã :" + gtxtMa.Text;
                     string caption = "Thông báo";
                     MessageDialogButtons button = MessageDialogButtons.OK;

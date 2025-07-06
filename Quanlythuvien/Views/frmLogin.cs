@@ -142,5 +142,10 @@ namespace Quanlythuvien.Views
             ipichien.Visible = true;
             ipican.Visible = false;
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -47,9 +47,9 @@
             lblchao.AutoSize = true;
             lblchao.BackColor = Color.White;
             lblchao.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblchao.Location = new Point(315, 9);
+            lblchao.Location = new Point(360, 12);
             lblchao.Name = "lblchao";
-            lblchao.Size = new Size(612, 37);
+            lblchao.Size = new Size(768, 46);
             lblchao.TabIndex = 0;
             lblchao.Text = "Chào mừng đến với ứng dụng quản lý thư viện";
             // 
@@ -57,9 +57,9 @@
             // 
             lblthoigian.AutoSize = true;
             lblthoigian.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblthoigian.Location = new Point(845, 615);
+            lblthoigian.Location = new Point(966, 820);
             lblthoigian.Name = "lblthoigian";
-            lblthoigian.Size = new Size(135, 37);
+            lblthoigian.Size = new Size(168, 46);
             lblthoigian.TabIndex = 1;
             lblthoigian.Text = "HH:mm:ss";
             // 
@@ -71,8 +71,9 @@
             // 
             panel1.Controls.Add(ibtnMenu);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(240, 65);
+            panel1.Size = new Size(274, 87);
             panel1.TabIndex = 5;
             // 
             // ibtnMenu
@@ -88,8 +89,9 @@
             ibtnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtnMenu.ImageAlign = ContentAlignment.MiddleLeft;
             ibtnMenu.Location = new Point(0, 0);
+            ibtnMenu.Margin = new Padding(3, 4, 3, 4);
             ibtnMenu.Name = "ibtnMenu";
-            ibtnMenu.Size = new Size(240, 65);
+            ibtnMenu.Size = new Size(274, 87);
             ibtnMenu.TabIndex = 0;
             ibtnMenu.Text = "Menu";
             ibtnMenu.UseVisualStyleBackColor = false;
@@ -97,16 +99,19 @@
             // 
             // pamain
             // 
-            pamain.Location = new Point(73, 70);
+            pamain.Location = new Point(83, 93);
+            pamain.Margin = new Padding(3, 4, 3, 4);
             pamain.Name = "pamain";
-            pamain.Size = new Size(1100, 540);
+            pamain.Size = new Size(1257, 720);
             pamain.TabIndex = 6;
+            pamain.Paint += pamain_Paint;
             // 
             // button1
             // 
-            button1.Location = new Point(12, 71);
+            button1.Location = new Point(14, 95);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(52, 23);
+            button1.Size = new Size(59, 31);
             button1.TabIndex = 7;
             button1.Text = "Admin";
             button1.UseVisualStyleBackColor = true;
@@ -114,9 +119,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(12, 100);
+            button2.Location = new Point(14, 133);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(52, 23);
+            button2.Size = new Size(59, 31);
             button2.TabIndex = 8;
             button2.Text = "Docgia";
             button2.UseVisualStyleBackColor = true;
@@ -124,20 +130,21 @@
             // 
             // button3
             // 
-            button3.Location = new Point(12, 129);
+            button3.Location = new Point(14, 172);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(52, 23);
+            button3.Size = new Size(59, 31);
             button3.TabIndex = 9;
             button3.Text = "Sách";
             button3.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 47);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1184, 661);
+            ClientSize = new Size(1351, 871);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -145,8 +152,9 @@
             Controls.Add(panel1);
             Controls.Add(lblchao);
             Controls.Add(pamain);
-            MaximumSize = new Size(1200, 700);
-            MinimumSize = new Size(1200, 700);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(1369, 918);
+            MinimumSize = new Size(1369, 918);
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";

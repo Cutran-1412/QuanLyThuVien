@@ -55,8 +55,6 @@ namespace Quanlythuvien.Models.DocGias
         [Range(0, 10, ErrorMessage = "Số sách mượn tối đa từ 0 đến 10 cuốn")]
         [DisplayName("Số sách muon tối đa")]
         public int SoSachMuonToiDa { get; set; } = 10;
-
-        [Range(10000, 1000000, ErrorMessage = "Tiền đăng ký phải từ 10.000đ đến 1.000.000đ")]
         [DisplayName("Tiền phạt")]
         public decimal TienPhat { get; set; } = 0;
 
