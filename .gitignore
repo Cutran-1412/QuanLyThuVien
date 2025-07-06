@@ -23,7 +23,8 @@ ehthumbs.db
 packages/
 *.nuget.props
 *.nuget.targets
-
+obj/
+bin/
 # Rider IDE
 .idea/
 
