@@ -12,5 +12,6 @@ namespace Quanlythuvien.Models
         public abstract bool Insert(T model);
         public abstract bool Delete(string key);
         public abstract int GetCount();
+        public abstract T FindByKey(string key);
     }
 }

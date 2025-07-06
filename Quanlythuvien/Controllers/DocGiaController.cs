@@ -14,14 +14,5 @@ namespace Quanlythuvien.Controllers
             this.dao = new DocGiaDAO();
 
         }
-        public override int GetCount()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override List<DocGia> GetData()
-        {
-            return this.dao.GetData();
-        }
     }
 }

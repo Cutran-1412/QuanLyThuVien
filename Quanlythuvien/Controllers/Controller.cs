@@ -10,9 +10,22 @@ namespace Quanlythuvien.Controllers
  
     public abstract class Controller<T>
     {
-        protected DAO<T> dao;   
-        public abstract List<T> GetData();
-        public abstract int GetCount();
-        
+        protected DAO<T> dao;
+        public virtual List<T> GetData()
+        {
+            return this.dao.GetData();
+        }
+        public virtual int GetCount()
+        {
+            return this.dao.GetCount();
+        }
+        public virtual bool Insert(T model)
+        {
+            return this.dao.Insert(model);
+        }
+        public virtual T FindByKey(string key)
+        {
+            return this.dao.FindByKey(key);
+        }
     }
 }

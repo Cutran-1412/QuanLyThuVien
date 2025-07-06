@@ -19,6 +19,7 @@ namespace Quanlythuvien.Models
         public DbSet<PhieuMuon> PhieuMuons { get; set; }
         public DbSet<PhieuTra> PhieuTras { get; set; }
         public DbSet<ChiTietPhieuMuon> ChiTietPhieuMuons { get; set; }
+        public DbSet<ChiTietPhieuTra> ChiTietPhieuTras { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
@@ -31,6 +32,15 @@ namespace Quanlythuvien.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Admin>().HasData(
+                new Admin {Id=1, Username="Admin1",Password="2004"},
+                new Admin { Id = 2, Username ="Admin2",Password="2004"},
+                new Admin { Id = 3, Username ="Admin3",Password="2004"},
+                new Admin {Id = 4, Username="Admin4",Password="2004"},
+                new Admin {Id = 5, Username="Admin5",Password="2004"},
+                new Admin {Id = 6, Username="Admin6",Password="2004"},
+                new Admin {Id=  7,   Username = "Admin7", Password = "2004" }
+                );
             
             modelBuilder.Entity<DocGia>().HasData(
                 new DocGia { MaDocGia = "DG001", HoTen = "Nguyễn Văn An", GioiTinh = "Nam", NgaySinh = new DateTime(1995, 3, 15), SoDienThoai = "0912345678", Email = "nguyenvana@example.com", DiaChi = "12 Tràng Tiền, Hà Nội", NgayDangKy = new DateTime(2025, 1, 5), SoSachMuonToiDa = 5, TienDangKy = 50000m },

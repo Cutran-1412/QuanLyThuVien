@@ -14,9 +14,17 @@ namespace Quanlythuvien.Models.PhieuTras
             throw new NotImplementedException();
         }
 
-        public override int GetCount()
+        public override PhieuTra FindByKey(string key)
         {
             throw new NotImplementedException();
+        }
+
+        public override int GetCount()
+        {
+            using(DataContext context = new DataContext()) 
+            {
+                return context.PhieuTras.Count();
+            }
         }
 
         public override List<PhieuTra> GetData()
@@ -26,7 +34,13 @@ namespace Quanlythuvien.Models.PhieuTras
 
         public override bool Insert(PhieuTra model)
         {
-            throw new NotImplementedException();
+            using (DataContext context = new DataContext())
+            {
+                context.PhieuTras.Add(model);
+                      context.SaveChanges();
+                return true;
+              
+            }
         }
     }
 }

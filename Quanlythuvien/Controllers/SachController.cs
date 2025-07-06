@@ -17,10 +17,5 @@ namespace Quanlythuvien.Controllers
         {
             throw new NotImplementedException();
         }
-
-        public override List<Sach> GetData()
-        {
-            return this.dao.GetData();
-        }
     }
-}
+}   

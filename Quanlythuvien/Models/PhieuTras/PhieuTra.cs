@@ -24,6 +24,7 @@ namespace Quanlythuvien.Models.PhieuTras
 
         [Range(0, double.MaxValue)] 
         public decimal TienPhat { get; set; }
+        public List<ChiTietPhieuTra> ChiTietPhieuTras { get; set; } = new List<ChiTietPhieuTra>();
 
     }
 }
