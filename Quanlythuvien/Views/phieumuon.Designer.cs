@@ -39,6 +39,10 @@
             button2 = new Button();
             btnSave = new Button();
             dgvDocGia = new DataGridView();
+            txtSoLuong = new TextBox();
+            label5 = new Label();
+            dtpNgaytra = new DateTimePicker();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDocGia).BeginInit();
             SuspendLayout();
@@ -63,7 +67,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(782, 357);
+            btnAdd.Location = new Point(749, 392);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(94, 29);
             btnAdd.TabIndex = 2;
@@ -117,7 +121,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(916, 357);
+            button2.Location = new Point(887, 392);
             button2.Name = "button2";
             button2.Size = new Size(94, 29);
             button2.TabIndex = 9;
@@ -137,18 +141,54 @@
             // dgvDocGia
             // 
             dgvDocGia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDocGia.Location = new Point(111, 197);
+            dgvDocGia.Location = new Point(118, 197);
             dgvDocGia.Name = "dgvDocGia";
             dgvDocGia.RowHeadersWidth = 51;
             dgvDocGia.RowTemplate.Height = 29;
             dgvDocGia.Size = new Size(438, 137);
             dgvDocGia.TabIndex = 11;
             // 
+            // txtSoLuong
+            // 
+            txtSoLuong.Location = new Point(856, 348);
+            txtSoLuong.Name = "txtSoLuong";
+            txtSoLuong.Size = new Size(125, 27);
+            txtSoLuong.TabIndex = 12;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(749, 351);
+            label5.Name = "label5";
+            label5.Size = new Size(69, 20);
+            label5.TabIndex = 13;
+            label5.Text = "Số lượng";
+            // 
+            // dtpNgaytra
+            // 
+            dtpNgaytra.Location = new Point(519, 144);
+            dtpNgaytra.Name = "dtpNgaytra";
+            dtpNgaytra.Size = new Size(250, 27);
+            dtpNgaytra.TabIndex = 15;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(379, 144);
+            label6.Name = "label6";
+            label6.Size = new Size(99, 20);
+            label6.TabIndex = 14;
+            label6.Text = "Ngày phải trả";
+            // 
             // PhieuMuonForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 493);
+            Controls.Add(dtpNgaytra);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(txtSoLuong);
             Controls.Add(dgvDocGia);
             Controls.Add(btnSave);
             Controls.Add(button2);
@@ -182,5 +222,9 @@
         private Button button2;
         private Button btnSave;
         private DataGridView dgvDocGia;
+        private TextBox txtSoLuong;
+        private Label label5;
+        private DateTimePicker dtpNgaytra;
+        private Label label6;
     }
 }

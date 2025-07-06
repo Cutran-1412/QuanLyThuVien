@@ -14,6 +14,11 @@ namespace Quanlythuvien.Models.Sachs
             throw new NotImplementedException();
         }
 
+        public override Sach FindByKey(string key)
+        {
+            throw new NotImplementedException();
+        }
+
         public override int GetCount()
         {
             throw new NotImplementedException();

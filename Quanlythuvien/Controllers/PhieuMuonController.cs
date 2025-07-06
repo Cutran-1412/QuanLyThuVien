@@ -1,4 +1,5 @@
 ﻿using Quanlythuvien.Models.PhieuMuons;
+using Quanlythuvien.Models.Sachs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +14,5 @@ namespace Quanlythuvien.Controllers
             this.dao = new PhieuMuonDAO();
         }
 
-        public override int GetCount()
-        {
-            return this.dao.GetCount();
-        }
-
-        public override List<PhieuMuon> GetData()
-        {
-            return this.dao.GetData();
-        }
     }
 }

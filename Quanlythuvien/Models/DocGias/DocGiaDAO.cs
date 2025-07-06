@@ -14,6 +14,11 @@ namespace Quanlythuvien.Models.DocGias
             throw new NotImplementedException();
         }
 
+        public override DocGia FindByKey(string key)
+        {
+            throw new NotImplementedException();
+        }
+
         public override int GetCount()
         {
             throw new NotImplementedException();

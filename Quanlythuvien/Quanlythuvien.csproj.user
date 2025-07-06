@@ -16,6 +16,9 @@
     <Compile Update="Views\PhieuTraControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">

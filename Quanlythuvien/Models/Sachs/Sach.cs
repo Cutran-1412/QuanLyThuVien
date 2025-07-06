@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quanlythuvien.Models.PhieuMuons;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -53,5 +54,6 @@ namespace Quanlythuvien.Models.Sachs
 
         [Range(0, 1000, ErrorMessage = "Số lượng phải >= 0")]
         public int SoLuong { get; set; }
+
     }
 }

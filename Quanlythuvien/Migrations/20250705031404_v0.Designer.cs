@@ -12,7 +12,7 @@ using Quanlythuvien.Models;
 namespace Quanlythuvien.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250703042013_v0")]
+    [Migration("20250705031404_v0")]
     partial class v0
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,84 +26,69 @@ namespace Quanlythuvien.Migrations
 
             modelBuilder.Entity("Quanlythuvien.Models.Admins.Admin", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("id");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("password")
+                    b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("username")
+                    b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Admins");
 
                     b.HasData(
                         new
                         {
-                            id = 1,
-                            password = "2004",
-                            username = "Admin1"
+                            Id = 1,
+                            Password = "2004",
+                            Username = "Admin1"
                         },
                         new
                         {
-                            id = 2,
-                            password = "2004",
-                            username = "Admin2"
+                            Id = 2,
+                            Password = "2004",
+                            Username = "Admin2"
                         },
                         new
                         {
-                            id = 3,
-                            password = "2004",
-                            username = "Admin3"
+                            Id = 3,
+                            Password = "2004",
+                            Username = "Admin3"
                         },
                         new
                         {
-                            id = 4,
-                            password = "2004",
-                            username = "Admin4"
+                            Id = 4,
+                            Password = "2004",
+                            Username = "Admin4"
                         },
                         new
                         {
-                            id = 5,
-                            password = "2004",
-                            username = "Admin5"
+                            Id = 5,
+                            Password = "2004",
+                            Username = "Admin5"
                         },
                         new
                         {
-                            id = 6,
-                            password = "2004",
-                            username = "Admin6"
+                            Id = 6,
+                            Password = "2004",
+                            Username = "Admin6"
                         },
                         new
                         {
-                            id = 7,
-                            password = "2004",
-                            username = "Admin7"
-                        },
-                        new
-                        {
-                            id = 8,
-                            password = "2004",
-                            username = "Admin8"
-                        },
-                        new
-                        {
-                            id = 9,
-                            password = "2004",
-                            username = "Admin9"
-                        },
-                        new
-                        {
-                            id = 10,
-                            password = "2004",
-                            username = "Admin110"
+                            Id = 7,
+                            Password = "2004",
+                            Username = "Admin7"
                         });
                 });
 
@@ -289,6 +274,10 @@ namespace Quanlythuvien.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("MaPhieuMuon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(12)");
+
                     b.Property<string>("MaSach")
                         .IsRequired()
                         .HasColumnType("nvarchar(10)");
@@ -296,17 +285,16 @@ namespace Quanlythuvien.Migrations
                     b.Property<DateTime?>("NgayTra")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("PhieuMuonId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(12)");
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MaPhieuMuon");
+
                     b.HasIndex("MaSach");
 
-                    b.HasIndex("PhieuMuonId");
-
-                    b.ToTable("ChiTietPhieuMuon");
+                    b.ToTable("ChiTietPhieuMuons");
                 });
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuMuons.PhieuMuon", b =>
@@ -349,9 +337,6 @@ namespace Quanlythuvien.Migrations
                         .HasMaxLength(12)
                         .HasColumnType("nvarchar(12)");
 
-                    b.Property<string>("DocGiaMaDocGia")
-                        .HasColumnType("nvarchar(10)");
-
                     b.Property<string>("MaPhieuMuon")
                         .IsRequired()
                         .HasColumnType("nvarchar(12)");
@@ -363,8 +348,6 @@ namespace Quanlythuvien.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("MaPhieuTra");
-
-                    b.HasIndex("DocGiaMaDocGia");
 
                     b.HasIndex("MaPhieuMuon");
 
@@ -794,15 +777,15 @@ namespace Quanlythuvien.Migrations
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuMuons.ChiTietPhieuMuon", b =>
                 {
-                    b.HasOne("Quanlythuvien.Models.Sachs.Sach", "Sach")
-                        .WithMany()
-                        .HasForeignKey("MaSach")
+                    b.HasOne("Quanlythuvien.Models.PhieuMuons.PhieuMuon", "PhieuMuon")
+                        .WithMany("ChiTietPhieuMuons")
+                        .HasForeignKey("MaPhieuMuon")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Quanlythuvien.Models.PhieuMuons.PhieuMuon", "PhieuMuon")
-                        .WithMany("ChiTietPhieuMuons")
-                        .HasForeignKey("PhieuMuonId")
+                    b.HasOne("Quanlythuvien.Models.Sachs.Sach", "Sach")
+                        .WithMany()
+                        .HasForeignKey("MaSach")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -824,10 +807,6 @@ namespace Quanlythuvien.Migrations
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuTras.PhieuTra", b =>
                 {
-                    b.HasOne("Quanlythuvien.Models.DocGia", null)
-                        .WithMany("PhieuTra")
-                        .HasForeignKey("DocGiaMaDocGia");
-
                     b.HasOne("Quanlythuvien.Models.PhieuMuons.PhieuMuon", "PhieuMuon")
                         .WithMany("PhieuTras")
                         .HasForeignKey("MaPhieuMuon")
@@ -840,8 +819,6 @@ namespace Quanlythuvien.Migrations
             modelBuilder.Entity("Quanlythuvien.Models.DocGia", b =>
                 {
                     b.Navigation("PhieuMuon");
-
-                    b.Navigation("PhieuTra");
                 });
 
             modelBuilder.Entity("Quanlythuvien.Models.PhieuMuons.PhieuMuon", b =>

@@ -8,12 +8,19 @@ namespace Quanlythuvien.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-
+            migrationBuilder.DropColumn(
+                name: "SoLuong",
+                table: "ChiTietPhieuTras");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-
+            migrationBuilder.AddColumn<int>(
+                name: "SoLuong",
+                table: "ChiTietPhieuTras",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
         }
     }
 }

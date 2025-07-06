@@ -20,11 +20,13 @@ namespace Quanlythuvien.Views
         private PhieuMuonController phieuMuonctrl = new PhieuMuonController();
         private SachController sachCtrl = new SachController();
         private DocGiaController docGiaCtrl = new DocGiaController();
+        private ChiTietPhieuMuonController chiTietCtrl = new ChiTietPhieuMuonController();
         int cnt = 0;
         public PhieuMuonForm()
         {
             InitializeComponent();
             this.SinhMaPhieu();
+            this.cnt = this.chiTietCtrl.GetCount();
         }
         private void SinhMaPhieu()
         {
@@ -48,29 +50,32 @@ namespace Quanlythuvien.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-            using (DataContext context = new DataContext())
+            int sachRowSelected = this.dgvSach.CurrentRow.Index;
+            int docGiaRowSelected = this.dgvDocGia.CurrentRow.Index;
+            int soLuong = int.Parse(this.txtSoLuong.Text);
+            if (docGiaRowSelected < 0 || docGiaRowSelected > this.dgvDocGia.Rows.Count)
             {
-                int rowSelected = this.dgvSach.CurrentRow.Index;
-                string maSach = this.dgvSach.Rows[rowSelected].Cells[0].Value.ToString();
-                ChiTietPhieuMuon ct = new ChiTietPhieuMuon { Id = "CT" + (++cnt), MaSach = maSach, PhieuMuonId = this.phieuMuon.MaPhieuMuon, NgayTra = null };
-                context.ChiTietPhieuMuons.Add(ct);
-                this.phieuMuon.ChiTietPhieuMuons.Add(ct);
+                //Thông báo vui lòng chọn độc giả
+                return;
             }
-
+            if (sachRowSelected < 0 || sachRowSelected > this.dgvSach.Rows.Count)
+            {
+                //Thông báo vui lòng chọn sách
+                return;
+            }
+            this.phieuMuon.MaDocGia = this.dgvDocGia.Rows[docGiaRowSelected].Cells[0].Value.ToString();
+            string maSach = this.dgvSach.Rows[sachRowSelected].Cells[0].Value.ToString();
+            ChiTietPhieuMuon ct = new ChiTietPhieuMuon { Id = "CT" + (++cnt), MaSach = maSach, MaPhieuMuon = this.phieuMuon.MaPhieuMuon, SoLuong = soLuong };
+            this.phieuMuon.ChiTietPhieuMuons.Add(ct);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            using (DataContext context = new DataContext())
-            {
-                this.phieuMuon.NgayMuon = this.dtpNgayMuon.Value;
+            this.phieuMuon.NgayMuon = this.dtpNgayMuon.Value.Date;
+            this.phieuMuon.NgayPhaiTra = this.dtpNgaytra.Value.Date;
+            this.phieuMuonctrl.Insert(this.phieuMuon);
 
-                context.PhieuMuons.Add(this.phieuMuon);
-                context.SaveChanges();
-            }
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

@@ -17,15 +17,14 @@ namespace Quanlythuvien.Models.PhieuMuons
         public string MaPhieuMuon { get; set; }
 
         [Required(ErrorMessage = "Phải chọn quyển sách muốn mượn")]
-
+        [ForeignKey(nameof(DocGia))]
         public string MaDocGia { get; set; }
-
-        [ForeignKey(nameof(MaDocGia))]
         public DocGia? DocGia { get; set; }
 
         [Required, DataType(DataType.Date)]
         public DateTime NgayMuon { get; set; }
         public List<ChiTietPhieuMuon> ChiTietPhieuMuons { get; set; } = new List<ChiTietPhieuMuon>();
-        public List<PhieuTra> PhieuTras { get; set; }
+        public List<PhieuTra>? PhieuTras { get; set; }
+        public DateTime? NgayPhaiTra { get; set; }
     }
 }

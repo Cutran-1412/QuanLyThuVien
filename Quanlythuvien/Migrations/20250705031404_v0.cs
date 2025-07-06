@@ -15,8 +15,8 @@ namespace Quanlythuvien.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -82,25 +82,26 @@ namespace Quanlythuvien.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ChiTietPhieuMuon",
+                name: "ChiTietPhieuMuons",
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    PhieuMuonId = table.Column<string>(type: "nvarchar(12)", nullable: false),
+                    MaPhieuMuon = table.Column<string>(type: "nvarchar(12)", nullable: false),
                     MaSach = table.Column<string>(type: "nvarchar(10)", nullable: false),
+                    SoLuong = table.Column<int>(type: "int", nullable: false),
                     NgayTra = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ChiTietPhieuMuon", x => x.Id);
+                    table.PrimaryKey("PK_ChiTietPhieuMuons", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ChiTietPhieuMuon_PhieuMuons_PhieuMuonId",
-                        column: x => x.PhieuMuonId,
+                        name: "FK_ChiTietPhieuMuons_PhieuMuons_MaPhieuMuon",
+                        column: x => x.MaPhieuMuon,
                         principalTable: "PhieuMuons",
                         principalColumn: "MaPhieuMuon",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ChiTietPhieuMuon_Sachs_MaSach",
+                        name: "FK_ChiTietPhieuMuons_Sachs_MaSach",
                         column: x => x.MaSach,
                         principalTable: "Sachs",
                         principalColumn: "MaSach",
@@ -114,17 +115,11 @@ namespace Quanlythuvien.Migrations
                     MaPhieuTra = table.Column<string>(type: "nvarchar(12)", maxLength: 12, nullable: false),
                     MaPhieuMuon = table.Column<string>(type: "nvarchar(12)", nullable: false),
                     NgayTra = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TienPhat = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    DocGiaMaDocGia = table.Column<string>(type: "nvarchar(10)", nullable: true)
+                    TienPhat = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PhieuTras", x => x.MaPhieuTra);
-                    table.ForeignKey(
-                        name: "FK_PhieuTras_DocGias_DocGiaMaDocGia",
-                        column: x => x.DocGiaMaDocGia,
-                        principalTable: "DocGias",
-                        principalColumn: "MaDocGia");
                     table.ForeignKey(
                         name: "FK_PhieuTras_PhieuMuons_MaPhieuMuon",
                         column: x => x.MaPhieuMuon,
@@ -135,7 +130,7 @@ namespace Quanlythuvien.Migrations
 
             migrationBuilder.InsertData(
                 table: "Admins",
-                columns: new[] { "id", "password", "username" },
+                columns: new[] { "id", "Password", "Username" },
                 values: new object[,]
                 {
                     { 1, "2004", "Admin1" },
@@ -144,10 +139,7 @@ namespace Quanlythuvien.Migrations
                     { 4, "2004", "Admin4" },
                     { 5, "2004", "Admin5" },
                     { 6, "2004", "Admin6" },
-                    { 7, "2004", "Admin7" },
-                    { 8, "2004", "Admin8" },
-                    { 9, "2004", "Admin9" },
-                    { 10, "2004", "Admin110" }
+                    { 7, "2004", "Admin7" }
                 });
 
             migrationBuilder.InsertData(
@@ -193,7 +185,10 @@ namespace Quanlythuvien.Migrations
                     { "S019", 78000m, 2015, new DateTime(2025, 6, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Trẻ", 4, "Cà Phê Cùng Tony", "Tony Buổi Sáng", "Kỹ năng" },
                     { "S020", 145000m, 1943, new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Văn Học", 3, "Suối Nguồn", "Ayn Rand", "Tiểu thuyết" },
                     { "S021", 112000m, 2004, new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Tổng Hợp", 5, "Kỷ Luật Tự Giác", "Stephen R. Covey", "Kỹ năng" },
-                    { "S022", 130000m, 1997, new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Trẻ", 6, "Cha Giàu Cha Nghèo", "R. T. Kiyosaki", "Kinh tế" }
+                    { "S022", 130000m, 1997, new DateTime(2025, 6, 18, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Trẻ", 6, "Cha Giàu Cha Nghèo", "R. T. Kiyosaki", "Kinh tế" },
+                    { "S023", 88000m, 1968, new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Lao Động", 4, "Người Bán Hàng Vĩ Đại", "Og Mandino", "Kỹ năng" },
+                    { "S024", 118000m, 1969, new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Văn Học", 7, "Bố Già", "Mario Puzo", "Tiểu thuyết" },
+                    { "S025", 128000m, 1967, new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Văn Học", 5, "Trăm Năm Cô Đơn", "G. G. Márquez", "Tiểu thuyết" }
                 });
 
             migrationBuilder.InsertData(
@@ -201,9 +196,6 @@ namespace Quanlythuvien.Migrations
                 columns: new[] { "MaSach", "DonGia", "NamPhatHanh", "NgayNhap", "NhaXuatBan", "SoLuong", "TenSach", "TenTacGia", "TheLoai" },
                 values: new object[,]
                 {
-                    { "S023", 88000m, 1968, new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Lao Động", 4, "Người Bán Hàng Vĩ Đại", "Og Mandino", "Kỹ năng" },
-                    { "S024", 118000m, 1969, new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Văn Học", 7, "Bố Già", "Mario Puzo", "Tiểu thuyết" },
-                    { "S025", 128000m, 1967, new DateTime(2025, 6, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Văn Học", 5, "Trăm Năm Cô Đơn", "G. G. Márquez", "Tiểu thuyết" },
                     { "S026", 92000m, 1952, new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Văn Học", 3, "Ông Già Và Biển Cả", "Ernest Hemingway", "Tiểu thuyết" },
                     { "S027", 104000m, 1949, new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Văn Học", 4, "Hoa Nhẫn Thạch", "Yasunari Kawabata", "Tiểu thuyết" },
                     { "S028", 132000m, 2011, new DateTime(2025, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "NXB Tri Thức", 5, "The Lean Startup", "Eric Ries", "Kinh tế" },
@@ -223,33 +215,28 @@ namespace Quanlythuvien.Migrations
 
             migrationBuilder.InsertData(
                 table: "PhieuTras",
-                columns: new[] { "MaPhieuTra", "DocGiaMaDocGia", "MaPhieuMuon", "NgayTra", "TienPhat" },
-                values: new object[] { "PT001", null, "PM1", new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), 0m });
+                columns: new[] { "MaPhieuTra", "MaPhieuMuon", "NgayTra", "TienPhat" },
+                values: new object[] { "PT001", "PM1", new DateTime(2025, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), 0m });
 
             migrationBuilder.InsertData(
                 table: "PhieuTras",
-                columns: new[] { "MaPhieuTra", "DocGiaMaDocGia", "MaPhieuMuon", "NgayTra", "TienPhat" },
-                values: new object[] { "PT002", null, "PM2", new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), 500m });
+                columns: new[] { "MaPhieuTra", "MaPhieuMuon", "NgayTra", "TienPhat" },
+                values: new object[] { "PT002", "PM2", new DateTime(2025, 6, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), 500m });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ChiTietPhieuMuon_MaSach",
-                table: "ChiTietPhieuMuon",
+                name: "IX_ChiTietPhieuMuons_MaPhieuMuon",
+                table: "ChiTietPhieuMuons",
+                column: "MaPhieuMuon");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ChiTietPhieuMuons_MaSach",
+                table: "ChiTietPhieuMuons",
                 column: "MaSach");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ChiTietPhieuMuon_PhieuMuonId",
-                table: "ChiTietPhieuMuon",
-                column: "PhieuMuonId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PhieuMuons_MaDocGia",
                 table: "PhieuMuons",
                 column: "MaDocGia");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PhieuTras_DocGiaMaDocGia",
-                table: "PhieuTras",
-                column: "DocGiaMaDocGia");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PhieuTras_MaPhieuMuon",
@@ -263,7 +250,7 @@ namespace Quanlythuvien.Migrations
                 name: "Admins");
 
             migrationBuilder.DropTable(
-                name: "ChiTietPhieuMuon");
+                name: "ChiTietPhieuMuons");
 
             migrationBuilder.DropTable(
                 name: "PhieuTras");
