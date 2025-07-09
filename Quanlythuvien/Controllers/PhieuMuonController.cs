@@ -1,5 +1,6 @@
 
 using Quanlythuvien.Models.PhieuMuons;
+using Quanlythuvien.Models.Sachs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,17 @@ namespace Quanlythuvien.Controllers
     {
         public PhieuMuonController() {
             this.dao = new PhieuMuonDAO();
+        }
+        public override bool Insert(PhieuMuon model)
+        {
+            List<ChiTietPhieuMuon> chiTietPhieuMuons = model.ChiTietPhieuMuons;
+            foreach (var ct in chiTietPhieuMuons)
+            {
+                Sach sach = new SachDAO().FindByKey(ct.MaSach);
+                sach.SoLuong -= ct.SoLuongMuon;
+                new SachDAO().Update(sach);
+            }
+            return this.dao.Insert(model);
         }
     }
 }

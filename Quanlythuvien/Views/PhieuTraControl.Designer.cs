@@ -1,5 +1,5 @@
 
-﻿namespace Quanlythuvien.Views
+namespace Quanlythuvien.Views
 {
     partial class PhieuTraControl
     {
@@ -31,15 +31,14 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
             dgvChiTietPhieuMuon = new DataGridView();
             btnTraSach = new Button();
-            btnSave = new Button();
             label5 = new Label();
-            dtpNgayTra = new DateTimePicker();
             txtMaPhieuTra = new TextBox();
             dgvPhieuMuon = new DataGridView();
+            txtSoLuongTra = new TextBox();
+            lbl = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvChiTietPhieuMuon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvPhieuMuon).BeginInit();
             SuspendLayout();
@@ -61,15 +60,6 @@
             label2.Size = new Size(93, 20);
             label2.TabIndex = 1;
             label2.Text = "Mã phiếu trả";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(400, 92);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Ngày trả";
             // 
             // label4
             // 
@@ -94,23 +84,13 @@
             // 
             // btnTraSach
             // 
-            btnTraSach.Location = new Point(759, 360);
+            btnTraSach.Location = new Point(774, 397);
             btnTraSach.Name = "btnTraSach";
             btnTraSach.Size = new Size(155, 29);
             btnTraSach.TabIndex = 6;
             btnTraSach.Text = "Trả sách";
             btnTraSach.UseVisualStyleBackColor = true;
             btnTraSach.Click += btnTraSach_Click;
-            // 
-            // btnSave
-            // 
-            btnSave.Location = new Point(528, 397);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(94, 29);
-            btnSave.TabIndex = 7;
-            btnSave.Text = "Lưu";
-            btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
             // 
             // label5
             // 
@@ -120,13 +100,6 @@
             label5.Size = new Size(127, 20);
             label5.TabIndex = 8;
             label5.Text = "Chọn phiếu mượn";
-            // 
-            // dtpNgayTra
-            // 
-            dtpNgayTra.Location = new Point(543, 92);
-            dtpNgayTra.Name = "dtpNgayTra";
-            dtpNgayTra.Size = new Size(250, 27);
-            dtpNgayTra.TabIndex = 10;
             // 
             // txtMaPhieuTra
             // 
@@ -149,19 +122,34 @@
             dgvPhieuMuon.TabIndex = 12;
             dgvPhieuMuon.CellClick += dgvPhieuMuon_CellClick;
             // 
+            // txtSoLuongTra
+            // 
+            txtSoLuongTra.Location = new Point(707, 342);
+            txtSoLuongTra.Name = "txtSoLuongTra";
+            txtSoLuongTra.Size = new Size(125, 27);
+            txtSoLuongTra.TabIndex = 13;
+            // 
+            // lbl
+            // 
+            lbl.AutoSize = true;
+            lbl.Location = new Point(584, 342);
+            lbl.Name = "lbl";
+            lbl.Size = new Size(91, 20);
+            lbl.TabIndex = 14;
+            lbl.Text = "Số lượng trả";
+            // 
             // PhieuTraControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lbl);
+            Controls.Add(txtSoLuongTra);
             Controls.Add(dgvPhieuMuon);
             Controls.Add(txtMaPhieuTra);
-            Controls.Add(dtpNgayTra);
             Controls.Add(label5);
-            Controls.Add(btnSave);
             Controls.Add(btnTraSach);
             Controls.Add(dgvChiTietPhieuMuon);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "PhieuTraControl";
@@ -177,14 +165,13 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
         private Label label4;
         private DataGridView dgvChiTietPhieuMuon;
         private Button btnTraSach;
-        private Button btnSave;
         private Label label5;
-        private DateTimePicker dtpNgayTra;
         private TextBox txtMaPhieuTra;
         private DataGridView dgvPhieuMuon;
+        private TextBox txtSoLuongTra;
+        private Label lbl;
     }
 }

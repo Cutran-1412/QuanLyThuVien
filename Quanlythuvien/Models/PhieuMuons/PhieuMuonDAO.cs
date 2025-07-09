@@ -16,7 +16,7 @@ namespace Quanlythuvien.Models.PhieuMuons
         {
             using (DataContext context = new DataContext())
             {
-                PhieuMuon temp = context.PhieuMuons.Find(key);
+                var temp = context.PhieuMuons.Find(key);
                 if (temp == null) return false;
                 context.PhieuMuons.Remove(temp);
                 context.SaveChanges();

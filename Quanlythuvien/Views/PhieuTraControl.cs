@@ -1,5 +1,5 @@
 
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Quanlythuvien.Controllers;
 using Quanlythuvien.Models;
 using Quanlythuvien.Models.PhieuMuons;
@@ -20,23 +20,20 @@ namespace Quanlythuvien.Views
 {
     public partial class PhieuTraControl : UserControl
     {
+        private PhieuTra phieuTra;
         private PhieuMuonController phieuMuonCtrl = new PhieuMuonController();
         private PhieuTraController phieuTraCtrl = new PhieuTraController();
-        PhieuTra phieuTra = new PhieuTra();
+
         private ChiTietPhieuTraController chiTietPhieuTraCtrl = new ChiTietPhieuTraController();
         private ChiTietPhieuMuonController chiTietPhieuMuonCtrl = new ChiTietPhieuMuonController();
-        int cnt = 0;
         public PhieuTraControl()
         {
             InitializeComponent();
-            this.SinhMaPhieuTra();
-            this.cnt = this.chiTietPhieuTraCtrl.GetCount();
         }
-        private void SinhMaPhieuTra()
+        private string SinhMaPhieuTra()
         {
             int cnt = this.phieuTraCtrl.GetCount() + 1;
-            this.phieuTra.MaPhieuTra = "PT" + cnt;
-            this.txtMaPhieuTra.Text = this.phieuTra.MaPhieuTra;
+            return "PT" + cnt;
         }
         private void LoadChiTietPhieuMuon(string maPhieuMuon)
         {
@@ -49,7 +46,6 @@ namespace Quanlythuvien.Views
             this.dgvChiTietPhieuMuon.DataSource = phieuMuon.ChiTietPhieuMuons;
             this.dgvChiTietPhieuMuon.Columns["PhieuMuon"].Visible = false;
             this.dgvChiTietPhieuMuon.Columns["Sach"].Visible = false;
-            this.dgvChiTietPhieuMuon.Columns["Id"].Visible = false;
 
         }
         private void LoadPhieuMuon()
@@ -70,36 +66,39 @@ namespace Quanlythuvien.Views
             this.LoadChiTietPhieuMuon(maPhieuMuon);
         }
 
+
         private void btnTraSach_Click(object sender, EventArgs e)
         {
             int row = this.dgvChiTietPhieuMuon.CurrentRow.Index;
             var maSach = this.dgvChiTietPhieuMuon.Rows[row].Cells["MaSach"].Value.ToString();
             var maPhieuMuon = this.dgvChiTietPhieuMuon.Rows[row].Cells["MaPhieuMuon"].Value.ToString();
-            var ctPhieuMuonId = this.dgvChiTietPhieuMuon.Rows[row].Cells[0].Value.ToString();
-            var daTra = bool.Parse(this.dgvChiTietPhieuMuon.Rows[row].Cells["DaTra"].Value.ToString());
-            if (daTra)
+            int soLuongTra = int.Parse(this.txtSoLuongTra.Text);
+            this.phieuTra = this.phieuTraCtrl.FindByKey(this.txtMaPhieuTra.Text);
+            if (phieuTra == null)
             {
-                //thong bao sach da duoc tra
-                return;
-            }
-            this.chiTietPhieuMuonCtrl.TraSach(ctPhieuMuonId);
-            this.LoadChiTietPhieuMuon(maPhieuMuon);
-            ChiTietPhieuTra chiTietPhieuTra
-                = new ChiTietPhieuTra
+                this.phieuTra = new PhieuTra
                 {
-                    Id = "CT" + (++cnt),
-                    MaPhieuTra = this.phieuTra.MaPhieuTra,
-                    MaSach = maSach,
-                    NgayTra = this.dtpNgayTra.Value.Date,
+                    MaPhieuTra = this.SinhMaPhieuTra(),
+                    MaPhieuMuon = maPhieuMuon,
+                    NgayTra = DateTime.Now.Date,
+                    ChiTietPhieuTras = new List<ChiTietPhieuTra>()
                 };
+                this.phieuTraCtrl.Insert(phieuTra);
+                this.txtMaPhieuTra.Text = this.phieuTra.MaPhieuTra;
+            }
+            this.chiTietPhieuMuonCtrl.TraSach(maPhieuMuon, maSach, soLuongTra);
+            this.LoadChiTietPhieuMuon(maPhieuMuon);
 
-            this.phieuTra.MaPhieuMuon = maPhieuMuon;
-            this.phieuTra.ChiTietPhieuTras.Add(chiTietPhieuTra);
-        }
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            this.phieuTra.NgayTra = this.dtpNgayTra.Value.Date;
-            this.phieuTraCtrl.Insert(this.phieuTra);
+            var ctPhieuTra = new ChiTietPhieuTra
+            {
+                MaPhieuTra = this.phieuTra.MaPhieuTra,
+                MaSach = maSach,
+                SoLuong = soLuongTra
+            };
+            this.chiTietPhieuTraCtrl.Insert(ctPhieuTra);
+            this.phieuTra.ChiTietPhieuTras.Add(ctPhieuTra);
+            MessageBox.Show("Đã thêm sách vào phiếu trả");
+
         }
     }
 }

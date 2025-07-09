@@ -8,8 +8,8 @@
     <Compile Update="Views\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\phieumuon.cs">
-      <SubType>Form</SubType>
+    <Compile Update="Views\phieumuoncontrol.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\PhieuTraControl.cs">
       <SubType>UserControl</SubType>

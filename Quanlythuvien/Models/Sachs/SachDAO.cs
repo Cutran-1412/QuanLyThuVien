@@ -17,7 +17,10 @@ namespace Quanlythuvien.Models.Sachs
 
         public override Sach FindByKey(string key)
         {
-            throw new NotImplementedException();
+            using (DataContext context = new DataContext())
+            {
+                return context.Sachs.Find(key);
+            }
         }
 
         public override int GetCount()
@@ -36,6 +39,15 @@ namespace Quanlythuvien.Models.Sachs
         public override bool Insert(Sach model)
         {
             throw new NotImplementedException();
+        }
+        public override bool Update(Sach model)
+        {
+            using (DataContext context = new DataContext())
+            {
+                context.Sachs.Update(model);
+                context.SaveChanges();
+                return true;
+            }
         }
     }
 }

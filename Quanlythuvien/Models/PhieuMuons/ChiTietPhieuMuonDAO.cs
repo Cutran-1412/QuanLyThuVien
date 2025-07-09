@@ -21,7 +21,7 @@ namespace Quanlythuvien.Models.PhieuMuons
 
         public override int GetCount()
         {
-            using (DataContext context = new DataContext())
+            using (DataContext context = new())
             {
                 return context.ChiTietPhieuMuons.Count();
             }
@@ -44,15 +44,28 @@ namespace Quanlythuvien.Models.PhieuMuons
                 return true;
             }
         }
-        public virtual bool TraSach(string chiTietId)
+        public virtual bool TraSach(string maPhieuMuon, string maSach,int soLuongTra)
         {
             using (DataContext context = new DataContext())
             {
-                var ctPhieuMuon = context.ChiTietPhieuMuons.FirstOrDefault(ct =>ct.Id==chiTietId);
-                ctPhieuMuon.DaTra = true;
-                context.SaveChanges();
-                return true;
+                var ctPhieuMuon = context.ChiTietPhieuMuons.FirstOrDefault(ct =>ct.MaPhieuMuon== maPhieuMuon && ct.MaSach== maSach);
+                if (ctPhieuMuon != null)
+                {
+                    ctPhieuMuon.SoLuongDaTra += soLuongTra;
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
             }
         }
+        public virtual ChiTietPhieuMuon GetByKey(string maPhieuMuon, string maSach)
+        {
+            using (DataContext context = new DataContext())
+            {            
+                var  ctPhieuMuon = context.ChiTietPhieuMuons.FirstOrDefault(ct => ct.MaPhieuMuon == maPhieuMuon && ct.MaSach == maSach);
+                return ctPhieuMuon;
+            }
+        }
+
     }
 }

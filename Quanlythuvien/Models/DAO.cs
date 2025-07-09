@@ -14,5 +14,9 @@ namespace Quanlythuvien.Models
         public abstract bool Delete(string key);
         public abstract int GetCount();
         public abstract T FindByKey(string key);
+        public virtual bool Update(T model)
+        {
+            return true;
+        }
     }
 }
