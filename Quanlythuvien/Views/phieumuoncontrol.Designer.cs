@@ -439,6 +439,7 @@
             groupBox5.TabIndex = 12;
             groupBox5.TabStop = false;
             groupBox5.Text = "Tìm kiếm";
+            groupBox5.Enter += groupBox5_Enter;
             // 
             // button7
             // 

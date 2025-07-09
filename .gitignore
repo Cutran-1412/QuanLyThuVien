@@ -60,3 +60,6 @@ _ReSharper*/
 
 # Crash dumps
 *.dmp
+
+.vs/
+Migrations/

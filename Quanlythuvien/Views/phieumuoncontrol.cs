@@ -56,7 +56,7 @@ namespace Quanlythuvien.Views
         }
         private void LoadMaDocGia()
         {
-            this.cboMaDG.DataSource = this.docGiaCtrol.GetData();
+            this.cboMaDG.DataSource = this.docGiaCtrol.Get_DocGia();
             this.cboMaDG.DisplayMember = "MaDocGia";
             this.cboMaDG.ValueMember = "MaDocGia";
             this.cboMaDG.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -91,7 +91,7 @@ namespace Quanlythuvien.Views
             this.btnChoMuon.Enabled = false;
             this.ClearAll();
             this.chiTietPhieuMuons.Clear();
-            
+
         }
         private void ClearAll()
         {
@@ -138,16 +138,16 @@ namespace Quanlythuvien.Views
             };
             this.txtSoLuongCon.Text = (int.Parse(this.txtSoLuongCon.Text) - ctPhieuMuon.SoLuongMuon).ToString();
             var sa = ctPhieuMuon.MaSach;
-            bool isContained=false;
+            bool isContained = false;
             foreach (var ct in this.chiTietPhieuMuons)
             {
                 if (!ct.MaPhieuMuon.Equals(ctPhieuMuon.MaPhieuMuon) && ct.MaSach.Equals(ctPhieuMuon.MaSach)) continue;
                 ct.SoLuongMuon += ctPhieuMuon.SoLuongMuon;
-                isContained  = true;
+                isContained = true;
                 this.dgvDanhSachMuon.Refresh();
                 break;
             }
-            if(!isContained) this.chiTietPhieuMuons.Add(ctPhieuMuon);
+            if (!isContained) this.chiTietPhieuMuons.Add(ctPhieuMuon);
         }
 
         private void txtSoLuongMuon_TextChanged(object sender, EventArgs e)
@@ -203,7 +203,7 @@ namespace Quanlythuvien.Views
         private void dgvDanhSachMuon_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             int rowCount = this.dgvDanhSachMuon.Rows.Count;
-            if(rowCount > 0 )
+            if (rowCount > 0)
             {
                 this.btnChoMuon.Enabled = true;
             }
@@ -211,6 +211,11 @@ namespace Quanlythuvien.Views
             {
                 this.btnChoMuon.Enabled = false;
             }
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
