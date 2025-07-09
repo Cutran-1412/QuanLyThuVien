@@ -9,21 +9,24 @@ using Quanlythuvien.Models.DocGias;
 namespace Quanlythuvien.Controllers
 {
     
-    public class DocGiaController : Controller<DocGia>
+    public class DocGiaController 
     {
-        public DocGiaController() {
-            this.dao = new DocGiaDAO();
-
-        }
-
-        public override int GetCount()
+        public readonly DocGiaDAO dgdao = new DocGiaDAO();
+        public List<DocGia> Get_DocGia()
         {
-            throw new NotImplementedException();
+            return dgdao.Get_DocGia();
         }
-
-        public override List<DocGia> GetData()
+        public DocGia? Get_DocGia_Ma(string ma)
         {
-            return this.dao.GetData();
+            return dgdao.Check(ma);
+        }
+        public void Insert_DocGia(DocGia dg)
+        {
+            dgdao.Insert(dg);
+        }
+        public void Update_Docgia(DocGia dg)
+        {
+            dgdao.Update(dg);
         }
     }
 }

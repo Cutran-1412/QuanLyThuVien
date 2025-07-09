@@ -4,37 +4,42 @@ using System.Linq;
 using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
+using Quanlythuvien.Views.ucFrom;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Quanlythuvien.Models.DocGias
 {
-    internal class DocGiaDAO : DAO<DocGia>
+    public class DocGiaDAO
     {
-        public override bool Delete(string key)
+        private readonly DataContext kn = new DataContext();
+        public List<DocGia> Get_DocGia()
         {
-            throw new NotImplementedException();
+            return kn.DocGias.ToList();
         }
-
-        public override DocGia FindByKey(string key)
+        public DocGia? Check(string ma)
         {
-            throw new NotImplementedException();
+            return kn.DocGias.Find(ma);
         }
-
-        public override int GetCount()
+        public void Insert(DocGia docgia) 
         {
-            throw new NotImplementedException();
+            kn.DocGias.Add(docgia);
+            kn.SaveChanges();
         }
-
-        public override List<DocGia> GetData()
+        public void Update(DocGia docgia)
         {
-            using (DataContext context = new DataContext())
+            var dg = kn.DocGias.Find(docgia.MaDocGia);
+            if (dg != null) 
             {
-                return context.DocGias.ToList();
+                dg.HoTen = docgia.HoTen;
+                dg.GioiTinh = docgia.GioiTinh;
+                dg.NgaySinh = docgia.NgaySinh;
+                dg.SoDienThoai = docgia.SoDienThoai;
+                dg.Email = docgia.Email;
+                dg.DiaChi = docgia.DiaChi;
+                dg.NgayDangKy = docgia.NgayDangKy;
+                dg.TienPhat = docgia.TienPhat;
+                kn.SaveChanges();
             }
-        }
-
-        public override bool Insert(DocGia model)
-        {
-            throw new NotImplementedException();
         }
     }
 }

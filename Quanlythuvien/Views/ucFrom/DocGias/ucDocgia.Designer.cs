@@ -55,8 +55,8 @@
             guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            gbtnsua = new Guna.UI2.WinForms.Guna2Button();
+            gbtnthem = new Guna.UI2.WinForms.Guna2Button();
             gbtnThongtin = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             dtDocgia = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -85,8 +85,8 @@
             guna2GroupBox2.Controls.Add(guna2Button5);
             guna2GroupBox2.Controls.Add(guna2Button4);
             guna2GroupBox2.Controls.Add(guna2Button3);
-            guna2GroupBox2.Controls.Add(guna2Button2);
-            guna2GroupBox2.Controls.Add(guna2Button1);
+            guna2GroupBox2.Controls.Add(gbtnsua);
+            guna2GroupBox2.Controls.Add(gbtnthem);
             guna2GroupBox2.Controls.Add(gbtnThongtin);
             guna2GroupBox2.CustomBorderColor = Color.FromArgb(136, 192, 208);
             guna2GroupBox2.CustomizableEdges = customizableEdges13;
@@ -179,57 +179,59 @@
             guna2Button3.TabIndex = 4;
             guna2Button3.Text = "Thêm";
             // 
-            // guna2Button2
+            // gbtnsua
             // 
-            guna2Button2.BackColor = Color.Transparent;
-            guna2Button2.BorderColor = Color.Transparent;
-            guna2Button2.BorderRadius = 15;
-            guna2Button2.CustomizableEdges = customizableEdges7;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(63, 142, 252);
-            guna2Button2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.HoverState.FillColor = Color.FromArgb(45, 156, 219);
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.ImageAlign = HorizontalAlignment.Left;
-            guna2Button2.Location = new Point(27, 184);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.PressedColor = Color.FromArgb(26, 115, 232);
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button2.ShadowDecoration.Depth = 12;
-            guna2Button2.ShadowDecoration.Enabled = true;
-            guna2Button2.Size = new Size(153, 40);
-            guna2Button2.TabIndex = 3;
-            guna2Button2.Text = "Thêm";
+            gbtnsua.BackColor = Color.Transparent;
+            gbtnsua.BorderColor = Color.Transparent;
+            gbtnsua.BorderRadius = 15;
+            gbtnsua.CustomizableEdges = customizableEdges7;
+            gbtnsua.DisabledState.BorderColor = Color.DarkGray;
+            gbtnsua.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtnsua.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtnsua.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtnsua.FillColor = Color.FromArgb(63, 142, 252);
+            gbtnsua.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtnsua.ForeColor = Color.White;
+            gbtnsua.HoverState.FillColor = Color.FromArgb(45, 156, 219);
+            gbtnsua.Image = (Image)resources.GetObject("gbtnsua.Image");
+            gbtnsua.ImageAlign = HorizontalAlignment.Left;
+            gbtnsua.Location = new Point(27, 184);
+            gbtnsua.Name = "gbtnsua";
+            gbtnsua.PressedColor = Color.FromArgb(26, 115, 232);
+            gbtnsua.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gbtnsua.ShadowDecoration.Depth = 12;
+            gbtnsua.ShadowDecoration.Enabled = true;
+            gbtnsua.Size = new Size(153, 40);
+            gbtnsua.TabIndex = 3;
+            gbtnsua.Text = "Sửa";
+            gbtnsua.Click += gbtnsua_Click;
             // 
-            // guna2Button1
+            // gbtnthem
             // 
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderColor = Color.Transparent;
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(63, 142, 252);
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.HoverState.FillColor = Color.FromArgb(45, 156, 219);
-            guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
-            guna2Button1.ImageAlign = HorizontalAlignment.Left;
-            guna2Button1.Location = new Point(27, 116);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.FromArgb(26, 115, 232);
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.ShadowDecoration.Depth = 12;
-            guna2Button1.ShadowDecoration.Enabled = true;
-            guna2Button1.Size = new Size(153, 40);
-            guna2Button1.TabIndex = 2;
-            guna2Button1.Text = "Thêm";
+            gbtnthem.BackColor = Color.Transparent;
+            gbtnthem.BorderColor = Color.Transparent;
+            gbtnthem.BorderRadius = 15;
+            gbtnthem.CustomizableEdges = customizableEdges9;
+            gbtnthem.DisabledState.BorderColor = Color.DarkGray;
+            gbtnthem.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtnthem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtnthem.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtnthem.FillColor = Color.FromArgb(63, 142, 252);
+            gbtnthem.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtnthem.ForeColor = Color.White;
+            gbtnthem.HoverState.FillColor = Color.FromArgb(45, 156, 219);
+            gbtnthem.Image = (Image)resources.GetObject("gbtnthem.Image");
+            gbtnthem.ImageAlign = HorizontalAlignment.Left;
+            gbtnthem.Location = new Point(27, 116);
+            gbtnthem.Name = "gbtnthem";
+            gbtnthem.PressedColor = Color.FromArgb(26, 115, 232);
+            gbtnthem.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gbtnthem.ShadowDecoration.Depth = 12;
+            gbtnthem.ShadowDecoration.Enabled = true;
+            gbtnthem.Size = new Size(153, 40);
+            gbtnthem.TabIndex = 2;
+            gbtnthem.Text = "Thêm";
+            gbtnthem.Click += gbtnthem_Click;
             // 
             // gbtnThongtin
             // 
@@ -350,8 +352,8 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button gbtnsua;
+        private Guna.UI2.WinForms.Guna2Button gbtnthem;
         private Guna.UI2.WinForms.Guna2Button gbtnThongtin;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2DataGridView dtDocgia;

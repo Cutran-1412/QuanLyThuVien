@@ -27,7 +27,7 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
         {
             if (docgia != null)
             {
-                gtxtMa.Text = docgia.MaDocGia;
+                gtxtma.Text = docgia.MaDocGia;
                 gtxthoten.Text = docgia.HoTen;
                 gcbogioitinh.Text = docgia.GioiTinh;
                 gdatengaysinh.Value = docgia.NgaySinh;
@@ -44,7 +44,7 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
         }
         private bool Check_Null()
         {
-            
+
             return true;
         }
         private void gbtnThem_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
             {
                 DocGia dg = new DocGia
                 {
-                    MaDocGia = gtxtMa.Text,
+                    MaDocGia = gtxtma.Text,
                     HoTen = gtxthoten.Text,
                     GioiTinh = gcbogioitinh.Text,
                     NgaySinh = gdatengaysinh.Value,
@@ -63,18 +63,66 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                     NgayDangKy = datengaydangki.Value,
                     TienPhat = decimal.Parse(gtxttienphat.Text)
                 };
-                if(dgctr.FindByKey(dg.MaDocGia) != null) 
+                if (dgctr.Get_DocGia_Ma(dg.MaDocGia) == null)
                 {
-                    dgctr.Insert(dg);
-                    string text = "Đã thêm thành công độc giả có mã :" + gtxtMa.Text;
+                    dgctr.Insert_DocGia(dg);
+                    string text = "Đã thêm thành công độc giả có mã :" + gtxtma.Text;
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Information;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                    if (TopLevelControl is frmMain main)
+                    {
+                        main.ShowControl(new ucDocgia());
+                    }
+                }
+                else
+                {
+                    string text = "Đã thêm thất bại độc giả bị trùng mã :" + gtxtma.Text;
                     string caption = "Thông báo";
                     MessageDialogButtons button = MessageDialogButtons.OK;
                     MessageDialogIcon icon = MessageDialogIcon.Information;
                     new frmMain().Msgbox(text, caption, button, icon);
                 }
-                else 
-                {
+            }
+        }
 
+        private void gbtnSua_Click(object sender, EventArgs e)
+        {
+            if (Check_Null())
+            {
+                DocGia dg = new DocGia
+                {
+                    MaDocGia = gtxtma.Text,
+                    HoTen = gtxthoten.Text,
+                    GioiTinh = gcbogioitinh.Text,
+                    NgaySinh = gdatengaysinh.Value,
+                    SoDienThoai = gtxtsodienthoai.Text,
+                    Email = gtxtemail.Text,
+                    DiaChi = gtxtdiachi.Text,
+                    NgayDangKy = datengaydangki.Value,
+                    TienPhat = decimal.Parse(gtxttienphat.Text)
+                };
+                if (dgctr.Get_DocGia_Ma(dg.MaDocGia) == null)
+                {
+                    dgctr.Insert_DocGia(dg);
+                    string text = "Đã thêm thành công độc giả có mã :" + gtxtma.Text;
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Information;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                    if (TopLevelControl is frmMain main)
+                    {
+                        main.ShowControl(new ucDocgia());
+                    }
+                }
+                else
+                {
+                    string text = "Đã thêm thất bại độc giả bị trùng mã :" + gtxtma.Text;
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Information;
+                    new frmMain().Msgbox(text, caption, button, icon);
                 }
             }
         }

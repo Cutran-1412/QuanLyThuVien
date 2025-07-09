@@ -46,7 +46,7 @@ namespace Quanlythuvien.Views
         }
         private void LoadDocGia()
         {
-            this.dgvDocGia.DataSource = this.docGiaCtrl.GetData();
+            this.dgvDocGia.DataSource = this.docGiaCtrl.Get_DocGia();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

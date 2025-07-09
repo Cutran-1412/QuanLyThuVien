@@ -85,7 +85,7 @@
             gdatengaysinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             gcbogioitinh = new Guna.UI2.WinForms.Guna2ComboBox();
             gtxthoten = new Guna.UI2.WinForms.Guna2TextBox();
-            gtxtMa = new Guna.UI2.WinForms.Guna2TextBox();
+            gtxtma = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1.SuspendLayout();
             guna2GroupBox2.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
@@ -201,6 +201,7 @@
             gbtnSua.Size = new Size(153, 40);
             gbtnSua.TabIndex = 2;
             gbtnSua.Text = "Sửa";
+            gbtnSua.Click += gbtnSua_Click;
             // 
             // gbtnThem
             // 
@@ -251,7 +252,7 @@
             guna2GroupBox1.Controls.Add(gdatengaysinh);
             guna2GroupBox1.Controls.Add(gcbogioitinh);
             guna2GroupBox1.Controls.Add(gtxthoten);
-            guna2GroupBox1.Controls.Add(gtxtMa);
+            guna2GroupBox1.Controls.Add(gtxtma);
             guna2GroupBox1.CustomBorderColor = Color.FromArgb(92, 122, 234);
             guna2GroupBox1.CustomizableEdges = customizableEdges29;
             guna2GroupBox1.FillColor = Color.FromArgb(42, 45, 60);
@@ -510,27 +511,27 @@
             gtxthoten.Size = new Size(241, 36);
             gtxthoten.TabIndex = 14;
             // 
-            // gtxtMa
+            // gtxtma
             // 
-            gtxtMa.BorderColor = Color.FromArgb(94, 129, 172);
-            gtxtMa.BorderRadius = 10;
-            gtxtMa.CustomizableEdges = customizableEdges27;
-            gtxtMa.DefaultText = "";
-            gtxtMa.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            gtxtMa.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            gtxtMa.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            gtxtMa.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            gtxtMa.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            gtxtMa.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gtxtMa.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            gtxtMa.IconLeft = (Image)resources.GetObject("gtxtMa.IconLeft");
-            gtxtMa.Location = new Point(160, 60);
-            gtxtMa.Name = "gtxtMa";
-            gtxtMa.PlaceholderText = "ID";
-            gtxtMa.SelectedText = "";
-            gtxtMa.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            gtxtMa.Size = new Size(241, 36);
-            gtxtMa.TabIndex = 13;
+            gtxtma.BorderColor = Color.FromArgb(94, 129, 172);
+            gtxtma.BorderRadius = 10;
+            gtxtma.CustomizableEdges = customizableEdges27;
+            gtxtma.DefaultText = "";
+            gtxtma.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtxtma.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtxtma.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtxtma.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtxtma.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtxtma.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxtma.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtxtma.IconLeft = (Image)resources.GetObject("gtxtma.IconLeft");
+            gtxtma.Location = new Point(160, 60);
+            gtxtma.Name = "gtxtma";
+            gtxtma.PlaceholderText = "ID";
+            gtxtma.SelectedText = "";
+            gtxtma.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            gtxtma.Size = new Size(241, 36);
+            gtxtma.TabIndex = 13;
             // 
             // ucDocgiaExtra
             // 
@@ -555,7 +556,7 @@
         private Guna.UI2.WinForms.Guna2Button gbtnSua;
         private Guna.UI2.WinForms.Guna2Button gbtnThem;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2TextBox gtxtMa;
+        private Guna.UI2.WinForms.Guna2TextBox gtxtma;
         private Guna.UI2.WinForms.Guna2TextBox gtxthoten;
         private Guna.UI2.WinForms.Guna2ComboBox gcbogioitinh;
         private Guna.UI2.WinForms.Guna2TextBox gtxtsodienthoai;
