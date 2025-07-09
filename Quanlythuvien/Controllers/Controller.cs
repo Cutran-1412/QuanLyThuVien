@@ -28,5 +28,13 @@ namespace Quanlythuvien.Controllers
         {
             return this.dao.FindByKey(key);
         }
+        public virtual bool Update(T model)
+        {
+            return this.dao.Update(model);
+        }
+        public virtual bool DeleteByKey(string key)
+        {
+            return this.dao.Delete(key);
+        }
     }
 }

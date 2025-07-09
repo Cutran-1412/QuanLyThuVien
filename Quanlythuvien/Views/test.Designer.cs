@@ -33,16 +33,16 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(44, 54);
+            panel1.Location = new Point(96, 63);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1082, 443);
+            panel1.Size = new Size(1100, 540);
             panel1.TabIndex = 0;
             // 
             // test
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1182, 553);
+            ClientSize = new Size(1282, 653);
             Controls.Add(panel1);
             Name = "test";
             Text = "test";

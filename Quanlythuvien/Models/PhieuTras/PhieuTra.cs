@@ -10,7 +10,6 @@ using Quanlythuvien.Models.Sachs;
 
 namespace Quanlythuvien.Models.PhieuTras
 {
-
     public class PhieuTra :Model
     {
         [Key]
@@ -21,7 +20,7 @@ namespace Quanlythuvien.Models.PhieuTras
         public string MaPhieuMuon { get; set; }
         public PhieuMuon PhieuMuon { get; set; }
         [Required, DataType(DataType.Date)]
-        public DateTime NgayTra { get; set; }
+        public DateTime NgayTra { get; set; } = DateTime.Now.Date;
 
         [Range(0, double.MaxValue)] 
         public decimal TienPhat { get; set; }

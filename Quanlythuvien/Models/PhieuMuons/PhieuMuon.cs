@@ -18,9 +18,8 @@ namespace Quanlythuvien.Models.PhieuMuons
         [Required, StringLength(12, MinimumLength = 3)]
         public string MaPhieuMuon { get; set; }
 
-        [Required(ErrorMessage = "Phải chọn quyển sách muốn mượn")]
         [ForeignKey(nameof(DocGia))]
-        public string MaDocGia { get; set; }
+        public string MaDocGia { get; set; } 
         public DocGia? DocGia { get; set; }
 
         [Required, DataType(DataType.Date)]

@@ -17,7 +17,12 @@ namespace Quanlythuvien.Models.PhieuTras
 
         public override PhieuTra FindByKey(string key)
         {
-            throw new NotImplementedException();
+
+            using (DataContext context = new DataContext())
+            {
+                return context.PhieuTras.FirstOrDefault(p => p.MaPhieuTra == key);
+
+            }
         }
 
         public override int GetCount()

@@ -19,7 +19,7 @@ namespace Quanlythuvien.Views
 
         private void test_Load(object sender, EventArgs e)
         {
-            this.panel1.Controls.Add( new PhieuTraControl());
+            this.panel1.Controls.Add(new phieumuoncontrol());
         }
     }
 }
