@@ -128,6 +128,8 @@ namespace Quanlythuvien.Views
         }
         private void btnThemChiTiet_Click(object sender, EventArgs e)
         {
+            int soLuongMuon = int.Parse(this.txtSoLuongMuon.Text);
+
             ChiTietPhieuMuon ctPhieuMuon = new ChiTietPhieuMuon
             {
                 MaPhieuMuon = this.txtMaPhieuCenter.Text,
