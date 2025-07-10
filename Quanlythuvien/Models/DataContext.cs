@@ -29,7 +29,7 @@ namespace Quanlythuvien.Models
             String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=Quanlythuvien;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
             String sqlCuong = "";
             String sqlChien = "Data Source=MSI\\SQLSERVER;Initial Catalog=qlthuvien;Integrated Security=True";
-            optionsBuilder.UseSqlServer(sqlcu);
+            optionsBuilder.UseSqlServer(sqlChien);
         }
         private void Seed_Admin(ModelBuilder modelBuilder)
         {
@@ -102,15 +102,8 @@ namespace Quanlythuvien.Models
             Seed_Admin(modelBuilder);
             Seed_DocGia(modelBuilder);
             Seed_Sach(modelBuilder);
-            modelBuilder.Entity<PhieuMuon>().HasData(
-                new PhieuMuon { MaPhieuMuon = "PM1", MaDocGia = "DG001", NgayMuon = new DateTime(2025, 6, 1)},
-                new PhieuMuon { MaPhieuMuon = "PM2", MaDocGia = "DG001", NgayMuon = new DateTime(2025, 6, 3)}
-         
-            );
-            modelBuilder.Entity<PhieuTra>().HasData(
-                new PhieuTra {MaPhieuMuon="PM1",  MaPhieuTra = "PT001", NgayTra = new DateTime(2025, 6, 8), TienPhat = 0 },
-                new PhieuTra {MaPhieuMuon="PM2" ,MaPhieuTra = "PT002", NgayTra = new DateTime(2025, 6, 11), TienPhat = 500 }
-                );
+            modelBuilder.Entity<ChiTietPhieuMuon>().HasKey(c => new { c.MaPhieuMuon, c.MaSach });
+            modelBuilder.Entity<ChiTietPhieuTra>().HasKey(c => new { c.MaPhieuTra, c.MaSach});
         }
     }
 }
