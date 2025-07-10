@@ -166,7 +166,7 @@
             dtpNgayMuon.Format = DateTimePickerFormat.Short;
             dtpNgayMuon.Location = new Point(136, 129);
             dtpNgayMuon.Name = "dtpNgayMuon";
-            dtpNgayMuon.Size = new Size(133, 27);
+            dtpNgayMuon.Size = new Size(132, 27);
             dtpNgayMuon.TabIndex = 2;
             // 
             // txtMaPhieuLeft
