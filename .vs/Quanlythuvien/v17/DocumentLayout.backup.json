@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\docgias\\ucdocgiaextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|e:\\\u0111\u1ED3 \u00E1n 1\\quanlythuvien\\quanlythuvien\\views\\ucfrom\\sachs\\ucsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\quanlythuvien\\views\\ucfrom\\sachs\\ucsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\sachs\\ucsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -61,8 +61,7 @@
               "ToolTip": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSach.cs [Design]",
               "RelativeToolTip": "Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T13:05:27.725Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-10T13:05:27.725Z"
             },
             {
               "$type": "Document",
@@ -74,8 +73,7 @@
               "RelativeToolTip": "Quanlythuvien\\Models\\PhieuTras\\PhieuTraDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T12:59:50.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-10T12:59:50.643Z"
             },
             {
               "$type": "Document",
@@ -86,8 +84,7 @@
               "ToolTip": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\DocGias\\ucDocgia.cs [Design]",
               "RelativeToolTip": "Quanlythuvien\\Views\\ucFrom\\DocGias\\ucDocgia.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T00:39:18.04Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-07T00:39:18.04Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "ToolTip": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\DocGias\\ucDocgiaExtra.cs [Design]",
               "RelativeToolTip": "Quanlythuvien\\Views\\ucFrom\\DocGias\\ucDocgiaExtra.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T13:35:11.605Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-05T13:35:11.605Z"
             }
           ]
         },
