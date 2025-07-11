@@ -46,7 +46,7 @@ namespace Quanlythuvien.Models.Sachs
         public int NamPhatHanh { get; set; }
 
         [StringLength(80)]
-        [DisplayName("Năm xuất bản sách")]
+        [DisplayName("Nhà xuất bản")]
         public string NhaXuatBan { get; set; }
         [DisplayName("Số lượng")]
 
