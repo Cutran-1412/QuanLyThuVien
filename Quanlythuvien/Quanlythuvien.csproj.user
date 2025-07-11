@@ -8,9 +8,6 @@
     <Compile Update="Views\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\phieumuon.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\phieumuoncontrol.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -24,6 +21,15 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\ucFrom\DocGias\ucDocgiaExtra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\ucFrom\Sachs\ucSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\ucFrom\Sachs\ucSachExtra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\ucFrom\Sachs\ucSachSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\ucFrom\ucAdmin.cs">
