@@ -8,15 +8,6 @@
     <Compile Update="Views\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\phieumuoncontrol.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Views\PhieuTraControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Views\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\ucFrom\DocGias\ucDocgia.cs">
       <SubType>UserControl</SubType>
     </Compile>
