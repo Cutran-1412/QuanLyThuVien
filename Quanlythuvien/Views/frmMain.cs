@@ -12,7 +12,7 @@ using Guna.UI2.WinForms;
 using Quanlythuvien.Controllers;
 using Quanlythuvien.Models.DocGias;
 using Quanlythuvien.Views.ucFrom;
-
+using Quanlythuvien.Views.ucFrom.Sachs;
 
 namespace Quanlythuvien.Views
 {
@@ -105,6 +105,11 @@ namespace Quanlythuvien.Views
         private void pamain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void gbtnSach_Click(object sender, EventArgs e)
+        {
+            ShowControl(new ucSach());
         }
     }
 }

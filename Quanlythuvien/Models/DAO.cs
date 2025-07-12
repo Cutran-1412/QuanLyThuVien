@@ -16,7 +16,7 @@ namespace Quanlythuvien.Models
         public abstract T FindByKey(string key);
         public virtual bool Update(T model)
         {
-            return true;
+            return true;    
         }
     }
 }

@@ -38,7 +38,7 @@
             pamain = new Panel();
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
+            gbtnSach = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -128,15 +128,16 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // gbtnSach
             // 
-            button3.Location = new Point(14, 172);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(59, 31);
-            button3.TabIndex = 9;
-            button3.Text = "Sách";
-            button3.UseVisualStyleBackColor = true;
+            gbtnSach.Location = new Point(14, 172);
+            gbtnSach.Margin = new Padding(3, 4, 3, 4);
+            gbtnSach.Name = "gbtnSach";
+            gbtnSach.Size = new Size(59, 31);
+            gbtnSach.TabIndex = 9;
+            gbtnSach.Text = "Sách";
+            gbtnSach.UseVisualStyleBackColor = true;
+            gbtnSach.Click += gbtnSach_Click;
             // 
             // frmMain
             // 
@@ -145,7 +146,7 @@
             BackColor = Color.FromArgb(30, 30, 47);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1351, 871);
-            Controls.Add(button3);
+            Controls.Add(gbtnSach);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(lblthoigian);
@@ -175,6 +176,6 @@
         private Panel pamain;
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button gbtnSach;
     }
 }

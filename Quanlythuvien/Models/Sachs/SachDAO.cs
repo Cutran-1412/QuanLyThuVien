@@ -12,7 +12,18 @@ namespace Quanlythuvien.Models.Sachs
     {
         public override bool Delete(string key)
         {
-            throw new NotImplementedException();
+            using (DataContext context = new DataContext())
+            {
+                Sach sach= context.Sachs.Find(key);
+                if(sach != null)
+                {
+                    context.Sachs.Remove(sach);
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
+                
+            }
         }
 
         public override Sach FindByKey(string key)
@@ -38,7 +49,12 @@ namespace Quanlythuvien.Models.Sachs
 
         public override bool Insert(Sach model)
         {
-            throw new NotImplementedException();
+            using (DataContext context = new DataContext())
+            {
+                context.Sachs.Add(model);
+                context.SaveChanges();
+                return true;
+            }
         }
         public override bool Update(Sach model)
         {
