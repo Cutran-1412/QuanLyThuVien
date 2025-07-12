@@ -41,7 +41,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
                     TenSach = this.gtxtTenSach.Text,
                     DonGia = decimal.Parse(this.gtxtDongia.Text),
                     NamPhatHanh = int.Parse(this.gtxtNamphathanh.Text),
-                    NgayNhap = this.gdtpNgaynhap.Value,
+                    NgayNhap = this.gdtpNgaynhap.Value.Date,
                     NhaXuatBan = this.gtxtNhaxb.Text,
                     SoLuong = int.Parse(this.gtxtSoluong.Text),
                     TenTacGia = this.gtxtTacgia.Text,

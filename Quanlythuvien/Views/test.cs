@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quanlythuvien.Views.ucFrom.PhieuMuon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace Quanlythuvien.Views
 
         private void test_Load(object sender, EventArgs e)
         {
-            this.panel1.Controls.Add(new phieumuoncontrol());
+            this.panel1.Controls.Add(new ucPhieuMuon());
         }
     }
 }

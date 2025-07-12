@@ -31,6 +31,7 @@ namespace Quanlythuvien.Models.PhieuMuons
                 var  phieuMuon = context.PhieuMuons
                     .Where(pm=>pm.MaPhieuMuon==key)
                     .Include(pm=>pm.ChiTietPhieuMuons)
+                    .ThenInclude(ct =>ct.Sach)
                     .FirstOrDefault();
                 return phieuMuon;
             }
@@ -60,6 +61,15 @@ namespace Quanlythuvien.Models.PhieuMuons
                 context.PhieuMuons.Add(model);
                 context.SaveChanges();
                 return true;
+            }
+        }
+        public virtual PhieuMuon GetLast()
+        {
+            using (DataContext context = new DataContext())
+            {
+                return context.PhieuMuons
+                    .OrderByDescending(pm=>pm.MaPhieuMuon)
+                    .FirstOrDefault();
             }
         }
     }

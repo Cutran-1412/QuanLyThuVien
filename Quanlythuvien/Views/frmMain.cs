@@ -12,6 +12,7 @@ using Guna.UI2.WinForms;
 using Quanlythuvien.Controllers;
 using Quanlythuvien.Models.DocGias;
 using Quanlythuvien.Views.ucFrom;
+using Quanlythuvien.Views.ucFrom.PhieuMuon;
 using Quanlythuvien.Views.ucFrom.Sachs;
 
 namespace Quanlythuvien.Views
@@ -112,9 +113,9 @@ namespace Quanlythuvien.Views
             ShowControl(new ucSach());
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnMuon_Click(object sender, EventArgs e)
         {
-
+            ShowControl(new ucPhieuMuon());
         }
     }
 }
