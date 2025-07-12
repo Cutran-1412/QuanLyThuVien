@@ -30,12 +30,21 @@
     {
       "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\controllers\\docgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\controllers\\docgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|e:\\\u0111\u1ED3 \u00E1n 1\\quanlythuvien\\quanlythuvien\\views\\ucfrom\\sachs\\ucsachsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\sachs\\ucsachsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\views\\ucfrom\\docgias\\ucdocgiaextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\docgias\\ucdocgiaextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|e:\\\u0111\u1ED3 \u00E1n 1\\quanlythuvien\\quanlythuvien\\views\\ucfrom\\sachs\\ucsachextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\sachs\\ucsachextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> 20f18ac38541f27316fa907a197d0fe4a6b9eae4
     },
     {
+      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\quanlythuvien\\views\\ucfrom\\sachs\\ucsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\sachs\\ucsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,16 +68,8 @@
       "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|d:\\quanlythuvien\\quanlythuvien\\quanlythuvien\\views\\ucfrom\\ucadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\ucadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 =======
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|e:\\\u0111\u1ED3 \u00E1n 1\\quanlythuvien\\quanlythuvien\\views\\ucfrom\\sachs\\ucsachextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\sachs\\ucsachextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\quanlythuvien\\views\\ucfrom\\docgias\\ucdocgiaextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\docgias\\ucdocgiaextra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\quanlythuvien\\views\\ucfrom\\sachs\\ucsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|solutionrelative:quanlythuvien\\views\\ucfrom\\sachs\\ucsach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68D8BC04-38DE-44AC-8113-0314D3C34494}|Quanlythuvien\\Quanlythuvien.csproj|E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\quanlythuvien\\views\\ucfrom\\docgias\\ucdocgia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -106,11 +107,23 @@
               "RelativeDocumentMoniker": "Quanlythuvien\\Views\\phieumuon.cs",
               "ToolTip": "D:\\Quanlythuvien\\Quanlythuvien\\Quanlythuvien\\Views\\phieumuon.cs",
               "RelativeToolTip": "Quanlythuvien\\Views\\phieumuon.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowBsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAA4wBsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T01:41:30.302Z",
               "EditorCaption": ""
 =======
+              "Title": "ucSachSearch.cs [Design]",
+              "DocumentMoniker": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSachSearch.cs",
+              "RelativeDocumentMoniker": "Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSachSearch.cs",
+              "ToolTip": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSachSearch.cs [Design]",
+              "RelativeToolTip": "Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSachSearch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T13:20:54.808Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ucSachExtra.cs [Design]",
               "DocumentMoniker": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSachExtra.cs",
               "RelativeDocumentMoniker": "Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSachExtra.cs",
@@ -145,6 +158,10 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAQwCMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-05T14:05:40.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
 =======
               "Title": "ucSach.cs [Design]",
               "DocumentMoniker": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSach.cs",
@@ -152,11 +169,12 @@
               "ToolTip": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSach.cs [Design]",
               "RelativeToolTip": "Quanlythuvien\\Views\\ucFrom\\Sachs\\ucSach.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T13:05:27.725Z"
+              "WhenOpened": "2025-07-10T13:05:27.725Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "PhieuTraDAO.cs",
               "DocumentMoniker": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Models\\PhieuTras\\PhieuTraDAO.cs",
               "RelativeDocumentMoniker": "Quanlythuvien\\Models\\PhieuTras\\PhieuTraDAO.cs",
@@ -165,11 +183,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T12:59:50.643Z"
->>>>>>> 20f18ac38541f27316fa907a197d0fe4a6b9eae4
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+>>>>>>> 20f18ac38541f27316fa907a197d0fe4a6b9eae4
               "Title": "ucDocgia.cs [Design]",
               "DocumentMoniker": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\DocGias\\ucDocgia.cs",
               "RelativeDocumentMoniker": "Quanlythuvien\\Views\\ucFrom\\DocGias\\ucDocgia.cs",
@@ -183,7 +201,7 @@
 <<<<<<< HEAD
               "DocumentIndex": 4,
 =======
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
 >>>>>>> 20f18ac38541f27316fa907a197d0fe4a6b9eae4
               "Title": "ucDocgiaExtra.cs [Design]",
               "DocumentMoniker": "E:\\\u0110\u1ED3 \u00E1n 1\\QuanLyThuVien\\Quanlythuvien\\Views\\ucFrom\\DocGias\\ucDocgiaExtra.cs",
