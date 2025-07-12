@@ -38,7 +38,9 @@
             pamain = new Panel();
             button1 = new Button();
             button2 = new Button();
-            button3 = new Button();
+            gbtnSach = new Button();
+            btnMuon = new Button();
+            btnTra = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             // 
             lblthoigian.AutoSize = true;
             lblthoigian.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblthoigian.Location = new Point(966, 820);
+            lblthoigian.Location = new Point(1082, 801);
             lblthoigian.Name = "lblthoigian";
             lblthoigian.Size = new Size(168, 46);
             lblthoigian.TabIndex = 1;
@@ -128,15 +130,37 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // gbtnSach
             // 
-            button3.Location = new Point(14, 172);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(59, 31);
-            button3.TabIndex = 9;
-            button3.Text = "Sách";
-            button3.UseVisualStyleBackColor = true;
+            gbtnSach.Location = new Point(14, 172);
+            gbtnSach.Margin = new Padding(3, 4, 3, 4);
+            gbtnSach.Name = "gbtnSach";
+            gbtnSach.Size = new Size(59, 31);
+            gbtnSach.TabIndex = 9;
+            gbtnSach.Text = "Sách";
+            gbtnSach.UseVisualStyleBackColor = true;
+            gbtnSach.Click += gbtnSach_Click;
+            // 
+            // btnMuon
+            // 
+            btnMuon.Location = new Point(14, 211);
+            btnMuon.Margin = new Padding(3, 4, 3, 4);
+            btnMuon.Name = "btnMuon";
+            btnMuon.Size = new Size(59, 77);
+            btnMuon.TabIndex = 10;
+            btnMuon.Text = "Mượn";
+            btnMuon.UseVisualStyleBackColor = true;
+            btnMuon.Click += btnMuon_Click;
+            // 
+            // btnTra
+            // 
+            btnTra.Location = new Point(14, 296);
+            btnTra.Margin = new Padding(3, 4, 3, 4);
+            btnTra.Name = "btnTra";
+            btnTra.Size = new Size(59, 91);
+            btnTra.TabIndex = 11;
+            btnTra.Text = "Trả";
+            btnTra.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -144,8 +168,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 47);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1351, 871);
-            Controls.Add(button3);
+            ClientSize = new Size(1351, 868);
+            Controls.Add(btnTra);
+            Controls.Add(btnMuon);
+            Controls.Add(gbtnSach);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(lblthoigian);
@@ -153,8 +179,8 @@
             Controls.Add(lblchao);
             Controls.Add(pamain);
             Margin = new Padding(3, 4, 3, 4);
-            MaximumSize = new Size(1369, 918);
-            MinimumSize = new Size(1369, 918);
+            MaximumSize = new Size(1369, 915);
+            MinimumSize = new Size(1369, 915);
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";
@@ -175,6 +201,8 @@
         private Panel pamain;
         private Button button1;
         private Button button2;
-        private Button button3;
+        private Button gbtnSach;
+        private Button btnMuon;
+        private Button btnTra;
     }
 }

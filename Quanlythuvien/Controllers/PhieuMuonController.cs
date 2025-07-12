@@ -25,5 +25,9 @@ namespace Quanlythuvien.Controllers
             }
             return this.dao.Insert(model);
         }
+        public virtual PhieuMuon GetLast()
+        {
+            return ((PhieuMuonDAO)this.dao).GetLast();
+        }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quanlythuvien.Views.ucFrom.Sachs
+namespace Quanlythuvien.Views.ucFrom.PhieuTra
 {
-    public partial class ucSachSearch : UserControl
+    public partial class ucPhieuTra : UserControl
     {
-        public ucSachSearch()
+        public ucPhieuTra()
         {
             InitializeComponent();
         }
