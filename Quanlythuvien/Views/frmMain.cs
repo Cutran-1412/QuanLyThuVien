@@ -111,5 +111,10 @@ namespace Quanlythuvien.Views
         {
             ShowControl(new ucSach());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
