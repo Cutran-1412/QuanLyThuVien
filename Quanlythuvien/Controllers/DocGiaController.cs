@@ -28,5 +28,9 @@ namespace Quanlythuvien.Controllers
         {
             dgdao.Update(dg);
         }
+        public List<DocGia> Search_Docgia(string luachon,string keyword)
+        {
+            return dgdao.Search(luachon, keyword);
+        }
     }
 }

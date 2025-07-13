@@ -16,5 +16,10 @@ namespace Quanlythuvien.Views
         {
             InitializeComponent();
         }
+
+        private void ucMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

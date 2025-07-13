@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
+using Quanlythuvien.Models.Admins;
 using Quanlythuvien.Views.ucFrom;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -40,6 +41,25 @@ namespace Quanlythuvien.Models.DocGias
                 dg.TienPhat = docgia.TienPhat;
                 kn.SaveChanges();
             }
+        }
+        public List<DocGia> Search(string luachon,string keyword)
+        {
+            switch (luachon)
+            {
+                case "Mã độc giả":
+                    return kn.DocGias.Where(a => a.MaDocGia.ToLower().Contains(keyword)).ToList();
+                case "Họ tên":
+                    return kn.DocGias.Where(a => a.HoTen.ToLower().Contains(keyword)).ToList();
+                case "Số điện thoại":
+                    return kn.DocGias.Where(a => a.SoDienThoai.ToLower().Contains(keyword)).ToList();
+                case "Email":
+                    return kn.DocGias.Where(a => a.Email.ToLower().Contains(keyword)).ToList();
+                case "Địa chỉ":
+                    return kn.DocGias.Where(a => a.DiaChi.ToLower().Contains(keyword)).ToList();
+                case "Giới tính":
+                    return kn.DocGias.Where(a => a.GioiTinh.ToLower().Contains(keyword)).ToList();
+            }
+            return null;
         }
     }
 }

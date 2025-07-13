@@ -13,6 +13,7 @@ using Quanlythuvien.Controllers;
 using Quanlythuvien.Models.DocGias;
 using Quanlythuvien.Views.ucFrom;
 using Quanlythuvien.Views.ucFrom.PhieuMuon;
+using Quanlythuvien.Views.ucFrom.PhieuTra;
 using Quanlythuvien.Views.ucFrom.Sachs;
 
 namespace Quanlythuvien.Views
@@ -23,19 +24,48 @@ namespace Quanlythuvien.Views
         {
             InitializeComponent();
         }
+        Color[] colors = new Color[]
+        {
+        ColorTranslator.FromHtml("#F1C40F"), // vàng
+        ColorTranslator.FromHtml("#1ABC9C"), // xanh ngọc
+        ColorTranslator.FromHtml("#E74C3C"), // đỏ
+        ColorTranslator.FromHtml("#9B59B6"), // tím
+        ColorTranslator.FromHtml("#3498DB")  // xanh lam
+        };
+        int colorIndex = 0;
+        private void CreateMarquee()
+        {
+            lblcodeby = new System.Windows.Forms.Label
+            {
+                Text = "Codeby: Trần Xuân Cư - Hoàng Thanh Chiến - Nguyễn Qúy Cường",
+                AutoSize = true,
+                Font = new Font("Segoe UI", 14, FontStyle.Bold),
+                ForeColor = colors[0],
+                Top = 5,
+                Left = pcodeby.Width
+            };
+
+            pcodeby.Controls.Add(lblcodeby);
+        }
+        private void timerdoimau_Tick(object sender, EventArgs e)
+        {
+            colorIndex = (colorIndex + 1) % colors.Length;
+            lblcodeby.ForeColor = colors[colorIndex];
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
+            ShowControl(new ucMain());
             timethoigian.Start();
-            timechuyen.Interval = 15;
-
             CreateMarquee();
             timerChayChu.Interval = 20;
             timerChayChu.Tick += timerChayChu_Tick;
             timerChayChu.Start();
 
-            timerdoimau.Interval = 300;
+            timerdoimau.Interval = 1000;
             timerdoimau.Tick += timerdoimau_Tick;
             timerdoimau.Start();
+            ibtnmuon.Visible = false;
+            ibtntra.Visible = false;
         }
         public DialogResult Msgbox(string text, string caption, MessageDialogButtons buttons, MessageDialogIcon icon)
         {
@@ -54,74 +84,16 @@ namespace Quanlythuvien.Views
         {
             lblthoigian.Text = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
         }
-        private bool siderbarExpand = true;
-
 
         private void ibtnMenu_Click(object sender, EventArgs e)
         {
-            timechuyen.Start();
             ShowControl(new ucMain());
-        }
-
-        private void ibtndocgia_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pamain.Controls.Clear();
-            ucAdmin myPanel = new ucAdmin();
-            pamain.Controls.Add(myPanel);
         }
         public void ShowControl(UserControl uc)
         {
             pamain.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             pamain.Controls.Add(uc);
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pamain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gbtnSach_Click(object sender, EventArgs e)
-        {
-            ShowControl(new ucSach());
-        }
-
-        private void btnMuon_Click(object sender, EventArgs e)
-        {
-            ShowControl(new ucPhieuMuon());
-        }
-
-        Color[] colors = new Color[]
-        {
-        ColorTranslator.FromHtml("#F1C40F"), // vàng
-        ColorTranslator.FromHtml("#1ABC9C"), // xanh ngọc
-        ColorTranslator.FromHtml("#E74C3C"), // đỏ
-        ColorTranslator.FromHtml("#9B59B6"), // tím
-        ColorTranslator.FromHtml("#3498DB")  // xanh lam
-        };
-        int colorIndex = 0;
-        private void CreateMarquee()
-        {
-            lblcodeby = new System.Windows.Forms.Label
-            {
-                Text = "Code by: Trần Xuân Cư - Hoàng Thanh Chiến - Nguyễn Qúy Cường",
-                AutoSize = true,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                ForeColor = colors[0],
-                Top = 5,
-                Left = pcodeby.Width
-            };
-
-            pcodeby.Controls.Add(lblcodeby);
         }
         private void timerChayChu_Tick(object sender, EventArgs e)
         {
@@ -133,53 +105,39 @@ namespace Quanlythuvien.Views
             }
         }
 
-        private void timerdoimau_Tick(object sender, EventArgs e)
+        private void fmenu_Paint(object sender, PaintEventArgs e)
         {
-            colorIndex = (colorIndex + 1) % colors.Length;
-            lblcodeby.ForeColor = colors[colorIndex];
-            lblchao.ForeColor = colors[colorIndex];
+
         }
 
-        private void gbtnadmin_Click(object sender, EventArgs e)
+        private void ibtnmuontra_Click(object sender, EventArgs e)
         {
-            if (fmenu.Width == fmenu.MaximumSize.Width)
-            {
-                timechuyen.Start();
-                ShowControl(new ucAdmin());
-            }
+            ibtnmuon.Visible = !ibtnmuon.Visible;
+            ibtntra.Visible = !ibtntra.Visible;
+        }
+        private void tbtnadmin_Click(object sender, EventArgs e)
+        {
+            ShowControl(new ucAdmin());
         }
 
-        private void timechuyen_Tick(object sender, EventArgs e)
+        private void ibtndocgia_Click(object sender, EventArgs e)
         {
-            if (siderbarExpand)
-            {
-                // Đang mở → thu nhỏ
-                fmenu.Width -= 3;
-                if (fmenu.Width <= fmenu.MinimumSize.Width)
-                {
-                    siderbarExpand = false;
-                    timechuyen.Stop();
-                }
-            }
-            else
-            {
-                // Đang thu nhỏ → mở ra
-                fmenu.Width += 3;
-                if (fmenu.Width >= fmenu.MaximumSize.Width)
-                {
-                    siderbarExpand = true;
-                    timechuyen.Stop();
-                }
-            }
+            ShowControl(new ucDocgia());
         }
 
-        private void gbtndocgia_Click(object sender, EventArgs e)
+        private void ibtnsach_Click(object sender, EventArgs e)
         {
-            if (fmenu.Width == fmenu.MaximumSize.Width)
-            {
-                timechuyen.Start();
-                ShowControl(new ucDocgia());
-            }
+            ShowControl(new ucSach());
+        }
+
+        private void ibtnmuon_Click(object sender, EventArgs e)
+        {
+            ShowControl(new ucPhieuMuon());
+        }
+
+        private void ibtntra_Click(object sender, EventArgs e)
+        {
+            ShowControl(new ucPhieuTra());
         }
     }
 }

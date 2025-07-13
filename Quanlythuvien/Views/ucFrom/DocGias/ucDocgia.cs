@@ -66,5 +66,19 @@ namespace Quanlythuvien.Views.ucFrom
                 main.ShowControl(new ucDocgiaExtra(docgia));
             }
         }
+
+        private void gtxttim_TextChanged(object sender, EventArgs e)
+        {
+            dtDocgia.DataSource = dg.Search_Docgia(gcboluachon.Text, gtxttim.Text);
+            dtDocgia.Columns["SoDienThoai"].Visible = false;
+            dtDocgia.Columns["Email"].Visible = false;
+            dtDocgia.Columns["SoSachMuonToiDa"].Visible = false;
+            dtDocgia.Columns["PhieuMuon"].Visible = false;
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
