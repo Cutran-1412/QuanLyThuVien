@@ -61,5 +61,14 @@ namespace Quanlythuvien.Models.DocGias
             }
             return null;
         }
+        public void Delete(string ma)
+        {
+            var dg = kn.DocGias.Find(ma);
+            if (dg != null)
+            {
+                kn.DocGias.Remove(dg);
+                kn.SaveChanges();
+            }    
+        }
     }
 }

@@ -301,6 +301,7 @@
             iconButton8.Text = "Thoát";
             iconButton8.UseCompatibleTextRendering = true;
             iconButton8.UseVisualStyleBackColor = false;
+            iconButton8.Click += iconButton8_Click;
             // 
             // tbtnadmin
             // 
@@ -385,16 +386,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.FromArgb(242, 243, 244);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1348, 661);
+            ClientSize = new Size(1355, 670);
             Controls.Add(fmenu);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pamain);
-            MaximumSize = new Size(1364, 700);
-            MinimumSize = new Size(1364, 700);
+            FormBorderStyle = FormBorderStyle.None;
+            MaximumSize = new Size(1355, 670);
+            MinimumSize = new Size(1355, 670);
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";

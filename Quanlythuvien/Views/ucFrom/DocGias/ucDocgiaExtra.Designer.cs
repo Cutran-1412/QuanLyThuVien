@@ -163,7 +163,7 @@
             gbtnSua.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnSua.Image = (Image)resources.GetObject("gbtnSua.Image");
             gbtnSua.ImageAlign = HorizontalAlignment.Left;
-            gbtnSua.Location = new Point(27, 161);
+            gbtnSua.Location = new Point(27, 220);
             gbtnSua.Name = "gbtnSua";
             gbtnSua.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnSua.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -250,7 +250,7 @@
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Location = new Point(470, 300);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(52, 17);
+            guna2HtmlLabel9.Size = new Size(53, 17);
             guna2HtmlLabel9.TabIndex = 31;
             guna2HtmlLabel9.Text = "Tiền phạt";
             // 

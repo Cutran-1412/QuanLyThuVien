@@ -34,17 +34,12 @@ namespace Quanlythuvien.Views.ucFrom
         {
             Load_Data();
         }
-        public DocGia docgia = new DocGia();
-        private void dtDocgia_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtDocgia.SelectedRows.Count > 0)
-            {
-                docgia = dg.Get_DocGia_Ma(dtDocgia.SelectedRows[0].Cells[0].Value.ToString());
-            }
-        }
 
         private void gbtnThongtin_Click(object sender, EventArgs e)
         {
+            int row = this.dtDocgia.CurrentRow.Index;
+            string ma = this.dtDocgia.Rows[row].Cells[0].Value.ToString();
+            DocGia docgia = dg.Get_DocGia_Ma(ma);
             if (TopLevelControl is frmMain main)
             {
                 main.ShowControl(new ucDocgiaExtra(docgia));
@@ -61,6 +56,9 @@ namespace Quanlythuvien.Views.ucFrom
 
         private void gbtnsua_Click(object sender, EventArgs e)
         {
+            int row = this.dtDocgia.CurrentRow.Index;
+            string ma = this.dtDocgia.Rows[row].Cells[0].Value.ToString();
+            DocGia docgia = dg.Get_DocGia_Ma(ma);
             if (TopLevelControl is frmMain main)
             {
                 main.ShowControl(new ucDocgiaExtra(docgia));
@@ -79,6 +77,14 @@ namespace Quanlythuvien.Views.ucFrom
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void gbtnxoa_Click(object sender, EventArgs e)
+        {
+            int row = this.dtDocgia.CurrentRow.Index;
+            string ma = this.dtDocgia.Rows[row].Cells[0].Value.ToString();
+            dg.Delete_Docgia(ma);
+            Load_Data();
         }
     }
 }
