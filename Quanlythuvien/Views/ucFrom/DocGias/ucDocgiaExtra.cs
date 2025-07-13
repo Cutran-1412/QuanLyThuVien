@@ -126,5 +126,13 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                 }
             }
         }
+
+        private void gbtnthoat_Click(object sender, EventArgs e)
+        {
+            if (TopLevelControl is frmMain main)
+            {
+                main.ShowControl(new ucDocgia());
+            }
+        }
     }
 }

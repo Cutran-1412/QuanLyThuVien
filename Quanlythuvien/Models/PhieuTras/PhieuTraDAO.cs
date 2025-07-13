@@ -45,7 +45,6 @@ namespace Quanlythuvien.Models.PhieuTras
                 context.PhieuTras.Add(model);
                       context.SaveChanges();
                 return true;
-              
             }
         }
     }
