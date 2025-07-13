@@ -32,6 +32,9 @@
     <Compile Update="Views\ucFrom\Sachs\ucSachExtra.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\ucFrom\ThongKe\ucThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\ucFrom\ucAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>

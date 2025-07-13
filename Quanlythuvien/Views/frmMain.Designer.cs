@@ -151,6 +151,7 @@
             iconButton7.Text = "Thống kê";
             iconButton7.UseCompatibleTextRendering = true;
             iconButton7.UseVisualStyleBackColor = false;
+            iconButton7.Click += iconButton7_Click;
             // 
             // ibtntra
             // 
@@ -392,7 +393,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pamain);
-            MaximumSize = new Size(1500, 700);
+            MaximumSize = new Size(1364, 700);
             MinimumSize = new Size(1364, 700);
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;

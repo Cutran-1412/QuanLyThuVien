@@ -38,8 +38,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\ucFrom\Thống kê\" />
-  </ItemGroup>
-
 </Project>
