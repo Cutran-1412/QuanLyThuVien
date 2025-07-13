@@ -35,7 +35,11 @@ namespace Quanlythuvien.Models.PhieuTras
 
         public override List<PhieuTra> GetData()
         {
-            throw new NotImplementedException();
+            using (DataContext context = new DataContext())
+            {
+                return context.PhieuTras.ToList();
+
+            }
         }
 
         public override bool Insert(PhieuTra model)
