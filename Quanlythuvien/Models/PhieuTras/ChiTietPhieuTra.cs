@@ -2,6 +2,7 @@
 using Quanlythuvien.Models.Sachs;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -14,13 +15,17 @@ namespace Quanlythuvien.Models.PhieuTras
     {
         // Phiếu trả 
         [ForeignKey(nameof(PhieuTra))]
+        [DisplayName("Mã phiếu trả")]
         public string MaPhieuTra { get; set; }
         public PhieuTra PhieuTra{ get; set; }
         
         // Sách
         [ForeignKey(nameof(Sach))]
+
+        [DisplayName("Mã sách")]
         public string MaSach { get; set; }
         public Sach Sach { get; set; }
+        [DisplayName("Số lượng")]
         public int SoLuong { get; set; }
 
     }

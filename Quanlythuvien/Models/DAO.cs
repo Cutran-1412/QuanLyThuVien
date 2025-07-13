@@ -18,5 +18,13 @@ namespace Quanlythuvien.Models
         {
             return true;    
         }
+        public virtual List<T> Search(string luachon,string value)
+        {
+            return null;
+        }
+        public virtual T? GetLast()
+        {
+            return default;
+        }
     }
 }

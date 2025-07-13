@@ -16,7 +16,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
 {
     public partial class ucSach : UserControl
     {
-        private SachController sachController = new SachController();
+        private SachController sachCtrl = new SachController();
         public ucSach()
         {
             InitializeComponent();
@@ -24,11 +24,13 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
-            this.LoadSach();
+            this.LoadSach(this.sachCtrl.GetData());
         }
-        private void LoadSach()
+        private void LoadSach(List<Sach> sachs)
         {
-            this.dtsach.DataSource = this.sachController.GetData();
+
+            this.dtsach.DataSource = sachs;
+            if (sachs == null) return;
             this.dtsach.Columns[2].Visible = false;
             this.dtsach.Columns[6].Visible = false;
             this.dtsach.Columns[7].Visible = false;
@@ -38,7 +40,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
         {
             int row = this.dtsach.CurrentRow.Index;
             string ma = this.dtsach.Rows[row].Cells[0].Value.ToString();
-            Sach sach = this.sachController.FindByKey(ma);
+            Sach sach = this.sachCtrl.FindByKey(ma);
             if (TopLevelControl is frmMain main)
             {
                 main.ShowControl(new ucSachExtra(sach));
@@ -62,7 +64,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
         {
             int row = this.dtsach.CurrentRow.Index;
             string ma = this.dtsach.Rows[row].Cells[0].Value.ToString();
-            Sach sach = this.sachController.FindByKey(ma);
+            Sach sach = this.sachCtrl.FindByKey(ma);
             if (TopLevelControl is frmMain main)
             {
                 main.ShowControl(new ucSachExtra(sach));
@@ -73,11 +75,21 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
         {
             int row = this.dtsach.CurrentRow.Index;
             string ma = this.dtsach.Rows[row].Cells[0].Value.ToString();
-            Sach sach = this.sachController.FindByKey(ma);
+            Sach sach = this.sachCtrl.FindByKey(ma);
             if (TopLevelControl is frmMain main)
             {
                 main.ShowControl(new ucSachExtra(sach));
             }
+        }
+
+        private void txtTimKiem_Changed(object sender, EventArgs e)
+        {
+            int luachon = this.gcboLuachon.SelectedIndex;
+            if (luachon == -1)
+            {
+                return;
+            }
+            this.LoadSach(this.sachCtrl.Search(this.gcboLuachon.Items[luachon].ToString(), txtTimkiem.Text.Trim()));
         }
     }
 }

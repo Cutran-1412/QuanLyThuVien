@@ -65,5 +65,33 @@ namespace Quanlythuvien.Models.Sachs
                 return true;
             }
         }
+        public override List<Sach> Search(string luachon, string value)
+        {
+            using(DataContext context = new DataContext())
+            {
+                switch(luachon)
+                {
+                    case "Mã sách":
+                        return context.Sachs
+                            .Where(s =>s.MaSach.ToLower().Contains(value.ToLower()))
+                            .ToList();  
+                    case "Tên sách":
+                        return context.Sachs
+                            .Where(s => s.TenSach.ToLower().Contains(value.ToLower()))
+                            .ToList();
+
+                    case "Nhà xuất bản":
+                        return context.Sachs
+                            .Where(s => s.NhaXuatBan.ToLower().Contains(value.ToLower()))
+                            .ToList();
+                        
+                    case "Thể loại":
+                        return context.Sachs
+                            .Where(s => s.TheLoai.ToLower().Contains(value.ToLower()))
+                            .ToList();
+                    default: return null; 
+                }
+            }
+        }
     }
 }

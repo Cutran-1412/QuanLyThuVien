@@ -63,13 +63,23 @@ namespace Quanlythuvien.Models.PhieuMuons
                 return true;
             }
         }
-        public virtual PhieuMuon GetLast()
+        public override PhieuMuon? GetLast()
         {
             using (DataContext context = new DataContext())
             {
                 return context.PhieuMuons
                     .OrderByDescending(pm=>pm.MaPhieuMuon)
                     .FirstOrDefault();
+            }
+        }
+        public virtual List<PhieuMuon> GetPhieuMuonChuaTra()
+        {
+            using (DataContext context = new DataContext())
+            {
+                return context.PhieuMuons
+                    .Include(pm => pm.ChiTietPhieuMuons
+                    .Where(ct => ct.SoLuongDaTra < ct.SoLuongMuon))
+                    .ToList();
             }
         }
     }

@@ -16,8 +16,8 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 {
     public partial class ucPhieuTraExtra : UserControl
     {
-        private PhieuTraController phieuMuonCtrl = new();
-        private PhieuMuonController PhieuMuon = new();
+        private PhieuTraController phieuTraCtrl = new();
+        private PhieuMuonController PhieuMuonCtrl = new();
         private SachController sachCtrl = new();
         private Quanlythuvien.Models.PhieuTras.PhieuTra phieutra;
         private BindingList<ChiTietPhieuTra> ctPhieuMuons = new();
@@ -28,7 +28,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         }
         private void LoadMaPhieuMuon()
         {
-            
+
 
         }
         private void ucPhieuTraExtra_Load(object sender, EventArgs e)
@@ -36,18 +36,38 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             if (this.phieutra != null)
             {
                 this.gtxtmaphieutra.Text = this.phieutra.MaPhieuTra;
-                this.gcbomaphieumuon.SelectedValue = this.phieutra.MaPhieuMuon;
+                this.gcboMaPhieuMuon.SelectedValue = this.phieutra.MaPhieuMuon;
                 this.gdtpngaytra.Value = this.phieutra.NgayTra;
                 this.gtxttienphat.Text = this.phieutra.TienPhat.ToString();
-                //this.SetReadOnly();
+                //  this.SetReadOnly();
                 //this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.phieuMuon.ChiTietPhieuMuons);
             }
             else
             {
-                //this.SinhMaPhieuMuon();
-                //this.LoadMaSach();
-                //this.gdgvSach.DataSource = this.ctPhieuMuons;
+                this.SinhMaPhieuTra();
+                this.LoadMaPhieuMuonChuaTra();
+                //  this.gdgvSach.DataSource = this.ctPhieuMuons;
             }
+        }
+        private void LoadMaPhieuMuonChuaTra()
+        {
+            this.gcboMaPhieuMuon.DataSource = this.PhieuMuonCtrl.GetPhieuMuonChuaTra();
+            this.gcboMaPhieuMuon.DisplayMember = "MaPhieuMuon";
+            this.gcboMaPhieuMuon.ValueMember = "MaPhieuMuon";
+        }
+        public void SinhMaPhieuTra()
+        {
+            var phieuCuoi = this.phieuTraCtrl.GetLast();
+            int nextNumber = 1;
+            if (phieuCuoi != null)
+            {
+                string numberPart = phieuCuoi.MaPhieuMuon.Substring(2);
+                if (int.TryParse(numberPart, out nextNumber))
+                {
+                    nextNumber = nextNumber + 1;
+                }
+            }
+            this.gtxtmaphieutra.Text = "PT" + nextNumber;
         }
 
         private void gbtnthoat_Click(object sender, EventArgs e)
@@ -56,6 +76,19 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             {
                 main.ShowControl(new ucPhieuTra());
             }
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -1,5 +1,7 @@
 
 ﻿using Quanlythuvien.Models;
+using Quanlythuvien.Models.PhieuMuons;
+using Quanlythuvien.Models.Sachs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +37,14 @@ namespace Quanlythuvien.Controllers
         public virtual bool DeleteByKey(string key)
         {
             return this.dao.Delete(key);
+        }
+        public virtual List<T> Search(string luachon, string value)
+        {
+            return this.dao.Search(luachon, value);
+        }
+        public virtual T? GetLast()
+        {
+            return this.dao.GetLast();
         }
     }
 }

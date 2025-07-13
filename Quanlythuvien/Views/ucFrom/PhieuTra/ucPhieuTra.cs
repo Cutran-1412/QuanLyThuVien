@@ -1,4 +1,5 @@
 ﻿using Quanlythuvien.Controllers;
+using Quanlythuvien.Models.PhieuTras;
 using Quanlythuvien.Views.ucFrom.PhieuMuon;
 using System;
 using System.Collections.Generic;
@@ -32,12 +33,22 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 
         private void gbtnThongtin_Click(object sender, EventArgs e)
         {
+            if (this.dtphieutra.CurrentRow == null) return;
             int row = this.dtphieutra.CurrentRow.Index;
+
             string maPhieu = this.dtphieutra.Rows[row].Cells[0].Value.ToString();
             Quanlythuvien.Models.PhieuTras.PhieuTra phieutra = this.phieuTraCtrl.FindByKey(maPhieu);
             if (TopLevelControl is frmMain main)
             {
                 main.ShowControl(new ucPhieuTraExtra(phieutra));
+            }
+        }
+
+        private void gbtnthem_Click(object sender, EventArgs e)
+        {
+            if (TopLevelControl is frmMain main)
+            {
+                main.ShowControl(new ucPhieuTraExtra(null));
             }
         }
     }

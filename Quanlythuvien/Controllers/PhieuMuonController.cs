@@ -23,10 +23,12 @@ namespace Quanlythuvien.Controllers
                 new SachDAO().Update(sach);
             }
             return this.dao.Insert(model);
+
         }
-        public virtual PhieuMuon GetLast()
+        public virtual List<PhieuMuon> GetPhieuMuonChuaTra()
         {
-            return ((PhieuMuonDAO)this.dao).GetLast();
+            return ((PhieuMuonDAO)dao).GetPhieuMuonChuaTra();
         }
     }
+
 }

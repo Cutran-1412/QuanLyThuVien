@@ -51,5 +51,14 @@ namespace Quanlythuvien.Models.PhieuTras
                 return true;
             }
         }
+        public override PhieuTra? GetLast()
+        {
+            using (DataContext context = new DataContext())
+            {
+                return context.PhieuTras
+                    .OrderByDescending(pm => pm.MaPhieuTra)
+                    .FirstOrDefault();
+            }
+        }
     }
 }
