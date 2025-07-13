@@ -17,28 +17,25 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
     public partial class ucPhieuTraExtra : UserControl
     {
         private PhieuTraController phieuTraCtrl = new();
-        private PhieuMuonController PhieuMuonCtrl = new();
+        private PhieuMuonController phieuMuonCtrl = new();
+        private ChiTietPhieuMuonController ctPhieuMuonCtrl = new();
+        private ChiTietPhieuTraController ctPhieuTraCtrl = new();
         private SachController sachCtrl = new();
-        private Quanlythuvien.Models.PhieuTras.PhieuTra phieutra;
         private BindingList<ChiTietPhieuTra> ctPhieuMuons = new();
+        private Quanlythuvien.Models.PhieuTras.PhieuTra phieuTra;
         public ucPhieuTraExtra(Models.PhieuTras.PhieuTra phieutra)
         {
             InitializeComponent();
-            this.phieutra = phieutra;
-        }
-        private void LoadMaPhieuMuon()
-        {
-
-
+            this.phieuTra = phieutra;
         }
         private void ucPhieuTraExtra_Load(object sender, EventArgs e)
         {
-            if (this.phieutra != null)
+            if (this.phieuTra != null)
             {
-                this.gtxtmaphieutra.Text = this.phieutra.MaPhieuTra;
-                this.gcboMaPhieuMuon.SelectedValue = this.phieutra.MaPhieuMuon;
-                this.gdtpngaytra.Value = this.phieutra.NgayTra;
-                this.gtxttienphat.Text = this.phieutra.TienPhat.ToString();
+                this.gtxtmaphieutra.Text = this.phieuTra.MaPhieuTra;
+                this.gcboMaPhieuMuon.SelectedValue = this.phieuTra.MaPhieuMuon;
+                this.gdtpngaytra.Value = this.phieuTra.NgayTra;
+                this.gtxttienphat.Text = this.phieuTra.TienPhat.ToString();
                 //  this.SetReadOnly();
                 //this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.phieuMuon.ChiTietPhieuMuons);
             }
@@ -46,14 +43,19 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             {
                 this.SinhMaPhieuTra();
                 this.LoadMaPhieuMuonChuaTra();
+                this.gdtpngaytra.Value = DateTime.Now.Date;
                 //  this.gdgvSach.DataSource = this.ctPhieuMuons;
             }
         }
         private void LoadMaPhieuMuonChuaTra()
         {
-            this.gcboMaPhieuMuon.DataSource = this.PhieuMuonCtrl.GetPhieuMuonChuaTra();
+
+            this.gcboMaPhieuMuon.DataSource = this.phieuMuonCtrl.GetPhieuMuonChuaTra();
             this.gcboMaPhieuMuon.DisplayMember = "MaPhieuMuon";
             this.gcboMaPhieuMuon.ValueMember = "MaPhieuMuon";
+
+
+
         }
         public void SinhMaPhieuTra()
         {
@@ -61,7 +63,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             int nextNumber = 1;
             if (phieuCuoi != null)
             {
-                string numberPart = phieuCuoi.MaPhieuMuon.Substring(2);
+                string numberPart = phieuCuoi.MaPhieuTra.Substring(2);
                 if (int.TryParse(numberPart, out nextNumber))
                 {
                     nextNumber = nextNumber + 1;
@@ -78,17 +80,129 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             }
         }
 
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        private void gbtnthem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2GroupBox4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2GroupBox3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void gbtnxoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbtnsua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gcboMaPhieuMuon_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (gcboMaPhieuMuon.SelectedValue is string maPhieu)
+            {
+                this.LoadDanhSachMuon(maPhieu);
+            }
+
+        }
+        private void LoadDanhSachMuon(string maPhieuMuon)
+        {
+            this.dgvDanhSachMuon.DataSource = this.phieuMuonCtrl.FindByKey(maPhieuMuon).ChiTietPhieuMuons;
+            this.dgvDanhSachMuon.Columns["MaPhieuMuon"].Visible = false;
+            this.dgvDanhSachMuon.Columns["PhieuMuon"].Visible = false;
+            this.dgvDanhSachMuon.Columns["Sach"].Visible = false;
+        }
+
+        private void gcboMaPhieuMuon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void dgvDanhSachMuon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = this.dgvDanhSachMuon.CurrentRow.Index;
+            this.gtxtMasach.Text = this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString();
+            this.gtxtTenSach.Text = this.dgvDanhSachMuon.Rows[index].Cells["TenSach"].Value.ToString();
+            this.gtxtSlMuon.Text = this.dgvDanhSachMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString();
+            this.gtxtSlDaTra.Text = this.dgvDanhSachMuon.Rows[index].Cells["SoLuongDaTra"].Value.ToString();
+        }
+
+        private void dgvDanhSachMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbtnTraSach_Click(object sender, EventArgs e)
+        {
+            if(this.phieuTra ==null)
+            {
+                this.phieuTra = new Models.PhieuTras.PhieuTra
+                {
+                    MaPhieuTra = this.gtxtmaphieutra.Text,
+                    MaPhieuMuon = this.gcboMaPhieuMuon.SelectedValue.ToString(),
+                    NgayTra = this.gdtpngaytra.Value,
+                    TienPhat = decimal.Parse(this.gtxttienphat.Text)
+                };
+            }
+            int soLuongTra;
+            if(!int.TryParse(this.gtxtSoLuongTra.Text, out soLuongTra))
+            {
+                //Thông báo vui lòng nhập số
+                return;
+            }
+            ChiTietPhieuTra ctPhieuTra = new ChiTietPhieuTra
+            {
+                MaPhieuTra = this.phieuTra.MaPhieuTra,
+                MaSach = this.gtxtMasach.Text,
+                SoLuong = soLuongTra
+            };
+     
+            if(this.phieuTraCtrl.FindByKey(this.phieuTra.MaPhieuTra)!=null)
+            {
+                this.phieuTraCtrl.Update(phieuTra);
+            }
+            else
+            {
+                this.phieuTraCtrl.Insert(this.phieuTra);
+            }
+            this.ctPhieuTraCtrl.Insert(ctPhieuTra);
+            this.LoadDanhSachMuon(this.gcboMaPhieuMuon.SelectedValue.ToString());
         }
     }
 }
