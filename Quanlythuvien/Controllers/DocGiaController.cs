@@ -32,5 +32,9 @@ namespace Quanlythuvien.Controllers
         {
             return dgdao.Search(luachon, keyword);
         }
+        public void Delete_Docgia(string ma)
+        {
+            dgdao.Delete(ma);
+        }
     }
 }

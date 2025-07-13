@@ -72,7 +72,6 @@
             gtxtId = new Guna.UI2.WinForms.Guna2TextBox();
             gtxtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             gtxtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            groupBox1 = new GroupBox();
             guna2GradientPanel1.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtAdmin).BeginInit();
@@ -173,7 +172,6 @@
             // 
             guna2GroupBox2.BorderColor = Color.FromArgb(136, 192, 208);
             guna2GroupBox2.BorderRadius = 15;
-            guna2GroupBox2.Controls.Add(groupBox1);
             guna2GroupBox2.Controls.Add(gbtnXoa);
             guna2GroupBox2.Controls.Add(gbtnSua);
             guna2GroupBox2.Controls.Add(gtxtSearch);
@@ -415,15 +413,6 @@
             gtxtPassword.TabIndex = 2;
             gtxtPassword.UseSystemPasswordChar = true;
             // 
-            // groupBox1
-            // 
-            groupBox1.Location = new Point(115, 21);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(8, 8);
-            groupBox1.TabIndex = 8;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
-            // 
             // ucAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -458,6 +447,5 @@
         private Guna.UI2.WinForms.Guna2Button gbtnSua;
         private Guna.UI2.WinForms.Guna2PictureBox gpichien;
         private Guna.UI2.WinForms.Guna2PictureBox gpican;
-        private GroupBox groupBox1;
     }
 }

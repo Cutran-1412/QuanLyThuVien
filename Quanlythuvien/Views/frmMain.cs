@@ -21,6 +21,7 @@ namespace Quanlythuvien.Views
 {
     public partial class frmMain : Form
     {
+        public bool check;
         public frmMain()
         {
             InitializeComponent();
@@ -67,6 +68,10 @@ namespace Quanlythuvien.Views
             timerdoimau.Start();
             ibtnmuon.Visible = false;
             ibtntra.Visible = false;
+            if (!this.check)
+            {
+                tbtnadmin.Visible = false;
+            }
         }
         public DialogResult Msgbox(string text, string caption, MessageDialogButtons buttons, MessageDialogIcon icon)
         {
@@ -144,6 +149,13 @@ namespace Quanlythuvien.Views
         private void iconButton7_Click(object sender, EventArgs e)
         {
             ShowControl(new ucThongKe());
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmLogin from = new frmLogin();
+            from.Visible = true;
         }
     }
 }

@@ -28,170 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lbldanghap = new Label();
-            txtusername = new TextBox();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            ipican = new FontAwesome.Sharp.IconPictureBox();
-            ipichien = new FontAwesome.Sharp.IconPictureBox();
-            panel4 = new Panel();
-            txtpassword = new TextBox();
-            btndangnhap = new Button();
-            btnthoat = new Button();
             lbllammoi = new Label();
             iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ipican).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ipichien).BeginInit();
+            label1 = new Label();
+            panel5 = new Panel();
+            label2 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            gpican = new Guna.UI2.WinForms.Guna2PictureBox();
+            gpichien = new Guna.UI2.WinForms.Guna2PictureBox();
+            gtxtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            gtxtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            gbtndangnhap = new Guna.UI2.WinForms.Guna2Button();
+            gbtnthoat = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gpican).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gpichien).BeginInit();
             SuspendLayout();
             // 
             // lbldanghap
             // 
             lbldanghap.AutoSize = true;
             lbldanghap.Font = new Font("Arial", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lbldanghap.Location = new Point(70, 27);
+            lbldanghap.Location = new Point(523, 25);
             lbldanghap.Name = "lbldanghap";
-            lbldanghap.Size = new Size(225, 39);
+            lbldanghap.Size = new Size(179, 32);
             lbldanghap.TabIndex = 1;
             lbldanghap.Text = "ĐĂNG NHẬP";
-            // 
-            // txtusername
-            // 
-            txtusername.BackColor = SystemColors.Control;
-            txtusername.BorderStyle = BorderStyle.None;
-            txtusername.Location = new Point(42, 28);
-            txtusername.Margin = new Padding(3, 4, 3, 4);
-            txtusername.Name = "txtusername";
-            txtusername.PlaceholderText = "Username";
-            txtusername.Size = new Size(216, 20);
-            txtusername.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(txtusername);
-            panel1.Location = new Point(27, 203);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(282, 59);
-            panel1.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ActiveCaptionText;
-            panel2.Location = new Point(42, 48);
-            panel2.Margin = new Padding(3, 4, 3, 4);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(216, 1);
-            panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(ipican);
-            panel3.Controls.Add(ipichien);
-            panel3.Controls.Add(panel4);
-            panel3.Controls.Add(txtpassword);
-            panel3.Location = new Point(27, 260);
-            panel3.Margin = new Padding(3, 4, 3, 4);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(282, 65);
-            panel3.TabIndex = 5;
-            // 
-            // ipican
-            // 
-            ipican.BackColor = SystemColors.Control;
-            ipican.ForeColor = SystemColors.ControlText;
-            ipican.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
-            ipican.IconColor = SystemColors.ControlText;
-            ipican.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ipican.IconSize = 29;
-            ipican.Location = new Point(230, 12);
-            ipican.Margin = new Padding(3, 4, 3, 4);
-            ipican.Name = "ipican";
-            ipican.Size = new Size(29, 33);
-            ipican.TabIndex = 10;
-            ipican.TabStop = false;
-            ipican.Click += ipican_Click;
-            // 
-            // ipichien
-            // 
-            ipichien.BackColor = SystemColors.Control;
-            ipichien.ForeColor = SystemColors.ControlText;
-            ipichien.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            ipichien.IconColor = SystemColors.ControlText;
-            ipichien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ipichien.IconSize = 29;
-            ipichien.Location = new Point(230, 12);
-            ipichien.Margin = new Padding(3, 4, 3, 4);
-            ipichien.Name = "ipichien";
-            ipichien.Size = new Size(29, 33);
-            ipichien.TabIndex = 9;
-            ipichien.TabStop = false;
-            ipichien.Click += ipichien_Click;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = SystemColors.ActiveCaptionText;
-            panel4.Location = new Point(42, 48);
-            panel4.Margin = new Padding(3, 4, 3, 4);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(216, 1);
-            panel4.TabIndex = 5;
-            // 
-            // txtpassword
-            // 
-            txtpassword.BackColor = SystemColors.Control;
-            txtpassword.BorderStyle = BorderStyle.None;
-            txtpassword.Location = new Point(42, 28);
-            txtpassword.Margin = new Padding(3, 4, 3, 4);
-            txtpassword.Name = "txtpassword";
-            txtpassword.PlaceholderText = "Password";
-            txtpassword.Size = new Size(216, 20);
-            txtpassword.TabIndex = 2;
-            // 
-            // btndangnhap
-            // 
-            btndangnhap.BackColor = SystemColors.Control;
-            btndangnhap.FlatAppearance.BorderColor = Color.Black;
-            btndangnhap.FlatAppearance.BorderSize = 2;
-            btndangnhap.FlatAppearance.MouseOverBackColor = Color.Gray;
-            btndangnhap.FlatStyle = FlatStyle.Flat;
-            btndangnhap.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btndangnhap.ForeColor = Color.Black;
-            btndangnhap.Location = new Point(70, 387);
-            btndangnhap.Margin = new Padding(3, 4, 3, 4);
-            btndangnhap.Name = "btndangnhap";
-            btndangnhap.Size = new Size(216, 51);
-            btndangnhap.TabIndex = 6;
-            btndangnhap.Text = "Đăng nhập";
-            btndangnhap.UseVisualStyleBackColor = false;
-            btndangnhap.Click += btndangnhap_Click;
-            // 
-            // btnthoat
-            // 
-            btnthoat.FlatAppearance.BorderColor = Color.Black;
-            btnthoat.FlatAppearance.MouseOverBackColor = Color.Red;
-            btnthoat.FlatStyle = FlatStyle.Flat;
-            btnthoat.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnthoat.Location = new Point(70, 445);
-            btnthoat.Margin = new Padding(3, 4, 3, 4);
-            btnthoat.Name = "btnthoat";
-            btnthoat.Size = new Size(216, 51);
-            btnthoat.TabIndex = 7;
-            btnthoat.Text = "Thoát";
-            btnthoat.UseVisualStyleBackColor = true;
-            btnthoat.Click += btnthoat_Click;
             // 
             // lbllammoi
             // 
             lbllammoi.AutoSize = true;
             lbllammoi.Font = new Font("Arial", 9F, FontStyle.Underline, GraphicsUnit.Point);
-            lbllammoi.Location = new Point(222, 337);
+            lbllammoi.Location = new Point(697, 292);
             lbllammoi.Name = "lbllammoi";
-            lbllammoi.Size = new Size(67, 17);
+            lbllammoi.Size = new Size(57, 15);
             lbllammoi.TabIndex = 8;
             lbllammoi.Text = "Làm mới";
             lbllammoi.Click += lbllammoi_Click;
@@ -203,57 +90,241 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
             iconPictureBox1.IconColor = SystemColors.ControlText;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 105;
-            iconPictureBox1.Location = new Point(118, 73);
-            iconPictureBox1.Margin = new Padding(3, 4, 3, 4);
+            iconPictureBox1.IconSize = 91;
+            iconPictureBox1.Location = new Point(579, 75);
             iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(105, 121);
+            iconPictureBox1.Size = new Size(92, 91);
             iconPictureBox1.TabIndex = 9;
             iconPictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(79, 150);
+            label1.Name = "label1";
+            label1.Size = new Size(267, 37);
+            label1.TabIndex = 0;
+            label1.Text = "QUẢN LÝ THƯ VIỆN";
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.DodgerBlue;
+            panel5.Controls.Add(label2);
+            panel5.Controls.Add(label5);
+            panel5.Controls.Add(label4);
+            panel5.Controls.Add(label3);
+            panel5.Controls.Add(label1);
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(428, 464);
+            panel5.TabIndex = 10;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(267, 423);
+            label2.Name = "label2";
+            label2.Size = new Size(130, 17);
+            label2.TabIndex = 5;
+            label2.Text = "Nguyễn Qúy Cường";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(267, 393);
+            label5.Name = "label5";
+            label5.Size = new Size(131, 17);
+            label5.TabIndex = 4;
+            label5.Text = "Hoàng Thanh Chiến";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(267, 366);
+            label4.Name = "label4";
+            label4.Size = new Size(92, 17);
+            label4.TabIndex = 3;
+            label4.Text = "Trần Xuân Cư";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(207, 366);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 17);
+            label3.TabIndex = 2;
+            label3.Text = "Codeby";
+            // 
+            // gpican
+            // 
+            gpican.BackColor = Color.White;
+            gpican.BorderRadius = 2;
+            gpican.CustomizableEdges = customizableEdges1;
+            gpican.Image = (Image)resources.GetObject("gpican.Image");
+            gpican.ImageRotate = 0F;
+            gpican.Location = new Point(735, 250);
+            gpican.Name = "gpican";
+            gpican.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gpican.Size = new Size(24, 24);
+            gpican.TabIndex = 14;
+            gpican.TabStop = false;
+            gpican.Click += gpican_Click;
+            // 
+            // gpichien
+            // 
+            gpichien.BackColor = Color.White;
+            gpichien.BorderRadius = 2;
+            gpichien.CustomizableEdges = customizableEdges3;
+            gpichien.Image = (Image)resources.GetObject("gpichien.Image");
+            gpichien.ImageRotate = 0F;
+            gpichien.Location = new Point(735, 250);
+            gpichien.Name = "gpichien";
+            gpichien.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            gpichien.Size = new Size(24, 24);
+            gpichien.TabIndex = 13;
+            gpichien.TabStop = false;
+            gpichien.Click += gpichien_Click;
+            // 
+            // gtxtUsername
+            // 
+            gtxtUsername.BorderColor = Color.FromArgb(94, 129, 172);
+            gtxtUsername.BorderRadius = 10;
+            gtxtUsername.CustomizableEdges = customizableEdges5;
+            gtxtUsername.DefaultText = "";
+            gtxtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtxtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtxtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtxtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtxtUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtxtUsername.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtxtUsername.IconLeft = (Image)resources.GetObject("gtxtUsername.IconLeft");
+            gtxtUsername.Location = new Point(495, 200);
+            gtxtUsername.Name = "gtxtUsername";
+            gtxtUsername.PlaceholderText = "User name";
+            gtxtUsername.SelectedText = "";
+            gtxtUsername.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            gtxtUsername.Size = new Size(274, 34);
+            gtxtUsername.TabIndex = 12;
+            // 
+            // gtxtPassword
+            // 
+            gtxtPassword.BorderColor = Color.FromArgb(94, 129, 172);
+            gtxtPassword.BorderRadius = 10;
+            gtxtPassword.CustomizableEdges = customizableEdges7;
+            gtxtPassword.DefaultText = "";
+            gtxtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            gtxtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            gtxtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            gtxtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            gtxtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtxtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            gtxtPassword.IconLeft = (Image)resources.GetObject("gtxtPassword.IconLeft");
+            gtxtPassword.Location = new Point(495, 246);
+            gtxtPassword.Name = "gtxtPassword";
+            gtxtPassword.PlaceholderText = "Pass word";
+            gtxtPassword.SelectedText = "";
+            gtxtPassword.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            gtxtPassword.Size = new Size(274, 30);
+            gtxtPassword.TabIndex = 11;
+            gtxtPassword.UseSystemPasswordChar = true;
+            // 
+            // gbtndangnhap
+            // 
+            gbtndangnhap.BorderRadius = 25;
+            gbtndangnhap.CustomizableEdges = customizableEdges9;
+            gbtndangnhap.DisabledState.BorderColor = Color.DarkGray;
+            gbtndangnhap.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtndangnhap.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtndangnhap.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtndangnhap.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtndangnhap.ForeColor = Color.White;
+            gbtndangnhap.Location = new Point(534, 329);
+            gbtndangnhap.Name = "gbtndangnhap";
+            gbtndangnhap.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            gbtndangnhap.Size = new Size(180, 45);
+            gbtndangnhap.TabIndex = 15;
+            gbtndangnhap.Text = "Đăng nhập";
+            gbtndangnhap.Click += gbtndangnhap_Click;
+            // 
+            // gbtnthoat
+            // 
+            gbtnthoat.BorderRadius = 25;
+            gbtnthoat.CustomizableEdges = customizableEdges11;
+            gbtnthoat.DisabledState.BorderColor = Color.DarkGray;
+            gbtnthoat.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtnthoat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtnthoat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtnthoat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtnthoat.ForeColor = Color.White;
+            gbtnthoat.Location = new Point(534, 393);
+            gbtnthoat.Name = "gbtnthoat";
+            gbtnthoat.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            gbtnthoat.Size = new Size(180, 45);
+            gbtnthoat.TabIndex = 16;
+            gbtnthoat.Text = "Thoát";
+            gbtnthoat.Click += gbtnthoat_Click;
+            // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(334, 537);
+            ClientSize = new Size(807, 465);
+            Controls.Add(gbtnthoat);
+            Controls.Add(gbtndangnhap);
+            Controls.Add(gpican);
+            Controls.Add(gpichien);
+            Controls.Add(gtxtUsername);
+            Controls.Add(gtxtPassword);
+            Controls.Add(panel5);
             Controls.Add(iconPictureBox1);
             Controls.Add(lbllammoi);
-            Controls.Add(btnthoat);
-            Controls.Add(btndangnhap);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
             Controls.Add(lbldanghap);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             Load += frmLogin_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ipican).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ipichien).EndInit();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)gpican).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gpichien).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label lbldanghap;
-        private TextBox txtusername;
         private TextBox textBox2;
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
-        private Panel panel4;
-        private TextBox txtpassword;
-        private Button btndangnhap;
-        private Button btnthoat;
         private Label lbllammoi;
-        private FontAwesome.Sharp.IconPictureBox ipichien;
-        private FontAwesome.Sharp.IconPictureBox ipican;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Label label1;
+        private Panel panel5;
+        private Guna.UI2.WinForms.Guna2PictureBox gpican;
+        private Guna.UI2.WinForms.Guna2PictureBox gpichien;
+        private Guna.UI2.WinForms.Guna2TextBox gtxtUsername;
+        private Guna.UI2.WinForms.Guna2TextBox gtxtPassword;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2Button gbtndangnhap;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2Button gbtnthoat;
     }
 }

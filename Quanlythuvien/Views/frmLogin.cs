@@ -24,24 +24,24 @@ namespace Quanlythuvien.Views
         public frmLogin()
         {
             InitializeComponent();
-            txtusername.TabStop = false;
-            txtpassword.TabStop = false;
-            btndangnhap.TabStop = false;
-            btnthoat.TabStop = false;
-            ipican.Visible = false;
-            txtpassword.UseSystemPasswordChar = true;
+            gtxtUsername.TabStop = false;
+            gtxtPassword.TabStop = false;
+            gbtndangnhap.TabStop = false;
+            gbtnthoat.TabStop = false;
+            gpican.Visible = false;
+            gtxtPassword.UseSystemPasswordChar = true;
         }
         private void lbllammoi_Click(object sender, EventArgs e)
         {
-            txtusername.Text = "";
-            txtpassword.Text = "";
-            txtusername.TabStop = false;
-            txtpassword.TabStop = false;
-            btndangnhap.TabStop = false;
-            btnthoat.TabStop = false;
-            ipican.Visible = false;
-            ipichien.Visible = true;
-            txtpassword.UseSystemPasswordChar = true;
+            gtxtUsername.Text = "";
+            gtxtPassword.Text = "";
+            gtxtUsername.TabStop = false;
+            gtxtPassword.TabStop = false;
+            gbtndangnhap.TabStop = false;
+            gbtnthoat.TabStop = false;
+            gpican.Visible = false;
+            gpichien.Visible = true;
+            gtxtPassword.UseSystemPasswordChar = true;
         }
         private DialogResult Msgbox(string text, string caption, MessageDialogButtons buttons, MessageDialogIcon icon)
         {
@@ -58,34 +58,55 @@ namespace Quanlythuvien.Views
         }
         public bool Check_Null()
         {
-            if (string.IsNullOrEmpty(txtusername.Text))
+            if (string.IsNullOrEmpty(gtxtUsername.Text))
             {
                 string text = "Chưa nhập tài khoản";
                 string caption = "Cảnh báo";
                 MessageDialogButtons button = MessageDialogButtons.OK;
                 MessageDialogIcon icon = MessageDialogIcon.Warning;
                 Msgbox(text, caption, button, icon);
-                txtusername.Focus();
+                gtxtUsername.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtpassword.Text))
+            if (string.IsNullOrEmpty(gtxtPassword.Text))
             {
                 string text = "Chưa nhập mật khẩu";
                 string caption = "Cảnh báo";
                 MessageDialogButtons button = MessageDialogButtons.OK;
                 MessageDialogIcon icon = MessageDialogIcon.Warning;
                 Msgbox(text, caption, button, icon);
-                txtusername.Focus();
+                gtxtPassword.Focus();
                 return false;
             }
             return true;
         }
-        private void btndangnhap_Click(object sender, EventArgs e)
+
+        private void frmLogin_Load(object sender, EventArgs e)
         {
-            Admin ad = new Admin { Username = txtusername.Text, Password = txtpassword.Text };
+
+        }
+
+        private void gpichien_Click(object sender, EventArgs e)
+        {
+            gtxtPassword.UseSystemPasswordChar = false;
+            gpican.Visible = true;
+            gpichien.Visible = false;
+        }
+
+        private void gpican_Click(object sender, EventArgs e)
+        {
+            gtxtPassword.UseSystemPasswordChar = true;
+            gpichien.Visible = true;
+            gpican.Visible = false;
+        }
+
+
+        private void gbtndangnhap_Click(object sender, EventArgs e)
+        {
+            Admin ad = new Admin { Username = gtxtUsername.Text, Password = gtxtPassword.Text };
             if (Check_Null())
             {
-                if (txtusername.Text == "Administrator" && txtpassword.Text == "2004")
+                if (gtxtUsername.Text == "Administrator" && gtxtPassword.Text == "2004")
                 {
                     string text = "Đăng nhập thành công với quyền Administrator !";
                     string caption = "Thông báo";
@@ -94,6 +115,7 @@ namespace Quanlythuvien.Views
                     Msgbox(text, caption, button, icon);
                     this.Visible = false;
                     frmMain from = new frmMain();
+                    from.check = true;
                     from.Visible = true;
                 }
                 else if (new AdminController().Check_TaiKhoan_Admin(ad))
@@ -105,6 +127,7 @@ namespace Quanlythuvien.Views
                     Msgbox(text, caption, button, icon);
                     this.Visible = false;
                     frmMain from = new frmMain();
+                    from.check = false;
                     from.Visible = true;
                 }
                 else
@@ -117,7 +140,8 @@ namespace Quanlythuvien.Views
                 }
             }
         }
-        private void btnthoat_Click(object sender, EventArgs e)
+
+        private void gbtnthoat_Click(object sender, EventArgs e)
         {
             string text = "Bạn chắc chắn muốn thoát chương trình?";
             string caption = "Xác nhận";
@@ -127,25 +151,6 @@ namespace Quanlythuvien.Views
             {
                 Application.Exit();
             }
-        }
-
-        private void ipichien_Click(object sender, EventArgs e)
-        {
-            txtpassword.UseSystemPasswordChar = false;
-            ipican.Visible = true;
-            ipichien.Visible = false;
-        }
-
-        private void ipican_Click(object sender, EventArgs e)
-        {
-            txtpassword.UseSystemPasswordChar = true;
-            ipichien.Visible = true;
-            ipican.Visible = false;
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

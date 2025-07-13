@@ -168,6 +168,7 @@
             gbtnxoa.Size = new Size(153, 40);
             gbtnxoa.TabIndex = 4;
             gbtnxoa.Text = "Xóa";
+            gbtnxoa.Click += gbtnxoa_Click;
             // 
             // gbtnsua
             // 
@@ -319,7 +320,6 @@
             dtDocgia.ThemeStyle.RowsStyle.Height = 25;
             dtDocgia.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtDocgia.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            dtDocgia.CellClick += dtDocgia_CellClick;
             // 
             // ucDocgia
             // 

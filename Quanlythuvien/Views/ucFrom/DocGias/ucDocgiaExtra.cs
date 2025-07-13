@@ -103,10 +103,10 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                     NgayDangKy = datengaydangki.Value,
                     TienPhat = decimal.Parse(gtxttienphat.Text)
                 };
-                if (dgctr.Get_DocGia_Ma(dg.MaDocGia) == null)
+                if (dgctr.Get_DocGia_Ma(dg.MaDocGia) != null)
                 {
-                    dgctr.Insert_DocGia(dg);
-                    string text = "Đã thêm thành công độc giả có mã :" + gtxtma.Text;
+                    dgctr.Update_Docgia(dg);
+                    string text = "Đã sửa thành công độc giả có mã :" + gtxtma.Text;
                     string caption = "Thông báo";
                     MessageDialogButtons button = MessageDialogButtons.OK;
                     MessageDialogIcon icon = MessageDialogIcon.Information;
@@ -116,14 +116,14 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                         main.ShowControl(new ucDocgia());
                     }
                 }
-                else
-                {
-                    string text = "Đã thêm thất bại độc giả bị trùng mã :" + gtxtma.Text;
-                    string caption = "Thông báo";
-                    MessageDialogButtons button = MessageDialogButtons.OK;
-                    MessageDialogIcon icon = MessageDialogIcon.Information;
-                    new frmMain().Msgbox(text, caption, button, icon);
-                }
+            }
+            else
+            {
+                string text = "Đã sửa thất bại độc giả ";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Information;
+                new frmMain().Msgbox(text, caption, button, icon);
             }
         }
 
