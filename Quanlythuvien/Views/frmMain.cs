@@ -15,6 +15,7 @@ using Quanlythuvien.Views.ucFrom;
 using Quanlythuvien.Views.ucFrom.PhieuMuon;
 using Quanlythuvien.Views.ucFrom.PhieuTra;
 using Quanlythuvien.Views.ucFrom.Sachs;
+using Quanlythuvien.Views.ucFrom.ThongKe;
 
 namespace Quanlythuvien.Views
 {
@@ -37,7 +38,7 @@ namespace Quanlythuvien.Views
         {
             lblcodeby = new System.Windows.Forms.Label
             {
-                Text = "Codeby: Trần Xuân Cư - Hoàng Thanh Chiến - Nguyễn Qúy Cường",
+                Text = "Codeby: Trần Xuân Cư - Hoàng Thanh Chiến - Nguyễn Quý Cường",
                 AutoSize = true,
                 Font = new Font("Segoe UI", 14, FontStyle.Bold),
                 ForeColor = colors[0],
@@ -138,6 +139,11 @@ namespace Quanlythuvien.Views
         private void ibtntra_Click(object sender, EventArgs e)
         {
             ShowControl(new ucPhieuTra());
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            ShowControl(new ucThongKe());
         }
     }
 }
