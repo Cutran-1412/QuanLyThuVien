@@ -14,9 +14,9 @@ namespace Quanlythuvien.Controllers
         {
             this.dao = new ChiTietPhieuMuonDAO ();
         }
-        public bool TraSach(string maPhieuMuon, string maSach,int soLuongTra)
+        public bool TraSach(string maPhieuMuon, string maSach)
         {
-           return ((ChiTietPhieuMuonDAO)dao).TraSach(maPhieuMuon,maSach,soLuongTra);
+           return ((ChiTietPhieuMuonDAO)dao).TraSach(maPhieuMuon,maSach);
         }
         public ChiTietPhieuMuon GetByKey(string maPhieuMuon,string maSach)
         {

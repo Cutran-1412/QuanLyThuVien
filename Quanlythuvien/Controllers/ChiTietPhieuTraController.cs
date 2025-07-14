@@ -17,7 +17,7 @@ namespace Quanlythuvien.Controllers
         public override bool Insert(ChiTietPhieuTra model)
         {
             PhieuTra phieuTra = new PhieuTraController().FindByKey(model.MaPhieuTra);
-            new ChiTietPhieuMuonController().TraSach(phieuTra.MaPhieuMuon, model.MaSach, model.SoLuong);
+            new ChiTietPhieuMuonController().TraSach(phieuTra.MaPhieuMuon, model.MaSach);
             return base.Insert(model);
 
         }

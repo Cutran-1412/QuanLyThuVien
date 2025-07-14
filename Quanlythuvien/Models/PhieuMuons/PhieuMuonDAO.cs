@@ -77,8 +77,8 @@ namespace Quanlythuvien.Models.PhieuMuons
             using (DataContext context = new DataContext())
             {
                 return context.PhieuMuons
-                    .Include(pm => pm.ChiTietPhieuMuons
-                    .Where(ct => ct.SoLuongDaTra < ct.SoLuongMuon))
+                    .Include(pm => pm.ChiTietPhieuMuons)
+                    .Where(pm=>pm.ChiTietPhieuMuons.Any(ct =>ct.DaTra == false))
                     .ToList();
             }
         }

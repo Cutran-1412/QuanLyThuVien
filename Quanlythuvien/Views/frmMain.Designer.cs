@@ -63,9 +63,9 @@
             lblchao.BackColor = Color.FromArgb(174, 214, 241);
             lblchao.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblchao.ForeColor = Color.FromArgb(21, 67, 96);
-            lblchao.Location = new Point(105, 12);
+            lblchao.Location = new Point(120, 16);
             lblchao.Name = "lblchao";
-            lblchao.Size = new Size(717, 37);
+            lblchao.Size = new Size(908, 46);
             lblchao.TabIndex = 0;
             lblchao.Text = "CHÀO MỪNG ĐẾN VỚI ỨNG DỤNG QUẢN LÝ THƯ VIỆN";
             // 
@@ -77,8 +77,9 @@
             // 
             panel1.Controls.Add(ibtnMenu);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(240, 65);
+            panel1.Size = new Size(274, 87);
             panel1.TabIndex = 5;
             // 
             // ibtnMenu
@@ -94,8 +95,9 @@
             ibtnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtnMenu.ImageAlign = ContentAlignment.MiddleLeft;
             ibtnMenu.Location = new Point(0, 0);
+            ibtnMenu.Margin = new Padding(3, 4, 3, 4);
             ibtnMenu.Name = "ibtnMenu";
-            ibtnMenu.Size = new Size(240, 65);
+            ibtnMenu.Size = new Size(274, 87);
             ibtnMenu.TabIndex = 0;
             ibtnMenu.Text = "Menu";
             ibtnMenu.UseVisualStyleBackColor = false;
@@ -103,9 +105,10 @@
             // 
             // pamain
             // 
-            pamain.Location = new Point(246, 70);
+            pamain.Location = new Point(281, 93);
+            pamain.Margin = new Padding(3, 4, 3, 4);
             pamain.Name = "pamain";
-            pamain.Size = new Size(1100, 540);
+            pamain.Size = new Size(1257, 720);
             pamain.TabIndex = 6;
             // 
             // fmenu
@@ -120,11 +123,12 @@
             fmenu.Controls.Add(iconButton8);
             fmenu.Controls.Add(tbtnadmin);
             fmenu.ForeColor = Color.White;
-            fmenu.Location = new Point(0, 70);
-            fmenu.MaximumSize = new Size(240, 590);
-            fmenu.MinimumSize = new Size(67, 590);
+            fmenu.Location = new Point(0, 93);
+            fmenu.Margin = new Padding(3, 4, 3, 4);
+            fmenu.MaximumSize = new Size(274, 787);
+            fmenu.MinimumSize = new Size(77, 787);
             fmenu.Name = "fmenu";
-            fmenu.Size = new Size(240, 590);
+            fmenu.Size = new Size(274, 787);
             fmenu.TabIndex = 12;
             fmenu.Paint += fmenu_Paint;
             // 
@@ -144,9 +148,10 @@
             iconButton7.IconColor = Color.White;
             iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton7.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton7.Location = new Point(0, 324);
+            iconButton7.Location = new Point(0, 432);
+            iconButton7.Margin = new Padding(3, 4, 3, 4);
             iconButton7.Name = "iconButton7";
-            iconButton7.Size = new Size(240, 54);
+            iconButton7.Size = new Size(274, 72);
             iconButton7.TabIndex = 14;
             iconButton7.Text = "Thống kê";
             iconButton7.UseCompatibleTextRendering = true;
@@ -168,9 +173,10 @@
             ibtntra.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
             ibtntra.IconColor = Color.White;
             ibtntra.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ibtntra.Location = new Point(0, 270);
+            ibtntra.Location = new Point(0, 360);
+            ibtntra.Margin = new Padding(3, 4, 3, 4);
             ibtntra.Name = "ibtntra";
-            ibtntra.Size = new Size(240, 54);
+            ibtntra.Size = new Size(274, 72);
             ibtntra.TabIndex = 13;
             ibtntra.Text = "Trả";
             ibtntra.TextAlign = ContentAlignment.MiddleRight;
@@ -193,9 +199,10 @@
             ibtnmuon.IconChar = FontAwesome.Sharp.IconChar.ArrowRight;
             ibtnmuon.IconColor = Color.White;
             ibtnmuon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ibtnmuon.Location = new Point(0, 216);
+            ibtnmuon.Location = new Point(0, 288);
+            ibtnmuon.Margin = new Padding(3, 4, 3, 4);
             ibtnmuon.Name = "ibtnmuon";
-            ibtnmuon.Size = new Size(240, 54);
+            ibtnmuon.Size = new Size(274, 72);
             ibtnmuon.TabIndex = 12;
             ibtnmuon.Text = "Mượn";
             ibtnmuon.TextAlign = ContentAlignment.MiddleRight;
@@ -219,9 +226,10 @@
             ibtnmuontra.IconColor = Color.White;
             ibtnmuontra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtnmuontra.ImageAlign = ContentAlignment.MiddleLeft;
-            ibtnmuontra.Location = new Point(0, 162);
+            ibtnmuontra.Location = new Point(0, 216);
+            ibtnmuontra.Margin = new Padding(3, 4, 3, 4);
             ibtnmuontra.Name = "ibtnmuontra";
-            ibtnmuontra.Size = new Size(240, 54);
+            ibtnmuontra.Size = new Size(274, 72);
             ibtnmuontra.TabIndex = 11;
             ibtnmuontra.Text = "Mượn trả";
             ibtnmuontra.UseCompatibleTextRendering = true;
@@ -244,9 +252,10 @@
             ibtnsach.IconColor = Color.White;
             ibtnsach.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtnsach.ImageAlign = ContentAlignment.MiddleLeft;
-            ibtnsach.Location = new Point(0, 108);
+            ibtnsach.Location = new Point(0, 144);
+            ibtnsach.Margin = new Padding(3, 4, 3, 4);
             ibtnsach.Name = "ibtnsach";
-            ibtnsach.Size = new Size(240, 54);
+            ibtnsach.Size = new Size(274, 72);
             ibtnsach.TabIndex = 10;
             ibtnsach.Text = "Sách";
             ibtnsach.UseCompatibleTextRendering = true;
@@ -269,9 +278,10 @@
             ibtndocgia.IconColor = Color.White;
             ibtndocgia.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtndocgia.ImageAlign = ContentAlignment.MiddleLeft;
-            ibtndocgia.Location = new Point(0, 54);
+            ibtndocgia.Location = new Point(0, 72);
+            ibtndocgia.Margin = new Padding(3, 4, 3, 4);
             ibtndocgia.Name = "ibtndocgia";
-            ibtndocgia.Size = new Size(240, 54);
+            ibtndocgia.Size = new Size(274, 72);
             ibtndocgia.TabIndex = 9;
             ibtndocgia.Text = "Độc giả";
             ibtndocgia.UseCompatibleTextRendering = true;
@@ -294,9 +304,10 @@
             iconButton8.IconColor = Color.White;
             iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton8.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton8.Location = new Point(0, 536);
+            iconButton8.Location = new Point(0, 715);
+            iconButton8.Margin = new Padding(3, 4, 3, 4);
             iconButton8.Name = "iconButton8";
-            iconButton8.Size = new Size(240, 54);
+            iconButton8.Size = new Size(274, 72);
             iconButton8.TabIndex = 8;
             iconButton8.Text = "Thoát";
             iconButton8.UseCompatibleTextRendering = true;
@@ -320,8 +331,9 @@
             tbtnadmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             tbtnadmin.ImageAlign = ContentAlignment.MiddleLeft;
             tbtnadmin.Location = new Point(0, 0);
+            tbtnadmin.Margin = new Padding(3, 4, 3, 4);
             tbtnadmin.Name = "tbtnadmin";
-            tbtnadmin.Size = new Size(240, 54);
+            tbtnadmin.Size = new Size(274, 72);
             tbtnadmin.TabIndex = 2;
             tbtnadmin.Text = "Admin";
             tbtnadmin.UseCompatibleTextRendering = true;
@@ -332,9 +344,10 @@
             // 
             panel2.BackColor = Color.FromArgb(174, 214, 241);
             panel2.Controls.Add(lblchao);
-            panel2.Location = new Point(246, 0);
+            panel2.Location = new Point(281, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1100, 65);
+            panel2.Size = new Size(1257, 87);
             panel2.TabIndex = 13;
             // 
             // panel3
@@ -342,25 +355,27 @@
             panel3.BackColor = Color.FromArgb(214, 234, 248);
             panel3.Controls.Add(pcodeby);
             panel3.Controls.Add(lblthoigian);
-            panel3.Location = new Point(246, 616);
+            panel3.Location = new Point(281, 821);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1100, 46);
+            panel3.Size = new Size(1257, 61);
             panel3.TabIndex = 14;
             // 
             // pcodeby
             // 
             pcodeby.Controls.Add(lblcodeby);
-            pcodeby.Location = new Point(3, 4);
+            pcodeby.Location = new Point(3, 5);
+            pcodeby.Margin = new Padding(3, 4, 3, 4);
             pcodeby.Name = "pcodeby";
-            pcodeby.Size = new Size(850, 39);
+            pcodeby.Size = new Size(971, 52);
             pcodeby.TabIndex = 2;
             // 
             // lblcodeby
             // 
             lblcodeby.AutoSize = true;
-            lblcodeby.Location = new Point(823, 14);
+            lblcodeby.Location = new Point(941, 19);
             lblcodeby.Name = "lblcodeby";
-            lblcodeby.Size = new Size(0, 15);
+            lblcodeby.Size = new Size(0, 20);
             lblcodeby.TabIndex = 0;
             // 
             // lblthoigian
@@ -368,9 +383,9 @@
             lblthoigian.AutoSize = true;
             lblthoigian.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblthoigian.ForeColor = Color.Black;
-            lblthoigian.Location = new Point(859, 4);
+            lblthoigian.Location = new Point(982, 5);
             lblthoigian.Name = "lblthoigian";
-            lblthoigian.Size = new Size(67, 32);
+            lblthoigian.Size = new Size(83, 41);
             lblthoigian.TabIndex = 1;
             lblthoigian.Text = "Time";
             // 
@@ -384,20 +399,21 @@
             // 
             // frmMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.FromArgb(242, 243, 244);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1355, 670);
+            ClientSize = new Size(1549, 893);
             Controls.Add(fmenu);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pamain);
             FormBorderStyle = FormBorderStyle.None;
-            MaximumSize = new Size(1355, 670);
-            MinimumSize = new Size(1355, 670);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximumSize = new Size(1549, 893);
+            MinimumSize = new Size(1549, 893);
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";

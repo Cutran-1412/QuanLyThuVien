@@ -98,106 +98,19 @@ namespace Quanlythuvien.Models
         }
         private void Seed_PhieuMuon(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PhieuMuon>().HasData(
-                new PhieuMuon { MaPhieuMuon = "PM001", MaDocGia = "DG001", NgayMuon = new DateTime(2025, 7, 1), NgayPhaiTra = new DateTime(2025, 7, 10) },
-                new PhieuMuon { MaPhieuMuon = "PM002", MaDocGia = "DG002", NgayMuon = new DateTime(2025, 7, 2), NgayPhaiTra = new DateTime(2025, 7, 11) },
-                new PhieuMuon { MaPhieuMuon = "PM003", MaDocGia = "DG003", NgayMuon = new DateTime(2025, 7, 3), NgayPhaiTra = new DateTime(2025, 7, 12) },
-                new PhieuMuon { MaPhieuMuon = "PM004", MaDocGia = "DG004", NgayMuon = new DateTime(2025, 7, 4), NgayPhaiTra = new DateTime(2025, 7, 13) },
-                new PhieuMuon { MaPhieuMuon = "PM005", MaDocGia = "DG005", NgayMuon = new DateTime(2025, 7, 5), NgayPhaiTra = new DateTime(2025, 7, 14) },
-                new PhieuMuon { MaPhieuMuon = "PM006", MaDocGia = "DG006", NgayMuon = new DateTime(2025, 7, 6), NgayPhaiTra = new DateTime(2025, 7, 15) },
-                new PhieuMuon { MaPhieuMuon = "PM007", MaDocGia = "DG007", NgayMuon = new DateTime(2025, 7, 7), NgayPhaiTra = new DateTime(2025, 7, 16) },
-                new PhieuMuon { MaPhieuMuon = "PM008", MaDocGia = "DG008", NgayMuon = new DateTime(2025, 7, 8), NgayPhaiTra = new DateTime(2025, 7, 17) },
-                new PhieuMuon { MaPhieuMuon = "PM009", MaDocGia = "DG009", NgayMuon = new DateTime(2025, 7, 9), NgayPhaiTra = new DateTime(2025, 7, 18) },
-                new PhieuMuon { MaPhieuMuon = "PM010", MaDocGia = "DG010", NgayMuon = new DateTime(2025, 7, 10), NgayPhaiTra = new DateTime(2025, 7, 19) }
-            );
+          
         }
         private void Seed_ChiTietPhieuMuon(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChiTietPhieuMuon>().HasData(
-                // PM001
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM001", MaSach = "S003", SoLuongMuon = 2, SoLuongDaTra = 1 },
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM001", MaSach = "S015", SoLuongMuon = 1, SoLuongDaTra = 1 },
-
-                // PM002
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM002", MaSach = "S001", SoLuongMuon = 3, SoLuongDaTra = 0 },
-
-                // PM003
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM003", MaSach = "S020", SoLuongMuon = 1, SoLuongDaTra = 1 },
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM003", MaSach = "S018", SoLuongMuon = 2, SoLuongDaTra = 2 },
-
-                // PM004
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM004", MaSach = "S006", SoLuongMuon = 1, SoLuongDaTra = 0 },
-
-                // PM005
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM005", MaSach = "S011", SoLuongMuon = 2, SoLuongDaTra = 1 },
-
-                // PM006
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM006", MaSach = "S005", SoLuongMuon = 1, SoLuongDaTra = 1 },
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM006", MaSach = "S014", SoLuongMuon = 2, SoLuongDaTra = 2 },
-
-                // PM007
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM007", MaSach = "S009", SoLuongMuon = 3, SoLuongDaTra = 2 },
-
-                // PM008
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM008", MaSach = "S025", SoLuongMuon = 2, SoLuongDaTra = 1 },
-
-                // PM009
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM009", MaSach = "S013", SoLuongMuon = 1, SoLuongDaTra = 0 },
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM009", MaSach = "S002", SoLuongMuon = 2, SoLuongDaTra = 2 },
-
-                // PM010
-                new ChiTietPhieuMuon { MaPhieuMuon = "PM010", MaSach = "S030", SoLuongMuon = 1, SoLuongDaTra = 1 }
-            );
+         
         }
         private void Seed_PhieuTra(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PhieuTra>().HasData(
-                new PhieuTra { MaPhieuTra = "PT001", MaPhieuMuon = "PM001", NgayTra = new DateTime(2025, 7, 10), TienPhat = 0 },
-                new PhieuTra { MaPhieuTra = "PT002", MaPhieuMuon = "PM002", NgayTra = new DateTime(2025, 7, 12), TienPhat = 0 },
-                new PhieuTra { MaPhieuTra = "PT003", MaPhieuMuon = "PM003", NgayTra = new DateTime(2025, 7, 15), TienPhat = 10000 },
-                new PhieuTra { MaPhieuTra = "PT004", MaPhieuMuon = "PM004", NgayTra = new DateTime(2025, 7, 14), TienPhat = 0 },
-                new PhieuTra { MaPhieuTra = "PT005", MaPhieuMuon = "PM005", NgayTra = new DateTime(2025, 7, 16), TienPhat = 5000 },
-                new PhieuTra { MaPhieuTra = "PT006", MaPhieuMuon = "PM006", NgayTra = new DateTime(2025, 7, 15), TienPhat = 0 },
-                new PhieuTra { MaPhieuTra = "PT007", MaPhieuMuon = "PM007", NgayTra = new DateTime(2025, 7, 19), TienPhat = 15000 },
-                new PhieuTra { MaPhieuTra = "PT008", MaPhieuMuon = "PM008", NgayTra = new DateTime(2025, 7, 18), TienPhat = 0 },
-                new PhieuTra { MaPhieuTra = "PT009", MaPhieuMuon = "PM009", NgayTra = new DateTime(2025, 7, 21), TienPhat = 20000 },
-                new PhieuTra { MaPhieuTra = "PT010", MaPhieuMuon = "PM010", NgayTra = new DateTime(2025, 7, 20), TienPhat = 0 }
-            );
+        
         }
         private void Seed_ChiTietPhieuTra(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChiTietPhieuTra>().HasData(
-                // PT001 → PM001 → S003 (1), S015 (1)
-                new ChiTietPhieuTra { MaPhieuTra = "PT001", MaSach = "S003", SoLuong = 1 },
-                new ChiTietPhieuTra { MaPhieuTra = "PT001", MaSach = "S015", SoLuong = 1 },
-
-                // PT002 → PM002 → S001 (0) → không tạo
-
-                // PT003 → PM003 → S020 (1), S018 (2)
-                new ChiTietPhieuTra { MaPhieuTra = "PT003", MaSach = "S020", SoLuong = 1 },
-                new ChiTietPhieuTra { MaPhieuTra = "PT003", MaSach = "S018", SoLuong = 2 },
-
-                // PT004 → PM004 → S006 (0) → không tạo
-
-                // PT005 → PM005 → S011 (1)
-                new ChiTietPhieuTra { MaPhieuTra = "PT005", MaSach = "S011", SoLuong = 1 },
-
-                // PT006 → PM006 → S005 (1), S014 (2)
-                new ChiTietPhieuTra { MaPhieuTra = "PT006", MaSach = "S005", SoLuong = 1 },
-                new ChiTietPhieuTra { MaPhieuTra = "PT006", MaSach = "S014", SoLuong = 2 },
-
-                // PT007 → PM007 → S009 (2)
-                new ChiTietPhieuTra { MaPhieuTra = "PT007", MaSach = "S009", SoLuong = 2 },
-
-                // PT008 → PM008 → S025 (1)
-                new ChiTietPhieuTra { MaPhieuTra = "PT008", MaSach = "S025", SoLuong = 1 },
-
-                // PT009 → PM009 → S002 (2)
-                new ChiTietPhieuTra { MaPhieuTra = "PT009", MaSach = "S002", SoLuong = 2 },
-
-                // PT010 → PM010 → S030 (1)
-                new ChiTietPhieuTra { MaPhieuTra = "PT010", MaSach = "S030", SoLuong = 1 }
-            );
+         
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

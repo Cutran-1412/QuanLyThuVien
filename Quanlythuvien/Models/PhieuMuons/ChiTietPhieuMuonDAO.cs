@@ -44,14 +44,14 @@ namespace Quanlythuvien.Models.PhieuMuons
                 return true;
             }
         }
-        public virtual bool TraSach(string maPhieuMuon, string maSach,int soLuongTra)
+        public virtual bool TraSach(string maPhieuMuon, string maSach)
         {
             using (DataContext context = new DataContext())
             {
                 var ctPhieuMuon = context.ChiTietPhieuMuons.FirstOrDefault(ct =>ct.MaPhieuMuon== maPhieuMuon && ct.MaSach== maSach);
                 if (ctPhieuMuon != null)
                 {
-                    ctPhieuMuon.SoLuongDaTra += soLuongTra;
+                    ctPhieuMuon.DaTra = true;
                     context.SaveChanges();
                     return true;
                 }

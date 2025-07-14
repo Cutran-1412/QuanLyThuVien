@@ -42,6 +42,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         }
         private void gbtnThongtin_Click(object sender, EventArgs e)
         {
+            if (this.dgvPhieuMuon.CurrentRow == null) return;
             int row = this.dgvPhieuMuon.CurrentRow.Index;
             string maPhieu = this.dgvPhieuMuon.Rows[row].Cells[0].Value.ToString();
             Quanlythuvien.Models.PhieuMuons.PhieuMuon phieuMuon = this.phieuMuonCtrl.FindByKey(maPhieu);

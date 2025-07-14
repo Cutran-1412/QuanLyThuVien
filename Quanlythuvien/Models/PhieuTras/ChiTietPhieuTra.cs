@@ -25,8 +25,8 @@ namespace Quanlythuvien.Models.PhieuTras
         [DisplayName("Mã sách")]
         public string MaSach { get; set; }
         public Sach Sach { get; set; }
-        [DisplayName("Số lượng")]
-        public int SoLuong { get; set; }
+        [DisplayName("Tiền phạt")]
+        public decimal TienPhat { get; set; }
 
     }
 }

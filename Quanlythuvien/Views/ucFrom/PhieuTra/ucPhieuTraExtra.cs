@@ -1,4 +1,5 @@
-﻿using Quanlythuvien.Controllers;
+﻿using Guna.UI2.WinForms;
+using Quanlythuvien.Controllers;
 using Quanlythuvien.Models.PhieuMuons;
 using Quanlythuvien.Models.PhieuTras;
 using Quanlythuvien.Views.ucFrom.PhieuMuon;
@@ -27,6 +28,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         {
             InitializeComponent();
             this.phieuTra = phieutra;
+            this.LoadMaPhieuMuon();
         }
         private void ucPhieuTraExtra_Load(object sender, EventArgs e)
         {
@@ -35,21 +37,41 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 this.gtxtmaphieutra.Text = this.phieuTra.MaPhieuTra;
                 this.gcboMaPhieuMuon.SelectedValue = this.phieuTra.MaPhieuMuon;
                 this.gdtpngaytra.Value = this.phieuTra.NgayTra;
-                this.gtxttienphat.Text = this.phieuTra.TienPhat.ToString();
-                //  this.SetReadOnly();
-                //this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.phieuMuon.ChiTietPhieuMuons);
+
+                this.SetReadOnly();
+                this.LoadMaPhieuMuonChuaTra();
+                this.gcboMaPhieuMuon.SelectedValue = phieuTra.MaPhieuMuon;
+                this.ctPhieuMuons = new BindingList<ChiTietPhieuTra>(this.phieuTra.ChiTietPhieuTras);
             }
             else
             {
                 this.SinhMaPhieuTra();
                 this.LoadMaPhieuMuonChuaTra();
                 this.gdtpngaytra.Value = DateTime.Now.Date;
-                //  this.gdgvSach.DataSource = this.ctPhieuMuons;
+
             }
+        }
+        private void SetReadOnly()
+        {
+            foreach (Control ct in this.ggrbTtPhieuTra.Controls)
+            {
+                ct.Enabled = false;
+            }
+            foreach (Control ct in this.ggrbChucnang.Controls)
+            {
+                ct.Enabled = false;
+            }
+            gbtnThoat.Enabled = true;
+
+        }
+        private void LoadMaPhieuMuon()
+        {
+            this.gcboMaPhieuMuon.DataSource = this.phieuMuonCtrl.GetData();
+            this.gcboMaPhieuMuon.DisplayMember = "MaPhieuMuon";
+            this.gcboMaPhieuMuon.ValueMember = "MaPhieuMuon";
         }
         private void LoadMaPhieuMuonChuaTra()
         {
-
             this.gcboMaPhieuMuon.DataSource = this.phieuMuonCtrl.GetPhieuMuonChuaTra();
             this.gcboMaPhieuMuon.DisplayMember = "MaPhieuMuon";
             this.gcboMaPhieuMuon.ValueMember = "MaPhieuMuon";
@@ -155,7 +177,12 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             this.gtxtMasach.Text = this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString();
             this.gtxtTenSach.Text = this.dgvDanhSachMuon.Rows[index].Cells["TenSach"].Value.ToString();
             this.gtxtSlMuon.Text = this.dgvDanhSachMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString();
-            this.gtxtSlDaTra.Text = this.dgvDanhSachMuon.Rows[index].Cells["SoLuongDaTra"].Value.ToString();
+            this.cbDaTra.Checked = Convert.ToBoolean(this.dgvDanhSachMuon.Rows[index].Cells["DaTra"].Value);
+            var phieuMuon = this.phieuMuonCtrl.FindByKey(this.gcboMaPhieuMuon.SelectedValue.ToString());
+            int soNgayTre = (this.gdtpngaytra.Value - phieuMuon.NgayMuon).Days;
+            float tienPhatMoiQuyen = 1000;
+            int slMuon = int.Parse(this.gtxtSlMuon.Text);
+            this.gtxtTienphat.Text = (soNgayTre * tienPhatMoiQuyen * slMuon).ToString();
         }
 
         private void dgvDanhSachMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -170,30 +197,25 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 
         private void gbtnTraSach_Click(object sender, EventArgs e)
         {
-            if(this.phieuTra ==null)
+            if (this.phieuTra == null)
             {
                 this.phieuTra = new Models.PhieuTras.PhieuTra
                 {
                     MaPhieuTra = this.gtxtmaphieutra.Text,
                     MaPhieuMuon = this.gcboMaPhieuMuon.SelectedValue.ToString(),
                     NgayTra = this.gdtpngaytra.Value,
-                    TienPhat = decimal.Parse(this.gtxttienphat.Text)
+
                 };
             }
-            int soLuongTra;
-            if(!int.TryParse(this.gtxtSoLuongTra.Text, out soLuongTra))
-            {
-                //Thông báo vui lòng nhập số
-                return;
-            }
+
             ChiTietPhieuTra ctPhieuTra = new ChiTietPhieuTra
             {
                 MaPhieuTra = this.phieuTra.MaPhieuTra,
                 MaSach = this.gtxtMasach.Text,
-                SoLuong = soLuongTra
+                //   TienPhat = decimal.Parse(this.gtxttienphat.Text)
             };
-     
-            if(this.phieuTraCtrl.FindByKey(this.phieuTra.MaPhieuTra)!=null)
+
+            if (this.phieuTraCtrl.FindByKey(this.phieuTra.MaPhieuTra) != null)
             {
                 this.phieuTraCtrl.Update(phieuTra);
             }
@@ -202,7 +224,21 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 this.phieuTraCtrl.Insert(this.phieuTra);
             }
             this.ctPhieuTraCtrl.Insert(ctPhieuTra);
+            string text = "Đã trả sách thành công";
+            string caption = "Thông báo";
+            MessageDialogButtons button = MessageDialogButtons.OK;
+            MessageDialogIcon icon = MessageDialogIcon.Information;
+            new frmMain().Msgbox(text, caption, button, icon);
+            this.gcboMaPhieuMuon.Enabled = false;
             this.LoadDanhSachMuon(this.gcboMaPhieuMuon.SelectedValue.ToString());
+        }
+
+        private void gbtnThoat_Click_1(object sender, EventArgs e)
+        {
+            if (TopLevelControl is frmMain main)
+            {
+                main.ShowControl(new ucPhieuTra());
+            }
         }
     }
 }

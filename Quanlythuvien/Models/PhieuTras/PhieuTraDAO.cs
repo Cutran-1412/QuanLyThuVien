@@ -56,9 +56,10 @@ namespace Quanlythuvien.Models.PhieuTras
             using (DataContext context = new DataContext())
             {
                 return context.PhieuTras
-                    .OrderByDescending(pm => pm.MaPhieuTra)
+                    .OrderByDescending(pm => Convert.ToInt32(pm.MaPhieuTra.Substring(2)))
                     .FirstOrDefault();
             }
+
         }
     }
 }

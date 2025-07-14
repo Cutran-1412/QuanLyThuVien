@@ -27,8 +27,7 @@ namespace Quanlythuvien.Models.PhieuTras
         public DateTime NgayTra { get; set; } = DateTime.Now.Date;
 
         [Range(0, double.MaxValue)]
-        [DisplayName("Tiền phạt")]
-        public decimal TienPhat { get; set; }
+   
         public List<ChiTietPhieuTra> ChiTietPhieuTras { get; set; } = new List<ChiTietPhieuTra>();
 
     }

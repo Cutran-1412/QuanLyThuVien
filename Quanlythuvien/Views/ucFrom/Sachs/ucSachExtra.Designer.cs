@@ -278,7 +278,7 @@
             // guna2HtmlLabel10
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Location = new Point(68, 559);
+            guna2HtmlLabel10.Location = new Point(68, 564);
             guna2HtmlLabel10.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(91, 22);
@@ -299,7 +299,7 @@
             gtxtNhaxb.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtNhaxb.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtNhaxb.IconLeft = (Image)resources.GetObject("gtxtNhaxb.IconLeft");
-            gtxtNhaxb.Location = new Point(182, 546);
+            gtxtNhaxb.Location = new Point(206, 564);
             gtxtNhaxb.Margin = new Padding(3, 4, 3, 4);
             gtxtNhaxb.Name = "gtxtNhaxb";
             gtxtNhaxb.PlaceholderText = "Phone";
@@ -322,7 +322,7 @@
             gtxtTacgia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtTacgia.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtTacgia.IconLeft = (Image)resources.GetObject("gtxtTacgia.IconLeft");
-            gtxtTacgia.Location = new Point(182, 348);
+            gtxtTacgia.Location = new Point(206, 348);
             gtxtTacgia.Margin = new Padding(3, 4, 3, 4);
             gtxtTacgia.Name = "gtxtTacgia";
             gtxtTacgia.PlaceholderText = "Name";
@@ -344,7 +344,7 @@
             // guna2HtmlLabel9
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
-            guna2HtmlLabel9.Location = new Point(536, 361);
+            guna2HtmlLabel9.Location = new Point(560, 361);
             guna2HtmlLabel9.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             guna2HtmlLabel9.Size = new Size(63, 22);
@@ -354,7 +354,7 @@
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Location = new Point(536, 267);
+            guna2HtmlLabel7.Location = new Point(560, 267);
             guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(56, 22);
@@ -364,17 +364,17 @@
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Location = new Point(536, 161);
+            guna2HtmlLabel6.Location = new Point(560, 161);
             guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(27, 22);
+            guna2HtmlLabel6.Size = new Size(71, 30);
             guna2HtmlLabel6.TabIndex = 46;
-            guna2HtmlLabel6.Text = "Thể ";
+            guna2HtmlLabel6.Text = "Thể loại";
             // 
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Location = new Point(540, 467);
+            guna2HtmlLabel5.Location = new Point(551, 467);
             guna2HtmlLabel5.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(105, 22);
@@ -425,7 +425,7 @@
             gtxtSoluong.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtSoluong.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtSoluong.IconLeft = (Image)resources.GetObject("gtxtSoluong.IconLeft");
-            gtxtSoluong.Location = new Point(654, 348);
+            gtxtSoluong.Location = new Point(695, 348);
             gtxtSoluong.Margin = new Padding(3, 4, 3, 4);
             gtxtSoluong.Name = "gtxtSoluong";
             gtxtSoluong.PlaceholderText = "Fine";
@@ -448,7 +448,7 @@
             gtxtDongia.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtDongia.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtDongia.IconLeft = (Image)resources.GetObject("gtxtDongia.IconLeft");
-            gtxtDongia.Location = new Point(654, 254);
+            gtxtDongia.Location = new Point(695, 254);
             gtxtDongia.Margin = new Padding(3, 4, 3, 4);
             gtxtDongia.Name = "gtxtDongia";
             gtxtDongia.PlaceholderText = "Address";
@@ -471,7 +471,7 @@
             gtxtTheloai.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtTheloai.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtTheloai.IconLeft = (Image)resources.GetObject("gtxtTheloai.IconLeft");
-            gtxtTheloai.Location = new Point(654, 147);
+            gtxtTheloai.Location = new Point(695, 147);
             gtxtTheloai.Margin = new Padding(3, 4, 3, 4);
             gtxtTheloai.Name = "gtxtTheloai";
             gtxtTheloai.PlaceholderText = "Email";
@@ -494,7 +494,7 @@
             gtxtNamphathanh.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtNamphathanh.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtNamphathanh.IconLeft = (Image)resources.GetObject("gtxtNamphathanh.IconLeft");
-            gtxtNamphathanh.Location = new Point(654, 454);
+            gtxtNamphathanh.Location = new Point(695, 454);
             gtxtNamphathanh.Margin = new Padding(3, 4, 3, 4);
             gtxtNamphathanh.Name = "gtxtNamphathanh";
             gtxtNamphathanh.PlaceholderText = "Phone";
@@ -512,7 +512,7 @@
             gdtpNgaynhap.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gdtpNgaynhap.ForeColor = Color.Black;
             gdtpNgaynhap.Format = DateTimePickerFormat.Long;
-            gdtpNgaynhap.Location = new Point(182, 454);
+            gdtpNgaynhap.Location = new Point(206, 454);
             gdtpNgaynhap.Margin = new Padding(3, 4, 3, 4);
             gdtpNgaynhap.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             gdtpNgaynhap.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -536,7 +536,7 @@
             gtxtTenSach.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtTenSach.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtTenSach.IconLeft = (Image)resources.GetObject("gtxtTenSach.IconLeft");
-            gtxtTenSach.Location = new Point(182, 254);
+            gtxtTenSach.Location = new Point(206, 254);
             gtxtTenSach.Margin = new Padding(3, 4, 3, 4);
             gtxtTenSach.Name = "gtxtTenSach";
             gtxtTenSach.PlaceholderText = "Name";
@@ -559,7 +559,7 @@
             gtxtma.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtma.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtma.IconLeft = (Image)resources.GetObject("gtxtma.IconLeft");
-            gtxtma.Location = new Point(182, 147);
+            gtxtma.Location = new Point(206, 147);
             gtxtma.Margin = new Padding(3, 4, 3, 4);
             gtxtma.Name = "gtxtma";
             gtxtma.PlaceholderText = "ID";
