@@ -93,6 +93,7 @@ namespace Quanlythuvien.Views
 
         private void ibtnMenu_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
             ShowControl(new ucMain());
         }
         public void ShowControl(UserControl uc)
@@ -111,51 +112,75 @@ namespace Quanlythuvien.Views
             }
         }
 
-        private void fmenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void ibtnmuontra_Click(object sender, EventArgs e)
         {
             ibtnmuon.Visible = !ibtnmuon.Visible;
             ibtntra.Visible = !ibtntra.Visible;
         }
+        private void ResetButtonColors()
+        {
+            Color defaultColor = Color.DodgerBlue;
+            tbtnadmin.BackColor = defaultColor;
+            ibtndocgia.BackColor = defaultColor;
+            ibtnsach.BackColor = defaultColor;
+            ibtnmuon.BackColor = defaultColor;
+            ibtntra.BackColor = defaultColor;
+            ibtnthongke.BackColor = defaultColor;
+        }
         private void tbtnadmin_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
+            tbtnadmin.BackColor = Color.FromArgb(26, 37, 47);
             ShowControl(new ucAdmin());
         }
 
         private void ibtndocgia_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
+            ibtndocgia.BackColor = Color.FromArgb(26, 37, 47);
             ShowControl(new ucDocgia());
         }
 
         private void ibtnsach_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
+            ibtnsach.BackColor = Color.FromArgb(26, 37, 47);
             ShowControl(new ucSach());
         }
 
         private void ibtnmuon_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
+            ibtnmuon.BackColor = Color.FromArgb(26, 37, 47);
             ShowControl(new ucPhieuMuon());
         }
 
         private void ibtntra_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
+            ibtntra.BackColor = Color.FromArgb(26, 37, 47);
             ShowControl(new ucPhieuTra());
         }
 
-        private void iconButton7_Click(object sender, EventArgs e)
+        private void ibtnthongke_Click(object sender, EventArgs e)
         {
+            ResetButtonColors();
+            ibtnthongke.BackColor = Color.FromArgb(26, 37, 47);
             ShowControl(new ucThongKe());
         }
 
-        private void iconButton8_Click(object sender, EventArgs e)
+        private void ibtnthoat_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            frmLogin from = new frmLogin();
-            from.Visible = true;
+            string text = "Bạn chắc chắn muốn thoát chương trình?";
+            string caption = "Xác nhận";
+            MessageDialogButtons button = MessageDialogButtons.OKCancel;
+            MessageDialogIcon icon = MessageDialogIcon.Question;
+            if (Msgbox(text, caption, button, icon) == DialogResult.Yes)
+            {
+                this.Visible = false;
+                frmLogin from = new frmLogin();
+                from.Visible = true;
+            }
         }
     }
 }
