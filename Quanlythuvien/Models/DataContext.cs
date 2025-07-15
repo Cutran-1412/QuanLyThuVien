@@ -26,10 +26,10 @@ namespace Quanlythuvien.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            String sqlcu = "Data Source=ADMIN\\SQLEXPRESS;Initial Catalog=Quanlythuvien;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+            String sqlcu = "Data Source=ADMIN-PC;Initial Catalog=Quanlythuvien;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
             String sqlCuong = "";
             String sqlChien = "Data Source=MSI\\SQLSERVER;Initial Catalog=qlthuvien;Integrated Security=True";
-            optionsBuilder.UseSqlServer(sqlChien);
+            optionsBuilder.UseSqlServer(sqlcu);
         }
         private void Seed_Admin(ModelBuilder modelBuilder)
         {
