@@ -73,15 +73,18 @@ namespace Quanlythuvien.Views
         {
             if (dtAdmin.SelectedRows.Count > 0)
             {
-                int id = Convert.ToInt32(dtAdmin.SelectedRows[0].Cells[0].Value.ToString());
-                Admin ad = new Admin { Id = id, Username = gtxtUsername.Text, Password = gtxtPassword.Text };
-                adm.Update_Admin(ad);
-                string text = "Sửa thành công tài khoản có ID :" + id;
-                string caption = "Thông báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Information;
-                new frmMain().Msgbox(text, caption, button, icon);
-                Load_Data();
+                if (Check_Null())
+                {
+                    int id = Convert.ToInt32(dtAdmin.SelectedRows[0].Cells[0].Value.ToString());
+                    Admin ad = new Admin { Id = id, Username = gtxtUsername.Text, Password = gtxtPassword.Text };
+                    adm.Update_Admin(ad);
+                    string text = "Sửa thành công tài khoản có ID :" + id;
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Information;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                    Load_Data();
+                }
             }
             else
             {
@@ -119,13 +122,20 @@ namespace Quanlythuvien.Views
             if (dtAdmin.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(dtAdmin.SelectedRows[0].Cells[0].Value.ToString());
-                adm.Delete_Admin(id);
-                string text = "Xóa thành công tài khoản có ID :" + id;
-                string caption = "Thông báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Information;
-                new frmMain().Msgbox(text, caption, button, icon);
-                Load_Data();
+                string text1 = "Bạn chắc chắn muốn xóa mã " + id;
+                string caption1 = "Xác nhận";
+                MessageDialogButtons button1 = MessageDialogButtons.OKCancel;
+                MessageDialogIcon icon1 = MessageDialogIcon.Question;
+                if (new frmMain().Msgbox(text1, caption1, button1, icon1) == DialogResult.Yes)
+                {
+                    adm.Delete_Admin(id);
+                    string text = "Xóa thành công tài khoản có ID :" + id;
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Information;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                    Load_Data();
+                }
             }
             else
             {

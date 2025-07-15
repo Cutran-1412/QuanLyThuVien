@@ -54,8 +54,8 @@
             gpichien = new Guna.UI2.WinForms.Guna2PictureBox();
             gtxtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             gtxtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            gbtndangnhap = new Guna.UI2.WinForms.Guna2Button();
             gbtnthoat = new Guna.UI2.WinForms.Guna2Button();
+            gbtndangnhap = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gpican).BeginInit();
@@ -90,10 +90,10 @@
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
             iconPictureBox1.IconColor = SystemColors.ControlText;
             iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconPictureBox1.IconSize = 91;
-            iconPictureBox1.Location = new Point(579, 75);
+            iconPictureBox1.IconSize = 99;
+            iconPictureBox1.Location = new Point(578, 74);
             iconPictureBox1.Name = "iconPictureBox1";
-            iconPictureBox1.Size = new Size(92, 91);
+            iconPictureBox1.Size = new Size(99, 106);
             iconPictureBox1.TabIndex = 9;
             iconPictureBox1.TabStop = false;
             // 
@@ -116,9 +116,9 @@
             panel5.Controls.Add(label4);
             panel5.Controls.Add(label3);
             panel5.Controls.Add(label1);
-            panel5.Location = new Point(0, 0);
+            panel5.Location = new Point(0, -7);
             panel5.Name = "panel5";
-            panel5.Size = new Size(428, 464);
+            panel5.Size = new Size(428, 477);
             panel5.TabIndex = 10;
             // 
             // label2
@@ -127,7 +127,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(267, 423);
+            label2.Location = new Point(282, 444);
             label2.Name = "label2";
             label2.Size = new Size(130, 17);
             label2.TabIndex = 5;
@@ -139,7 +139,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(267, 393);
+            label5.Location = new Point(282, 414);
             label5.Name = "label5";
             label5.Size = new Size(131, 17);
             label5.TabIndex = 4;
@@ -151,7 +151,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(267, 366);
+            label4.Location = new Point(282, 387);
             label4.Name = "label4";
             label4.Size = new Size(92, 17);
             label4.TabIndex = 3;
@@ -163,7 +163,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(207, 366);
+            label3.Location = new Point(222, 387);
             label3.Name = "label3";
             label3.Size = new Size(54, 17);
             label3.TabIndex = 2;
@@ -244,41 +244,43 @@
             gtxtPassword.TabIndex = 11;
             gtxtPassword.UseSystemPasswordChar = true;
             // 
-            // gbtndangnhap
-            // 
-            gbtndangnhap.BorderRadius = 25;
-            gbtndangnhap.CustomizableEdges = customizableEdges9;
-            gbtndangnhap.DisabledState.BorderColor = Color.DarkGray;
-            gbtndangnhap.DisabledState.CustomBorderColor = Color.DarkGray;
-            gbtndangnhap.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gbtndangnhap.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gbtndangnhap.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gbtndangnhap.ForeColor = Color.White;
-            gbtndangnhap.Location = new Point(534, 329);
-            gbtndangnhap.Name = "gbtndangnhap";
-            gbtndangnhap.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            gbtndangnhap.Size = new Size(180, 45);
-            gbtndangnhap.TabIndex = 15;
-            gbtndangnhap.Text = "Đăng nhập";
-            gbtndangnhap.Click += gbtndangnhap_Click;
-            // 
             // gbtnthoat
             // 
             gbtnthoat.BorderRadius = 25;
-            gbtnthoat.CustomizableEdges = customizableEdges11;
+            gbtnthoat.CustomizableEdges = customizableEdges9;
             gbtnthoat.DisabledState.BorderColor = Color.DarkGray;
             gbtnthoat.DisabledState.CustomBorderColor = Color.DarkGray;
             gbtnthoat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             gbtnthoat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gbtnthoat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gbtnthoat.FillColor = Color.DodgerBlue;
+            gbtnthoat.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             gbtnthoat.ForeColor = Color.White;
             gbtnthoat.Location = new Point(534, 393);
             gbtnthoat.Name = "gbtnthoat";
-            gbtnthoat.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            gbtnthoat.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gbtnthoat.Size = new Size(180, 45);
             gbtnthoat.TabIndex = 16;
             gbtnthoat.Text = "Thoát";
             gbtnthoat.Click += gbtnthoat_Click;
+            // 
+            // gbtndangnhap
+            // 
+            gbtndangnhap.BorderRadius = 25;
+            gbtndangnhap.CustomizableEdges = customizableEdges11;
+            gbtndangnhap.DisabledState.BorderColor = Color.DarkGray;
+            gbtndangnhap.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtndangnhap.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtndangnhap.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtndangnhap.FillColor = Color.DodgerBlue;
+            gbtndangnhap.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            gbtndangnhap.ForeColor = Color.White;
+            gbtndangnhap.Location = new Point(534, 329);
+            gbtndangnhap.Name = "gbtndangnhap";
+            gbtndangnhap.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            gbtndangnhap.Size = new Size(180, 45);
+            gbtndangnhap.TabIndex = 15;
+            gbtndangnhap.Text = "Đăng nhập";
+            gbtndangnhap.Click += gbtndangnhap_Click;
             // 
             // frmLogin
             // 
@@ -323,8 +325,8 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2Button gbtndangnhap;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button gbtnthoat;
+        private Guna.UI2.WinForms.Guna2Button gbtndangnhap;
     }
 }
