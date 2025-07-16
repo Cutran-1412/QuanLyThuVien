@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 using Quanlythuvien.Controllers;
 using Quanlythuvien.Models.DocGias;
 using Quanlythuvien.Views.ucFrom.DocGias;
@@ -18,17 +19,20 @@ namespace Quanlythuvien.Views.ucFrom
         public ucDocgia()
         {
             InitializeComponent();
+            Load_Bang();
         }
         private readonly DocGiaController dg = new DocGiaController();
-
+        private void Load_Bang()
+        {
+            dtDocgia.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+        }
         private void Load_Data()
         {
             dtDocgia.DataSource = dg.Get_DocGia();
             dtDocgia.Columns["SoDienThoai"].Visible = false;
             dtDocgia.Columns["Email"].Visible = false;
             dtDocgia.Columns["SoSachMuonToiDa"].Visible = false;
-            dtDocgia.Columns["PhieuMuon"].Visible = false;
-
+            dtDocgia.Columns["PhieuMuon"].Visible = false;   
         }
         private void ucDocgia_Load(object sender, EventArgs e)
         {
@@ -39,10 +43,10 @@ namespace Quanlythuvien.Views.ucFrom
         {
             int row = this.dtDocgia.CurrentRow.Index;
             string ma = this.dtDocgia.Rows[row].Cells[0].Value.ToString();
-            DocGia docgia = dg.Get_DocGia_Ma(ma);
+            DocGia? docgia = dg.Get_DocGia_Ma(ma);
             if (TopLevelControl is frmMain main)
             {
-                main.ShowControl(new ucDocgiaExtra(docgia));
+                main.ShowControl(new ucDocgiaExtra(docgia,0));
             }
         }
 
@@ -50,7 +54,7 @@ namespace Quanlythuvien.Views.ucFrom
         {
             if (TopLevelControl is frmMain main)
             {
-                main.ShowControl(new ucDocgiaExtra(null));
+                main.ShowControl(new ucDocgiaExtra(null,1));
             }
         }
 
@@ -61,7 +65,7 @@ namespace Quanlythuvien.Views.ucFrom
             DocGia docgia = dg.Get_DocGia_Ma(ma);
             if (TopLevelControl is frmMain main)
             {
-                main.ShowControl(new ucDocgiaExtra(docgia));
+                main.ShowControl(new ucDocgiaExtra(docgia,-1));
             }
         }
 
@@ -74,17 +78,19 @@ namespace Quanlythuvien.Views.ucFrom
             dtDocgia.Columns["PhieuMuon"].Visible = false;
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void gbtnxoa_Click(object sender, EventArgs e)
         {
             int row = this.dtDocgia.CurrentRow.Index;
             string ma = this.dtDocgia.Rows[row].Cells[0].Value.ToString();
-            dg.Delete_Docgia(ma);
-            Load_Data();
+            string text = "Bạn chắc chắn muốn xóa độc giả mã " + ma +" ?";
+            string caption = "Xác nhận";
+            MessageDialogButtons button = MessageDialogButtons.OKCancel;
+            MessageDialogIcon icon = MessageDialogIcon.Question;
+            if (new frmMain().Msgbox(text, caption, button, icon) == DialogResult.Yes)
+            {
+                dg.Delete_Docgia(ma);
+                Load_Data();
+            }  
         }
     }
 }

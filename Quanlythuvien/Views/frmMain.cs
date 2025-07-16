@@ -120,52 +120,78 @@ namespace Quanlythuvien.Views
         private void ResetButtonColors()
         {
             Color defaultColor = Color.DodgerBlue;
+            Color Colortext = Color.White;
             tbtnadmin.BackColor = defaultColor;
+            tbtnadmin.ForeColor = Colortext;
+            tbtnadmin.IconColor = Colortext;
             ibtndocgia.BackColor = defaultColor;
+            ibtndocgia.ForeColor = Colortext;
+            ibtndocgia.IconColor = Colortext;
             ibtnsach.BackColor = defaultColor;
+            ibtnsach.ForeColor = Colortext;
+            ibtnsach.IconColor = Colortext;
             ibtnmuon.BackColor = defaultColor;
+            ibtnmuon.ForeColor = Colortext;
+            ibtnmuon.IconColor = Colortext;
             ibtntra.BackColor = defaultColor;
+            ibtntra.ForeColor = Colortext;
+            ibtntra.IconColor = Colortext;
             ibtnthongke.BackColor = defaultColor;
+            ibtnthongke.ForeColor = Colortext;
+            ibtnthongke.IconColor = Colortext;
+
         }
         private void tbtnadmin_Click(object sender, EventArgs e)
         {
             ResetButtonColors();
-            tbtnadmin.BackColor = Color.FromArgb(26, 37, 47);
+            tbtnadmin.BackColor = Color.White;
+            tbtnadmin.ForeColor = Color.Black;
+            tbtnadmin.IconColor = Color.Black;
             ShowControl(new ucAdmin());
         }
 
         private void ibtndocgia_Click(object sender, EventArgs e)
         {
             ResetButtonColors();
-            ibtndocgia.BackColor = Color.FromArgb(26, 37, 47);
+            ibtndocgia.BackColor = Color.White;
+            ibtndocgia.ForeColor = Color.Black;
+            ibtndocgia.IconColor = Color.Black;
             ShowControl(new ucDocgia());
         }
 
         private void ibtnsach_Click(object sender, EventArgs e)
         {
             ResetButtonColors();
-            ibtnsach.BackColor = Color.FromArgb(26, 37, 47);
+            ibtnsach.BackColor = Color.White;
+            ibtnsach.ForeColor = Color.Black;
+            ibtnsach.IconColor = Color.Black;
             ShowControl(new ucSach());
         }
 
         private void ibtnmuon_Click(object sender, EventArgs e)
         {
             ResetButtonColors();
-            ibtnmuon.BackColor = Color.FromArgb(26, 37, 47);
+            ibtnmuon.BackColor = Color.White;
+            ibtnmuon.ForeColor = Color.Black;
+            ibtnmuon.IconColor = Color.Black;
             ShowControl(new ucPhieuMuon());
         }
 
         private void ibtntra_Click(object sender, EventArgs e)
         {
             ResetButtonColors();
-            ibtntra.BackColor = Color.FromArgb(26, 37, 47);
+            ibtntra.BackColor = Color.White;
+            ibtntra.ForeColor = Color.Black;
+            ibtntra.IconColor = Color.Black;
             ShowControl(new ucPhieuTra());
         }
 
         private void ibtnthongke_Click(object sender, EventArgs e)
         {
             ResetButtonColors();
-            ibtnthongke.BackColor = Color.FromArgb(26, 37, 47);
+            ibtnthongke.BackColor = Color.White;
+            ibtnthongke.ForeColor = Color.Black;
+            ibtnthongke.IconColor = Color.Black;
             ShowControl(new ucThongKe());
         }
 
@@ -177,9 +203,7 @@ namespace Quanlythuvien.Views
             MessageDialogIcon icon = MessageDialogIcon.Question;
             if (Msgbox(text, caption, button, icon) == DialogResult.Yes)
             {
-                this.Visible = false;
-                frmLogin from = new frmLogin();
-                from.Visible = true;
+                Application.Exit();
             }
         }
     }

@@ -60,7 +60,7 @@
             // lblchao
             // 
             lblchao.AutoSize = true;
-            lblchao.BackColor = Color.DarkGray;
+            lblchao.BackColor = Color.Transparent;
             lblchao.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblchao.ForeColor = Color.White;
             lblchao.Location = new Point(136, 12);
@@ -322,14 +322,14 @@
             tbtnadmin.Name = "tbtnadmin";
             tbtnadmin.Size = new Size(240, 54);
             tbtnadmin.TabIndex = 2;
-            tbtnadmin.Text = "Admin";
+            tbtnadmin.Text = "Tài khoản";
             tbtnadmin.UseCompatibleTextRendering = true;
             tbtnadmin.UseVisualStyleBackColor = false;
             tbtnadmin.Click += tbtnadmin_Click;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.DarkGray;
+            panel2.BackColor = Color.FromArgb(0, 101, 248);
             panel2.Controls.Add(lblchao);
             panel2.Location = new Point(239, 0);
             panel2.Name = "panel2";
@@ -338,7 +338,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.DarkGray;
+            panel3.BackColor = Color.FromArgb(0, 101, 248);
             panel3.Controls.Add(pcodeby);
             panel3.Controls.Add(lblthoigian);
             panel3.Location = new Point(239, 601);

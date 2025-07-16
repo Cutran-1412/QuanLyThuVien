@@ -55,8 +55,6 @@ namespace Quanlythuvien.Models.DocGias
         [Range(0, 10, ErrorMessage = "Số sách mượn tối đa từ 0 đến 10 cuốn")]
         [DisplayName("Số sách muon tối đa")]
         public int SoSachMuonToiDa { get; set; } = 10;
-        [DisplayName("Tiền phạt")]
-        public decimal TienPhat { get; set; } = 0;
 
         public virtual ICollection<PhieuMuon>? PhieuMuon { get; set; }
     }

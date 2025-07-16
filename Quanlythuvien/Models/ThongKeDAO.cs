@@ -57,12 +57,5 @@ namespace Quanlythuvien.Models
                 return db.ChiTietPhieuTras.Sum(s=>s.TienPhat);
             }
         }
-        public decimal Ttiendanop()
-        {
-            using (DataContext db = new DataContext())
-            {
-                return db.DocGias.Sum(s => s.TienPhat);
-            }
-        }
     }
 }

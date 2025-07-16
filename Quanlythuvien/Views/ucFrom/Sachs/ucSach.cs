@@ -20,6 +20,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
         public ucSach()
         {
             InitializeComponent();
+            dtsach.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -82,14 +83,14 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
             }
         }
 
-        private void txtTimKiem_Changed(object sender, EventArgs e)
+        private void gtxttim_TextChanged(object sender, EventArgs e)
         {
             int luachon = this.gcboLuachon.SelectedIndex;
             if (luachon == -1)
             {
                 return;
             }
-            this.LoadSach(this.sachCtrl.Search(this.gcboLuachon.Items[luachon].ToString(), txtTimkiem.Text.Trim()));
+            this.LoadSach(this.sachCtrl.Search(this.gcboLuachon.Items[luachon].ToString(), gtxttim.Text.Trim()));
         }
     }
 }

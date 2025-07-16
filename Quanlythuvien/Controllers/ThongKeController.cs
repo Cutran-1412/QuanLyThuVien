@@ -43,10 +43,5 @@ namespace Quanlythuvien.Controllers
         {
             return tkDao.Ttienphat();
         }
-
-        public decimal Tongtienphatdanop()
-        {
-            return tkDao.Ttiendanop();
-        }
     }
 }

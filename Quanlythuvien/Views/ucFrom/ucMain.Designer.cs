@@ -38,7 +38,7 @@
             // 
             lblmon.AutoSize = true;
             lblmon.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblmon.ForeColor = Color.White;
+            lblmon.ForeColor = Color.Black;
             lblmon.Location = new Point(400, 134);
             lblmon.Name = "lblmon";
             lblmon.Size = new Size(185, 37);
@@ -49,7 +49,7 @@
             // 
             lblmamon.AutoSize = true;
             lblmamon.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblmamon.ForeColor = Color.White;
+            lblmamon.ForeColor = Color.Black;
             lblmamon.Location = new Point(400, 233);
             lblmamon.Name = "lblmamon";
             lblmamon.Size = new Size(316, 37);
@@ -60,7 +60,7 @@
             // 
             lblgiangvien.AutoSize = true;
             lblgiangvien.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblgiangvien.ForeColor = Color.White;
+            lblgiangvien.ForeColor = Color.Black;
             lblgiangvien.Location = new Point(400, 282);
             lblgiangvien.Name = "lblgiangvien";
             lblgiangvien.Size = new Size(321, 37);
@@ -71,7 +71,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
+            label1.ForeColor = Color.Black;
             label1.Location = new Point(400, 186);
             label1.Name = "label1";
             label1.Size = new Size(242, 37);
@@ -82,12 +82,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(26, 37, 47);
+            BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(label1);
             Controls.Add(lblgiangvien);
             Controls.Add(lblmamon);
             Controls.Add(lblmon);
+            ForeColor = SystemColors.ButtonHighlight;
             Name = "ucMain";
             Size = new Size(1105, 530);
             Load += ucMain_Load;

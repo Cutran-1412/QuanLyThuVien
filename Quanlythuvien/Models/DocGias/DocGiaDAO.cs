@@ -38,7 +38,6 @@ namespace Quanlythuvien.Models.DocGias
                 dg.Email = docgia.Email;
                 dg.DiaChi = docgia.DiaChi;
                 dg.NgayDangKy = docgia.NgayDangKy;
-                dg.TienPhat = docgia.TienPhat;
                 kn.SaveChanges();
             }
         }
