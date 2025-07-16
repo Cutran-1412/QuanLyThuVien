@@ -82,5 +82,12 @@ namespace Quanlythuvien.Models.PhieuMuons
                     .ToList();
             }
         }
+        public override List<PhieuMuon> Search(string luachon, string value)
+        {
+            using (DataContext context = new DataContext())
+            {
+                  return context.PhieuMuons.Where(s => s.MaPhieuMuon.ToLower().Contains(value.ToLower())).ToList();
+            }
+        }
     }
 }

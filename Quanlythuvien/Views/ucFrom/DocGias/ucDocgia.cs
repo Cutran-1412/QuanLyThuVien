@@ -88,6 +88,11 @@ namespace Quanlythuvien.Views.ucFrom
             MessageDialogIcon icon = MessageDialogIcon.Question;
             if (new frmMain().Msgbox(text, caption, button, icon) == DialogResult.Yes)
             {
+                string text1 = "Xóa thành công độc giả có mã " + ma;
+                string caption1 = "Cảnh báo";
+                MessageDialogButtons button1 = MessageDialogButtons.OK;
+                MessageDialogIcon icon1 = MessageDialogIcon.Information;
+                new frmMain().Msgbox(text1, caption1, button1, icon1);
                 dg.Delete_Docgia(ma);
                 Load_Data();
             }  

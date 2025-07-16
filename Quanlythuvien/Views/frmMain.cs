@@ -86,6 +86,19 @@ namespace Quanlythuvien.Views
             };
             return msg.Show();
         }
+        public bool Check_Null(Guna2TextBox txtbox,string text)
+        {
+            if (string.IsNullOrEmpty(txtbox.Text))
+            {
+                string caption = "Cảnh báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Warning;
+                Msgbox(text, caption, button, icon);
+                txtbox.Focus();
+                return false;
+            }
+            return true;
+        }
         private void timethoigian_Tick(object sender, EventArgs e)
         {
             lblthoigian.Text = DateTime.Now.ToString("HH:mm:ss dd/MM/yyyy");
@@ -156,6 +169,7 @@ namespace Quanlythuvien.Views
             ibtndocgia.BackColor = Color.White;
             ibtndocgia.ForeColor = Color.Black;
             ibtndocgia.IconColor = Color.Black;
+            Thread.Sleep(500);
             ShowControl(new ucDocgia());
         }
 

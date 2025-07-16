@@ -1,4 +1,5 @@
-﻿using Quanlythuvien.Controllers;
+﻿using Guna.UI2.WinForms;
+using Quanlythuvien.Controllers;
 using Quanlythuvien.Models.DocGias;
 using Quanlythuvien.Models.Sachs;
 using Quanlythuvien.Views.ucFrom.DocGias;
@@ -44,7 +45,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
             Sach sach = this.sachCtrl.FindByKey(ma);
             if (TopLevelControl is frmMain main)
             {
-                main.ShowControl(new ucSachExtra(sach));
+                main.ShowControl(new ucSachExtra(sach,0));
             }
         }
 
@@ -52,7 +53,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
         {
             if (TopLevelControl is frmMain main)
             {
-                main.ShowControl(new ucSachExtra(null)); ;
+                main.ShowControl(new ucSachExtra(null,1)); ;
             }
         }
 
@@ -68,7 +69,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
             Sach sach = this.sachCtrl.FindByKey(ma);
             if (TopLevelControl is frmMain main)
             {
-                main.ShowControl(new ucSachExtra(sach));
+                main.ShowControl(new ucSachExtra(sach,-1));
             }
         }
 
@@ -76,11 +77,20 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
         {
             int row = this.dtsach.CurrentRow.Index;
             string ma = this.dtsach.Rows[row].Cells[0].Value.ToString();
-            Sach sach = this.sachCtrl.FindByKey(ma);
-            if (TopLevelControl is frmMain main)
+            string text = "Bạn chắc chắn muốn xóa sách có mã " + ma + " ?";
+            string caption = "Xác nhận";
+            MessageDialogButtons button = MessageDialogButtons.OKCancel;
+            MessageDialogIcon icon = MessageDialogIcon.Question;
+            if (new frmMain().Msgbox(text, caption, button, icon) == DialogResult.Yes)
             {
-                main.ShowControl(new ucSachExtra(sach));
-            }
+                string text1 = "Xóa thành công sách có mã " + ma;
+                string caption1 = "Thông báo";
+                MessageDialogButtons button1 = MessageDialogButtons.OK;
+                MessageDialogIcon icon1 = MessageDialogIcon.Information;
+                new frmMain().Msgbox(text1, caption1, button1, icon1);
+                this.sachCtrl.DeleteByKey(ma);
+                this.LoadSach(this.sachCtrl.GetData());
+            }   
         }
 
         private void gtxttim_TextChanged(object sender, EventArgs e)

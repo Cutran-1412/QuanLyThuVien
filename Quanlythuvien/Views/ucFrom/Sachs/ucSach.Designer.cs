@@ -163,7 +163,7 @@
             gbtnxoa.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnxoa.Image = (Image)resources.GetObject("gbtnxoa.Image");
             gbtnxoa.ImageAlign = HorizontalAlignment.Left;
-            gbtnxoa.Location = new Point(27, 270);
+            gbtnxoa.Location = new Point(27, 277);
             gbtnxoa.Name = "gbtnxoa";
             gbtnxoa.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnxoa.ShadowDecoration.CustomizableEdges = customizableEdges6;

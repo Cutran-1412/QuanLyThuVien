@@ -235,7 +235,7 @@
             guna2HtmlLabel3.ForeColor = Color.Black;
             guna2HtmlLabel3.Location = new Point(60, 92);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(27, 23);
+            guna2HtmlLabel3.Size = new Size(20, 17);
             guna2HtmlLabel3.TabIndex = 32;
             guna2HtmlLabel3.Text = "Mã";
             // 
@@ -245,7 +245,7 @@
             guna2HtmlLabel8.ForeColor = Color.Black;
             guna2HtmlLabel8.Location = new Point(452, 405);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(109, 23);
+            guna2HtmlLabel8.Size = new Size(76, 17);
             guna2HtmlLabel8.TabIndex = 30;
             guna2HtmlLabel8.Text = "Ngày đăng ký";
             // 
@@ -255,7 +255,7 @@
             guna2HtmlLabel7.ForeColor = Color.Black;
             guna2HtmlLabel7.Location = new Point(452, 299);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(56, 23);
+            guna2HtmlLabel7.Size = new Size(39, 17);
             guna2HtmlLabel7.TabIndex = 29;
             guna2HtmlLabel7.Text = "Địa chỉ";
             // 
@@ -265,7 +265,7 @@
             guna2HtmlLabel6.ForeColor = Color.Black;
             guna2HtmlLabel6.Location = new Point(452, 201);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(46, 23);
+            guna2HtmlLabel6.Size = new Size(32, 17);
             guna2HtmlLabel6.TabIndex = 28;
             guna2HtmlLabel6.Text = "Email";
             // 
@@ -275,7 +275,7 @@
             guna2HtmlLabel5.ForeColor = Color.Black;
             guna2HtmlLabel5.Location = new Point(452, 92);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(104, 23);
+            guna2HtmlLabel5.Size = new Size(72, 17);
             guna2HtmlLabel5.TabIndex = 27;
             guna2HtmlLabel5.Text = "Số điện thoại";
             // 
@@ -285,7 +285,7 @@
             guna2HtmlLabel4.ForeColor = Color.Black;
             guna2HtmlLabel4.Location = new Point(60, 405);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(80, 23);
+            guna2HtmlLabel4.Size = new Size(56, 17);
             guna2HtmlLabel4.TabIndex = 26;
             guna2HtmlLabel4.Text = "Ngày sinh";
             // 
@@ -295,7 +295,7 @@
             guna2HtmlLabel2.ForeColor = Color.Black;
             guna2HtmlLabel2.Location = new Point(60, 201);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(54, 23);
+            guna2HtmlLabel2.Size = new Size(39, 17);
             guna2HtmlLabel2.TabIndex = 24;
             guna2HtmlLabel2.Text = "Họ tên";
             // 
@@ -305,7 +305,7 @@
             guna2HtmlLabel1.ForeColor = Color.Black;
             guna2HtmlLabel1.Location = new Point(60, 299);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(69, 23);
+            guna2HtmlLabel1.Size = new Size(48, 17);
             guna2HtmlLabel1.TabIndex = 23;
             guna2HtmlLabel1.Text = "Giới tính";
             // 
@@ -342,6 +342,7 @@
             gtxtdiachi.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             gtxtdiachi.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtdiachi.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxtdiachi.ForeColor = Color.Black;
             gtxtdiachi.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtdiachi.IconLeft = (Image)resources.GetObject("gtxtdiachi.IconLeft");
             gtxtdiachi.Location = new Point(567, 289);
@@ -364,6 +365,7 @@
             gtxtemail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             gtxtemail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtemail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxtemail.ForeColor = Color.Black;
             gtxtemail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtemail.IconLeft = (Image)resources.GetObject("gtxtemail.IconLeft");
             gtxtemail.Location = new Point(567, 191);
@@ -386,6 +388,7 @@
             gtxtsodienthoai.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             gtxtsodienthoai.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtsodienthoai.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxtsodienthoai.ForeColor = Color.Black;
             gtxtsodienthoai.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtsodienthoai.IconLeft = (Image)resources.GetObject("gtxtsodienthoai.IconLeft");
             gtxtsodienthoai.Location = new Point(567, 82);
@@ -427,7 +430,7 @@
             gcbogioitinh.FocusedColor = Color.FromArgb(94, 148, 255);
             gcbogioitinh.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gcbogioitinh.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            gcbogioitinh.ForeColor = Color.FromArgb(68, 88, 112);
+            gcbogioitinh.ForeColor = Color.Black;
             gcbogioitinh.ItemHeight = 30;
             gcbogioitinh.Items.AddRange(new object[] { "Nam", "Nữ", "Không muốn trả lời" });
             gcbogioitinh.Location = new Point(160, 289);
@@ -448,6 +451,7 @@
             gtxthoten.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             gtxthoten.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxthoten.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxthoten.ForeColor = Color.Black;
             gtxthoten.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxthoten.IconLeft = (Image)resources.GetObject("gtxthoten.IconLeft");
             gtxthoten.Location = new Point(160, 191);

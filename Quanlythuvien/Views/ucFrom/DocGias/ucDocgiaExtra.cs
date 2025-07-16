@@ -70,14 +70,8 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
         }
         private bool Check_Null()
         {
-            if (string.IsNullOrEmpty(gtxtma.Text))
+            if(!new frmMain().Check_Null(gtxtma, "Chưa nhập mã độc giả"))
             {
-                string text = "Chưa nhập mã độc giả";
-                string caption = "Cảnh báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Warning;
-                new frmMain().Msgbox(text, caption, button, icon);
-                gtxtma.Focus();
                 return false;
             }
             if (gtxtma.Text.Length < 3 || gtxtma.Text.Length > 10)
@@ -90,14 +84,8 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                 gtxtma.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(gtxthoten.Text))
+            if (!new frmMain().Check_Null(gtxthoten, "Chưa nhập họ tên độc giả"))
             {
-                string text = "Chưa nhập họ tên độc giả";
-                string caption = "Cảnh báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Warning;
-                new frmMain().Msgbox(text, caption, button, icon);
-                gtxthoten.Focus();
                 return false;
             }
             if (gtxthoten.Text.Length > 50)
@@ -130,14 +118,8 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                 gdatengaysinh.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(gtxtsodienthoai.Text))
+            if (!new frmMain().Check_Null(gtxtsodienthoai, "Chưa nhập số điện thoại độc giả"))
             {
-                string text = "Chưa nhập số điện thoại độc giả";
-                string caption = "Cảnh báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Warning;
-                new frmMain().Msgbox(text, caption, button, icon);
-                gtxtsodienthoai.Focus();
                 return false;
             }
             if (!System.Text.RegularExpressions.Regex.IsMatch(gtxtsodienthoai.Text, @"^\d{9,11}$"))
@@ -150,14 +132,8 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                 gtxtsodienthoai.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(gtxtemail.Text))
+            if (!new frmMain().Check_Null(gtxtemail, "Chưa nhập email"))
             {
-                string text = "Chưa nhập email";
-                string caption = "Cảnh báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Warning;
-                new frmMain().Msgbox(text, caption, button, icon);
-                gtxtemail.Focus();
                 return false;
             }
             if (!new EmailAddressAttribute().IsValid(gtxtemail.Text))
@@ -170,14 +146,8 @@ namespace Quanlythuvien.Views.ucFrom.DocGias
                 gtxtemail.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(gtxtdiachi.Text))
+            if (!new frmMain().Check_Null(gtxtdiachi, "Chưa nhập địa chỉ"))
             {
-                string text = "Chưa nhập địa chỉ";
-                string caption = "Cảnh báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Warning;
-                new frmMain().Msgbox(text, caption, button, icon);
-                gtxtdiachi.Focus();
                 return false;
             }
             return true;

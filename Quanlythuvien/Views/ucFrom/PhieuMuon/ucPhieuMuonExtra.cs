@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Quanlythuvien.Controllers;
+using Quanlythuvien.Models.DocGias;
 using Quanlythuvien.Models.PhieuMuons;
 using Quanlythuvien.Models.Sachs;
 using Quanlythuvien.Views.ucFrom.Sachs;
@@ -26,6 +27,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             InitializeComponent();
             this.phieuMuon = phieuMuon;
             this.LoadMaDocGia();
+            gdgvSach.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
 
         private void ucPhieuMuonExtra_Load(object sender, EventArgs e)
