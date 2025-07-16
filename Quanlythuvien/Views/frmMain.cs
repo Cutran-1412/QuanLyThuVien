@@ -206,5 +206,10 @@ namespace Quanlythuvien.Views
                 Application.Exit();
             }
         }
+
+        private void pcodeby_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

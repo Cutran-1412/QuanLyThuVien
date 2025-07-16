@@ -276,6 +276,7 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             dtsach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtsach.CausesValidation = false;
+            dtsach.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.DeepSkyBlue;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -312,7 +313,7 @@
             dtsach.ThemeStyle.BackColor = Color.White;
             dtsach.ThemeStyle.GridColor = Color.Black;
             dtsach.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            dtsach.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            dtsach.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
             dtsach.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtsach.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dtsach.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;

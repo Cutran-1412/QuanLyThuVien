@@ -43,18 +43,18 @@
             ibtndocgia = new FontAwesome.Sharp.IconButton();
             ibtnthoat = new FontAwesome.Sharp.IconButton();
             tbtnadmin = new FontAwesome.Sharp.IconButton();
-            panel2 = new Panel();
-            panel3 = new Panel();
             pcodeby = new Panel();
             lblcodeby = new Label();
+            panel2 = new Panel();
+            panel3 = new Panel();
             lblthoigian = new Label();
             timerChayChu = new System.Windows.Forms.Timer(components);
             timerdoimau = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             fmenu.SuspendLayout();
+            pcodeby.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            pcodeby.SuspendLayout();
             SuspendLayout();
             // 
             // lblchao
@@ -103,7 +103,7 @@
             // 
             // pamain
             // 
-            pamain.Location = new Point(239, 65);
+            pamain.Location = new Point(240, 65);
             pamain.Name = "pamain";
             pamain.Size = new Size(1100, 540);
             pamain.TabIndex = 6;
@@ -121,10 +121,10 @@
             fmenu.Controls.Add(tbtnadmin);
             fmenu.ForeColor = Color.White;
             fmenu.Location = new Point(0, 65);
-            fmenu.MaximumSize = new Size(240, 590);
-            fmenu.MinimumSize = new Size(67, 590);
+            fmenu.MaximumSize = new Size(240, 593);
+            fmenu.MinimumSize = new Size(67, 593);
             fmenu.Name = "fmenu";
-            fmenu.Size = new Size(240, 590);
+            fmenu.Size = new Size(240, 593);
             fmenu.TabIndex = 12;
             // 
             // ibtnthongke
@@ -293,7 +293,7 @@
             ibtnthoat.IconColor = Color.White;
             ibtnthoat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ibtnthoat.ImageAlign = ContentAlignment.MiddleLeft;
-            ibtnthoat.Location = new Point(0, 536);
+            ibtnthoat.Location = new Point(0, 539);
             ibtnthoat.Name = "ibtnthoat";
             ibtnthoat.Size = new Size(240, 54);
             ibtnthoat.TabIndex = 8;
@@ -327,32 +327,14 @@
             tbtnadmin.UseVisualStyleBackColor = false;
             tbtnadmin.Click += tbtnadmin_Click;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(0, 101, 248);
-            panel2.Controls.Add(lblchao);
-            panel2.Location = new Point(239, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1100, 65);
-            panel2.TabIndex = 13;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(0, 101, 248);
-            panel3.Controls.Add(pcodeby);
-            panel3.Controls.Add(lblthoigian);
-            panel3.Location = new Point(239, 601);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1100, 54);
-            panel3.TabIndex = 14;
-            // 
             // pcodeby
             // 
             pcodeby.Controls.Add(lblcodeby);
-            pcodeby.Location = new Point(3, 15);
+            pcodeby.Location = new Point(6, 7);
             pcodeby.Name = "pcodeby";
-            pcodeby.Size = new Size(850, 39);
+            pcodeby.Size = new Size(828, 39);
             pcodeby.TabIndex = 2;
+            pcodeby.Paint += pcodeby_Paint;
             // 
             // lblcodeby
             // 
@@ -362,14 +344,33 @@
             lblcodeby.Size = new Size(0, 15);
             lblcodeby.TabIndex = 0;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(0, 101, 248);
+            panel2.Controls.Add(lblchao);
+            panel2.Location = new Point(239, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1101, 65);
+            panel2.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(0, 101, 248);
+            panel3.Controls.Add(lblthoigian);
+            panel3.Controls.Add(pcodeby);
+            panel3.Location = new Point(240, 604);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1100, 54);
+            panel3.TabIndex = 14;
+            // 
             // lblthoigian
             // 
             lblthoigian.AutoSize = true;
-            lblthoigian.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblthoigian.ForeColor = Color.Black;
-            lblthoigian.Location = new Point(859, 15);
+            lblthoigian.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblthoigian.ForeColor = Color.White;
+            lblthoigian.Location = new Point(835, 9);
             lblthoigian.Name = "lblthoigian";
-            lblthoigian.Size = new Size(67, 32);
+            lblthoigian.Size = new Size(70, 32);
             lblthoigian.TabIndex = 1;
             lblthoigian.Text = "Time";
             // 
@@ -388,15 +389,15 @@
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             BackColor = Color.FromArgb(242, 243, 244);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1340, 656);
+            ClientSize = new Size(1340, 657);
+            Controls.Add(panel3);
             Controls.Add(pamain);
             Controls.Add(fmenu);
-            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            MaximumSize = new Size(1340, 656);
-            MinimumSize = new Size(1340, 656);
+            MaximumSize = new Size(1340, 657);
+            MinimumSize = new Size(1340, 657);
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";
@@ -404,12 +405,12 @@
             panel1.ResumeLayout(false);
             fmenu.ResumeLayout(false);
             fmenu.PerformLayout();
+            pcodeby.ResumeLayout(false);
+            pcodeby.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            pcodeby.ResumeLayout(false);
-            pcodeby.PerformLayout();
             ResumeLayout(false);
         }
 
