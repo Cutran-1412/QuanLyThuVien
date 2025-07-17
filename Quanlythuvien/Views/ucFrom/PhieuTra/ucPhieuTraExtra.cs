@@ -29,6 +29,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             InitializeComponent();
             this.phieuTra = phieutra;
             this.LoadMaPhieuMuon();
+            dgvDanhSachMuon.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private void ucPhieuTraExtra_Load(object sender, EventArgs e)
         {

@@ -19,6 +19,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         public ucPhieuTra()
         {
             InitializeComponent();
+            dtphieutra.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private PhieuTraController phieuTraCtrl = new PhieuTraController();
         private void Load_Data()

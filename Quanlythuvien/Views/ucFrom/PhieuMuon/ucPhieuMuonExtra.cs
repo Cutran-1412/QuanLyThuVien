@@ -68,11 +68,11 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             {
                 ct.Enabled = false;
             }
-            gbtnThoat.Enabled = true;
             foreach (Control ct in this.ggrbCnChitiet.Controls)
             {
                 ct.Enabled = false;
             }
+            gbtnThoat.Enabled = true;
         }
         private void LoadSachMuon()
         {
@@ -112,7 +112,6 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             this.gcboMaDG.ValueMember = "MaDocGia";
             this.gcboMaDG.DropDownHeight = this.gcboMaDG.ItemHeight * 5;
             this.gcboMaDG.SelectedIndex = -1;
-
         }
 
         private void gbtnLuu_Click(object sender, EventArgs e)
@@ -142,26 +141,33 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
 
         private void gbtnThemSach_Click(object sender, EventArgs e)
         {
-            int soLuongMuon = int.Parse(this.gtxtSoLuongMuon.Text);
-            ChiTietPhieuMuon ctPhieuMuon = new ChiTietPhieuMuon
+            if (!new frmMain().Check_Null(gtxtSoLuongMuon,"Chưa nhập số lượng mượn"))
             {
-                MaPhieuMuon = this.gtxtMaPhieu.Text,
-                MaSach = this.gcboMaSach.SelectedValue.ToString(),
-                SoLuongMuon = soLuongMuon
-            };
-            var sa = ctPhieuMuon.MaSach;
-            bool isContained = false;
-            foreach (var ct in this.ctPhieuMuons)
-            {
-                if (!ct.MaPhieuMuon.Equals(ctPhieuMuon.MaPhieuMuon) || !ct.MaSach.Equals(ctPhieuMuon.MaSach)) continue;
-                ct.SoLuongMuon += ctPhieuMuon.SoLuongMuon;
-                isContained = true;
-
-                break;
+                return;
             }
-            if (!isContained)
-                this.ctPhieuMuons.Add(ctPhieuMuon);
-            this.gdgvSach.Refresh();
+            else
+            {
+                int soLuongMuon = int.Parse(this.gtxtSoLuongMuon.Text);
+                ChiTietPhieuMuon ctPhieuMuon = new ChiTietPhieuMuon
+                {
+                    MaPhieuMuon = this.gtxtMaPhieu.Text,
+                    MaSach = this.gcboMaSach.SelectedValue.ToString(),
+                    SoLuongMuon = soLuongMuon
+                };
+                var sa = ctPhieuMuon.MaSach;
+                bool isContained = false;
+                foreach (var ct in this.ctPhieuMuons)
+                {
+                    if (!ct.MaPhieuMuon.Equals(ctPhieuMuon.MaPhieuMuon) || !ct.MaSach.Equals(ctPhieuMuon.MaSach)) continue;
+                    ct.SoLuongMuon += ctPhieuMuon.SoLuongMuon;
+                    isContained = true;
+
+                    break;
+                }
+                if (!isContained)
+                    this.ctPhieuMuons.Add(ctPhieuMuon);
+                this.gdgvSach.Refresh();
+            } 
         }
 
         private void gbtnThoat_Click(object sender, EventArgs e)
@@ -170,6 +176,16 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             {
                 main.ShowControl(new ucPhieuMuon());
             }
+        }
+
+        private void gcboMaSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var sach = this.sachCtrl.FindByKey(gcboMaSach.Text);
+            if(sach != null)
+            {
+                glblsoluongcon.Visible = true;
+                glblsoluongcon.Text = "Số lượng sách còn :" + sach.SoLuong;
+            } 
         }
     }
 }

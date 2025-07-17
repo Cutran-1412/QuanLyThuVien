@@ -177,7 +177,6 @@
             gbtnxoa.Size = new Size(153, 40);
             gbtnxoa.TabIndex = 4;
             gbtnxoa.Text = "Xóa";
-            gbtnxoa.Click += gbtnxoa_Click;
             // 
             // gbtnsua
             // 

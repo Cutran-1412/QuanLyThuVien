@@ -273,8 +273,9 @@
             // 
             // dgvPhieuMuon
             // 
-            dataGridViewCellStyle1.BackColor = Color.DeepSkyBlue;
-            dataGridViewCellStyle1.ForeColor = Color.DeepSkyBlue;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
             dgvPhieuMuon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvPhieuMuon.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
