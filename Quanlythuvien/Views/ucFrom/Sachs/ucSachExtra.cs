@@ -217,10 +217,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
             }
             return true;
         }
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-            if (this.sach != null) this.LoadChiTietSach(this.sach);
-        }
+  
         private void LoadChiTietSach(Sach sach)
         {
             this.gtxtma.Text = sach.MaSach;
@@ -305,14 +302,19 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
             }
         }
 
-        private void ucSachExtra_Load(object sender, EventArgs e)
-        {
-            if (this.sach != null) this.LoadChiTietSach(this.sach);
-        }
-
         private void gbtnxoa_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gtxtSoluong_TextChanged(object sender, EventArgs e)
+        {
+            int a = 0;
+        }
+
+        private void ucSachExtra_Load(object sender, EventArgs e)
+        {
+            if (this.sach != null) this.LoadChiTietSach(this.sach);
         }
     }
 }

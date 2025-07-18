@@ -29,7 +29,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         {
             InitializeComponent();
             this.phieuTra = phieutra;
-     
+
             dgvDanhSachMuon.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private void ucPhieuTraExtra_Load(object sender, EventArgs e)
@@ -39,12 +39,14 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 this.gtxtmaphieutra.Text = this.phieuTra.MaPhieuTra;
                 this.gcboMaPhieuMuon.SelectedValue = this.phieuTra.MaPhieuMuon;
                 this.gdtpNgaytra.Value = this.phieuTra.NgayTra;
-          
+
 
                 this.LoadMaPhieuMuon();
                 this.SetReadOnly();
                 this.gcboMaPhieuMuon.SelectedValue = phieuTra.MaPhieuMuon;
                 this.ctPhieuMuons = new BindingList<ChiTietPhieuTra>(this.phieuTra.ChiTietPhieuTras);
+
+
             }
             else
             {
@@ -53,6 +55,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 this.gdtpNgaytra.Value = DateTime.Now.Date;
 
             }
+            this.dgvDanhSachMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
         }
         private void SetReadOnly()
         {
@@ -63,9 +66,10 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             this.gtxtmaphieutra.Enabled = true;
             this.gtxtmaphieutra.ReadOnly = true;
             this.gtxtMasach.ReadOnly = true;
-            this.gtxtTenSach.ReadOnly = true;    
-            this.gtxtSlMuon.ReadOnly = true;    
-            this.gtxtTienphat.ReadOnly = true;    
+            this.gtxtTenSach.ReadOnly = true;
+            this.gtxtSlMuon.ReadOnly = true;
+            this.gtxtTienphat.ReadOnly = true;
+            this.gbtnTraSach.Enabled = false;
             gbtnThoat.Enabled = true;
 
         }
@@ -107,53 +111,6 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             }
         }
 
-        private void gbtnthem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2GroupBox4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2GroupBox3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2GroupBox2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void gbtnxoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbtnsua_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gcboMaPhieuMuon_SelectedValueChanged(object sender, EventArgs e)
         {
             if (gcboMaPhieuMuon.SelectedValue is string maPhieu)
@@ -168,12 +125,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             this.dgvDanhSachMuon.Columns["MaPhieuMuon"].Visible = false;
             this.dgvDanhSachMuon.Columns["PhieuMuon"].Visible = false;
             this.dgvDanhSachMuon.Columns["Sach"].Visible = false;
-        }
-
-        private void gcboMaPhieuMuon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
+          
         }
 
         private void dgvDanhSachMuon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -183,6 +135,14 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             this.gtxtTenSach.Text = this.dgvDanhSachMuon.Rows[index].Cells["TenSach"].Value.ToString();
             this.gtxtSlMuon.Text = this.dgvDanhSachMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString();
             this.TinhTienPhat();
+            if (Convert.ToBoolean(this.dgvDanhSachMuon.Rows[index].Cells["DaTra"].Value))
+            {
+                this.gbtnTraSach.Enabled = false;
+            }
+            else if(this.phieuTra ==null)
+            {
+                this.gbtnTraSach.Enabled = true;
+            }
         }
         private void TinhTienPhat()
         {
@@ -191,15 +151,6 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             float tienPhatMoiQuyen = 1000;
             int slMuon = int.Parse(this.gtxtSlMuon.Text);
             this.gtxtTienphat.Text = (soNgayTre * tienPhatMoiQuyen * slMuon).ToString();
-        }
-        private void dgvDanhSachMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void gbtnTraSach_Click(object sender, EventArgs e)
@@ -246,6 +197,12 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             {
                 main.ShowControl(new ucPhieuTra());
             }
+        }
+
+        private void dgvDanhSachMuon_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.dgvDanhSachMuon.ClearSelection();
+            this.dgvDanhSachMuon.CurrentCell = null;
         }
     }
 }

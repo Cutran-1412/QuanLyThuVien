@@ -14,6 +14,7 @@ using System.Linq;
 using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Navigation;
 namespace Quanlythuvien.Views.ucFrom.PhieuMuon
 {
     public partial class ucPhieuMuonExtra : UserControl
@@ -42,14 +43,17 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
                 this.gdtpNgayHenTra.Value = this.phieuMuon.NgayPhaiTra;
                 this.SetReadOnly();
                 this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.phieuMuon.ChiTietPhieuMuons);
+                this.LoadSachMuon(true);
             }
             else
             {
                 this.SinhMaPhieuMuon();
                 this.LoadDtp();
                 this.gdgvCtMuon.DataSource = this.ctPhieuMuons;
+                this.LoadSachMuon(false);
+
             }
-            this.LoadSachMuon();
+
             this.LoadMaSach();
         }
         private void LoadDtp()
@@ -61,7 +65,6 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         {
             this.gcboMaSach.DropDownHeight = this.gcboMaSach.ItemHeight * 5;
             this.gcboMaSach.DataSource = this.sachCtrl.GetData();
-            this.gcboMaSach.SelectedIndex = -1;
             this.gcboMaSach.DisplayMember = "MaSach";
             this.gcboMaSach.ValueMember = "MaSach";
         }
@@ -81,8 +84,9 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             }
             gbtnThoat.Enabled = true;
         }
-        private void LoadSachMuon()
+        private void LoadSachMuon(bool isReadonly)
         {
+            gdgvCtMuon.AlternatingRowsDefaultCellStyle = new DataGridViewCellStyle();
             this.gdgvCtMuon.DataSource = this.ctPhieuMuons;
             this.gdgvCtMuon.Columns["MaSach"].FillWeight = 90;
             this.gdgvCtMuon.Columns["TenSach"].FillWeight = 150;
@@ -91,16 +95,16 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             this.gdgvCtMuon.Columns["MaPhieuMuon"].Visible = false;
             this.gdgvCtMuon.Columns["PhieuMuon"].Visible = false;
             this.gdgvCtMuon.Columns["Sach"].Visible = false;
+            this.gdgvCtMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 
-            DataGridViewButtonColumn btnCotXoa = new DataGridViewButtonColumn();
-            btnCotXoa.Name = "btnXoa";               
-            btnCotXoa.HeaderText = "Thao tác";         
-            btnCotXoa.Text = "Xóa";                     
-            btnCotXoa.UseColumnTextForButtonValue = true; 
-            btnCotXoa.FillWeight = 80;     
-
-            gdgvCtMuon.Columns.Add(btnCotXoa);
-
+            if (!isReadonly)
+            {
+                this.gdgvCtMuon.Columns["DaTra"].Visible = false;
+            }
+            else
+            {
+                this.gdgvCtMuon.Columns["DaTra"].Visible = true;
+            }
         }
         private void ClearPhieuMuon()
         {
@@ -183,33 +187,53 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         }
         private void gbtnThemSach_Click(object sender, EventArgs e)
         {
+            int soLuongMuon;
+            if (!int.TryParse(this.gtxtSoLuongMuon.Text, out soLuongMuon))
+            {
+                string text = "Vui lòng số lượng là số";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Error;
+                new frmMain().Msgbox(text, caption, button, icon);
+                return;
+            }
             if (!new frmMain().Check_Null(gtxtSoLuongMuon, "Chưa nhập số lượng mượn"))
             {
                 return;
             }
-            else
+            if (soLuongMuon > this.GetSoLuongTonKho(this.gcboMaSach.SelectedValue.ToString()))
             {
-                int soLuongMuon = int.Parse(this.gtxtSoLuongMuon.Text);
-                ChiTietPhieuMuon ctPhieuMuon = new ChiTietPhieuMuon
-                {
-                    MaPhieuMuon = this.gtxtMaPhieu.Text,
-                    MaSach = this.gcboMaSach.SelectedValue.ToString(),
-                    SoLuongMuon = soLuongMuon
-                };
-                var sa = ctPhieuMuon.MaSach;
-                bool isContained = false;
-                foreach (var ct in this.ctPhieuMuons)
-                {
-                    if (!ct.MaPhieuMuon.Equals(ctPhieuMuon.MaPhieuMuon) || !ct.MaSach.Equals(ctPhieuMuon.MaSach)) continue;
-                    ct.SoLuongMuon += ctPhieuMuon.SoLuongMuon;
-                    isContained = true;
 
-                    break;
-                }
-                if (!isContained)
-                    this.ctPhieuMuons.Add(ctPhieuMuon);
-                this.gdgvCtMuon.Refresh();
+                string text = "Số lượng sách mượn vượt quá sách còn lại ";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Warning;
+                new frmMain().Msgbox(text, caption, button, icon);
+                return;
             }
+            var sach = this.sachCtrl.FindByKey(this.gcboMaSach.SelectedValue.ToString());
+            ChiTietPhieuMuon ctPhieuMuon = new ChiTietPhieuMuon
+            {
+                MaPhieuMuon = this.gtxtMaPhieu.Text,
+                MaSach = this.gcboMaSach.SelectedValue.ToString(),
+                SoLuongMuon = soLuongMuon,
+                Sach = sach
+            };
+            var sa = ctPhieuMuon.MaSach;
+            bool isContained = false;
+            foreach (var ct in this.ctPhieuMuons)
+            {
+                if (!ct.MaPhieuMuon.Equals(ctPhieuMuon.MaPhieuMuon) || !ct.MaSach.Equals(ctPhieuMuon.MaSach)) continue;
+                ct.SoLuongMuon += ctPhieuMuon.SoLuongMuon;
+                isContained = true;
+
+                break;
+            }
+            if (!isContained)
+                this.ctPhieuMuons.Add(ctPhieuMuon);
+            this.UpdateSoLuongTonKho();
+            this.gdgvCtMuon.Refresh();
+
         }
 
         private void gbtnThoat_Click(object sender, EventArgs e)
@@ -222,22 +246,67 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
 
         private void gcboMaSach_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.UpdateSoLuongTonKho();
+        }
+        private void UpdateSoLuongTonKho()
+        {
+
+            glblsoluongcon.Visible = true;
+            glblsoluongcon.Text = "Số lượng tồn kho :" + this.GetSoLuongTonKho(gcboMaSach.Text);
+
+        }
+        private int GetSoLuongTonKho(string maSach)
+        {
             var sach = this.sachCtrl.FindByKey(gcboMaSach.Text);
-            if (sach != null)
+            if (sach == null) return 0;
+            int slCon = sach.SoLuong;
+            foreach (var ct in this.ctPhieuMuons)
             {
-                glblsoluongcon.Visible = true;
-                glblsoluongcon.Text = "Số lượng tồn kho :" + sach.SoLuong;
+                if (ct.MaSach != sach.MaSach) continue;
+                slCon -= ct.SoLuongMuon;
             }
+            if (sach != null)
+                return slCon;
+            return 0;
         }
 
         private void gdgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (this.gdgvCtMuon.CurrentRow == null) return;
             int index = this.gdgvCtMuon.CurrentRow.Index;
             this.gcboMaSach.SelectedValue = this.gdgvCtMuon.Rows[index].Cells["MaSach"].Value;
-            this.gtxtSoLuongMuon.Text  = this.gdgvCtMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString();
+            this.gtxtSoLuongMuon.Text = this.gdgvCtMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString();
         }
 
         private void ggrbCnChitiet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gdgvCtMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbtnXoa_Click(object sender, EventArgs e)
+        {
+            if (this.gdgvCtMuon.CurrentRow == null) return;
+            int index = this.gdgvCtMuon.CurrentRow.Index;
+            string maSach = this.gdgvCtMuon.Rows[index].Cells["MaSach"].Value.ToString();
+            foreach (var ct in this.ctPhieuMuons)
+            {
+                if (ct.MaSach != maSach) continue;
+                ctPhieuMuons.Remove(ct);
+                break;
+            }
+        }
+
+        private void gtxtMaPhieu_TextChanged(object sender, EventArgs e)
         {
 
         }

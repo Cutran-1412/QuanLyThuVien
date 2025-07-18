@@ -12,7 +12,36 @@ namespace Quanlythuvien.Models.PhieuTras
     {
         public override bool Delete(string key)
         {
-            throw new NotImplementedException();
+            using (var context = new DataContext())
+            {
+                var pt = context.PhieuTras.Find(key);
+                if (pt != null)
+                {
+
+                    context.PhieuTras.Remove(pt);
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+        
+        }
+        public override List<PhieuTra> Search(string luachon, string value)
+        {
+            using(var context = new DataContext())
+            {
+                if (value == "Tất cả") return this.GetData();
+                switch (luachon)
+                {
+                    case "MaPhieuMuon":
+                        return context.PhieuTras
+                            .Where(pt => pt.MaPhieuMuon.Equals(value))
+                              .OrderBy(pm => Convert.ToInt32(pm.MaPhieuTra.Substring(2)))
+                            .ToList();
+                    default: return null; 
+                }
+            }
+           
         }
 
         public override PhieuTra FindByKey(string key)
@@ -37,7 +66,9 @@ namespace Quanlythuvien.Models.PhieuTras
         {
             using (DataContext context = new DataContext())
             {
-                return context.PhieuTras.ToList();
+                return context.PhieuTras
+                      .OrderBy(pm => Convert.ToInt32(pm.MaPhieuTra.Substring(2)))
+                    .ToList();
 
             }
         }

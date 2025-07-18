@@ -97,9 +97,9 @@
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            guna2Panel1.Size = new Size(1100, 540);
+            guna2Panel1.Size = new Size(1103, 543);
             guna2Panel1.TabIndex = 3;
-            guna2Panel1.Paint += guna2Panel1_Paint;
+          
             // 
             // guna2GroupBox2
             // 
@@ -395,6 +395,7 @@
             gtxtSoluong.ShadowDecoration.CustomizableEdges = customizableEdges14;
             gtxtSoluong.Size = new Size(241, 36);
             gtxtSoluong.TabIndex = 41;
+            gtxtSoluong.TextChanged += gtxtSoluong_TextChanged;
             // 
             // gtxtDongia
             // 
@@ -537,6 +538,7 @@
             Controls.Add(guna2Panel1);
             Name = "ucSachExtra";
             Size = new Size(1100, 540);
+            Load += ucSachExtra_Load;
             guna2Panel1.ResumeLayout(false);
             guna2GroupBox2.ResumeLayout(false);
             guna2GroupBox1.ResumeLayout(false);

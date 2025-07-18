@@ -32,6 +32,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPhieuMuon));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -47,11 +50,9 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPhieuMuon));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             gtxttim = new Guna.UI2.WinForms.Guna2GroupBox();
+            gbtnlaydulieu = new Guna.UI2.WinForms.Guna2Button();
             gbtntimkiem = new Guna.UI2.WinForms.Guna2Button();
             gcobotim = new Guna.UI2.WinForms.Guna2ComboBox();
             gbtnxoa = new Guna.UI2.WinForms.Guna2Button();
@@ -59,7 +60,6 @@
             gbtnThongtin = new Guna.UI2.WinForms.Guna2Button();
             guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             dgvPhieuMuon = new Guna.UI2.WinForms.Guna2DataGridView();
-            gbtnlaydulieu = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel1.SuspendLayout();
             gtxttim.SuspendLayout();
             guna2GroupBox1.SuspendLayout();
@@ -101,6 +101,32 @@
             gtxttim.TabIndex = 7;
             gtxttim.TabStop = false;
             gtxttim.Text = "Chức năng";
+            // 
+            // gbtnlaydulieu
+            // 
+            gbtnlaydulieu.BackColor = Color.Transparent;
+            gbtnlaydulieu.BorderRadius = 15;
+            gbtnlaydulieu.BorderThickness = 1;
+            gbtnlaydulieu.CustomizableEdges = customizableEdges1;
+            gbtnlaydulieu.DisabledState.BorderColor = Color.DarkGray;
+            gbtnlaydulieu.DisabledState.CustomBorderColor = Color.DarkGray;
+            gbtnlaydulieu.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            gbtnlaydulieu.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            gbtnlaydulieu.FillColor = Color.FromArgb(63, 142, 252);
+            gbtnlaydulieu.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            gbtnlaydulieu.ForeColor = Color.White;
+            gbtnlaydulieu.HoverState.FillColor = Color.FromArgb(45, 156, 219);
+            gbtnlaydulieu.Image = (Image)resources.GetObject("gbtnlaydulieu.Image");
+            gbtnlaydulieu.ImageAlign = HorizontalAlignment.Left;
+            gbtnlaydulieu.Location = new Point(31, 296);
+            gbtnlaydulieu.Name = "gbtnlaydulieu";
+            gbtnlaydulieu.PressedColor = Color.FromArgb(26, 115, 232);
+            gbtnlaydulieu.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            gbtnlaydulieu.ShadowDecoration.Depth = 12;
+            gbtnlaydulieu.Size = new Size(153, 40);
+            gbtnlaydulieu.TabIndex = 8;
+            gbtnlaydulieu.Text = "Lấy dữ lệu";
+            gbtnlaydulieu.Click += gbtnlaydulieu_Click;
             // 
             // gbtntimkiem
             // 
@@ -239,7 +265,7 @@
             guna2GroupBox1.ForeColor = Color.White;
             guna2GroupBox1.Location = new Point(22, 19);
             guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.Padding = new Padding(10, 10, 10, 10);
+            guna2GroupBox1.Padding = new Padding(10);
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2GroupBox1.Size = new Size(818, 510);
             guna2GroupBox1.TabIndex = 0;
@@ -269,7 +295,7 @@
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 255, 204);
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvPhieuMuon.DefaultCellStyle = dataGridViewCellStyle3;
@@ -305,32 +331,6 @@
             dgvPhieuMuon.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvPhieuMuon.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dgvPhieuMuon.CellContentClick += dgvPhieuMuon_CellContentClick;
-            // 
-            // gbtnlaydulieu
-            // 
-            gbtnlaydulieu.BackColor = Color.Transparent;
-            gbtnlaydulieu.BorderRadius = 15;
-            gbtnlaydulieu.BorderThickness = 1;
-            gbtnlaydulieu.CustomizableEdges = customizableEdges1;
-            gbtnlaydulieu.DisabledState.BorderColor = Color.DarkGray;
-            gbtnlaydulieu.DisabledState.CustomBorderColor = Color.DarkGray;
-            gbtnlaydulieu.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            gbtnlaydulieu.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gbtnlaydulieu.FillColor = Color.FromArgb(63, 142, 252);
-            gbtnlaydulieu.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            gbtnlaydulieu.ForeColor = Color.White;
-            gbtnlaydulieu.HoverState.FillColor = Color.FromArgb(45, 156, 219);
-            gbtnlaydulieu.Image = (Image)resources.GetObject("gbtnlaydulieu.Image");
-            gbtnlaydulieu.ImageAlign = HorizontalAlignment.Left;
-            gbtnlaydulieu.Location = new Point(31, 296);
-            gbtnlaydulieu.Name = "gbtnlaydulieu";
-            gbtnlaydulieu.PressedColor = Color.FromArgb(26, 115, 232);
-            gbtnlaydulieu.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gbtnlaydulieu.ShadowDecoration.Depth = 12;
-            gbtnlaydulieu.Size = new Size(153, 40);
-            gbtnlaydulieu.TabIndex = 8;
-            gbtnlaydulieu.Text = "Lấy dữ lệu";
-            gbtnlaydulieu.Click += gbtnlaydulieu_Click;
             // 
             // ucPhieuMuon
             // 

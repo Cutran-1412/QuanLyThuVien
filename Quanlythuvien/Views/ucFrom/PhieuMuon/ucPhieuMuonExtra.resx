@@ -134,22 +134,12 @@
         RK5CYII=
 </value>
   </data>
-  <data name="guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gbtnXoa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAG5JREFUSEvt
         jMENgDAQw7rJdRT2XwrEh4dblBrxrKU8IsVpbfMHVXXOwt0SPLHh3wAFG/5NUeMPey3Y/SDYHqFge4SC
         7REKtkco2B6hYHuEgu0RCrZHKNgesYLda8HuH8GGP6/03g/KKbfDn80SF/2Az+GjDWhQAAAAAElFTkSu
         QmCC
-</value>
-  </data>
-  <data name="guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAO1JREFUSEvt
-        kk0KwjAQhbt16zrNG9y68RTiMYRexBu66aYguC/+oKtSpEpgUqZDwZD+LMQPBprhzXtpkiT5EwsR7QC8
-        ZRHRXuuiAXDUAVwvrY0GQO6NrbUrABWva60NIk3Trdu57AEofIgxZgGg4XUmdUGIY8hV/yz+ZO2/pSYI
-        ddaF61lrD75HRBup0/NfUQGu2p17c6nrTgfgB/lC2yBpboxZRge4d87DFV9ox9wB4BYd4HDvnA0ad6G+
-        zzs/seY5NKSWR6SqZM1jaEjWY65D7oNC+ugJuc4RcpkjpJw0RAeOhjAe39wzqfnv8wH/26n0GwOL6wAA
-        AABJRU5ErkJggg==
 </value>
   </data>
   <data name="gbtnThemSach.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

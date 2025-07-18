@@ -81,6 +81,7 @@ namespace Quanlythuvien.Models.PhieuMuons
                 return context.PhieuMuons
                     .Include(pm => pm.ChiTietPhieuMuons)
                     .Where(pm=>pm.ChiTietPhieuMuons.Any(ct =>ct.DaTra == false))
+                    .OrderBy(pm => Convert.ToInt32(pm.MaPhieuMuon.Substring(2)))
                     .ToList();
             }
         }

@@ -118,15 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gbtntimkiem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAALpJREFUSEvt
-        lDEOwjAMRTszMSfox9dj4W5dOQDco2foDrJUR9YXpDEgpjzJQ/J/7NZ1Ok2DT8k5nwAspZSHha51n71h
-        AFx9Yg7V+Uw3AGZLJCJnr+naFZm91oW+viVgzWOecLus5wAurHlU33wLa016nt6IeCuRQxFvJXIo4q3Y
-        N+DpYdw03VhrEp0iETmytou/ZDxNNj1brF4L4S/bm1i/LvLqX1RKuVtbflJkj1EkxN+KpJQOvD9o8gQz
-        +XtdpfmvYAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="gbtnlaydulieu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAJJJREFUSEvd
