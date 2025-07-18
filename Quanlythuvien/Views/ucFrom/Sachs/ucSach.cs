@@ -36,6 +36,8 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
             this.dtsach.Columns[2].Visible = false;
             this.dtsach.Columns[6].Visible = false;
             this.dtsach.Columns[7].Visible = false;
+            dtsach.Columns["DonGia"].DefaultCellStyle.Format = "c0";
+            dtsach.Columns["DonGia"].DefaultCellStyle.FormatProvider = new System.Globalization.CultureInfo("vi-VN");
         }
 
         private void gbtnThongtin_Click(object sender, EventArgs e)

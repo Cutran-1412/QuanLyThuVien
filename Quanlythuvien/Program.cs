@@ -1,3 +1,4 @@
+using Quanlythuvien.Controllers;
 using Quanlythuvien.Views;
 namespace Quanlythuvien
 {
@@ -9,6 +10,8 @@ namespace Quanlythuvien
         [STAThread]
         static void Main()
         {
+            AdminController ad = new AdminController();
+            ad.Get_Admin();
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
