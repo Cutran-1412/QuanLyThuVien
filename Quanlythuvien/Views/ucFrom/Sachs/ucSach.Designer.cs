@@ -73,10 +73,9 @@
             guna2Panel1.Controls.Add(guna2GroupBox1);
             guna2Panel1.CustomizableEdges = customizableEdges17;
             guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2Panel1.Size = new Size(1257, 720);
+            guna2Panel1.Size = new Size(1100, 540);
             guna2Panel1.TabIndex = 2;
             guna2Panel1.Paint += guna2Panel1_Paint;
             // 
@@ -96,11 +95,10 @@
             guna2GroupBox2.FillColor = Color.Transparent;
             guna2GroupBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             guna2GroupBox2.ForeColor = Color.White;
-            guna2GroupBox2.Location = new Point(1019, 25);
-            guna2GroupBox2.Margin = new Padding(3, 4, 3, 4);
+            guna2GroupBox2.Location = new Point(892, 19);
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2GroupBox2.Size = new Size(234, 673);
+            guna2GroupBox2.Size = new Size(205, 505);
             guna2GroupBox2.TabIndex = 7;
             guna2GroupBox2.TabStop = false;
             guna2GroupBox2.Text = "Chức năng";
@@ -120,13 +118,12 @@
             gtxttim.ForeColor = Color.Black;
             gtxttim.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxttim.IconLeft = (Image)resources.GetObject("gtxttim.IconLeft");
-            gtxttim.Location = new Point(31, 571);
-            gtxttim.Margin = new Padding(3, 4, 3, 4);
+            gtxttim.Location = new Point(27, 428);
             gtxttim.Name = "gtxttim";
             gtxttim.PlaceholderText = "Search";
             gtxttim.SelectedText = "";
             gtxttim.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            gtxttim.Size = new Size(175, 48);
+            gtxttim.Size = new Size(153, 36);
             gtxttim.TabIndex = 7;
             gtxttim.TextChanged += gtxttim_TextChanged;
             // 
@@ -144,11 +141,10 @@
             gcboLuachon.ForeColor = Color.FromArgb(68, 88, 112);
             gcboLuachon.ItemHeight = 30;
             gcboLuachon.Items.AddRange(new object[] { "Mã sách", "Tên sách", "Thể loại", "Nhà xuất bản" });
-            gcboLuachon.Location = new Point(31, 471);
-            gcboLuachon.Margin = new Padding(3, 4, 3, 4);
+            gcboLuachon.Location = new Point(27, 353);
             gcboLuachon.Name = "gcboLuachon";
             gcboLuachon.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            gcboLuachon.Size = new Size(174, 36);
+            gcboLuachon.Size = new Size(153, 36);
             gcboLuachon.TabIndex = 6;
             // 
             // gbtnxoa
@@ -167,13 +163,12 @@
             gbtnxoa.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnxoa.Image = (Image)resources.GetObject("gbtnxoa.Image");
             gbtnxoa.ImageAlign = HorizontalAlignment.Left;
-            gbtnxoa.Location = new Point(31, 369);
-            gbtnxoa.Margin = new Padding(3, 4, 3, 4);
+            gbtnxoa.Location = new Point(27, 277);
             gbtnxoa.Name = "gbtnxoa";
             gbtnxoa.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnxoa.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gbtnxoa.ShadowDecoration.Depth = 12;
-            gbtnxoa.Size = new Size(175, 53);
+            gbtnxoa.Size = new Size(153, 40);
             gbtnxoa.TabIndex = 4;
             gbtnxoa.Text = "Xóa";
             gbtnxoa.Click += gbtnxoa_Click;
@@ -194,13 +189,12 @@
             gbtnsua.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnsua.Image = (Image)resources.GetObject("gbtnsua.Image");
             gbtnsua.ImageAlign = HorizontalAlignment.Left;
-            gbtnsua.Location = new Point(31, 271);
-            gbtnsua.Margin = new Padding(3, 4, 3, 4);
+            gbtnsua.Location = new Point(27, 203);
             gbtnsua.Name = "gbtnsua";
             gbtnsua.PressedColor = SystemColors.Highlight;
             gbtnsua.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gbtnsua.ShadowDecoration.Depth = 12;
-            gbtnsua.Size = new Size(175, 53);
+            gbtnsua.Size = new Size(153, 40);
             gbtnsua.TabIndex = 3;
             gbtnsua.Text = "Sửa";
             gbtnsua.Click += gbtnsua_Click;
@@ -221,13 +215,12 @@
             gbtnthem.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnthem.Image = (Image)resources.GetObject("gbtnthem.Image");
             gbtnthem.ImageAlign = HorizontalAlignment.Left;
-            gbtnthem.Location = new Point(31, 177);
-            gbtnthem.Margin = new Padding(3, 4, 3, 4);
+            gbtnthem.Location = new Point(27, 133);
             gbtnthem.Name = "gbtnthem";
             gbtnthem.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnthem.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gbtnthem.ShadowDecoration.Depth = 12;
-            gbtnthem.Size = new Size(175, 53);
+            gbtnthem.Size = new Size(153, 40);
             gbtnthem.TabIndex = 2;
             gbtnthem.Text = "Thêm";
             gbtnthem.Click += gbtnthem_Click;
@@ -248,13 +241,12 @@
             gbtnThongtin.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnThongtin.Image = (Image)resources.GetObject("gbtnThongtin.Image");
             gbtnThongtin.ImageAlign = HorizontalAlignment.Left;
-            gbtnThongtin.Location = new Point(31, 81);
-            gbtnThongtin.Margin = new Padding(3, 4, 3, 4);
+            gbtnThongtin.Location = new Point(27, 61);
             gbtnThongtin.Name = "gbtnThongtin";
             gbtnThongtin.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnThongtin.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gbtnThongtin.ShadowDecoration.Depth = 12;
-            gbtnThongtin.Size = new Size(175, 53);
+            gbtnThongtin.Size = new Size(153, 40);
             gbtnThongtin.TabIndex = 1;
             gbtnThongtin.Text = "Thông tin chi tết";
             gbtnThongtin.Click += gbtnThongtin_Click;
@@ -270,12 +262,11 @@
             guna2GroupBox1.FillColor = Color.Transparent;
             guna2GroupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             guna2GroupBox1.ForeColor = Color.White;
-            guna2GroupBox1.Location = new Point(25, 25);
-            guna2GroupBox1.Margin = new Padding(3, 4, 3, 4);
+            guna2GroupBox1.Location = new Point(22, 19);
             guna2GroupBox1.Name = "guna2GroupBox1";
-            guna2GroupBox1.Padding = new Padding(11, 13, 11, 13);
+            guna2GroupBox1.Padding = new Padding(10, 10, 10, 10);
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2GroupBox1.Size = new Size(973, 673);
+            guna2GroupBox1.Size = new Size(851, 505);
             guna2GroupBox1.TabIndex = 0;
             guna2GroupBox1.Text = "Sách";
             guna2GroupBox1.Click += guna2GroupBox1_Click;
@@ -289,6 +280,7 @@
             dtsach.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dtsach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dtsach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtsach.CausesValidation = false;
             dtsach.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -311,14 +303,13 @@
             dtsach.DefaultCellStyle = dataGridViewCellStyle3;
             dtsach.Dock = DockStyle.Fill;
             dtsach.GridColor = Color.Black;
-            dtsach.Location = new Point(11, 53);
-            dtsach.Margin = new Padding(3, 4, 3, 4);
+            dtsach.Location = new Point(10, 50);
             dtsach.Name = "dtsach";
             dtsach.ReadOnly = true;
             dtsach.RowHeadersVisible = false;
             dtsach.RowHeadersWidth = 51;
             dtsach.RowTemplate.Height = 40;
-            dtsach.Size = new Size(951, 607);
+            dtsach.Size = new Size(831, 445);
             dtsach.TabIndex = 0;
             dtsach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtsach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -344,12 +335,11 @@
             // 
             // ucSach
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(guna2Panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "ucSach";
-            Size = new Size(1257, 720);
+            Size = new Size(1100, 540);
             guna2Panel1.ResumeLayout(false);
             guna2GroupBox2.ResumeLayout(false);
             guna2GroupBox1.ResumeLayout(false);

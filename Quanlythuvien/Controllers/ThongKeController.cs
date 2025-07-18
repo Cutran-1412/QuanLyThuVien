@@ -5,6 +5,8 @@ using System.Text;
 using Quanlythuvien.Models;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
+using Quanlythuvien.Models.PhieuMuons;
+using Quanlythuvien.Models.PhieuTras;
 
 namespace Quanlythuvien.Controllers
 {
@@ -42,6 +44,18 @@ namespace Quanlythuvien.Controllers
         public decimal Tongtienphat()
         {
             return tkDao.Ttienphat();
+        }
+        public List<ChiTietPhieuMuon> GetPhieuMuon()
+        {
+            return tkDao.Get_CTPM();
+        }
+        public List<ChiTietPhieuTra> GetPhieuTra()
+        {
+            return tkDao.Get_CTPT();
+        }
+        public int Soluongquahan()
+        {
+            return tkDao.TraQuaHan();
         }
     }
 }

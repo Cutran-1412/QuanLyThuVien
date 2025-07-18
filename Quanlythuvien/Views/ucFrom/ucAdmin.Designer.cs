@@ -83,7 +83,7 @@
             // 
             // guna2GradientPanel1
             // 
-            guna2GradientPanel1.BackColor = Color.FromArgb(44, 47, 58);
+            guna2GradientPanel1.BackColor = Color.White;
             guna2GradientPanel1.BorderColor = Color.Red;
             guna2GradientPanel1.BorderRadius = 20;
             guna2GradientPanel1.Controls.Add(guna2GroupBox3);
@@ -98,16 +98,19 @@
             // 
             // guna2GroupBox3
             // 
-            guna2GroupBox3.BorderColor = Color.FromArgb(63, 142, 252);
+            guna2GroupBox3.BackColor = Color.Transparent;
+            guna2GroupBox3.BorderColor = SystemColors.Highlight;
             guna2GroupBox3.BorderRadius = 15;
+            guna2GroupBox3.BorderThickness = 3;
             guna2GroupBox3.Controls.Add(dtAdmin);
-            guna2GroupBox3.CustomBorderColor = Color.FromArgb(63, 142, 252);
+            guna2GroupBox3.CustomBorderColor = SystemColors.Highlight;
             guna2GroupBox3.CustomizableEdges = customizableEdges1;
-            guna2GroupBox3.FillColor = Color.FromArgb(44, 47, 58);
+            guna2GroupBox3.FillColor = Color.Transparent;
             guna2GroupBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             guna2GroupBox3.ForeColor = Color.White;
             guna2GroupBox3.Location = new Point(30, 30);
             guna2GroupBox3.Name = "guna2GroupBox3";
+            guna2GroupBox3.Padding = new Padding(10);
             guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2GroupBox3.Size = new Size(620, 480);
             guna2GroupBox3.TabIndex = 7;
@@ -120,10 +123,10 @@
             dtAdmin.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtAdmin.BorderStyle = BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(100, 88, 255);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.BackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.DarkTurquoise;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dtAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -133,16 +136,17 @@
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtAdmin.DefaultCellStyle = dataGridViewCellStyle3;
+            dtAdmin.Dock = DockStyle.Fill;
             dtAdmin.GridColor = Color.FromArgb(231, 229, 255);
-            dtAdmin.Location = new Point(16, 52);
+            dtAdmin.Location = new Point(10, 50);
             dtAdmin.Name = "dtAdmin";
             dtAdmin.RowHeadersVisible = false;
             dtAdmin.RowTemplate.Height = 25;
-            dtAdmin.Size = new Size(585, 413);
+            dtAdmin.Size = new Size(600, 420);
             dtAdmin.TabIndex = 4;
             dtAdmin.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtAdmin.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -170,15 +174,15 @@
             // 
             // guna2GroupBox2
             // 
-            guna2GroupBox2.BorderColor = Color.FromArgb(136, 192, 208);
+            guna2GroupBox2.BorderColor = SystemColors.Highlight;
             guna2GroupBox2.BorderRadius = 15;
             guna2GroupBox2.Controls.Add(gbtnXoa);
             guna2GroupBox2.Controls.Add(gbtnSua);
             guna2GroupBox2.Controls.Add(gtxtSearch);
             guna2GroupBox2.Controls.Add(gbtnthem);
-            guna2GroupBox2.CustomBorderColor = Color.FromArgb(136, 192, 208);
+            guna2GroupBox2.CustomBorderColor = SystemColors.Highlight;
             guna2GroupBox2.CustomizableEdges = customizableEdges11;
-            guna2GroupBox2.FillColor = Color.FromArgb(31, 42, 48);
+            guna2GroupBox2.FillColor = Color.Transparent;
             guna2GroupBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             guna2GroupBox2.ForeColor = Color.White;
             guna2GroupBox2.Location = new Point(680, 338);
@@ -192,8 +196,8 @@
             // gbtnXoa
             // 
             gbtnXoa.BackColor = Color.Transparent;
-            gbtnXoa.BorderColor = Color.Transparent;
             gbtnXoa.BorderRadius = 15;
+            gbtnXoa.BorderThickness = 1;
             gbtnXoa.CustomizableEdges = customizableEdges3;
             gbtnXoa.DisabledState.BorderColor = Color.DarkGray;
             gbtnXoa.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -210,7 +214,6 @@
             gbtnXoa.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnXoa.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gbtnXoa.ShadowDecoration.Depth = 12;
-            gbtnXoa.ShadowDecoration.Enabled = true;
             gbtnXoa.Size = new Size(110, 40);
             gbtnXoa.TabIndex = 7;
             gbtnXoa.Text = "Xóa";
@@ -219,8 +222,8 @@
             // gbtnSua
             // 
             gbtnSua.BackColor = Color.Transparent;
-            gbtnSua.BorderColor = Color.Transparent;
             gbtnSua.BorderRadius = 15;
+            gbtnSua.BorderThickness = 1;
             gbtnSua.CustomizableEdges = customizableEdges5;
             gbtnSua.DisabledState.BorderColor = Color.DarkGray;
             gbtnSua.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -237,7 +240,6 @@
             gbtnSua.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnSua.ShadowDecoration.CustomizableEdges = customizableEdges6;
             gbtnSua.ShadowDecoration.Depth = 12;
-            gbtnSua.ShadowDecoration.Enabled = true;
             gbtnSua.Size = new Size(110, 40);
             gbtnSua.TabIndex = 6;
             gbtnSua.Text = "Sửa";
@@ -255,6 +257,7 @@
             gtxtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             gtxtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gtxtSearch.ForeColor = Color.Black;
             gtxtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtSearch.IconLeft = (Image)resources.GetObject("gtxtSearch.IconLeft");
             gtxtSearch.Location = new Point(72, 118);
@@ -269,8 +272,8 @@
             // gbtnthem
             // 
             gbtnthem.BackColor = Color.Transparent;
-            gbtnthem.BorderColor = Color.Transparent;
             gbtnthem.BorderRadius = 15;
+            gbtnthem.BorderThickness = 1;
             gbtnthem.CustomizableEdges = customizableEdges9;
             gbtnthem.DisabledState.BorderColor = Color.DarkGray;
             gbtnthem.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -287,7 +290,6 @@
             gbtnthem.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnthem.ShadowDecoration.CustomizableEdges = customizableEdges10;
             gbtnthem.ShadowDecoration.Depth = 12;
-            gbtnthem.ShadowDecoration.Enabled = true;
             gbtnthem.Size = new Size(110, 40);
             gbtnthem.TabIndex = 0;
             gbtnthem.Text = "Thêm";
@@ -295,16 +297,17 @@
             // 
             // guna2GroupBox1
             // 
-            guna2GroupBox1.BorderColor = Color.FromArgb(94, 129, 172);
+            guna2GroupBox1.BorderColor = SystemColors.Highlight;
             guna2GroupBox1.BorderRadius = 15;
+            guna2GroupBox1.BorderThickness = 3;
             guna2GroupBox1.Controls.Add(gpican);
             guna2GroupBox1.Controls.Add(gpichien);
             guna2GroupBox1.Controls.Add(gtxtId);
             guna2GroupBox1.Controls.Add(gtxtUsername);
             guna2GroupBox1.Controls.Add(gtxtPassword);
-            guna2GroupBox1.CustomBorderColor = Color.FromArgb(94, 129, 172);
+            guna2GroupBox1.CustomBorderColor = SystemColors.Highlight;
             guna2GroupBox1.CustomizableEdges = customizableEdges23;
-            guna2GroupBox1.FillColor = Color.FromArgb(46, 52, 64);
+            guna2GroupBox1.FillColor = Color.Transparent;
             guna2GroupBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             guna2GroupBox1.ForeColor = Color.White;
             guna2GroupBox1.Location = new Point(680, 30);
@@ -347,7 +350,7 @@
             // 
             // gtxtId
             // 
-            gtxtId.BorderColor = Color.FromArgb(94, 129, 172);
+            gtxtId.BorderColor = Color.Black;
             gtxtId.BorderRadius = 10;
             gtxtId.CustomizableEdges = customizableEdges17;
             gtxtId.DefaultText = "";
@@ -370,7 +373,7 @@
             // 
             // gtxtUsername
             // 
-            gtxtUsername.BorderColor = Color.FromArgb(94, 129, 172);
+            gtxtUsername.BorderColor = Color.Black;
             gtxtUsername.BorderRadius = 10;
             gtxtUsername.CustomizableEdges = customizableEdges19;
             gtxtUsername.DefaultText = "";
@@ -392,7 +395,7 @@
             // 
             // gtxtPassword
             // 
-            gtxtPassword.BorderColor = Color.FromArgb(94, 129, 172);
+            gtxtPassword.BorderColor = Color.Black;
             gtxtPassword.BorderRadius = 10;
             gtxtPassword.CustomizableEdges = customizableEdges21;
             gtxtPassword.DefaultText = "";
