@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Quanlythuvien.Views.ucFrom.PhieuTra
 {
@@ -28,7 +29,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         {
             InitializeComponent();
             this.phieuTra = phieutra;
-            this.LoadMaPhieuMuon();
+     
             dgvDanhSachMuon.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private void ucPhieuTraExtra_Load(object sender, EventArgs e)
@@ -37,10 +38,11 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             {
                 this.gtxtmaphieutra.Text = this.phieuTra.MaPhieuTra;
                 this.gcboMaPhieuMuon.SelectedValue = this.phieuTra.MaPhieuMuon;
-                this.gdtpngaytra.Value = this.phieuTra.NgayTra;
+                this.gdtpNgaytra.Value = this.phieuTra.NgayTra;
+          
 
+                this.LoadMaPhieuMuon();
                 this.SetReadOnly();
-                this.LoadMaPhieuMuonChuaTra();
                 this.gcboMaPhieuMuon.SelectedValue = phieuTra.MaPhieuMuon;
                 this.ctPhieuMuons = new BindingList<ChiTietPhieuTra>(this.phieuTra.ChiTietPhieuTras);
             }
@@ -48,7 +50,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             {
                 this.SinhMaPhieuTra();
                 this.LoadMaPhieuMuonChuaTra();
-                this.gdtpngaytra.Value = DateTime.Now.Date;
+                this.gdtpNgaytra.Value = DateTime.Now.Date;
 
             }
         }
@@ -58,10 +60,12 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             {
                 ct.Enabled = false;
             }
-            foreach (Control ct in this.ggrbChucnang.Controls)
-            {
-                ct.Enabled = false;
-            }
+            this.gtxtmaphieutra.Enabled = true;
+            this.gtxtmaphieutra.ReadOnly = true;
+            this.gtxtMasach.ReadOnly = true;
+            this.gtxtTenSach.ReadOnly = true;    
+            this.gtxtSlMuon.ReadOnly = true;    
+            this.gtxtTienphat.ReadOnly = true;    
             gbtnThoat.Enabled = true;
 
         }
@@ -178,14 +182,16 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             this.gtxtMasach.Text = this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString();
             this.gtxtTenSach.Text = this.dgvDanhSachMuon.Rows[index].Cells["TenSach"].Value.ToString();
             this.gtxtSlMuon.Text = this.dgvDanhSachMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString();
-            this.cbDaTra.Checked = Convert.ToBoolean(this.dgvDanhSachMuon.Rows[index].Cells["DaTra"].Value);
+            this.TinhTienPhat();
+        }
+        private void TinhTienPhat()
+        {
             var phieuMuon = this.phieuMuonCtrl.FindByKey(this.gcboMaPhieuMuon.SelectedValue.ToString());
-            int soNgayTre = (this.gdtpngaytra.Value - phieuMuon.NgayMuon).Days;
+            int soNgayTre = (this.gdtpNgaytra.Value - phieuMuon.NgayPhaiTra).Days;
             float tienPhatMoiQuyen = 1000;
             int slMuon = int.Parse(this.gtxtSlMuon.Text);
             this.gtxtTienphat.Text = (soNgayTre * tienPhatMoiQuyen * slMuon).ToString();
         }
-
         private void dgvDanhSachMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -204,7 +210,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 {
                     MaPhieuTra = this.gtxtmaphieutra.Text,
                     MaPhieuMuon = this.gcboMaPhieuMuon.SelectedValue.ToString(),
-                    NgayTra = this.gdtpngaytra.Value,
+                    NgayTra = this.gdtpNgaytra.Value,
 
                 };
             }

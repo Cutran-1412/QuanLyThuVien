@@ -49,7 +49,9 @@ namespace Quanlythuvien.Models.PhieuMuons
         {
             using (DataContext context = new DataContext())
             {
-                return context.PhieuMuons.ToList();
+                return context.PhieuMuons
+                    .OrderBy(pm=>Convert.ToInt32(pm.MaPhieuMuon.Substring(2)))
+                    .ToList();
 
             }
         }
@@ -68,7 +70,7 @@ namespace Quanlythuvien.Models.PhieuMuons
             using (DataContext context = new DataContext())
             {
                 return context.PhieuMuons
-                    .OrderByDescending(pm=>pm.MaPhieuMuon)
+                    .OrderByDescending(pm=>Convert.ToInt32(pm.MaPhieuMuon.Substring(2)))
                     .FirstOrDefault();
             }
         }
@@ -86,7 +88,29 @@ namespace Quanlythuvien.Models.PhieuMuons
         {
             using (DataContext context = new DataContext())
             {
-                  return context.PhieuMuons.Where(s => s.MaPhieuMuon.ToLower().Contains(value.ToLower())).ToList();
+                if (value.Equals("Tất cả"))
+                {
+                    return this.GetData();
+                }
+                switch (luachon)
+                {
+                    case "Mã phiếu mượn" :
+                        
+                        return context.PhieuMuons
+                            .Where(s => s.MaPhieuMuon.ToLower().Contains(value.ToLower()))
+                             .OrderBy(pm => Convert.ToInt32(pm.MaPhieuMuon.Substring(2)))
+                            .ToList();
+
+                    case "Mã độc giả":
+                        return context.PhieuMuons
+                            .Where(s => s.MaDocGia.ToLower().Contains(value.ToLower()))
+                             .OrderBy(pm => Convert.ToInt32(pm.MaPhieuMuon.Substring(2)))
+                            .ToList();
+
+                    default: return null;
+                }
+
+               
             }
         }
     }

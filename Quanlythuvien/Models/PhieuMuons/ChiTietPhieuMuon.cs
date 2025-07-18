@@ -28,7 +28,7 @@ namespace Quanlythuvien.Models.PhieuMuons
         public string TenSach => Sach != null ? Sach.TenSach : "";
         public Sach Sach { get; set; }
         //
-        [DisplayName("Số lượng mượn")]
+        [DisplayName("Sl mượn")]
         public int SoLuongMuon { get; set; }
         [DisplayName("Đã trả")]
         public bool DaTra{ get; set; }

@@ -35,13 +35,22 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
 
         private void ucPhieuMuon_Load(object sender, EventArgs e)
         {
-            this.LoadPhieuMuon();
+            this.LoadPhieuMuon(this.phieuMuonCtrl.GetData());
+            this.LoadMaDocGiaTimKiem(new DocGiaController().Get_DocGia());
         }
-        private void LoadPhieuMuon()
+        private void LoadPhieuMuon(List<Models.PhieuMuons.PhieuMuon> pms)
         {
-            this.dgvPhieuMuon.DataSource = this.phieuMuonCtrl.GetData();
+            this.dgvPhieuMuon.DataSource = pms;
             this.dgvPhieuMuon.Columns["DocGia"].Visible = false;
-            gcobotim.DataSource = new DocGiaController().Get_DocGia();
+            this.dgvPhieuMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+        }
+        private void LoadMaDocGiaTimKiem(List<DocGia> dgs)
+        {
+            dgs.Insert(0, new DocGia { MaDocGia = "Tất cả" });
+            gcobotim.DropDownHeight = gcobotim.ItemHeight * 5;
+            gcobotim.DataSource = dgs;
+            gcobotim.ValueMember = "MaDocGia";
             gcobotim.ValueMember = "MaDocGia";
         }
         private void gbtnThongtin_Click(object sender, EventArgs e)
@@ -72,19 +81,23 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
                 MessageDialogIcon icon1 = MessageDialogIcon.Information;
                 new frmMain().Msgbox(text1, caption1, button1, icon1);
                 this.phieuMuonCtrl.DeleteByKey(maPhieu);
-                this.LoadPhieuMuon();
+                this.LoadPhieuMuon(this.phieuMuonCtrl.GetData());
             }
         }
 
         private void gbtnlaydulieu_Click(object sender, EventArgs e)
         {
-            this.LoadPhieuMuon();
+            this.LoadPhieuMuon(this.phieuMuonCtrl.GetData());
         }
 
         private void gbtntimkiem_Click(object sender, EventArgs e)
         {
-            this.dgvPhieuMuon.DataSource = this.phieuMuonCtrl.Search("",gcobotim.Text);
-            this.dgvPhieuMuon.Columns["DocGia"].Visible = false;
+            this.LoadPhieuMuon(this.phieuMuonCtrl.Search("Mã độc giả", this.gcobotim.SelectedValue.ToString()));
+        }
+
+        private void dgvPhieuMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

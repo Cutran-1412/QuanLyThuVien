@@ -74,7 +74,7 @@
             gbtnThemSach = new Guna.UI2.WinForms.Guna2Button();
             gcboMaSach = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2GroupBox3 = new Guna.UI2.WinForms.Guna2GroupBox();
-            gdgvSach = new Guna.UI2.WinForms.Guna2DataGridView();
+            gdgvCtMuon = new Guna.UI2.WinForms.Guna2DataGridView();
             ggrbCnPhieuMuon = new Guna.UI2.WinForms.Guna2GroupBox();
             gbtnLuu = new Guna.UI2.WinForms.Guna2Button();
             ggrbTtPhieuMuon = new Guna.UI2.WinForms.Guna2GroupBox();
@@ -89,7 +89,7 @@
             guna2Panel1.SuspendLayout();
             ggrbCnChitiet.SuspendLayout();
             guna2GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)gdgvSach).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gdgvCtMuon).BeginInit();
             ggrbCnPhieuMuon.SuspendLayout();
             ggrbTtPhieuMuon.SuspendLayout();
             SuspendLayout();
@@ -110,6 +110,7 @@
             // 
             // ggrbCnChitiet
             // 
+            ggrbCnChitiet.BackColor = Color.Transparent;
             ggrbCnChitiet.BorderColor = SystemColors.Highlight;
             ggrbCnChitiet.BorderRadius = 15;
             ggrbCnChitiet.BorderThickness = 3;
@@ -132,6 +133,7 @@
             ggrbCnChitiet.TabIndex = 9;
             ggrbCnChitiet.TabStop = false;
             ggrbCnChitiet.Text = "Chức năng sách mượn";
+            ggrbCnChitiet.Click += ggrbCnChitiet_Click;
             // 
             // glblsoluongcon
             // 
@@ -139,9 +141,9 @@
             glblsoluongcon.ForeColor = Color.Black;
             glblsoluongcon.Location = new Point(19, 107);
             glblsoluongcon.Name = "glblsoluongcon";
-            glblsoluongcon.Size = new Size(73, 17);
+            glblsoluongcon.Size = new Size(135, 23);
             glblsoluongcon.TabIndex = 54;
-            glblsoluongcon.Text = "Số lượng còn";
+            glblsoluongcon.Text = "Số lượng tồn kho";
             glblsoluongcon.Visible = false;
             // 
             // gtxtSoLuongMuon
@@ -176,7 +178,6 @@
             gbtnThoat.DisabledState.CustomBorderColor = Color.DarkGray;
             gbtnThoat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             gbtnThoat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            gbtnThoat.Enabled = false;
             gbtnThoat.FillColor = Color.FromArgb(63, 142, 252);
             gbtnThoat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             gbtnThoat.ForeColor = Color.White;
@@ -294,7 +295,7 @@
             guna2GroupBox3.BorderColor = SystemColors.Highlight;
             guna2GroupBox3.BorderRadius = 15;
             guna2GroupBox3.BorderThickness = 3;
-            guna2GroupBox3.Controls.Add(gdgvSach);
+            guna2GroupBox3.Controls.Add(gdgvCtMuon);
             guna2GroupBox3.CustomBorderColor = SystemColors.Highlight;
             guna2GroupBox3.CustomizableEdges = customizableEdges15;
             guna2GroupBox3.FillColor = Color.Transparent;
@@ -309,61 +310,62 @@
             guna2GroupBox3.TabStop = false;
             guna2GroupBox3.Text = "Thông tin sách mượn";
             // 
-            // gdgvSach
+            // gdgvCtMuon
             // 
-            gdgvSach.AllowUserToAddRows = false;
+            gdgvCtMuon.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
-            gdgvSach.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            gdgvSach.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.DeepSkyBlue;
+            gdgvCtMuon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            gdgvCtMuon.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.DeepSkyBlue;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            gdgvSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            gdgvSach.ColumnHeadersHeight = 30;
-            gdgvSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            gdgvCtMuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            gdgvCtMuon.ColumnHeadersHeight = 40;
+            gdgvCtMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            gdgvSach.DefaultCellStyle = dataGridViewCellStyle3;
-            gdgvSach.Dock = DockStyle.Fill;
-            gdgvSach.Enabled = false;
-            gdgvSach.GridColor = Color.Black;
-            gdgvSach.Location = new Point(10, 50);
-            gdgvSach.Name = "gdgvSach";
-            gdgvSach.RowHeadersVisible = false;
-            gdgvSach.RowHeadersWidth = 51;
-            gdgvSach.RowTemplate.Height = 25;
-            gdgvSach.Size = new Size(491, 444);
-            gdgvSach.TabIndex = 4;
-            gdgvSach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            gdgvSach.ThemeStyle.AlternatingRowsStyle.Font = null;
-            gdgvSach.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            gdgvSach.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            gdgvSach.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            gdgvSach.ThemeStyle.BackColor = Color.White;
-            gdgvSach.ThemeStyle.GridColor = Color.Black;
-            gdgvSach.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
-            gdgvSach.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
-            gdgvSach.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gdgvSach.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            gdgvSach.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            gdgvSach.ThemeStyle.HeaderStyle.Height = 30;
-            gdgvSach.ThemeStyle.ReadOnly = false;
-            gdgvSach.ThemeStyle.RowsStyle.BackColor = Color.White;
-            gdgvSach.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            gdgvSach.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            gdgvSach.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            gdgvSach.ThemeStyle.RowsStyle.Height = 25;
-            gdgvSach.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            gdgvSach.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            gdgvCtMuon.DefaultCellStyle = dataGridViewCellStyle3;
+            gdgvCtMuon.Dock = DockStyle.Fill;
+            gdgvCtMuon.GridColor = Color.Black;
+            gdgvCtMuon.Location = new Point(10, 50);
+            gdgvCtMuon.Name = "gdgvCtMuon";
+            gdgvCtMuon.ReadOnly = true;
+            gdgvCtMuon.RowHeadersVisible = false;
+            gdgvCtMuon.RowHeadersWidth = 51;
+            gdgvCtMuon.RowTemplate.Height = 40;
+            gdgvCtMuon.Size = new Size(491, 444);
+            gdgvCtMuon.TabIndex = 4;
+            gdgvCtMuon.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            gdgvCtMuon.ThemeStyle.AlternatingRowsStyle.Font = null;
+            gdgvCtMuon.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            gdgvCtMuon.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            gdgvCtMuon.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            gdgvCtMuon.ThemeStyle.BackColor = Color.White;
+            gdgvCtMuon.ThemeStyle.GridColor = Color.Black;
+            gdgvCtMuon.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
+            gdgvCtMuon.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.Single;
+            gdgvCtMuon.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gdgvCtMuon.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            gdgvCtMuon.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            gdgvCtMuon.ThemeStyle.HeaderStyle.Height = 40;
+            gdgvCtMuon.ThemeStyle.ReadOnly = true;
+            gdgvCtMuon.ThemeStyle.RowsStyle.BackColor = Color.White;
+            gdgvCtMuon.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            gdgvCtMuon.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            gdgvCtMuon.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            gdgvCtMuon.ThemeStyle.RowsStyle.Height = 40;
+            gdgvCtMuon.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            gdgvCtMuon.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            gdgvCtMuon.CellClick += gdgvSach_CellClick;
             // 
             // ggrbCnPhieuMuon
             // 
@@ -575,7 +577,7 @@
             ggrbCnChitiet.ResumeLayout(false);
             ggrbCnChitiet.PerformLayout();
             guna2GroupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)gdgvSach).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gdgvCtMuon).EndInit();
             ggrbCnPhieuMuon.ResumeLayout(false);
             ggrbTtPhieuMuon.ResumeLayout(false);
             ggrbTtPhieuMuon.PerformLayout();
@@ -594,7 +596,7 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker gdtpNgayHenTra;
         private Guna.UI2.WinForms.Guna2TextBox gtxtMaPhieu;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox3;
-        private Guna.UI2.WinForms.Guna2DataGridView gdgvSach;
+        private Guna.UI2.WinForms.Guna2DataGridView gdgvCtMuon;
         private Guna.UI2.WinForms.Guna2GroupBox ggrbCnChitiet;
         private Guna.UI2.WinForms.Guna2ComboBox gcboMaSach;
         private Guna.UI2.WinForms.Guna2Button gbtnThoat;

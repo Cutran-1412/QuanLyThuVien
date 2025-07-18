@@ -18,11 +18,11 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
     public partial class ucSachExtra : UserControl
     {
         private SachController sachCtrl = new SachController();
-        private Sach Sach;
+        private Sach sach;
         public ucSachExtra(Sach sach, int loai)
         {
             InitializeComponent();
-            this.Sach = sach;
+            this.sach = sach;
             if (loai == 0)
             {
                 gbtnthem.Enabled = false;
@@ -48,6 +48,8 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
                 gbtnsua.Enabled = true;
                 gtxtma.ReadOnly = true;
             }
+
+
         }
 
         private void gbtnthem_Click(object sender, EventArgs e)
@@ -217,7 +219,7 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
         }
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+            if (this.sach != null) this.LoadChiTietSach(this.sach);
         }
         private void LoadChiTietSach(Sach sach)
         {
@@ -305,7 +307,12 @@ namespace Quanlythuvien.Views.ucFrom.Sachs
 
         private void ucSachExtra_Load(object sender, EventArgs e)
         {
-            if (this.Sach != null) this.LoadChiTietSach(this.Sach);
+            if (this.sach != null) this.LoadChiTietSach(this.sach);
+        }
+
+        private void gbtnxoa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
