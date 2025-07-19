@@ -39,5 +39,9 @@ namespace Quanlythuvien.Controllers
         {
             return addao.Search(keyword);
         }
+        public bool CheckUser(string user)
+        {
+            return addao.Check(user);
+        }
     }
 }

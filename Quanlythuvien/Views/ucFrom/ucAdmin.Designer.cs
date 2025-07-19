@@ -35,6 +35,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -121,11 +122,10 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
             dtAdmin.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dtAdmin.BorderStyle = BorderStyle.FixedSingle;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
@@ -141,9 +141,18 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtAdmin.DefaultCellStyle = dataGridViewCellStyle3;
             dtAdmin.Dock = DockStyle.Fill;
-            dtAdmin.GridColor = Color.FromArgb(231, 229, 255);
+            dtAdmin.GridColor = Color.Black;
             dtAdmin.Location = new Point(10, 50);
             dtAdmin.Name = "dtAdmin";
+            dtAdmin.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dtAdmin.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dtAdmin.RowHeadersVisible = false;
             dtAdmin.RowTemplate.Height = 25;
             dtAdmin.Size = new Size(600, 420);
@@ -154,7 +163,7 @@
             dtAdmin.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
             dtAdmin.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
             dtAdmin.ThemeStyle.BackColor = Color.White;
-            dtAdmin.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            dtAdmin.ThemeStyle.GridColor = Color.Black;
             dtAdmin.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(100, 88, 255);
             dtAdmin.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
             dtAdmin.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);

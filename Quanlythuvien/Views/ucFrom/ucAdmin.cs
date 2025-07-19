@@ -19,11 +19,28 @@ namespace Quanlythuvien.Views
         public ucAdmin()
         {
             InitializeComponent();
+            dtAdmin.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private AdminController adm = new AdminController();
         public void Load_Data()
         {
             dtAdmin.DataSource = adm.Get_Admin();
+            dtAdmin.RowTemplate.Height = 40;
+            dtAdmin.ColumnHeadersHeight = 45;
+
+            dtAdmin.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+            dtAdmin.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+
+            dtAdmin.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtAdmin.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtAdmin.AdvancedColumnHeadersBorderStyle.Left = DataGridViewAdvancedCellBorderStyle.Single;
+            dtAdmin.AdvancedColumnHeadersBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.Single;
+            dtAdmin.AdvancedColumnHeadersBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.Single;
+            dtAdmin.AdvancedColumnHeadersBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.Single;
+            dtAdmin.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dtAdmin.Columns[0].Width = 60; 
+            dtAdmin.Columns[1].Width = 150;
+            dtAdmin.Columns[2].Width = 150;
         }
         private void ucAdmin_Load(object sender, EventArgs e)
         {
@@ -53,19 +70,31 @@ namespace Quanlythuvien.Views
                 return false;
             }
             return true;
-        }
+        } 
         private void gbtnthem_Click(object sender, EventArgs e)
         {
             if (Check_Null())
             {
                 Admin ad = new Admin { Username = gtxtUsername.Text, Password = gtxtPassword.Text };
-                adm.Insert_Admin(ad);
-                string text = "Đã thêm thành công tài khoản :" + gtxtUsername.Text;
-                string caption = "Thông báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Information;
-                new frmMain().Msgbox(text, caption, button, icon);
-                Load_Data();
+                if (adm.CheckUser(gtxtUsername.Text))
+                {
+                    adm.Insert_Admin(ad);
+                    string text = "Đã thêm thành công tài khoản :" + gtxtUsername.Text;
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Information;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                    Load_Data();
+                }
+                else
+                {
+                    string text = "Tài khoản bị trùng";
+                    string caption = "Cảnh báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Warning;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                    gtxtPassword.Focus();
+                }
             }
         }
 
