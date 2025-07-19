@@ -19,12 +19,44 @@ namespace Quanlythuvien.Views.ucFrom
         public ucDocgia()
         {
             InitializeComponent();
-            Load_Bang();
+            dtDocgia.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
         }
         private readonly DocGiaController dg = new DocGiaController();
         private void Load_Bang()
         {
+            // Font + kích thước
+            dtDocgia.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+            dtDocgia.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            dtDocgia.RowTemplate.Height = 40;
+            dtDocgia.ColumnHeadersHeight = 45;
+
+            // Căn giữa toàn bộ, trừ cột địa chỉ (căn trái)
+            dtDocgia.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtDocgia.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            if (dtDocgia.Columns.Contains("DiaChi"))
+            {
+                dtDocgia.Columns["DiaChi"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            }
+
+            // Viền đen rõ ràng
             dtDocgia.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dtDocgia.GridColor = Color.Black;
+
+            dtDocgia.AdvancedColumnHeadersBorderStyle.Left = DataGridViewAdvancedCellBorderStyle.Single;
+            dtDocgia.AdvancedColumnHeadersBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.Single;
+            dtDocgia.AdvancedColumnHeadersBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.Single;
+            dtDocgia.AdvancedColumnHeadersBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.Single;
+
+            // Font + kích thước
+            dtDocgia.EnableHeadersVisualStyles = false;
+            dtDocgia.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            dtDocgia.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Giữ màu xám khi chọn ô
+            dtDocgia.DefaultCellStyle.SelectionBackColor = Color.LightGray;
+            dtDocgia.DefaultCellStyle.SelectionForeColor = Color.Black;
         }
         private void Load_Data()
         {
@@ -32,7 +64,8 @@ namespace Quanlythuvien.Views.ucFrom
             dtDocgia.Columns["SoDienThoai"].Visible = false;
             dtDocgia.Columns["Email"].Visible = false;
             dtDocgia.Columns["SoSachMuonToiDa"].Visible = false;
-            dtDocgia.Columns["PhieuMuon"].Visible = false;   
+            dtDocgia.Columns["PhieuMuon"].Visible = false;
+            Load_Bang();
         }
         private void ucDocgia_Load(object sender, EventArgs e)
         {

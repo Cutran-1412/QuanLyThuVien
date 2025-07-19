@@ -46,5 +46,13 @@ namespace Quanlythuvien.Models.Admins
         {
             return kn.Admins.Where(a => a.Username.ToLower().Contains(keyword)).ToList();
         }
+        public bool Check(string user)
+        {
+            if (kn.Admins.Where(a => a.Username == user).ToList().Count>0)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
