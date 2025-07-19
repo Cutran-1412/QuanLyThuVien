@@ -55,7 +55,7 @@ namespace Quanlythuvien.Models.Sachs
                 context.SaveChanges();
                 return true;
             }
-        }
+        }   
         public override bool Update(Sach model)
         {
             using (DataContext context = new DataContext())

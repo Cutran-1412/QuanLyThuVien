@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Quanlythuvien.Models.PhieuTras;
 
 namespace Quanlythuvien.Models.PhieuMuons
@@ -17,6 +18,17 @@ namespace Quanlythuvien.Models.PhieuMuons
         public override ChiTietPhieuTra FindByKey(string key)
         {
             throw new NotImplementedException();
+        }
+        public override List<ChiTietPhieuTra> Search(string luachon, string value)
+        {
+            using (var context = new DataContext())
+            {
+                return context.ChiTietPhieuTras
+                    .Include(ct=>ct.PhieuTra)
+                   .Include(ct=>ct.Sach)
+                   .Where(ct => ct.PhieuTra.MaPhieuMuon== value)
+                   .ToList();
+            }
         }
 
         public override int GetCount()

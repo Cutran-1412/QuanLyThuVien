@@ -20,6 +20,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
     public partial class ucPhieuMuonExtra : UserControl
     {
         private PhieuMuonController phieuMuonCtrl = new();
+        private ChiTietPhieuMuonController ctPhieuMuonCtrl= new();
         private DocGiaController docGiaCtrl = new();
         private SachController sachCtrl = new();
         private Quanlythuvien.Models.PhieuMuons.PhieuMuon phieuMuon;
@@ -82,6 +83,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             {
                 ct.Enabled = false;
             }
+            this.lblSoLuongMuon.Enabled = true;
             gbtnThoat.Enabled = true;
         }
         private void LoadSachMuon(bool isReadonly)
@@ -100,10 +102,27 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             if (!isReadonly)
             {
                 this.gdgvCtMuon.Columns["DaTra"].Visible = false;
+                DataGridViewButtonColumn colButton = new DataGridViewButtonColumn();
+                colButton.Name = "btnXoa";                // Tên cột (dùng trong code)
+                colButton.HeaderText = "Thao tác";       // Tiêu đề cột
+                colButton.Text = "  Xóa  ";
+                colButton.Width = 120;// Chữ hiển thị trên nút
+                colButton.UseColumnTextForButtonValue = true; // Dùng text trên tất cả cell
+                colButton.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 204);
+                colButton.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 255, 204);
+                colButton.FillWeight = 80;
+
+                colButton.FlatStyle = FlatStyle.Flat; // Bắt buộc phải để Flat để đổi màu
+                colButton.DefaultCellStyle.BackColor = Color.FromArgb(255, 153, 102);   // đỏ nhạt
+                colButton.DefaultCellStyle.ForeColor = Color.White;                   // chữ trắng
+                colButton.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 180, 130); // khi chọn
+                colButton.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                this.gdgvCtMuon.Columns.Add(colButton);
             }
             else
             {
-                this.gdgvCtMuon.Columns["DaTra"].Visible = true;
+                this.gdgvCtMuon.Columns["DaTra"].Visible = true;      
             }
         }
         private void ClearPhieuMuon()
@@ -141,6 +160,25 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         private void gbtnLuu_Click(object sender, EventArgs e)
         {
             if (!this.IsFilledAll()) return;
+            var maDocGia = this.gcboMaDG.SelectedValue.ToString();
+            var docGia = this.docGiaCtrl.Get_DocGia_Ma(maDocGia);
+            int soLuongDaMuon = this.ctPhieuMuonCtrl.GetTongSoLuongDaMuon(maDocGia);
+            int muonThem = 0;
+            foreach (var ct in this.ctPhieuMuons)
+            {
+                muonThem += ct.SoLuongMuon;
+            }
+            if (soLuongDaMuon+muonThem> docGia.SoSachMuonToiDa)
+            {
+                // thông báo thêm thành công
+                string text = $"Độc giả đã mượn {soLuongDaMuon} quyển chỉ còn được mượn thêm {docGia.SoSachMuonToiDa-soLuongDaMuon} quyển !";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Information;
+                new frmMain().Msgbox(text, caption, button, icon);
+                
+                return;
+            }
             Quanlythuvien.Models.PhieuMuons.PhieuMuon phieuMuon = new Models.PhieuMuons.PhieuMuon()
             {
                 MaPhieuMuon = this.gtxtMaPhieu.Text,
@@ -197,6 +235,17 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
                 new frmMain().Msgbox(text, caption, button, icon);
                 return;
             }
+            if (soLuongMuon <= 0)
+            {
+
+                string text = "Vui lòng nhập số lượng mượn lớn hơn 0";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Warning;
+                new frmMain().Msgbox(text, caption, button, icon);
+                return;
+            }
+
             if (!new frmMain().Check_Null(gtxtSoLuongMuon, "Chưa nhập số lượng mượn"))
             {
                 return;
@@ -276,6 +325,11 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             int index = this.gdgvCtMuon.CurrentRow.Index;
             this.gcboMaSach.SelectedValue = this.gdgvCtMuon.Rows[index].Cells["MaSach"].Value;
             this.gtxtSoLuongMuon.Text = this.gdgvCtMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString();
+            if (this.gdgvCtMuon.Columns["btnXoa"] != null && e.ColumnIndex == this.gdgvCtMuon.Columns["btnXoa"].Index)
+            {
+                this.ctPhieuMuons.RemoveAt(e.RowIndex);
+                this.UpdateSoLuongTonKho();
+            }
         }
 
         private void ggrbCnChitiet_Click(object sender, EventArgs e)

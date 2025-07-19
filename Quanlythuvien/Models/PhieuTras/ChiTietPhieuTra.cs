@@ -24,7 +24,13 @@ namespace Quanlythuvien.Models.PhieuTras
 
         [DisplayName("Mã sách")]
         public string MaSach { get; set; }
+        [NotMapped]
+        [DisplayName("Tên sách")]
+        public string TenSach => Sach != null ? Sach.TenSach : "";
+        [DisplayName("Sl trả ")]
+        public int soLuongTra{ get; set; }
         public Sach Sach { get; set; }
+
         [DisplayName("Tiền phạt")]
         public decimal TienPhat { get; set; }
 

@@ -122,7 +122,7 @@
             gbtnlaydulieu.ShadowDecoration.Depth = 12;
             gbtnlaydulieu.Size = new Size(153, 40);
             gbtnlaydulieu.TabIndex = 9;
-            gbtnlaydulieu.Text = "Lấy dữ lệu";
+            gbtnlaydulieu.Text = "Làm mới";
             // 
             // gcboTimKiem
             // 

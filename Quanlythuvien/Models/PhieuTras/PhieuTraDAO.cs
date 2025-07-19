@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Quanlythuvien.Models.PhieuMuons;
 
 namespace Quanlythuvien.Models.PhieuTras
@@ -49,7 +50,12 @@ namespace Quanlythuvien.Models.PhieuTras
 
             using (DataContext context = new DataContext())
             {
-                return context.PhieuTras.FirstOrDefault(p => p.MaPhieuTra == key);
+                return context.PhieuTras
+                    .Include(pt=>pt.ChiTietPhieuTras)
+                    .Include(pt=>pt.PhieuMuon)
+                    .ThenInclude(pm=>pm.ChiTietPhieuMuons)
+                    .ThenInclude(ct=>ct.Sach)
+                    .FirstOrDefault(p => p.MaPhieuTra == key);
 
             }
         }
@@ -78,7 +84,8 @@ namespace Quanlythuvien.Models.PhieuTras
             using (DataContext context = new DataContext())
             {
                 context.PhieuTras.Add(model);
-                      context.SaveChanges();
+                model.ChiTietPhieuTras.ForEach(ct=>context.Attach(ct.Sach));
+                context.SaveChanges();
                 return true;
             }
         }

@@ -15,13 +15,13 @@ namespace Quanlythuvien.Controllers
         }
         public override bool Insert(PhieuMuon model)
         {
-            List<ChiTietPhieuMuon> chiTietPhieuMuons = model.ChiTietPhieuMuons;
-            foreach (var ct in chiTietPhieuMuons)
-            {
-                Sach sach = new SachDAO().FindByKey(ct.MaSach);
-                sach.SoLuong -= ct.SoLuongMuon;
-                new SachDAO().Update(sach);
-            }
+        //    List<ChiTietPhieuMuon> chiTietPhieuMuons = model.ChiTietPhieuMuons;
+        //    foreach (var ct in chiTietPhieuMuons)
+        //    {
+        //        Sach sach = new SachDAO().FindByKey(ct.MaSach);
+        //        sach.SoLuong -= ct.SoLuongMuon;
+        //        new SachDAO().Update(sach);
+        //    }
             return this.dao.Insert(model);
 
         }

@@ -35,8 +35,9 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
 
         private void ucPhieuMuon_Load(object sender, EventArgs e)
         {
-            this.LoadPhieuMuon(this.phieuMuonCtrl.GetData());
             this.LoadMaDocGiaTimKiem(new DocGiaController().Get_DocGia());
+            this.LoadPhieuMuon(this.phieuMuonCtrl.GetData());
+           
         }
         private void LoadPhieuMuon(List<Models.PhieuMuons.PhieuMuon> pms)
         {
@@ -48,10 +49,10 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         private void LoadMaDocGiaTimKiem(List<DocGia> dgs)
         {
             dgs.Insert(0, new DocGia { MaDocGia = "Tất cả" });
-            gcobotim.DropDownHeight = gcobotim.ItemHeight * 5;
-            gcobotim.DataSource = dgs;
-            gcobotim.ValueMember = "MaDocGia";
-            gcobotim.ValueMember = "MaDocGia";
+            gcboTimKiem.DropDownHeight = gcboTimKiem.ItemHeight * 5;
+            gcboTimKiem.DataSource = dgs;
+            gcboTimKiem.ValueMember = "MaDocGia";
+            gcboTimKiem.ValueMember = "MaDocGia";
         }
         private void gbtnThongtin_Click(object sender, EventArgs e)
         {
@@ -92,12 +93,19 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
 
         private void gbtntimkiem_Click(object sender, EventArgs e)
         {
-            this.LoadPhieuMuon(this.phieuMuonCtrl.Search("Mã độc giả", this.gcobotim.SelectedValue.ToString()));
+            this.LoadPhieuMuon(this.phieuMuonCtrl.Search("Mã độc giả", this.gcboTimKiem.SelectedValue.ToString()));
         }
 
         private void dgvPhieuMuon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void gcobotim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.gcboTimKiem.DataSource == null) return;
+            var maDocgia = this.gcboTimKiem.SelectedValue.ToString();
+            this.LoadPhieuMuon(this.phieuMuonCtrl.Search("Mã độc giả",maDocgia));
         }
     }
 }

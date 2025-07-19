@@ -39,5 +39,9 @@ namespace Quanlythuvien.Controllers
             }
 
         }
+        public int GetTongSoLuongDaMuon(string maDocGia)
+        {
+           return ((ChiTietPhieuMuonDAO)this.dao).GetSoLuongDaMuon(maDocGia);
+        }
     }
 }

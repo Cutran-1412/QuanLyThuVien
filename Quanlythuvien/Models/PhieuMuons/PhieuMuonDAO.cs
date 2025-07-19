@@ -61,6 +61,7 @@ namespace Quanlythuvien.Models.PhieuMuons
             using (DataContext context = new DataContext())
             {
                 context.PhieuMuons.Add(model);
+                model.ChiTietPhieuMuons.ForEach(ct=>context.Attach(ct.Sach));
                 context.SaveChanges();
                 return true;
             }
@@ -107,7 +108,11 @@ namespace Quanlythuvien.Models.PhieuMuons
                             .Where(s => s.MaDocGia.ToLower().Contains(value.ToLower()))
                              .OrderBy(pm => Convert.ToInt32(pm.MaPhieuMuon.Substring(2)))
                             .ToList();
-
+                    case "Chưa trả":
+                        return context.PhieuMuons
+                            .Include(pm => pm.ChiTietPhieuMuons.Where(ct => ct.DaTra == false))
+                           .ToList();
+                            
                     default: return null;
                 }
 

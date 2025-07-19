@@ -13,6 +13,14 @@ namespace Quanlythuvien.Controllers
         {
             this.dao = new PhieuTraDAO();
         }
+        public override bool Insert(PhieuTra model)
+        {
+            foreach (var ct in model.ChiTietPhieuTras)
+            {
+                new ChiTietPhieuMuonController().TraSach(model.MaPhieuMuon, ct.MaSach);
+            }
+            return base.Insert(model);
+        }
 
     }
 }
