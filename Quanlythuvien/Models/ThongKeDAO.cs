@@ -64,7 +64,7 @@ namespace Quanlythuvien.Models
         {
             using (DataContext db = new DataContext())
             {
-                return db.ChiTietPhieuMuons.Where(s => s.DaTra == false).ToList();
+                return db.ChiTietPhieuMuons.Where(s => s.DaTra == false).Include(s=>s.Sach).ToList();
             }
         }
         public List<ChiTietPhieuTra> Get_CTPT()

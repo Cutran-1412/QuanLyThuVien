@@ -93,7 +93,7 @@
             glblsoluongsachdangmuon.BackColor = Color.Transparent;
             glblsoluongsachdangmuon.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glblsoluongsachdangmuon.ForeColor = Color.Black;
-            glblsoluongsachdangmuon.Location = new Point(13, 120);
+            glblsoluongsachdangmuon.Location = new Point(13, 127);
             glblsoluongsachdangmuon.Name = "glblsoluongsachdangmuon";
             glblsoluongsachdangmuon.Size = new Size(238, 27);
             glblsoluongsachdangmuon.TabIndex = 4;
@@ -115,7 +115,7 @@
             glbltongiatri.BackColor = Color.Transparent;
             glbltongiatri.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glbltongiatri.ForeColor = Color.Black;
-            glbltongiatri.Location = new Point(13, 206);
+            glbltongiatri.Location = new Point(13, 222);
             glbltongiatri.Name = "glbltongiatri";
             glbltongiatri.Size = new Size(107, 27);
             glbltongiatri.TabIndex = 2;
@@ -126,7 +126,7 @@
             glblsoluongsach.BackColor = Color.Transparent;
             glblsoluongsach.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glblsoluongsach.ForeColor = Color.Black;
-            glblsoluongsach.Location = new Point(13, 81);
+            glblsoluongsach.Location = new Point(10, 94);
             glblsoluongsach.Name = "glblsoluongsach";
             glblsoluongsach.Size = new Size(128, 27);
             glblsoluongsach.TabIndex = 1;
@@ -233,6 +233,7 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtdsdangmuon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dtdsdangmuon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtdsdangmuon.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Highlight;
@@ -242,7 +243,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dtdsdangmuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dtdsdangmuon.ColumnHeadersHeight = 30;
+            dtdsdangmuon.ColumnHeadersHeight = 50;
             dtdsdangmuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
@@ -274,7 +275,7 @@
             dtdsdangmuon.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtdsdangmuon.ThemeStyle.HeaderStyle.ForeColor = Color.White;
             dtdsdangmuon.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dtdsdangmuon.ThemeStyle.HeaderStyle.Height = 30;
+            dtdsdangmuon.ThemeStyle.HeaderStyle.Height = 50;
             dtdsdangmuon.ThemeStyle.ReadOnly = true;
             dtdsdangmuon.ThemeStyle.RowsStyle.BackColor = Color.White;
             dtdsdangmuon.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;

@@ -27,9 +27,9 @@ namespace Quanlythuvien.Views.ucFrom.ThongKe
             glblsoluongsachcon.Text = "Số lượng sách còn :" + tkctr.Soluongsachcon().ToString();
             glblsoluongsachdangmuon.Text = "Số lượng sách đang mượn :" + tkctr.Soluongsachmuon().ToString();
             dtdsdangmuon.DataSource = tkctr.GetPhieuMuon();
-            dtdsdangmuon.Columns["MaPhieuMuon"].Visible = false;
             dtdsdangmuon.Columns["PhieuMuon"].Visible = false;
             dtdsdangmuon.Columns["Sach"].Visible = false;
+            dtdsdangmuon.Columns["DaTra"].Visible = false;
             dtdsdangmuon.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private void Load_DocGia()
@@ -39,6 +39,9 @@ namespace Quanlythuvien.Views.ucFrom.ThongKe
             glbltongtien.Text = "Tổng tiền phạt :" + tkctr.Tongtienphat().ToString();
             glbltongtraquahan.Text = "Số lượng sách trả quá hạn :" + tkctr.Soluongquahan().ToString();
             dtsachquahan.DataSource = tkctr.GetPhieuTra();
+            dtsachquahan.Columns["TenSach"].Visible = false;
+            dtsachquahan.Columns["soLuongTra"].Visible = false;
+            dtsachquahan.Columns["Sach"].Visible = false;
             dtsachquahan.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private void ucThongKe_Load(object sender, EventArgs e)
