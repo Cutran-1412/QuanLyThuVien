@@ -30,27 +30,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         {
             InitializeComponent();
             this.phieuTra = phieutra;
-            this.ctPhieuTras.ListChanged += CtPhieuTra_ListChanged;
-            this.ctPhieuMuons.ListChanged += CtPhieuMuons_ListChanged;
-            dgvDanhSachMuon.CellBorderStyle = DataGridViewCellBorderStyle.Single;
-        }
 
-        private void CtPhieuMuons_ListChanged(object? sender, ListChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void CtPhieuTra_ListChanged(object? sender, ListChangedEventArgs e)
-        {
-            if (this.ctPhieuTras.Count > 0)
-            {
-                this.gcboMaPhieuMuon.Enabled = false;
-            }
-            else
-            {
-                this.gcboMaPhieuMuon.Enabled = true;
-
-            }
 
         }
 
@@ -67,7 +47,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 
                 this.LoadMaPhieuMuon();
                 this.SetReadOnly();
-                this.gcboMaPhieuMuon.SelectedValue = phieuTra.MaPhieuMuon;
+
                 this.ctPhieuTras = new BindingList<ChiTietPhieuTra>(this.phieuTra.ChiTietPhieuTras);
 
                 this.LoadDanhSachTra(new BindingList<ChiTietPhieuTra>(this.ctPhieuTraCtrl.Search("Mã phiếu mượn", this.phieuTra.MaPhieuMuon)));
@@ -80,10 +60,9 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 this.gdtpNgaytra.Value = DateTime.Now.Date;
                 this.LoadDanhSachTra(this.ctPhieuTras);
 
+
             }
-            this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.ctPhieuMuonCtrl.Search("", this.gcboMaPhieuMuon.SelectedValue.ToString()));
-            this.LoadDanhSachMuon(this.ctPhieuMuons);
-            this.dgvDanhSachMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
         }
         private void SetReadOnly()
         {
@@ -100,13 +79,17 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             this.gcboMaPhieuMuon.DataSource = this.phieuMuonCtrl.GetData();
             this.gcboMaPhieuMuon.DisplayMember = "MaPhieuMuon";
             this.gcboMaPhieuMuon.ValueMember = "MaPhieuMuon";
+            this.gcboMaPhieuMuon.SelectedValue = phieuTra.MaPhieuMuon;
+            this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.ctPhieuMuonCtrl.Search("", this.gcboMaPhieuMuon.SelectedValue.ToString()));
+
         }
         private void LoadMaPhieuMuonChuaTra()
         {
             this.gcboMaPhieuMuon.DataSource = this.phieuMuonCtrl.GetPhieuMuonChuaTra();
             this.gcboMaPhieuMuon.DisplayMember = "MaPhieuMuon";
             this.gcboMaPhieuMuon.ValueMember = "MaPhieuMuon";
-
+            this.gcboMaPhieuMuon.SelectedIndex = -1;
+            this.gcboMaPhieuMuon.DropDownHeight = this.gcboMaPhieuMuon.ItemHeight * 5;
 
 
         }
@@ -135,15 +118,20 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 
         private void gcboMaPhieuMuon_SelectedValueChanged(object sender, EventArgs e)
         {
+
             if (gcboMaPhieuMuon.SelectedValue is string maPhieu)
             {
                 var ctPhieuMuon = this.phieuMuonCtrl.FindByKey(maPhieu).ChiTietPhieuMuons;
+                if (string.IsNullOrEmpty(maPhieu)) return;
+                this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.ctPhieuMuonCtrl.Search("", this.gcboMaPhieuMuon.SelectedValue.ToString()));
                 this.LoadDanhSachMuon(new BindingList<ChiTietPhieuMuon>(ctPhieuMuon));
-            }
 
+            }
         }
         private void LoadDanhSachMuon(BindingList<ChiTietPhieuMuon> cts)
         {
+            this.dgvDanhSachMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvDanhSachMuon.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             this.dgvDanhSachMuon.AlternatingRowsDefaultCellStyle = new();
             this.ctPhieuMuons = cts;
             var dsChiTiet = cts;
@@ -232,7 +220,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             {
                 var sach = sachCtrl.FindByKey(this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString());
                 var phieuMuon = this.phieuMuonCtrl.FindByKey(this.gcboMaPhieuMuon.SelectedValue.ToString());
-                int soNgayTre = (this.gdtpNgaytra.Value-phieuMuon.NgayPhaiTra).Days;
+                int soNgayTre = (this.gdtpNgaytra.Value - phieuMuon.NgayPhaiTra).Days;
 
                 var ctPhieuTra = new ChiTietPhieuTra
                 {
@@ -240,13 +228,13 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                     MaSach = this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString(),
                     soLuongTra = Convert.ToInt32(this.dgvDanhSachMuon.Rows[index].Cells["SoLuongMuon"].Value.ToString()),
                     Sach = sach,
-                    TienPhat = soNgayTre*1000
-                    
+                    TienPhat = soNgayTre * 1000
+
                 };
-               
+
                 var maSach = this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString();
                 var ct = this.ctPhieuMuons.Where(ct => ct.MaSach.Equals(maSach)).FirstOrDefault();
-                
+
                 foreach (var i in this.ctPhieuMuons)
                 {
                     string ma = i.MaSach;
@@ -272,9 +260,18 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 
         private void gbtnTraSach_Click(object sender, EventArgs e)
         {
+            if(this.gcboMaPhieuMuon.SelectedValue== null)
+            {
+                string text = "Vui lòng chọn phiếu mượn";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Warning;
+                new frmMain().Msgbox(text, caption, button, icon);
+                return;
+            }
             if (this.ctPhieuTras == null || this.ctPhieuTras.Count == 0)
             {
-                string text = "Vui lòng chọn sách để trả";
+                string text = "Chưa có sách nào được chọn để trả";
                 string caption = "Thông báo";
                 MessageDialogButtons button = MessageDialogButtons.OK;
                 MessageDialogIcon icon = MessageDialogIcon.Warning;
@@ -288,7 +285,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 NgayTra = this.gdtpNgaytra.Value,
                 ChiTietPhieuTras = this.ctPhieuTras.ToList()
             };
-            if(this.phieuTraCtrl.Insert(this.phieuTra))
+            if (this.phieuTraCtrl.Insert(this.phieuTra))
             {
                 string text = "Đã trả sách thành công";
                 string caption = "Thông báo";
@@ -300,7 +297,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                     main.ShowControl(new ucPhieuTra());
                 }
             }
-           
+
 
         }
 
@@ -335,8 +332,8 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                     MaPhieuMuon = this.gcboMaPhieuMuon.SelectedValue.ToString(),
                     MaSach = this.gdgvDanhSachTra.Rows[index].Cells["MaSach"].Value.ToString(),
                     Sach = sach,
-                    SoLuongMuon =Convert.ToInt32(this.gdgvDanhSachTra.Rows[index].Cells["SoLuongTra"].Value.ToString()),
-                    
+                    SoLuongMuon = Convert.ToInt32(this.gdgvDanhSachTra.Rows[index].Cells["SoLuongTra"].Value.ToString()),
+
                 };
                 this.ctPhieuMuons.Add(ctPhieuMuon);
                 var maSach = this.gdgvDanhSachTra.Rows[index].Cells["MaSach"].Value.ToString();
@@ -345,6 +342,23 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 this.ctPhieuTras.Remove(ct);
                 this.LoadDanhSachMuon(this.ctPhieuMuons);
                 this.LoadDanhSachTra(this.ctPhieuTras);
+            }
+        }
+
+        private void gcboMaPhieuMuon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (gcboMaPhieuMuon.SelectedValue is string maPhieu)
+            {
+                var ctPhieuMuon = this.phieuMuonCtrl.FindByKey(maPhieu).ChiTietPhieuMuons;
+                if (string.IsNullOrEmpty(maPhieu)) return;
+                this.ctPhieuMuons = new BindingList<ChiTietPhieuMuon>(this.ctPhieuMuonCtrl.Search("", this.gcboMaPhieuMuon.SelectedValue.ToString()));
+                this.LoadDanhSachMuon(new BindingList<ChiTietPhieuMuon>(ctPhieuMuon));
+
+            }
+            else
+            {
+                this.ctPhieuMuons.Clear();
+                this.LoadDanhSachMuon(this.ctPhieuMuons);
             }
         }
     }

@@ -154,7 +154,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             this.gcboMaDG.DisplayMember = "MaDocGia";
             this.gcboMaDG.ValueMember = "MaDocGia";
             this.gcboMaDG.DropDownHeight = this.gcboMaDG.ItemHeight * 5;
-            this.gcboMaDG.SelectedIndex = -1;
+            this.gcboMaDG.SelectedIndex = -1;   
         }
 
         private void gbtnLuu_Click(object sender, EventArgs e)
@@ -226,41 +226,45 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         private void gbtnThemSach_Click(object sender, EventArgs e)
         {
             int soLuongMuon;
-            if (!int.TryParse(this.gtxtSoLuongMuon.Text, out soLuongMuon))
+
+            if (!new frmMain().Check_Null(gtxtSoLuongMuon, "Vui lòng nhập số lượng"))
             {
-                string text = "Vui lòng số lượng là số";
+                return;
+            }
+            if (!int.TryParse(this.gtxtSoLuongMuon.Text, out soLuongMuon) || soLuongMuon <= 0)
+            {
+                string text = "Vui lòng nhập số lượng là số nguyên dương";
                 string caption = "Thông báo";
                 MessageDialogButtons button = MessageDialogButtons.OK;
                 MessageDialogIcon icon = MessageDialogIcon.Error;
                 new frmMain().Msgbox(text, caption, button, icon);
                 return;
             }
-            if (soLuongMuon <= 0)
-            {
+        
 
-                string text = "Vui lòng nhập số lượng mượn lớn hơn 0";
-                string caption = "Thông báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Warning;
-                new frmMain().Msgbox(text, caption, button, icon);
-                return;
-            }
-
-            if (!new frmMain().Check_Null(gtxtSoLuongMuon, "Chưa nhập số lượng mượn"))
+            int slTonKho = this.GetSoLuongTonKho(this.gcboMaSach.SelectedValue.ToString());
+            if (soLuongMuon > slTonKho)
             {
-                return;
-            }
-            if (soLuongMuon > this.GetSoLuongTonKho(this.gcboMaSach.SelectedValue.ToString()))
-            {
-
-                string text = "Số lượng sách mượn vượt quá sách còn lại ";
-                string caption = "Thông báo";
-                MessageDialogButtons button = MessageDialogButtons.OK;
-                MessageDialogIcon icon = MessageDialogIcon.Warning;
-                new frmMain().Msgbox(text, caption, button, icon);
-                return;
+                if(slTonKho==0)
+                {
+                    string text = "Sách đã hết không thể thêm";
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Warning;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                }
+                else
+                {
+                    string text = "Số lượng sách mượn vượt quá sách còn lại ";
+                    string caption = "Thông báo";
+                    MessageDialogButtons button = MessageDialogButtons.OK;
+                    MessageDialogIcon icon = MessageDialogIcon.Warning;
+                    new frmMain().Msgbox(text, caption, button, icon);
+                }
+                 return;
             }
             var sach = this.sachCtrl.FindByKey(this.gcboMaSach.SelectedValue.ToString());
+           
             ChiTietPhieuMuon ctPhieuMuon = new ChiTietPhieuMuon
             {
                 MaPhieuMuon = this.gtxtMaPhieu.Text,
@@ -309,14 +313,15 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             var sach = this.sachCtrl.FindByKey(gcboMaSach.Text);
             if (sach == null) return 0;
             int slCon = sach.SoLuong;
-            foreach (var ct in this.ctPhieuMuons)
+            if (this.phieuMuon == null)
             {
-                if (ct.MaSach != sach.MaSach) continue;
-                slCon -= ct.SoLuongMuon;
+                foreach (var ct in this.ctPhieuMuons)
+                {
+                    if (ct.MaSach != sach.MaSach) continue;
+                    slCon -= ct.SoLuongMuon;
+                }
             }
-            if (sach != null)
-                return slCon;
-            return 0;
+           return slCon;
         }
 
         private void gdgvSach_CellClick(object sender, DataGridViewCellEventArgs e)

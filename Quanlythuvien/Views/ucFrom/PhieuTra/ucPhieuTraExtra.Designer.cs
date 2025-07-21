@@ -398,6 +398,7 @@
             gcboMaPhieuMuon.ShadowDecoration.CustomizableEdges = customizableEdges12;
             gcboMaPhieuMuon.Size = new Size(171, 36);
             gcboMaPhieuMuon.TabIndex = 52;
+            gcboMaPhieuMuon.SelectedIndexChanged += gcboMaPhieuMuon_SelectedIndexChanged;
             gcboMaPhieuMuon.SelectedValueChanged += gcboMaPhieuMuon_SelectedValueChanged;
             // 
             // guna2HtmlLabel3

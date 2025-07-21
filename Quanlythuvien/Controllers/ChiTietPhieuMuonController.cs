@@ -16,6 +16,10 @@ namespace Quanlythuvien.Controllers
         }
         public bool TraSach(string maPhieuMuon, string maSach)
         {
+            var ctPhieuMuon = this.GetByKey(maPhieuMuon, maSach);
+            var sach = new SachController().FindByKey(maSach);
+            sach.SoLuong += ctPhieuMuon.SoLuongMuon;
+            new SachController().Update(sach);
            return ((ChiTietPhieuMuonDAO)dao).TraSach(maPhieuMuon,maSach);
         }
         public ChiTietPhieuMuon GetByKey(string maPhieuMuon,string maSach)
