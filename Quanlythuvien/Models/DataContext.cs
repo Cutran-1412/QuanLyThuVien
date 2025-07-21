@@ -29,7 +29,7 @@ namespace Quanlythuvien.Models
             String sqlcu = "Data Source=ADMIN-PC\\SQLEXPRESS;Initial Catalog=Quanlythuvien;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
             String sqlCuong = "";
             String sqlChien = "Data Source=MSI\\SQLSERVER;Initial Catalog=qlthuvien;Integrated Security=True";
-            optionsBuilder.UseSqlServer(sqlChien);
+            optionsBuilder.UseSqlServer(sqlcu);
         }
         private void Seed_Admin(ModelBuilder modelBuilder)
         {
@@ -110,7 +110,7 @@ namespace Quanlythuvien.Models
         }
         private void Seed_ChiTietPhieuTra(ModelBuilder modelBuilder)
         {
-         
+           
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
