@@ -396,7 +396,7 @@
             gtxtUsername.IconLeft = (Image)resources.GetObject("gtxtUsername.IconLeft");
             gtxtUsername.Location = new Point(72, 140);
             gtxtUsername.Name = "gtxtUsername";
-            gtxtUsername.PlaceholderText = "User name";
+            gtxtUsername.PlaceholderText = "Username";
             gtxtUsername.SelectedText = "";
             gtxtUsername.ShadowDecoration.CustomizableEdges = customizableEdges20;
             gtxtUsername.Size = new Size(241, 29);
@@ -418,7 +418,7 @@
             gtxtPassword.IconLeft = (Image)resources.GetObject("gtxtPassword.IconLeft");
             gtxtPassword.Location = new Point(72, 210);
             gtxtPassword.Name = "gtxtPassword";
-            gtxtPassword.PlaceholderText = "Pass word";
+            gtxtPassword.PlaceholderText = "Password";
             gtxtPassword.SelectedText = "";
             gtxtPassword.ShadowDecoration.CustomizableEdges = customizableEdges22;
             gtxtPassword.Size = new Size(241, 29);
