@@ -37,14 +37,14 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         {
             this.LoadMaDocGiaTimKiem(new DocGiaController().Get_DocGia());
             this.LoadPhieuMuon(this.phieuMuonCtrl.GetData());
-           
+
         }
         private void LoadPhieuMuon(List<Models.PhieuMuons.PhieuMuon> pms)
         {
             this.dgvPhieuMuon.DataSource = pms;
             this.dgvPhieuMuon.Columns["DocGia"].Visible = false;
             this.dgvPhieuMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-
+            
         }
         private void LoadMaDocGiaTimKiem(List<DocGia> dgs)
         {
@@ -56,7 +56,16 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         }
         private void gbtnThongtin_Click(object sender, EventArgs e)
         {
-            if (this.dgvPhieuMuon.CurrentRow == null) return;
+            if (this.dgvPhieuMuon.CurrentRow == null)
+            {
+                string text ="Vui lòng chọn phiếu mượn để xem thông tin chi tiết";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Information;
+                new frmMain().Msgbox(text, caption, button, icon);
+                return;
+            }
+
             int row = this.dgvPhieuMuon.CurrentRow.Index;
             string maPhieu = this.dgvPhieuMuon.Rows[row].Cells[0].Value.ToString();
             Quanlythuvien.Models.PhieuMuons.PhieuMuon phieuMuon = this.phieuMuonCtrl.FindByKey(maPhieu);
@@ -105,7 +114,13 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         {
             if (this.gcboTimKiem.DataSource == null) return;
             var maDocgia = this.gcboTimKiem.SelectedValue.ToString();
-            this.LoadPhieuMuon(this.phieuMuonCtrl.Search("Mã độc giả",maDocgia));
+            this.LoadPhieuMuon(this.phieuMuonCtrl.Search("Mã độc giả", maDocgia));
+        }
+
+        private void dgvPhieuMuon_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.dgvPhieuMuon.CurrentCell = null;
+            this.dgvPhieuMuon.ClearSelection();
         }
     }
 }

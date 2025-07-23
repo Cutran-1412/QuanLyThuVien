@@ -25,7 +25,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             gdgvPhieuTra.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             this.LoadCboTimKiem(this.phieuMuonCtrl.GetData());
         }
-     
+
         private void LoadDSPhieuTra(List<Models.PhieuTras.PhieuTra> pts)
         {
             if (pts == null) return;
@@ -35,21 +35,29 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         private void ucPhieuTra_Load(object sender, EventArgs e)
         {
             LoadDSPhieuTra(this.phieuTraCtrl.GetData());
-          
+
         }
         private void LoadCboTimKiem(List<Models.PhieuMuons.PhieuMuon> pms)
         {
-            pms.Insert(0,new Models.PhieuMuons.PhieuMuon { MaPhieuMuon = "Tất cả" });
-            this.gcboTimKiem.DropDownHeight = this.gcboTimKiem.ItemHeight*5;
-            this.gcboTimKiem.DataSource = pms;  
+            pms.Insert(0, new Models.PhieuMuons.PhieuMuon { MaPhieuMuon = "Tất cả" });
+            this.gcboTimKiem.DropDownHeight = this.gcboTimKiem.ItemHeight * 5;
+            this.gcboTimKiem.DataSource = pms;
             this.gcboTimKiem.DisplayMember = "MaPhieuMuon";
             this.gcboTimKiem.ValueMember = "MaPhieuMuon";
-            
+
         }
 
         private void gbtnThongtin_Click(object sender, EventArgs e)
         {
-            if (this.gdgvPhieuTra.CurrentRow == null) return;
+            if (this.gdgvPhieuTra.CurrentRow == null)
+            {
+                string text = "Vui lòng chọn phiếu trả để xem thông tin chi tiết";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Information;
+                new frmMain().Msgbox(text, caption, button, icon);
+                return;
+            }
             int row = this.gdgvPhieuTra.CurrentRow.Index;
 
             string maPhieu = this.gdgvPhieuTra.Rows[row].Cells[0].Value.ToString();
@@ -100,7 +108,18 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         {
             if (this.gcboTimKiem.DataSource == null) return;
             var maPhieuMuon = this.gcboTimKiem.SelectedValue;
-            this.LoadDSPhieuTra(this.phieuTraCtrl.Search("MaPhieuMuon",maPhieuMuon.ToString()));
+            this.LoadDSPhieuTra(this.phieuTraCtrl.Search("MaPhieuMuon", maPhieuMuon.ToString()));
+        }
+
+        private void gdgvPhieuTra_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            this.gdgvPhieuTra.CurrentCell = null;
+            this.gdgvPhieuTra.ClearSelection();
+        }
+
+        private void gbtnlaydulieu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -42,6 +42,7 @@ namespace Quanlythuvien.Views.ucFrom.ThongKe
             dtsachquahan.Columns["TenSach"].Visible = false;
             dtsachquahan.Columns["soLuongTra"].Visible = false;
             dtsachquahan.Columns["Sach"].Visible = false;
+            dtsachquahan.Columns["PhieuTra"].Visible = false;
             dtsachquahan.CellBorderStyle = DataGridViewCellBorderStyle.Single;
         }
         private void ucThongKe_Load(object sender, EventArgs e)

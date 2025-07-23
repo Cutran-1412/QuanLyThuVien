@@ -246,21 +246,11 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 
             }
 
-            this.TinhTienPhat();
-
-        }
-        private void TinhTienPhat()
-        {
-            var phieuMuon = this.phieuMuonCtrl.FindByKey(this.gcboMaPhieuMuon.SelectedValue.ToString());
-            int soNgayTre = (this.gdtpNgaytra.Value - phieuMuon.NgayPhaiTra).Days;
-            float tienPhatMoiQuyen = 1000;
-            // int slMuon = int.Parse(this.gtxtSlMuon.Text);
-            //  this.gtxtTienphat.Text = (soNgayTre * tienPhatMoiQuyen * slMuon).ToString();
         }
 
         private void gbtnTraSach_Click(object sender, EventArgs e)
         {
-            if(this.gcboMaPhieuMuon.SelectedValue== null)
+            if (this.gcboMaPhieuMuon.SelectedValue == null)
             {
                 string text = "Vui lòng chọn phiếu mượn";
                 string caption = "Thông báo";
@@ -360,6 +350,11 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 this.ctPhieuMuons.Clear();
                 this.LoadDanhSachMuon(this.ctPhieuMuons);
             }
+        }
+
+        private void dgvDanhSachMuon_CellBorderStyleChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

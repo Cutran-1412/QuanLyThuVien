@@ -327,6 +327,7 @@
             dgvDanhSachMuon.ThemeStyle.RowsStyle.Height = 40;
             dgvDanhSachMuon.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dgvDanhSachMuon.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            dgvDanhSachMuon.CellBorderStyleChanged += dgvDanhSachMuon_CellBorderStyleChanged;
             dgvDanhSachMuon.CellClick += dgvDanhSachMuon_CellClick;
             dgvDanhSachMuon.CellContentClick += dgvDanhSachMuon_CellContentClick;
             dgvDanhSachMuon.DataBindingComplete += dgvDanhSachMuon_DataBindingComplete;

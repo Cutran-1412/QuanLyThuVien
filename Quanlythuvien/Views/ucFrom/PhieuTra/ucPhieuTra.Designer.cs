@@ -111,7 +111,7 @@
             gbtnlaydulieu.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnlaydulieu.Image = (Image)resources.GetObject("gbtnlaydulieu.Image");
             gbtnlaydulieu.ImageAlign = HorizontalAlignment.Left;
-            gbtnlaydulieu.Location = new Point(31, 364);
+            gbtnlaydulieu.Location = new Point(31, 320);
             gbtnlaydulieu.Name = "gbtnlaydulieu";
             gbtnlaydulieu.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnlaydulieu.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -119,6 +119,7 @@
             gbtnlaydulieu.Size = new Size(153, 40);
             gbtnlaydulieu.TabIndex = 9;
             gbtnlaydulieu.Text = "Làm mới";
+            gbtnlaydulieu.Click += gbtnlaydulieu_Click;
             // 
             // gcboTimKiem
             // 
@@ -133,7 +134,7 @@
             gcboTimKiem.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             gcboTimKiem.ForeColor = Color.FromArgb(68, 88, 112);
             gcboTimKiem.ItemHeight = 30;
-            gcboTimKiem.Location = new Point(31, 439);
+            gcboTimKiem.Location = new Point(31, 430);
             gcboTimKiem.Name = "gcboTimKiem";
             gcboTimKiem.ShadowDecoration.CustomizableEdges = customizableEdges4;
             gcboTimKiem.Size = new Size(153, 36);
@@ -156,7 +157,7 @@
             gbtnthem.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnthem.Image = (Image)resources.GetObject("gbtnthem.Image");
             gbtnthem.ImageAlign = HorizontalAlignment.Left;
-            gbtnthem.Location = new Point(31, 227);
+            gbtnthem.Location = new Point(31, 210);
             gbtnthem.Name = "gbtnthem";
             gbtnthem.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnthem.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -182,7 +183,7 @@
             gbtnThongtin.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnThongtin.Image = (Image)resources.GetObject("gbtnThongtin.Image");
             gbtnThongtin.ImageAlign = HorizontalAlignment.Left;
-            gbtnThongtin.Location = new Point(31, 92);
+            gbtnThongtin.Location = new Point(31, 100);
             gbtnThongtin.Name = "gbtnThongtin";
             gbtnThongtin.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnThongtin.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -269,6 +270,7 @@
             gdgvPhieuTra.ThemeStyle.RowsStyle.Height = 40;
             gdgvPhieuTra.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             gdgvPhieuTra.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            gdgvPhieuTra.DataBindingComplete += gdgvPhieuTra_DataBindingComplete;
             // 
             // ucPhieuTra
             // 

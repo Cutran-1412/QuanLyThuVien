@@ -233,7 +233,6 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtdsdangmuon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dtdsdangmuon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtdsdangmuon.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Highlight;
