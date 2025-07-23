@@ -84,7 +84,7 @@
             guna2GroupBox1.Name = "guna2GroupBox1";
             guna2GroupBox1.Padding = new Padding(10);
             guna2GroupBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2GroupBox1.Size = new Size(508, 262);
+            guna2GroupBox1.Size = new Size(508, 233);
             guna2GroupBox1.TabIndex = 2;
             guna2GroupBox1.Text = "Sách";
             // 
@@ -93,7 +93,7 @@
             glblsoluongsachdangmuon.BackColor = Color.Transparent;
             glblsoluongsachdangmuon.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glblsoluongsachdangmuon.ForeColor = Color.Black;
-            glblsoluongsachdangmuon.Location = new Point(13, 127);
+            glblsoluongsachdangmuon.Location = new Point(13, 119);
             glblsoluongsachdangmuon.Name = "glblsoluongsachdangmuon";
             glblsoluongsachdangmuon.Size = new Size(238, 27);
             glblsoluongsachdangmuon.TabIndex = 4;
@@ -104,7 +104,7 @@
             glblsoluongsachcon.BackColor = Color.Transparent;
             glblsoluongsachcon.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glblsoluongsachcon.ForeColor = Color.Black;
-            glblsoluongsachcon.Location = new Point(10, 173);
+            glblsoluongsachcon.Location = new Point(13, 153);
             glblsoluongsachcon.Name = "glblsoluongsachcon";
             glblsoluongsachcon.Size = new Size(166, 27);
             glblsoluongsachcon.TabIndex = 3;
@@ -115,7 +115,7 @@
             glbltongiatri.BackColor = Color.Transparent;
             glbltongiatri.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glbltongiatri.ForeColor = Color.Black;
-            glbltongiatri.Location = new Point(13, 222);
+            glbltongiatri.Location = new Point(13, 193);
             glbltongiatri.Name = "glbltongiatri";
             glbltongiatri.Size = new Size(107, 27);
             glbltongiatri.TabIndex = 2;
@@ -126,7 +126,7 @@
             glblsoluongsach.BackColor = Color.Transparent;
             glblsoluongsach.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glblsoluongsach.ForeColor = Color.Black;
-            glblsoluongsach.Location = new Point(10, 94);
+            glblsoluongsach.Location = new Point(13, 86);
             glblsoluongsach.Name = "glblsoluongsach";
             glblsoluongsach.Size = new Size(128, 27);
             glblsoluongsach.TabIndex = 1;
@@ -137,7 +137,7 @@
             glbldausach.BackColor = Color.Transparent;
             glbldausach.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glbldausach.ForeColor = Color.Black;
-            glbldausach.Location = new Point(13, 43);
+            glbldausach.Location = new Point(12, 53);
             glbldausach.Name = "glbldausach";
             glbldausach.Size = new Size(167, 27);
             glbldausach.TabIndex = 0;
@@ -161,7 +161,7 @@
             guna2GroupBox2.Name = "guna2GroupBox2";
             guna2GroupBox2.Padding = new Padding(10);
             guna2GroupBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2GroupBox2.Size = new Size(539, 262);
+            guna2GroupBox2.Size = new Size(539, 233);
             guna2GroupBox2.TabIndex = 3;
             guna2GroupBox2.Text = "Độc giả";
             // 
@@ -170,7 +170,7 @@
             glbltongtraquahan.BackColor = Color.Transparent;
             glbltongtraquahan.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glbltongtraquahan.ForeColor = Color.Black;
-            glbltongtraquahan.Location = new Point(23, 153);
+            glbltongtraquahan.Location = new Point(23, 119);
             glbltongtraquahan.Name = "glbltongtraquahan";
             glbltongtraquahan.Size = new Size(200, 27);
             glbltongtraquahan.TabIndex = 3;
@@ -181,7 +181,7 @@
             glbltongtien.BackColor = Color.Transparent;
             glbltongtien.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glbltongtien.ForeColor = Color.Black;
-            glbltongtien.Location = new Point(23, 206);
+            glbltongtien.Location = new Point(23, 153);
             glbltongtien.Name = "glbltongtien";
             glbltongtien.Size = new Size(134, 27);
             glbltongtien.TabIndex = 2;
@@ -192,7 +192,7 @@
             glbltongphieudangmuon.BackColor = Color.Transparent;
             glbltongphieudangmuon.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             glbltongphieudangmuon.ForeColor = Color.Black;
-            glbltongphieudangmuon.Location = new Point(23, 97);
+            glbltongphieudangmuon.Location = new Point(23, 86);
             glbltongphieudangmuon.Name = "glbltongphieudangmuon";
             glbltongphieudangmuon.Size = new Size(215, 27);
             glbltongphieudangmuon.TabIndex = 1;
@@ -220,11 +220,11 @@
             guna2GroupBox3.FillColor = Color.Transparent;
             guna2GroupBox3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2GroupBox3.ForeColor = Color.White;
-            guna2GroupBox3.Location = new Point(16, 275);
+            guna2GroupBox3.Location = new Point(16, 242);
             guna2GroupBox3.Name = "guna2GroupBox3";
             guna2GroupBox3.Padding = new Padding(10);
             guna2GroupBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2GroupBox3.Size = new Size(508, 262);
+            guna2GroupBox3.Size = new Size(508, 295);
             guna2GroupBox3.TabIndex = 5;
             guna2GroupBox3.Text = "DS Sách đang mượn";
             // 
@@ -260,7 +260,7 @@
             dtdsdangmuon.RowHeadersVisible = false;
             dtdsdangmuon.RowHeadersWidth = 51;
             dtdsdangmuon.RowTemplate.Height = 25;
-            dtdsdangmuon.Size = new Size(488, 202);
+            dtdsdangmuon.Size = new Size(488, 235);
             dtdsdangmuon.TabIndex = 1;
             dtdsdangmuon.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtdsdangmuon.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -295,11 +295,11 @@
             guna2GroupBox4.FillColor = Color.Transparent;
             guna2GroupBox4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             guna2GroupBox4.ForeColor = Color.White;
-            guna2GroupBox4.Location = new Point(539, 271);
+            guna2GroupBox4.Location = new Point(539, 242);
             guna2GroupBox4.Name = "guna2GroupBox4";
             guna2GroupBox4.Padding = new Padding(10);
             guna2GroupBox4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2GroupBox4.Size = new Size(539, 262);
+            guna2GroupBox4.Size = new Size(539, 291);
             guna2GroupBox4.TabIndex = 6;
             guna2GroupBox4.Text = "DS Sách trả quá hạn";
             // 
@@ -335,7 +335,7 @@
             dtsachquahan.RowHeadersVisible = false;
             dtsachquahan.RowHeadersWidth = 51;
             dtsachquahan.RowTemplate.Height = 25;
-            dtsachquahan.Size = new Size(519, 202);
+            dtsachquahan.Size = new Size(519, 231);
             dtsachquahan.TabIndex = 1;
             dtsachquahan.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dtsachquahan.ThemeStyle.AlternatingRowsStyle.Font = null;
