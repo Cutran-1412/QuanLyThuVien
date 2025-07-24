@@ -86,7 +86,7 @@ namespace Quanlythuvien.Views
             };
             return msg.Show();
         }
-        public bool Check_Null(Guna2TextBox txtbox,string text)
+        public bool Check_Null(Guna2TextBox txtbox, string text)
         {
             if (string.IsNullOrEmpty(txtbox.Text))
             {
@@ -224,6 +224,23 @@ namespace Quanlythuvien.Views
         private void pcodeby_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            string text = "Bạn chắc chắn muốn thoát chương trình?";
+            string caption = "Xác nhận";
+            MessageDialogButtons button = MessageDialogButtons.OKCancel;
+            MessageDialogIcon icon = MessageDialogIcon.Question;
+            if (Msgbox(text, caption, button, icon) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

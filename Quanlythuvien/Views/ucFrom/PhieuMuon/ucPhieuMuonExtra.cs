@@ -60,7 +60,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         private void LoadDtp()
         {
             this.gdtpNgayMuon.Value = DateTime.Now;
-            this.gdtpNgayHenTra.Value = DateTime.Now;
+            this.gdtpNgayHenTra.Value = DateTime.Now.AddDays(15);
         }
         private void LoadMaSach()
         {
