@@ -120,7 +120,7 @@ namespace Quanlythuvien.Views
                 }
                 else if (new AdminController().Check_TaiKhoan_Admin(ad))
                 {
-                    string text = "Đăng nhập thành công với quyền Admin !";
+                    string text = "Đăng nhập thành công với quyền Thủ thư !";
                     string caption = "Thông báo";
                     MessageDialogButtons button = MessageDialogButtons.OK;
                     MessageDialogIcon icon = MessageDialogIcon.Information;
