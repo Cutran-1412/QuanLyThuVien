@@ -68,6 +68,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             this.gcboMaSach.DataSource = this.sachCtrl.GetData();
             this.gcboMaSach.DisplayMember = "MaSach";
             this.gcboMaSach.ValueMember = "MaSach";
+            this.gcboMaSach.SelectedIndex = -1;
         }
         private void SetReadOnly()
         {
@@ -154,7 +155,9 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
             this.gcboMaDG.DisplayMember = "MaDocGia";
             this.gcboMaDG.ValueMember = "MaDocGia";
             this.gcboMaDG.DropDownHeight = this.gcboMaDG.ItemHeight * 5;
-            this.gcboMaDG.SelectedIndex = -1;   
+            this.gcboMaDG.SelectedIndex = -1;
+            
+
         }
 
         private void gbtnLuu_Click(object sender, EventArgs e)
