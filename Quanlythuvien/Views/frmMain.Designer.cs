@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             lblchao = new Label();
             timethoigian = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
@@ -46,6 +47,8 @@
             pcodeby = new Panel();
             lblcodeby = new Label();
             panel2 = new Panel();
+            btnMinimize = new Button();
+            btnExit = new Button();
             panel3 = new Panel();
             lblthoigian = new Label();
             timerChayChu = new System.Windows.Forms.Timer(components);
@@ -297,7 +300,7 @@
             ibtnthoat.Name = "ibtnthoat";
             ibtnthoat.Size = new Size(240, 54);
             ibtnthoat.TabIndex = 8;
-            ibtnthoat.Text = "Thoát";
+            ibtnthoat.Text = "Đăng xuất";
             ibtnthoat.UseCompatibleTextRendering = true;
             ibtnthoat.UseVisualStyleBackColor = false;
             ibtnthoat.Click += ibtnthoat_Click;
@@ -347,11 +350,41 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 101, 248);
+            panel2.Controls.Add(btnMinimize);
+            panel2.Controls.Add(btnExit);
             panel2.Controls.Add(lblchao);
             panel2.Location = new Point(239, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(1101, 65);
             panel2.TabIndex = 13;
+            // 
+            // btnMinimize
+            // 
+            btnMinimize.FlatAppearance.BorderSize = 0;
+            btnMinimize.FlatStyle = FlatStyle.Flat;
+            btnMinimize.Image = (Image)resources.GetObject("btnMinimize.Image");
+            btnMinimize.Location = new Point(992, 9);
+            btnMinimize.Margin = new Padding(0);
+            btnMinimize.Name = "btnMinimize";
+            btnMinimize.Size = new Size(50, 35);
+            btnMinimize.TabIndex = 3;
+            btnMinimize.UseVisualStyleBackColor = true;
+            btnMinimize.Click += btnMinimize_Click;
+            // 
+            // btnExit
+            // 
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(196, 43, 28);
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.ForeColor = SystemColors.ControlText;
+            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
+            btnExit.Location = new Point(1042, 0);
+            btnExit.Margin = new Padding(0);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(59, 49);
+            btnExit.TabIndex = 1;
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // panel3
             // 
@@ -438,5 +471,7 @@
         private FontAwesome.Sharp.IconButton ibtnmuontra;
         private FontAwesome.Sharp.IconButton ibtnsach;
         private FontAwesome.Sharp.IconButton ibtndocgia;
+        private Button btnExit;
+        private Button btnMinimize;
     }
 }

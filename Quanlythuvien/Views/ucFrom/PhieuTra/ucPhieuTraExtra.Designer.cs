@@ -122,6 +122,7 @@
             gdgvDanhSachTra.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             gdgvDanhSachTra.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            gdgvDanhSachTra.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             gdgvDanhSachTra.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Highlight;

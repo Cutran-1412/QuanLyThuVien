@@ -60,15 +60,17 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         private void LoadDtp()
         {
             this.gdtpNgayMuon.Value = DateTime.Now;
-            this.gdtpNgayHenTra.Value = DateTime.Now;
+            this.gdtpNgayHenTra.Value = DateTime.Now.AddDays(15);
         }
         private void LoadMaSach()
         {
+            this.gcboMaSach.SelectedIndexChanged -= this.gcboMaSach_SelectedIndexChanged;
             this.gcboMaSach.DropDownHeight = this.gcboMaSach.ItemHeight * 5;
             this.gcboMaSach.DataSource = this.sachCtrl.GetData();
             this.gcboMaSach.DisplayMember = "MaSach";
             this.gcboMaSach.ValueMember = "MaSach";
             this.gcboMaSach.SelectedIndex = -1;
+            this.gcboMaSach.SelectedIndexChanged += this.gcboMaSach_SelectedIndexChanged;
         }
         private void SetReadOnly()
         {
@@ -228,6 +230,15 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         }
         private void gbtnThemSach_Click(object sender, EventArgs e)
         {
+            if (this.gcboMaSach.SelectedValue == null)
+            {
+                string text = "Vui lòng chọn mã sách";
+                string caption = "Thông báo";
+                MessageDialogButtons button = MessageDialogButtons.OK;
+                MessageDialogIcon icon = MessageDialogIcon.Error;
+                new frmMain().Msgbox(text, caption, button, icon);
+                return;
+            }
             int soLuongMuon;
 
             if (!new frmMain().Check_Null(gtxtSoLuongMuon, "Vui lòng nhập số lượng"))
@@ -303,6 +314,17 @@ namespace Quanlythuvien.Views.ucFrom.PhieuMuon
         private void gcboMaSach_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.UpdateSoLuongTonKho();
+            var maSach = this.gcboMaSach.SelectedValue.ToString();
+            this.LoadTenSach(maSach);
+        }
+        private void LoadTenSach(string maSach)
+        {
+            if (maSach is string)
+            {
+                var sach = this.sachCtrl.FindByKey(maSach);
+                this.txtTenSach.Text = sach.TenSach;
+            }
+            
         }
         private void UpdateSoLuongTonKho()
         {

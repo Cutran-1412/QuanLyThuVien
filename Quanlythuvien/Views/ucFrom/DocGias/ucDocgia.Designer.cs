@@ -282,7 +282,7 @@
             dtDocgia.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dtDocgia.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dtDocgia.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
@@ -292,11 +292,11 @@
             dtDocgia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtDocgia.ColumnHeadersHeight = 30;
             dtDocgia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 255, 204);
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtDocgia.DefaultCellStyle = dataGridViewCellStyle3;
@@ -307,7 +307,7 @@
             dtDocgia.ReadOnly = true;
             dtDocgia.RowHeadersVisible = false;
             dtDocgia.RowHeadersWidth = 51;
-            dtDocgia.RowTemplate.Height = 25;
+            dtDocgia.RowTemplate.Height = 40;
             dtDocgia.Size = new Size(831, 445);
             dtDocgia.TabIndex = 0;
             dtDocgia.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -328,7 +328,7 @@
             dtDocgia.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dtDocgia.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtDocgia.ThemeStyle.RowsStyle.ForeColor = Color.White;
-            dtDocgia.ThemeStyle.RowsStyle.Height = 25;
+            dtDocgia.ThemeStyle.RowsStyle.Height = 40;
             dtDocgia.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtDocgia.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 

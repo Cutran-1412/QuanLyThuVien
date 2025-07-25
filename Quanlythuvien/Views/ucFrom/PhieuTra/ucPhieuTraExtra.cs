@@ -30,7 +30,17 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         {
             InitializeComponent();
             this.phieuTra = phieutra;
+            this.ctPhieuTras.ListChanged += CtPhieuTras_ListChanged;
 
+        }
+
+        private void CtPhieuTras_ListChanged(object? sender, ListChangedEventArgs e)
+        {
+            if (this.ctPhieuTras == null || this.ctPhieuTras.Count == 0)
+            {
+                this.gcboMaPhieuMuon.Enabled = true;
+            }
+            else { this.gcboMaPhieuMuon.Enabled = false; }
 
         }
 
@@ -50,7 +60,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
 
                 this.ctPhieuTras = new BindingList<ChiTietPhieuTra>(this.phieuTra.ChiTietPhieuTras);
 
-                this.LoadDanhSachTra(new BindingList<ChiTietPhieuTra>(this.ctPhieuTraCtrl.Search("Mã phiếu mượn", this.phieuTra.MaPhieuMuon)));
+                this.LoadDanhSachTra(ctPhieuTras);
 
             }
             else
@@ -181,7 +191,8 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
         private void LoadDanhSachTra(BindingList<ChiTietPhieuTra> cts)
         {
             this.gdgvDanhSachTra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.gdgvDanhSachTra.AlternatingRowsDefaultCellStyle = null;
+            this.gdgvDanhSachTra.AlternatingRowsDefaultCellStyle = new() ;
+            gdgvDanhSachTra.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             this.gdgvDanhSachTra.DataSource = cts;
             this.gdgvDanhSachTra.Columns["MaPhieuTra"].Visible = false;
             this.gdgvDanhSachTra.Columns["PhieuTra"].Visible = false;
@@ -202,7 +213,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
             colButton.DefaultCellStyle.ForeColor = Color.White;                   // chữ trắng
             colButton.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 180, 130); // khi chọn
             colButton.DefaultCellStyle.SelectionForeColor = Color.White;
-
+                
             if (this.gdgvDanhSachTra.Columns["btnXoa"] == null && this.phieuTra == null)
             {
                 this.gdgvDanhSachTra.Columns.Add(colButton);
@@ -221,7 +232,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 var sach = sachCtrl.FindByKey(this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString());
                 var phieuMuon = this.phieuMuonCtrl.FindByKey(this.gcboMaPhieuMuon.SelectedValue.ToString());
                 int soNgayTre = (this.gdtpNgaytra.Value - phieuMuon.NgayPhaiTra).Days;
-
+                if(soNgayTre <0) soNgayTre = 0;
                 var ctPhieuTra = new ChiTietPhieuTra
                 {
                     MaPhieuTra = this.gtxtMaPhieuTra.Text,

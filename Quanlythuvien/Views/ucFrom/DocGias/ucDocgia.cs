@@ -65,7 +65,7 @@ namespace Quanlythuvien.Views.ucFrom
             dtDocgia.Columns["Email"].Visible = false;
             dtDocgia.Columns["SoSachMuonToiDa"].Visible = false;
             dtDocgia.Columns["PhieuMuon"].Visible = false;
-            Load_Bang();
+           Load_Bang();
         }
         private void ucDocgia_Load(object sender, EventArgs e)
         {

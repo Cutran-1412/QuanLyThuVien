@@ -9,61 +9,168 @@ namespace UnitTestProject1
     [TestClass]
     public class UnitTest1
     {
-        private WindowsDriver<WindowsElement> mainSession;
-        [TestInitialize]
-        public void Setup()
+        private static WindowsDriver<WindowsElement> mainSession;
+
+        [ClassInitialize]
+        public static void ClassInit(TestContext context)
         {
-            Login();
+            var sesison = GetSession();
+            Login(sesison);
             mainSession = GetMainFormSession();
         }
-        [TestCleanup]
-        public void Cleanup()
+
+        [ClassCleanup]
+        public static void ClassCleanup()
         {
             mainSession?.Quit();
         }
         [TestMethod]
-        public void TestBorrow()
+        public void TestBorrow1()
         {
 
             var btnMuontra = mainSession.FindElementByAccessibilityId("ibtnmuontra");
             btnMuontra.Click();
-            Thread.Sleep(100);
+            Thread.Sleep(1000);
             var btnBorrow = mainSession.FindElementByAccessibilityId("ibtnmuon");
-            btnBorrow.Click(); Thread.Sleep(100);
+            btnBorrow.Click(); Thread.Sleep(1000);
             var btnTao = mainSession.FindElementByAccessibilityId("gbtnTaoPhieuMuon");
-            btnTao.Click(); Thread.Sleep(100);
+            btnTao.Click(); Thread.Sleep(1000);
             // dociga
             var gcboMaDG = mainSession.FindElementByAccessibilityId("gcboMaDG");
-            gcboMaDG.Click(); Thread.Sleep(100);
-            var dg01 = mainSession.FindElementByName("DG001");
+            gcboMaDG.Click(); Thread.Sleep(1000);
+            var dg01 = mainSession.FindElementByName("DG003");
             dg01.Click();
-
+            Thread.Sleep(1000);
             //sach
             var gcboMaSach = mainSession.FindElementByAccessibilityId("gcboMaSach");
             gcboMaSach.Click();
             var S001 = mainSession.FindElementByName("S001");
             S001.Click();
-
+            Thread.Sleep(1000);
             //soluong
             var txtSL = mainSession.FindElementByAccessibilityId("gtxtSoLuongMuon");
             txtSL.Click();
             txtSL.SendKeys("1");
-
+            Thread.Sleep(1000);
             //them
             var btnThemSach = mainSession.FindElementByAccessibilityId("gbtnThemSach");
             btnThemSach.Click();
-            Thread.Sleep(100);
+            Thread.Sleep(3000);
             //luu 
             var btnLuu = mainSession.FindElementByAccessibilityId("gbtnLuu");
             btnLuu.Click();
 
-            var mess = mainSession.FindElementByName("Đã thêm phiếu mượn thành công");
-            Assert.IsNotNull(mess, "Không thấy thông báo thành công ");
+            IsBorrow1Pass();
         }
-
-        public void Login()
+        [TestMethod]
+        public void TestBorrow2()
         {
-            var session = GetSession();
+            Thread.Sleep(3000);
+            var btnTao = mainSession.FindElementByAccessibilityId("gbtnTaoPhieuMuon");
+            btnTao.Click(); Thread.Sleep(1000);
+         
+            //sach
+            var gcboMaSach = mainSession.FindElementByAccessibilityId("gcboMaSach");
+            gcboMaSach.Click();
+            var S001 = mainSession.FindElementByName("S001");
+            S001.Click();
+            Thread.Sleep(1000);
+            //soluong
+            var txtSL = mainSession.FindElementByAccessibilityId("gtxtSoLuongMuon");
+            txtSL.Click();
+            txtSL.SendKeys("1");
+            Thread.Sleep(2000);
+            //them
+            var btnThemSach = mainSession.FindElementByAccessibilityId("gbtnThemSach");
+            btnThemSach.Click();
+            Thread.Sleep(1000);
+            //luu 
+            var btnLuu = mainSession.FindElementByAccessibilityId("gbtnLuu");
+            btnLuu.Click();
+
+            IsBorrow2Pass();
+        }
+        [TestMethod]
+        public void TestBorrow3()
+        {
+            Thread.Sleep(3000);
+            var btnBorrow = mainSession.FindElementByAccessibilityId("ibtnmuon");
+            btnBorrow.Click(); Thread.Sleep(1000);
+            var btnTao = mainSession.FindElementByAccessibilityId("gbtnTaoPhieuMuon");
+            btnTao.Click(); Thread.Sleep(1000);
+            // dociga
+            var gcboMaDG = mainSession.FindElementByAccessibilityId("gcboMaDG");
+            gcboMaDG.Click(); Thread.Sleep(1000);
+            var dg01 = mainSession.FindElementByName("DG003");
+            dg01.Click();
+            Thread.Sleep(1000);
+            //sach
+            var gcboMaSach = mainSession.FindElementByAccessibilityId("gcboMaSach");
+            gcboMaSach.Click();
+            var S001 = mainSession.FindElementByName("S001");
+            S001.Click();
+            Thread.Sleep(1000);
+            //soluong
+            var txtSL = mainSession.FindElementByAccessibilityId("gtxtSoLuongMuon");
+            txtSL.Click();
+            txtSL.SendKeys("1");
+            Thread.Sleep(2000);
+   
+            //luu 
+            var btnLuu = mainSession.FindElementByAccessibilityId("gbtnLuu");
+            btnLuu.Click();
+
+            IsBorrow3Pass();
+        }
+        public void IsBorrow1Pass()
+        {
+            // 1. Tạo session desktop
+            var desktopOpts = new DesiredCapabilities();
+            desktopOpts.SetCapability("app", "Root");
+            var desktopSession = new WindowsDriver<WindowsElement>(
+                new Uri("http://127.0.0.1:4723"), desktopOpts);
+
+            // 2. Tìm cửa sổ chính theo tên
+            var mainWindow = desktopSession.FindElementByName("Đã thêm phiếu mượn thành công");
+          
+            Assert.IsNotNull(mainWindow);
+            Thread.Sleep(2000);
+            var okbtn = desktopSession.FindElementByName("OK");
+            okbtn.Click();
+        }
+        public void IsBorrow2Pass()
+        {
+            // 1. Tạo session desktop
+            var desktopOpts = new DesiredCapabilities();
+            desktopOpts.SetCapability("app", "Root");
+            var desktopSession = new WindowsDriver<WindowsElement>(
+                new Uri("http://127.0.0.1:4723"), desktopOpts);
+
+            // 2. Tìm cửa sổ chính theo tên (dùng Inspect.exe để lấy tên form chính)
+            var mainWindow = desktopSession.FindElementByName("Vui lòng chọn mã độc giả");
+            Thread.Sleep(2000);
+            var okbtn = desktopSession.FindElementByName("OK");
+            okbtn.Click();
+            Assert.IsNotNull(mainWindow);
+        }
+        public void IsBorrow3Pass()
+        {
+            // 1. Tạo session desktop
+            var desktopOpts = new DesiredCapabilities();
+            desktopOpts.SetCapability("app", "Root");
+            var desktopSession = new WindowsDriver<WindowsElement>(
+                new Uri("http://127.0.0.1:4723"), desktopOpts);
+
+            // 2. Tìm cửa sổ chính theo tên (dùng Inspect.exe để lấy tên form chính)
+            var mainWindow = desktopSession.FindElementByName("Chưa có sách nào được chọn");
+            Thread.Sleep(2000);
+            var okbtn = desktopSession.FindElementByName("OK");
+            okbtn.Click();
+            Assert.IsNotNull(mainWindow);
+        }
+        public static void Login(WindowsDriver<WindowsElement> session)
+        {
+
             var user = session.FindElementByAccessibilityId("gtxtUsername");
             var pass = session.FindElementByAccessibilityId("gtxtPassword");
             var btnLog = session.FindElementByAccessibilityId("gbtndangnhap");
@@ -80,7 +187,7 @@ namespace UnitTestProject1
             var okbtn = session.FindElementByName("OK");
             okbtn.Click();
         }
-        public WindowsDriver<WindowsElement> GetSession()
+        public static  WindowsDriver<WindowsElement> GetSession()
         {
             try
             {
