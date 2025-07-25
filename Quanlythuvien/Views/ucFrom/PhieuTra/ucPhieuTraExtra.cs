@@ -221,7 +221,7 @@ namespace Quanlythuvien.Views.ucFrom.PhieuTra
                 var sach = sachCtrl.FindByKey(this.dgvDanhSachMuon.Rows[index].Cells["MaSach"].Value.ToString());
                 var phieuMuon = this.phieuMuonCtrl.FindByKey(this.gcboMaPhieuMuon.SelectedValue.ToString());
                 int soNgayTre = (this.gdtpNgaytra.Value - phieuMuon.NgayPhaiTra).Days;
-
+                if(soNgayTre <0) soNgayTre = 0;
                 var ctPhieuTra = new ChiTietPhieuTra
                 {
                     MaPhieuTra = this.gtxtMaPhieuTra.Text,

@@ -211,13 +211,14 @@ namespace Quanlythuvien.Views
 
         private void ibtnthoat_Click(object sender, EventArgs e)
         {
-            string text = "Bạn chắc chắn muốn thoát chương trình?";
+            string text = "Bạn chắc chắn muốn đăng xuất?";
             string caption = "Xác nhận";
             MessageDialogButtons button = MessageDialogButtons.OKCancel;
             MessageDialogIcon icon = MessageDialogIcon.Question;
             if (Msgbox(text, caption, button, icon) == DialogResult.Yes)
             {
-                Application.Exit();
+                this.Visible = false;
+                new frmLogin().Visible = true;
             }
         }
 

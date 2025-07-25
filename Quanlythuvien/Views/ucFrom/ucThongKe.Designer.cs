@@ -230,13 +230,18 @@
             // 
             // dtdsdangmuon
             // 
+            dtdsdangmuon.AllowUserToAddRows = false;
+            dtdsdangmuon.AllowUserToDeleteRows = false;
+            dtdsdangmuon.AllowUserToOrderColumns = true;
+            dtdsdangmuon.AllowUserToResizeColumns = false;
+            dtdsdangmuon.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtdsdangmuon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtdsdangmuon.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
@@ -244,11 +249,11 @@
             dtdsdangmuon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtdsdangmuon.ColumnHeadersHeight = 50;
             dtdsdangmuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(255, 255, 204);
             dataGridViewCellStyle3.SelectionForeColor = Color.Black;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtdsdangmuon.DefaultCellStyle = dataGridViewCellStyle3;
@@ -259,7 +264,7 @@
             dtdsdangmuon.ReadOnly = true;
             dtdsdangmuon.RowHeadersVisible = false;
             dtdsdangmuon.RowHeadersWidth = 51;
-            dtdsdangmuon.RowTemplate.Height = 25;
+            dtdsdangmuon.RowTemplate.Height = 40;
             dtdsdangmuon.Size = new Size(488, 235);
             dtdsdangmuon.TabIndex = 1;
             dtdsdangmuon.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -280,7 +285,7 @@
             dtdsdangmuon.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dtdsdangmuon.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtdsdangmuon.ThemeStyle.RowsStyle.ForeColor = Color.White;
-            dtdsdangmuon.ThemeStyle.RowsStyle.Height = 25;
+            dtdsdangmuon.ThemeStyle.RowsStyle.Height = 40;
             dtdsdangmuon.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtdsdangmuon.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
@@ -305,13 +310,18 @@
             // 
             // dtsachquahan
             // 
+            dtsachquahan.AllowUserToAddRows = false;
+            dtsachquahan.AllowUserToDeleteRows = false;
+            dtsachquahan.AllowUserToOrderColumns = true;
+            dtsachquahan.AllowUserToResizeColumns = false;
+            dtsachquahan.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtsachquahan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             dtsachquahan.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle5.ForeColor = Color.White;
             dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
@@ -319,11 +329,11 @@
             dtsachquahan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dtsachquahan.ColumnHeadersHeight = 30;
             dtsachquahan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = Color.White;
             dataGridViewCellStyle6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(255, 255, 204);
             dataGridViewCellStyle6.SelectionForeColor = Color.Black;
             dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
             dtsachquahan.DefaultCellStyle = dataGridViewCellStyle6;
@@ -334,7 +344,7 @@
             dtsachquahan.ReadOnly = true;
             dtsachquahan.RowHeadersVisible = false;
             dtsachquahan.RowHeadersWidth = 51;
-            dtsachquahan.RowTemplate.Height = 25;
+            dtsachquahan.RowTemplate.Height = 40;
             dtsachquahan.Size = new Size(519, 231);
             dtsachquahan.TabIndex = 1;
             dtsachquahan.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
@@ -355,7 +365,7 @@
             dtsachquahan.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dtsachquahan.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtsachquahan.ThemeStyle.RowsStyle.ForeColor = Color.White;
-            dtsachquahan.ThemeStyle.RowsStyle.Height = 25;
+            dtsachquahan.ThemeStyle.RowsStyle.Height = 40;
             dtsachquahan.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dtsachquahan.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 

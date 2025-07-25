@@ -300,7 +300,7 @@
             ibtnthoat.Name = "ibtnthoat";
             ibtnthoat.Size = new Size(240, 54);
             ibtnthoat.TabIndex = 8;
-            ibtnthoat.Text = "Thoát";
+            ibtnthoat.Text = "Đăng xuất";
             ibtnthoat.UseCompatibleTextRendering = true;
             ibtnthoat.UseVisualStyleBackColor = false;
             ibtnthoat.Click += ibtnthoat_Click;

@@ -62,8 +62,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ggrbCnChitiet = new Guna.UI2.WinForms.Guna2GroupBox();
+            glblsoluongcon = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtTenSach = new TextBox();
             lblSoLuongMuon = new Label();
-            glblsoluongcon = new Guna.UI2.WinForms.Guna2HtmlLabel();
             gtxtSoLuongMuon = new Guna.UI2.WinForms.Guna2TextBox();
             gbtnThoat = new Guna.UI2.WinForms.Guna2Button();
             gbtnThemSach = new Guna.UI2.WinForms.Guna2Button();
@@ -109,8 +112,11 @@
             ggrbCnChitiet.BorderColor = SystemColors.Highlight;
             ggrbCnChitiet.BorderRadius = 15;
             ggrbCnChitiet.BorderThickness = 3;
-            ggrbCnChitiet.Controls.Add(lblSoLuongMuon);
             ggrbCnChitiet.Controls.Add(glblsoluongcon);
+            ggrbCnChitiet.Controls.Add(label2);
+            ggrbCnChitiet.Controls.Add(label1);
+            ggrbCnChitiet.Controls.Add(txtTenSach);
+            ggrbCnChitiet.Controls.Add(lblSoLuongMuon);
             ggrbCnChitiet.Controls.Add(gtxtSoLuongMuon);
             ggrbCnChitiet.Controls.Add(gbtnThoat);
             ggrbCnChitiet.Controls.Add(gbtnThemSach);
@@ -120,7 +126,7 @@
             ggrbCnChitiet.FillColor = Color.Transparent;
             ggrbCnChitiet.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             ggrbCnChitiet.ForeColor = Color.White;
-            ggrbCnChitiet.Location = new Point(874, 19);
+            ggrbCnChitiet.Location = new Point(874, 18);
             ggrbCnChitiet.Name = "ggrbCnChitiet";
             ggrbCnChitiet.ShadowDecoration.CustomizableEdges = customizableEdges10;
             ggrbCnChitiet.Size = new Size(204, 504);
@@ -129,28 +135,56 @@
             ggrbCnChitiet.Text = "Chức năng sách mượn";
             ggrbCnChitiet.Click += ggrbCnChitiet_Click;
             // 
+            // glblsoluongcon
+            // 
+            glblsoluongcon.AutoSize = true;
+            glblsoluongcon.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            glblsoluongcon.ForeColor = Color.Black;
+            glblsoluongcon.Location = new Point(24, 236);
+            glblsoluongcon.Name = "glblsoluongcon";
+            glblsoluongcon.Size = new Size(152, 20);
+            glblsoluongcon.TabIndex = 59;
+            glblsoluongcon.Text = "Số lượng trong kho: ";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(60, 130);
+            label2.Name = "label2";
+            label2.Size = new Size(75, 21);
+            label2.TabIndex = 58;
+            label2.Text = "Tên sách";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(46, 50);
+            label1.Name = "label1";
+            label1.Size = new Size(116, 21);
+            label1.TabIndex = 57;
+            label1.Text = "Chọn mã sách";
+            // 
+            // txtTenSach
+            // 
+            txtTenSach.Location = new Point(25, 160);
+            txtTenSach.Multiline = true;
+            txtTenSach.Name = "txtTenSach";
+            txtTenSach.ReadOnly = true;
+            txtTenSach.Size = new Size(153, 57);
+            txtTenSach.TabIndex = 56;
+            // 
             // lblSoLuongMuon
             // 
             lblSoLuongMuon.AutoSize = true;
             lblSoLuongMuon.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblSoLuongMuon.ForeColor = Color.Black;
-            lblSoLuongMuon.Location = new Point(25, 237);
+            lblSoLuongMuon.Location = new Point(25, 276);
             lblSoLuongMuon.Name = "lblSoLuongMuon";
             lblSoLuongMuon.Size = new Size(158, 20);
             lblSoLuongMuon.TabIndex = 55;
             lblSoLuongMuon.Text = "Nhập số lượng mượn";
-            // 
-            // glblsoluongcon
-            // 
-            glblsoluongcon.BackColor = Color.Transparent;
-            glblsoluongcon.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            glblsoluongcon.ForeColor = Color.Black;
-            glblsoluongcon.Location = new Point(30, 107);
-            glblsoluongcon.Name = "glblsoluongcon";
-            glblsoluongcon.Size = new Size(123, 22);
-            glblsoluongcon.TabIndex = 54;
-            glblsoluongcon.Text = "Số lượng tồn kho";
-            glblsoluongcon.Visible = false;
             // 
             // gtxtSoLuongMuon
             // 
@@ -166,7 +200,7 @@
             gtxtSoLuongMuon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             gtxtSoLuongMuon.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             gtxtSoLuongMuon.IconLeft = (Image)resources.GetObject("gtxtSoLuongMuon.IconLeft");
-            gtxtSoLuongMuon.Location = new Point(25, 291);
+            gtxtSoLuongMuon.Location = new Point(30, 319);
             gtxtSoLuongMuon.Name = "gtxtSoLuongMuon";
             gtxtSoLuongMuon.PlaceholderText = "Số lượng";
             gtxtSoLuongMuon.SelectedText = "";
@@ -216,7 +250,7 @@
             gbtnThemSach.HoverState.FillColor = Color.FromArgb(45, 156, 219);
             gbtnThemSach.Image = (Image)resources.GetObject("gbtnThemSach.Image");
             gbtnThemSach.ImageAlign = HorizontalAlignment.Left;
-            gbtnThemSach.Location = new Point(30, 361);
+            gbtnThemSach.Location = new Point(30, 376);
             gbtnThemSach.Name = "gbtnThemSach";
             gbtnThemSach.PressedColor = Color.FromArgb(26, 115, 232);
             gbtnThemSach.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -239,7 +273,7 @@
             gcboMaSach.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
             gcboMaSach.ForeColor = Color.FromArgb(68, 88, 112);
             gcboMaSach.ItemHeight = 30;
-            gcboMaSach.Location = new Point(32, 50);
+            gcboMaSach.Location = new Point(29, 81);
             gcboMaSach.Name = "gcboMaSach";
             gcboMaSach.ShadowDecoration.CustomizableEdges = customizableEdges8;
             gcboMaSach.Size = new Size(154, 36);
@@ -567,8 +601,11 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker gdtpNgayMuon;
         private Guna.UI2.WinForms.Guna2ComboBox gcboMaDG;
         private Guna.UI2.WinForms.Guna2TextBox gtxtSoLuongMuon;
-        private Guna.UI2.WinForms.Guna2HtmlLabel glblsoluongcon;
         private Guna.UI2.WinForms.Guna2DataGridView gdgvCtMuon;
         private Label lblSoLuongMuon;
+        private TextBox txtTenSach;
+        private Label label1;
+        private Label label2;
+        private Label glblsoluongcon;
     }
 }
